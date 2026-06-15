@@ -21,3 +21,5 @@ Wystarczy wgrać całość na hosting i otworzyć `index.html`.
 - Konwersja zdjęć w `pro/` do WebP i kompresja wg specyfikacji
   (hero < 300KB, kafelki < 150KB, miniatury < 60KB)
 - Dodanie panelu B2B / formularza leadów (faza 2-3)
+
+<!-- sync test 2026-06-15T21:15:07Z -->
