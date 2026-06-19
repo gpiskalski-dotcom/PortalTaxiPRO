@@ -21,7 +21,7 @@ const PRO = {
     {
       id: 'p52', cat: 'autonomiczne', img: 'uploads/56879122-11f2-40a3-94df-21d1ed41bdd2.png',
       title: '17 państw UE za wspólnymi testami robotaxi. Polska wśród sygnatariuszy',
-      lead: 'Osiem czerwca w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację polityczną popierającą transgraniczne testy pojazdów autonomicznych. To regulacyjna odpowiedź Europy na ekspansję Waymo, Tesli i Apollo Go.',
+      lead: '8 czerwca br. w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą transgraniczne testy pojazdów autonomicznych. To regulacyjna odpowiedź Europy na ekspansję Waymo, Tesli i Apollo Go, mająca dać szansę na rozwój ich europejskim konkurentom.',
       cats: ['autonomiczne', 'regulacje-ue'],
       author: 'Redakcja PortalTaxiPRO',
       date: '15 czerwca 2026', read: 6,
@@ -72,7 +72,7 @@ const PRO = {
       "cats": ["autonomiczne", "regulacje-ue"],
       "img": "uploads/56879122-11f2-40a3-94df-21d1ed41bdd2.png",
       "title": "17 państw UE za wspólnymi testami robotaxi. Polska wśród sygnatariuszy",
-      "lead": "Osiem czerwca w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację polityczną popierającą transgraniczne testy pojazdów autonomicznych. To regulacyjna odpowiedź Europy na ekspansję Waymo, Tesli i Apollo Go.",
+      "lead": "8 czerwca w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą wprowadzenie przez UE transgranicznych testów pojazdów autonomicznych. To regulacyjna odpowiedź Europy na ekspansję Waymo, Tesli i Apollo Go, mająca dać szansę europejskim firmom konkurującym na rynku AV.",
       "author": "Redakcja PortalTaxiPRO",
       "date": "15 czerwca 2026",
       "read": 6,
@@ -83,7 +83,7 @@ const PRO = {
         "electrive.com, 9.06.2026 — https://www.electrive.com/2026/06/09/17-eu-member-states-eye-cross-border-autonomous-driving-tests/"
       ],
       "body": [
-        "Osiem czerwca w Luksemburgu komisarz UE ds. transportu Apostolos Tzitzikostas i ministrowie transportu siedemnastu państw członkowskich podpisali deklarację polityczną popierającą wielkoskalowe, transgraniczne testy pojazdów autonomicznych (AV). Polska jest wśród sygnatariuszy. Celem deklaracji jest zastąpienie rozproszonych krajowych pilotaży wspólnymi zasadami dopuszczeń i zharmonizowanymi procedurami zezwoleń — tak by europejska branża mogła dogonić Stany Zjednoczone i Chiny.",
+        "8 czerwca w Luksemburgu komisarz UE ds. transportu Apostolos Tzitzikostas i ministrowie transportu siedemnastu państw członkowskich podpisali deklarację polityczną popierającą wielkoskalowe, transgraniczne testy pojazdów autonomicznych (AV). Wśród sygnatariuszy znalazła się Polska. Celem deklaracji jest zastąpienie rozproszonych krajowych pilotaży wspólnymi zasadami dopuszczeń i zharmonizowanymi procedurami zezwoleń — tak, by europejska branża mogła dogonić Stany Zjednoczone i Chiny.",
         "**Sygnatariusze i nieobecni**",
         "Pod deklaracją podpisały się: Austria, Belgia, Chorwacja, Cypr, Czechy, Estonia, Finlandia, Francja, Niemcy, Grecja, Węgry, Irlandia, Włochy, Luksemburg, Holandia, Polska i Szwecja (część źródeł wymienia też Litwę — wtedy 18 państw). Deklaracji nie podpisało ok. 9–10 krajów: Bułgaria, Dania, Łotwa, Malta, Portugalia, Rumunia, Słowacja, Słowenia i Hiszpania. Powodów oficjalnie nie podano — dokument był dobrowolny i otwarty, więc brak podpisu nie oznacza sprzeciwu; państwa mogą dołączyć w każdej chwili. Warta uwagi jest nieobecność Hiszpanii — to duży, mocno sporny rynek przewozów na aplikację (napięcie taxi vs VTC), a jej brak wśród sygnatariuszy jest istotnym sygnałem politycznym.",
         "**Pierwsze pieniądze: 20 mln EUR z CEF 2026**",
@@ -1379,7 +1379,7 @@ const PRO = {
 
   about: {
     title: 'O portalu',
-    lead: 'PortalTaxiPRO.eu to branżowy serwis informacyjny poświęcony rynkowi taxi, regulacjom, platformom przewozowym, flotom i zmianom wpływającym na sektor mobilności miejskiej.',
+    lead: 'pro.portaltaxi.pl to branżowy serwis informacyjny poświęcony rynkowi taxi, regulacjom, platformom przewozowym, flotom i zmianom wpływającym na sektor mobilności miejskiej.',
     body: 'Tworzymy treści dla profesjonalistów: właścicieli firm i flot taksówkowych, decydentów, organizacji branżowych, dziennikarzy oraz partnerów biznesowych. Śledzimy regulacje krajowe i unijne, analizujemy decyzje platform i dostarczamy danych, które pomagają podejmować decyzje biznesowe. Nie publikujemy poradników dla kierowców — skupiamy się na rynku, prawie, ekonomii i trendach.',
   },
 

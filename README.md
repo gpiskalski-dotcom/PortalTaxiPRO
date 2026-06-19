@@ -1,25 +1,23 @@
-# PortalTaxiPRO.eu
+# Aktualizacja pro.portaltaxi.pl — pliki do wgrania
 
-Branżowy serwis B2B dla rynku taxi/ride-hailing w Polsce (rynek polski, regulacje, Dyrektywa UE 2024/2831, platformy, analizy) + wersja angielska.
+Te 5 plików zastępują wersje w repo `gpiskalski-dotcom/PortalTaxiPRO` (gałąź `main`).
+Skopiuj je do katalogu głównego repo (nadpisując istniejące) i zacommituj.
 
-## Struktura
+## Zmienione pliki
 
-- `index.html` — strona główna (PL)
-- `en.html` — wersja angielska
-- `pro-data.js` — treści/dane (kategorie, artykuły, kafelki)
-- `pro-shell.jsx`, `pro-home.jsx`, `pro-pages.jsx`, `pro-app.jsx` — komponenty React (ładowane w przeglądarce via Babel standalone, bez build stepu)
-- `pro/` — obrazy (covery artykułów, zdjęcia)
-- `uploads/` — pojedynczy obraz referencjonowany z `pro-data.js`
+| Plik | Co się zmieniło |
+|------|-----------------|
+| `index.html` | Tytuł karty + splash ładowania: `portaltaxiPRO.eu` → `PRO.portaltaxi.pl` |
+| `en.html` | Logo, tytuł, opis i stopka wersji EN → `pro.portaltaxi.pl` |
+| `pro-shell.jsx` | Logo w nagłówku i stopce → `PRO.portaltaxi.pl`; prompt asystenta AI; copyright w stopce |
+| `pro-data.js` | Nowy artykuł o deklaracji UE ws. robotaxi (slider + pełny artykuł); poprawione leady; lead „O nas" |
+| `pro-home.jsx` | Rozjaśniony gradient slidera (zdjęcia mniej przyciemnione) |
 
-## Deploy
+## Czego NIE zmieniono (do decyzji)
 
-Strona jest statyczna (React + Babel standalone z CDN, bez kroku budowania).
-Wystarczy wgrać całość na hosting i otworzyć `index.html`.
+- Adresy e-mail `@portaltaxipro.eu` na stronach Kontakt/Reklama — zostawione (mogą być realnie skonfigurowane)
+- Komentarze techniczne w kodzie z `PortalTaxiPRO.eu` — niewidoczne dla użytkownika
 
-## Do zrobienia
+## Obrazy
 
-- Konwersja zdjęć w `pro/` do WebP i kompresja wg specyfikacji
-  (hero < 300KB, kafelki < 150KB, miniatury < 60KB)
-- Dodanie panelu B2B / formularza leadów (faza 2-3)
-
-<!-- sync test 2026-06-15T21:15:07Z -->
+Artykuł o robotaxi używa `uploads/56879122-11f2-40a3-94df-21d1ed41bdd2.png` — ten plik jest już w repo, nie trzeba go dogrywać.

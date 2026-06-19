@@ -88,9 +88,8 @@ const topLinkStyle = { display: 'inline-flex', alignItems: 'center', gap: 6, fon
 // ===== Logo =====
 const Logo = ({ onClick, size = 1 }) => (
   <button onClick={onClick} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'baseline', gap: 0 }}>
-    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink }}>portaltaxi</span>
-    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink, background: T.yellow, padding: `0 ${7 * size}px`, marginLeft: 3 }}>PRO</span>
-    <span style={{ fontFamily: T.ui, fontWeight: 600, fontSize: 14 * size, color: T.inkSoft, marginLeft: 2 }}>.eu</span>
+    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink, background: T.yellow, padding: `0 ${7 * size}px`, marginRight: 0 }}>PRO.</span>
+    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink }}>portaltaxi.pl</span>
   </button>
 );
 window.Logo = Logo;
@@ -190,7 +189,7 @@ const AIAssistant = ({ open, onClose }) => {
     setMessages(m => [...m, { role: 'user', text: question }]);
     setBusy(true);
 
-    const system = `Jesteś asystentem AI portalu branżowego PortalTaxiPRO.eu — serwisu dla profesjonalistów rynku taxi w Polsce (właścicieli flot, operatorów, decydentów, dziennikarzy). Odpowiadasz rzeczowo, profesjonalnie, po polsku, zwięźle (2-4 akapity). Skupiasz się na rynku, regulacjach (lex Uber 2.0, dyrektywa UE 2024/2831 o pracy platformowej z terminem wdrożenia 2.12.2026), platformach (Uber, Bolt, FreeNow przejęty przez Lyft za 175 mln EUR), ekonomii flot (realny koszt ~0,72 zł/km, prowizje realnie 28-31% z VAT), licencjonowaniu (licencja vs wypis, pułapka obszarowa) i trendach. Nie udzielasz porad dla kierowców-amatorów — mówisz językiem biznesowym B2B. Jeśli nie znasz konkretnej liczby, zaznacz to.`;
+    const system = `Jesteś asystentem AI portalu branżowego pro.portaltaxi.pl — serwisu dla profesjonalistów rynku taxi w Polsce (właścicieli flot, operatorów, decydentów, dziennikarzy). Odpowiadasz rzeczowo, profesjonalnie, po polsku, zwięźle (2-4 akapity). Skupiasz się na rynku, regulacjach (lex Uber 2.0, dyrektywa UE 2024/2831 o pracy platformowej z terminem wdrożenia 2.12.2026), platformach (Uber, Bolt, FreeNow przejęty przez Lyft za 175 mln EUR), ekonomii flot (realny koszt ~0,72 zł/km, prowizje realnie 28-31% z VAT), licencjonowaniu (licencja vs wypis, pułapka obszarowa) i trendach. Nie udzielasz porad dla kierowców-amatorów — mówisz językiem biznesowym B2B. Jeśli nie znasz konkretnej liczby, zaznacz to.`;
 
     try {
       if (window.claude && typeof window.claude.complete === 'function') {
@@ -361,9 +360,8 @@ const ProFooter = ({ onNav }) => (
       <div className="pro-footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr', gap: 40, paddingBottom: 36, borderBottom: '1px solid #2b2922' }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'baseline', marginBottom: 16 }}>
-            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 24, color: '#fff', letterSpacing: '-0.03em' }}>portaltaxi</span>
-            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 24, color: T.ink, background: T.yellow, padding: '0 6px', marginLeft: 3 }}>PRO</span>
-            <span style={{ fontFamily: T.ui, fontWeight: 600, fontSize: 12, color: '#9a9384', marginLeft: 2 }}>.eu</span>
+            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 24, color: T.ink, background: T.yellow, padding: '0 6px', marginRight: 0 }}>PRO.</span>
+            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 24, color: '#fff', letterSpacing: '-0.03em' }}>portaltaxi.pl</span>
           </div>
           <p style={{ fontFamily: T.serif, fontSize: 14.5, lineHeight: 1.55, color: '#9a9384', maxWidth: 460, margin: 0 }}>
             {window.PRO.about.lead}
@@ -383,7 +381,7 @@ const ProFooter = ({ onNav }) => (
         </div>
       </div>
       <div style={{ paddingTop: 22, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-        <span style={{ fontFamily: T.ui, fontSize: 12, color: '#6f6a5d' }}>© 2026 PortalTaxiPRO.eu · Wszelkie prawa zastrzeżone</span>
+        <span style={{ fontFamily: T.ui, fontSize: 12, color: '#6f6a5d' }}>© 2026 pro.portaltaxi.pl · Wszelkie prawa zastrzeżone</span>
         <span style={{ fontFamily: T.ui, fontSize: 12, color: '#6f6a5d' }}>Treści mają charakter informacyjny, nie stanowią porady prawnej.</span>
       </div>
     </div>
