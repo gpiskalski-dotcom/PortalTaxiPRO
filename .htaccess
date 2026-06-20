@@ -1,0 +1,7 @@
+# HTML zawsze świeży (żeby zmiany pokazywały się od razu po odświeżeniu).
+# Wersjonowane pliki .js/.jsx (?v=...) mogą się normalnie cache'ować.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
