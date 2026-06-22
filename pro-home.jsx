@@ -99,7 +99,7 @@ const ArticleRow = ({ a, onOpen }) => {
     onMouseEnter={(e) => e.currentTarget.querySelector('h3').style.color = window.catColor(a.cat)}
     onMouseLeave={(e) => e.currentTarget.querySelector('h3').style.color = T.ink}>
       <div style={{ position: 'relative', aspectRatio: '3/2', overflow: 'hidden', background: T.paper3 }}>
-        <img src={window.proImg(a.img)} onError={function (e) {e.currentTarget.style.opacity = '0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <img src={window.proThumb(a.img)} onError={function (e) {e.currentTarget.style.opacity = '0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </div>
       <div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
@@ -131,6 +131,8 @@ const SideTabs = ({ onOpen }) => {
   const najnowsze = all.slice(0, 6);
   const popularne = all.filter((a) => a.hot).concat(all).slice(0, 6);
   const list = tab === 'najnowsze' ? najnowsze : popularne;
+  // fake times for "najnowsze"
+  const times = ['18:12', '18:03', '17:49', '17:37', '17:28', '16:45'];
 
   return (
     <aside style={{ position: 'sticky', top: 130 }}>
@@ -148,13 +150,13 @@ const SideTabs = ({ onOpen }) => {
         <div>
           {list.map((a, idx) =>
           <div key={a.id + idx} onClick={() => onOpen(a)} style={{
-            display: 'grid', gridTemplateColumns: tab === 'najnowsze' ? '64px 1fr' : '24px 1fr', gap: 12,
+            display: 'grid', gridTemplateColumns: tab === 'najnowsze' ? '46px 1fr' : '24px 1fr', gap: 12,
             padding: '14px 16px', borderBottom: idx < list.length - 1 ? `1px solid ${T.lineSoft}` : 'none', cursor: 'pointer'
           }}
           onMouseEnter={(e) => e.currentTarget.style.background = T.paper2}
           onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
               {tab === 'najnowsze' ?
-            <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 11.5, lineHeight: 1.2, color: window.catColor(a.cat) }}>{(a.date || '').replace(/\s*\d{4}$/, '')}</span> :
+            <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: window.catColor(a.cat), fontVariantNumeric: 'tabular-nums' }}>{times[idx]}</span> :
             <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 16, color: T.yellow, lineHeight: 1 }}>{idx + 1}</span>}
               <div>
                 <div style={{ fontFamily: T.ui, fontWeight: 600, fontSize: 14, lineHeight: 1.3, color: T.ink }}>{a.title}</div>
@@ -238,7 +240,7 @@ const CategoryStrip = ({ catId, onOpen, onNav }) => {
         onMouseEnter={(e) => e.currentTarget.querySelector('h3').style.color = window.catColor(a.cat)}
         onMouseLeave={(e) => e.currentTarget.querySelector('h3').style.color = T.ink}>
             <div style={{ aspectRatio: '3/2', overflow: 'hidden', background: T.paper3, marginBottom: 12 }}>
-              <img src={window.proImg(a.img)} onError={function (e) {e.currentTarget.style.opacity = '0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={window.proThumb(a.img)} onError={function (e) {e.currentTarget.style.opacity = '0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ fontFamily: T.ui, fontSize: 11.5, color: T.inkSoft, marginBottom: 6 }}>{a.date} · {a.read} min</div>
             <h3 style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 16.5, lineHeight: 1.25, letterSpacing: '-0.01em', color: T.ink, margin: 0, transition: 'color .15s' }}>{a.title}</h3>

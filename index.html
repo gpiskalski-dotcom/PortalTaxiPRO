@@ -63,16 +63,19 @@
 <script>
 // proImg fallback — returns src as-is when not bundled
 window.proImg = window.proImg || function(src) { return src; };
+// proThumb — use a smoothed downscaled thumbnail in small cards when available (kills halftone moiré)
+window.__thumbs = { 'uploads/av-robotaxi-pe.png': 'thumbs/av-robotaxi-pe.png', 'uploads/przeglad-prasy-wypadki.png': 'thumbs/przeglad-prasy-wypadki.png', 'uploads/jazda-deszcz-warszawa.png': 'thumbs/jazda-deszcz-warszawa.png', 'uploads/przeglad-nowe-zasady.png': 'thumbs/przeglad-nowe-zasady.png', 'uploads/rynek-skrzyzowanie-warszawa.png': 'thumbs/rynek-skrzyzowanie-warszawa.png' };
+window.proThumb = window.proThumb || function(src) { if(!src) return window.proImg(src); if(window.__thumbs && window.__thumbs[src]) return window.proImg(window.__thumbs[src]); if(src.indexOf('pro/')===0) return window.proImg('thumbs/'+src); return window.proImg(src); };
 </script>
 </head>
 <body>
 <div id="root"></div>
 
-<script src="pro-data.js?v=20260617b"></script>
-<script type="text/babel" src="pro-shell.jsx?v=20260617b"></script>
-<script type="text/babel" src="pro-home.jsx?v=20260617b"></script>
-<script type="text/babel" src="pro-pages.jsx?v=20260617b"></script>
-<script type="text/babel" src="pro-app.jsx?v=20260617b"></script>
+<script src="pro-data.js"></script>
+<script type="text/babel" src="pro-shell.jsx"></script>
+<script type="text/babel" src="pro-home.jsx"></script>
+<script type="text/babel" src="pro-pages.jsx"></script>
+<script type="text/babel" src="pro-app.jsx"></script>
 
 </body>
 </html>

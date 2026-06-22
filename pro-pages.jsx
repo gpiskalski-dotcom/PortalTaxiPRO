@@ -212,7 +212,7 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
           {related.map((a) =>
           <article key={a.id} onClick={() => onOpen(a)} style={{ cursor: 'pointer' }}>
               <div style={{ aspectRatio: '3/2', overflow: 'hidden', background: T.paper3, marginBottom: 12 }}>
-                <img src={window.proImg(a.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={window.proThumb(a.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ fontFamily: T.ui, fontSize: 11.5, color: T.inkSoft, marginBottom: 6 }}>{a.date}</div>
               <h3 style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 16, lineHeight: 1.25, color: T.ink, margin: 0 }}>{a.title}</h3>
