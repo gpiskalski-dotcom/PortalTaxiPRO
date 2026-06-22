@@ -1312,7 +1312,7 @@ const PRO = {
 
   about: {
     title: 'PRO.portaltaxi.pl — serwis branżowy rynku taxi',
-    lead: 'Portal PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot i otoczenia rynkowego branży.',
+    lead: 'PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy to, co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot oraz otoczenia rynkowego branży.',
     body: [
       'PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy to, co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot oraz otoczenia rynkowego branży.',
       'Piszemy o tym, co ważne dla firm działających w ekosystemie Ubera, Bolta, FreeNow oraz innych platform ride-hailingu. Polska to dziś dojrzały ekosystem platformowo-flotowy, w którym o pozycję rywalizują globalne aplikacje, profesjonalne floty partnerskie i tradycyjne lokalne korporacje taxi. To dynamicznie rosnący europejski rynek, którego wartość wynosi 5 mld zł rocznie. Ponad 70% kursów taxi w Polsce zamawianych jest przez aplikację — powyżej średniej europejskiej — a branża zatrudnia kilkadziesiąt tysięcy osób.',
