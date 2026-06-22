@@ -1312,7 +1312,7 @@ const PRO = {
 
   about: {
     title: 'O portalu',
-    lead: 'pro.portaltaxi.pl to branżowy serwis informacyjny poświęcony rynkowi taxi, regulacjom, platformom przewozowym, flotom i zmianom wpływającym na sektor mobilności miejskiej.',
+    lead: 'Portal PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot i otoczenia rynkowego branży.',
     body: 'Tworzymy treści dla profesjonalistów: właścicieli firm i flot taksówkowych, decydentów, organizacji branżowych, dziennikarzy oraz partnerów biznesowych. Śledzimy regulacje krajowe i unijne, analizujemy decyzje platform i dostarczamy danych, które pomagają podejmować decyzje biznesowe. Nie publikujemy poradników dla kierowców — skupiamy się na rynku, prawie, ekonomii i trendach.',
   },
 
