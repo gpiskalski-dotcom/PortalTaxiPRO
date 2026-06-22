@@ -131,8 +131,6 @@ const SideTabs = ({ onOpen }) => {
   const najnowsze = all.slice(0, 6);
   const popularne = all.filter((a) => a.hot).concat(all).slice(0, 6);
   const list = tab === 'najnowsze' ? najnowsze : popularne;
-  // fake times for "najnowsze"
-  const times = ['18:12', '18:03', '17:49', '17:37', '17:28', '16:45'];
 
   return (
     <aside style={{ position: 'sticky', top: 130 }}>
@@ -150,13 +148,13 @@ const SideTabs = ({ onOpen }) => {
         <div>
           {list.map((a, idx) =>
           <div key={a.id + idx} onClick={() => onOpen(a)} style={{
-            display: 'grid', gridTemplateColumns: tab === 'najnowsze' ? '46px 1fr' : '24px 1fr', gap: 12,
+            display: 'grid', gridTemplateColumns: tab === 'najnowsze' ? '54px 1fr' : '24px 1fr', gap: 12,
             padding: '14px 16px', borderBottom: idx < list.length - 1 ? `1px solid ${T.lineSoft}` : 'none', cursor: 'pointer'
           }}
           onMouseEnter={(e) => e.currentTarget.style.background = T.paper2}
           onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
               {tab === 'najnowsze' ?
-            <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: window.catColor(a.cat), fontVariantNumeric: 'tabular-nums' }}>{times[idx]}</span> :
+            <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 12, color: window.catColor(a.cat), lineHeight: 1.25 }}>{a.date.replace(/^(\d+)\s+(\w{3})\w*/, '$1 $2')}</span> :
             <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 16, color: T.yellow, lineHeight: 1 }}>{idx + 1}</span>}
               <div>
                 <div style={{ fontFamily: T.ui, fontWeight: 600, fontSize: 14, lineHeight: 1.3, color: T.ink }}>{a.title}</div>
