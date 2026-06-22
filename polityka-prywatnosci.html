@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Polityka Prywatności i RODO — portaltaxi.pl</title>
+<meta name="description" content="Polityka prywatności i ochrony danych osobowych portalu portaltaxi.pl. Informacje RODO, prawa użytkowników, newsletter, analytics." />
+<meta name="robots" content="noindex, follow" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet" />
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:    #15140f;
+    --yellow: #F2C200;
+    --muted:  #5a5849;
+    --rule:   #e8e4d8;
+    --bg:     #ffffff;
+  }
+
+  html { font-size: 16px; }
+  body {
+    font-family: 'Archivo', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+
+  a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: #b89200; }
+
+  /* ── HEADER ────────────────────────────────── */
+  .site-header {
+    background: var(--ink);
+    padding: 0 24px;
+  }
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #fff;
+    text-decoration: none;
+  }
+  .logo span { color: var(--yellow); }
+  .header-nav {
+    font-size: 13px;
+    font-weight: 500;
+    color: #a09d92;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .header-nav:hover { color: #fff; }
+
+  /* ── BREADCRUMB ─────────────────────────────── */
+  .breadcrumb {
+    background: #f5f3ec;
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 24px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--muted); }
+  .breadcrumb a:hover { color: var(--ink); }
+
+  /* ── PAGE TITLE ─────────────────────────────── */
+  .page-hero {
+    background: var(--ink);
+    padding: 40px 24px 36px;
+    color: #fff;
+  }
+  .page-hero-inner { max-width: 900px; margin: 0 auto; }
+  .page-hero .label {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    margin-bottom: 14px;
+  }
+  .page-hero h1 {
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .page-hero .meta {
+    font-size: 13px;
+    color: #a09d92;
+    font-weight: 400;
+  }
+
+  /* ── CONTENT ────────────────────────────────── */
+  .content-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* Table of Contents */
+  .toc {
+    background: #f5f3ec;
+    border-left: 3px solid var(--yellow);
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    border-radius: 0 4px 4px 0;
+  }
+  .toc h2 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .toc ol {
+    padding-left: 18px;
+    font-size: 14px;
+    line-height: 2;
+  }
+  .toc a { text-decoration: none; color: var(--ink); font-weight: 500; }
+  .toc a:hover { color: #b89200; text-decoration: underline; }
+
+  /* Sections */
+  .section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--yellow);
+    display: inline-block;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 24px 0 10px;
+    color: var(--ink);
+  }
+
+  p { margin-bottom: 14px; font-size: 15px; line-height: 1.75; }
+  p:last-child { margin-bottom: 0; }
+
+  .admin-card {
+    background: #f5f3ec;
+    border: 1px solid var(--rule);
+    padding: 20px 24px;
+    margin: 16px 0 24px;
+    font-size: 14px;
+    line-height: 1.9;
+    border-radius: 4px;
+  }
+  .admin-card strong { font-weight: 700; display: block; margin-bottom: 4px; font-size: 15px; }
+
+  /* Data table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 16px 0 24px;
+  }
+  .data-table th {
+    background: var(--ink);
+    color: #fff;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: #f9f8f4; }
+
+  /* Rights list */
+  .rights-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+  }
+  .rights-list li {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .rights-list li:last-child { border-bottom: none; }
+  .rights-list .art {
+    background: var(--yellow);
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    height: fit-content;
+    margin-top: 2px;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+  }
+
+  .callout {
+    background: #fff8e0;
+    border-left: 3px solid var(--yellow);
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 1.65;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .uodo-box {
+    background: #f5f3ec;
+    border: 1px solid var(--rule);
+    padding: 18px 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 16px;
+  }
+
+  /* ── FOOTER ─────────────────────────────────── */
+  .site-footer {
+    background: var(--ink);
+    color: #a09d92;
+    font-size: 13px;
+    padding: 28px 24px;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .site-footer a { color: #a09d92; text-underline-offset: 2px; }
+  .site-footer a:hover { color: #fff; }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .page-hero { padding: 28px 20px 24px; }
+    .content-wrap { padding: 32px 20px 60px; }
+    .data-table { font-size: 12.5px; }
+    .data-table th, .data-table td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">portaltaxi<span>.pl</span></a>
+    <a href="/" class="header-nav">← Strona główna</a>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <div style="max-width:900px;margin:0 auto;">
+    <a href="/">portaltaxi.pl</a> &rsaquo; Polityka Prywatności
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="label">Dokument prawny</span>
+    <h1>Polityka Prywatności<br>i Ochrony Danych Osobowych</h1>
+    <p class="meta">Obowiązuje od: 22 czerwca 2026 &nbsp;·&nbsp; Wersja 1.0 &nbsp;·&nbsp; Serwis: pro.portaltaxi.pl</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="content-wrap">
+
+  <!-- TOC -->
+  <nav class="toc">
+    <h2>Spis treści</h2>
+    <ol>
+      <li><a href="#administrator">Administrator danych osobowych</a></li>
+      <li><a href="#podstawa">Podstawa prawna</a></li>
+      <li><a href="#dane">Jakie dane zbieramy i w jakim celu</a></li>
+      <li><a href="#odbiorcy">Odbiorcy danych</a></li>
+      <li><a href="#prawa">Prawa osób, których dane dotyczą</a></li>
+      <li><a href="#skarga">Prawo do skargi</a></li>
+      <li><a href="#bezpieczenstwo">Bezpieczeństwo danych</a></li>
+      <li><a href="#profilowanie">Profilowanie</a></li>
+      <li><a href="#cookies">Pliki cookies</a></li>
+      <li><a href="#linki">Linki zewnętrzne</a></li>
+      <li><a href="#zmiany">Zmiany Polityki</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. ADMINISTRATOR -->
+  <section class="section" id="administrator">
+    <h2>1. Administrator danych osobowych</h2>
+    <p>Administratorem danych osobowych przetwarzanych w związku z korzystaniem z serwisu jest:</p>
+    <div class="admin-card">
+      <strong>"PortalTaxi.pl" Grzegorz Piskalski</strong>
+      e-mail: <a href="mailto:kontakt@portaltaxi.pl">kontakt@portaltaxi.pl</a>
+    </div>
+  </section>
+
+  <!-- 2. PODSTAWA PRAWNA -->
+  <section class="section" id="podstawa">
+    <h2>2. Podstawa prawna</h2>
+    <p>Portal przetwarza dane osobowe zgodnie z:</p>
+    <ul style="padding-left:20px;font-size:15px;line-height:2;">
+      <li>Rozporządzeniem PE i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. <strong>(RODO/GDPR)</strong>,</li>
+      <li>Ustawą z dnia 10 maja 2018 r. o ochronie danych osobowych (Dz.U. 2018 poz. 1000),</li>
+      <li>Ustawą z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną,</li>
+      <li>Ustawą z dnia 16 lipca 2004 r. Prawo telekomunikacyjne.</li>
+    </ul>
+  </section>
+
+  <!-- 3. DANE -->
+  <section class="section" id="dane">
+    <h2>3. Jakie dane zbieramy i w jakim celu</h2>
+
+    <h3>3.1 Newsletter</h3>
+    <p>Serwis udostępnia formularz zapisu na newsletter.</p>
+    <table class="data-table">
+      <tr><th>Element</th><th>Szczegóły</th></tr>
+      <tr><td><strong>Dane</strong></td><td>Adres e-mail, opcjonalnie imię</td></tr>
+      <tr><td><strong>Cel</strong></td><td>Wysyłka materiałów informacyjnych o rynku taxi i ride-hailing w Polsce, aktualizacji portalu, raportów branżowych</td></tr>
+      <tr><td><strong>Podstawa prawna</strong></td><td>Art. 6 ust. 1 lit. <strong>a</strong> RODO — zgoda osoby, której dane dotyczą</td></tr>
+      <tr><td><strong>Okres przechowywania</strong></td><td>Do czasu cofnięcia zgody</td></tr>
+    </table>
+    <div class="callout">
+      Zgoda jest dobrowolna i może zostać wycofana w dowolnym momencie poprzez kliknięcie linku wypisania w mailu lub kontakt z Administratorem.
+    </div>
+
+    <h3>3.2 Dane analityczne i statystyczne</h3>
+    <p>Serwis nie wykorzystuje narzędzi analitycznych ani nie zbiera zagregowanych danych o ruchu poza podstawowymi logami technicznymi hostingu (pkt 7). Wdrożenie narzędzi analitycznych w celu pomiaru ruchu i poprawy jakości treści będzie wymagało odrębnej zgody użytkownika oraz aktualizacji niniejszej Polityki i Polityki Cookies.</p>
+
+    <h3>3.3 Kontakt</h3>
+    <p>Serwis udostępnia adresy e-mail do kontaktu z redakcją i w sprawach współpracy reklamowej. Pisząc do nas, przekazujesz nam swój adres e-mail oraz treść wiadomości — wykorzystujemy je wyłącznie w celu odpowiedzi i prowadzenia korespondencji (art. 6 ust. 1 lit. f RODO — uzasadniony interes Administratora), przez czas niezbędny do obsługi sprawy.</p>
+  </section>
+
+  <!-- 4. ODBIORCY -->
+  <section class="section" id="odbiorcy">
+    <h2>4. Odbiorcy danych</h2>
+    <p>Dane osobowe mogą być przekazywane następującym kategoriom odbiorców:</p>
+    <ul style="padding-left:20px;font-size:15px;line-height:2.1;">
+      <li><strong>Dostawcy usług IT i infrastruktury</strong> — operator hostingu, dostawca systemu mailingowego.</li>
+      <li><strong>Organy publiczne</strong> — wyłącznie na podstawie przepisów prawa.</li>
+    </ul>
+    <p style="margin-top:14px;">Administrator <strong>nie sprzedaje</strong> danych osobowych osobom trzecim. Serwis nie korzysta obecnie z narzędzi powodujących transfer danych poza Europejski Obszar Gospodarczy.</p>
+  </section>
+
+  <!-- 5. PRAWA -->
+  <section class="section" id="prawa">
+    <h2>5. Prawa osób, których dane dotyczą</h2>
+    <p>Na podstawie RODO przysługują Ci następujące prawa:</p>
+    <ul class="rights-list">
+      <li><span class="art">art. 15</span><div><strong>Prawo dostępu</strong> — uzyskanie informacji o przetwarzanych danych oraz kopii danych.</div></li>
+      <li><span class="art">art. 16</span><div><strong>Prawo do sprostowania</strong> — poprawienie danych niedokładnych lub uzupełnienie danych niekompletnych.</div></li>
+      <li><span class="art">art. 17</span><div><strong>Prawo do usunięcia</strong> — „prawo do bycia zapomnianym", jeśli dane nie są już niezbędne lub cofnięto zgodę.</div></li>
+      <li><span class="art">art. 18</span><div><strong>Prawo do ograniczenia przetwarzania</strong> — ograniczenie przetwarzania w określonych przypadkach.</div></li>
+      <li><span class="art">art. 20</span><div><strong>Prawo do przenoszenia danych</strong> — otrzymanie danych w formacie nadającym się do odczytu maszynowego.</div></li>
+      <li><span class="art">art. 21</span><div><strong>Prawo do sprzeciwu</strong> — sprzeciw wobec przetwarzania danych opartego na uzasadnionym interesie Administratora.</div></li>
+      <li><span class="art">zgoda</span><div><strong>Prawo do cofnięcia zgody</strong> — w każdym czasie, bez wpływu na wcześniejsze przetwarzanie.</div></li>
+    </ul>
+    <div class="callout">
+      Wnioski i żądania kieruj na adres: <a href="mailto:kontakt@portaltaxi.pl"><strong>kontakt@portaltaxi.pl</strong></a><br>
+      Administrator odpowiada bez zbędnej zwłoki, nie później niż w terminie <strong>30 dni</strong> od otrzymania żądania.
+    </div>
+  </section>
+
+  <!-- 6. SKARGA -->
+  <section class="section" id="skarga">
+    <h2>6. Prawo do skargi</h2>
+    <p>Jeśli uważasz, że przetwarzanie Twoich danych narusza przepisy RODO, masz prawo wniesienia skargi do organu nadzorczego:</p>
+    <div class="uodo-box">
+      <strong style="display:block;margin-bottom:6px;font-size:15px;">Prezes Urzędu Ochrony Danych Osobowych (UODO)</strong>
+      ul. Stawki 2, 00-193 Warszawa<br>
+      tel. 22 531 03 00<br>
+      e-mail: <a href="mailto:kancelaria@uodo.gov.pl">kancelaria@uodo.gov.pl</a><br>
+      www: <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>
+    </div>
+  </section>
+
+  <!-- 7. BEZPIECZEŃSTWO -->
+  <section class="section" id="bezpieczenstwo">
+    <h2>7. Bezpieczeństwo danych</h2>
+    <p>Administrator stosuje odpowiednie środki techniczne i organizacyjne w celu ochrony danych osobowych przed nieuprawnionym dostępem, utratą lub zniszczeniem, w tym:</p>
+    <ul style="padding-left:20px;font-size:15px;line-height:2.1;">
+      <li>szyfrowanie transmisji danych (protokół <strong>HTTPS/TLS</strong>),</li>
+      <li>ograniczony dostęp do danych wyłącznie dla upoważnionych osób,</li>
+      <li>regularne przeglądy procedur bezpieczeństwa.</li>
+    </ul>
+  </section>
+
+  <!-- 8. PROFILOWANIE -->
+  <section class="section" id="profilowanie">
+    <h2>8. Zautomatyzowane podejmowanie decyzji i profilowanie</h2>
+    <p>Portal <strong>nie prowadzi</strong> zautomatyzowanego podejmowania decyzji ani profilowania w rozumieniu art. 22 RODO.</p>
+  </section>
+
+  <!-- 9. COOKIES -->
+  <section class="section" id="cookies">
+    <h2>9. Pliki cookies</h2>
+    <p>Szczegółowe zasady dotyczące plików cookies opisane są w odrębnym dokumencie — <a href="/polityka-cookies.html"><strong>Polityce Cookies</strong></a> — dostępnym na stronie portalu.</p>
+  </section>
+
+  <!-- 10. LINKI -->
+  <section class="section" id="linki">
+    <h2>10. Linki do zewnętrznych serwisów</h2>
+    <p>Portal może zawierać linki do zewnętrznych serwisów branżowych. Administrator nie ponosi odpowiedzialności za polityki prywatności tych serwisów. Zalecamy zapoznanie się z polityką prywatności każdego odwiedzanego serwisu zewnętrznego.</p>
+  </section>
+
+  <!-- 11. ZMIANY -->
+  <section class="section" id="zmiany">
+    <h2>11. Zmiany Polityki Prywatności</h2>
+    <p>Administrator zastrzega prawo do zmiany niniejszej Polityki Prywatności. O istotnych zmianach użytkownicy zapisani na newsletter zostaną poinformowani drogą mailową. Aktualna wersja Polityki jest zawsze dostępna na stronie portalu.</p>
+    <p style="color:var(--muted);font-size:13px;margin-top:20px;"><em>Ostatnia aktualizacja: 22 czerwca 2026</em></p>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>
+    <a href="/">portaltaxi.pl</a> &nbsp;·&nbsp;
+    <a href="/polityka-prywatnosci.html">Polityka Prywatności</a> &nbsp;·&nbsp;
+    <a href="/polityka-cookies.html">Polityka Cookies</a>
+  </p>
+  <p style="margin-top:6px;">© 2025 "PortalTaxi.pl" Grzegorz Piskalski. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
