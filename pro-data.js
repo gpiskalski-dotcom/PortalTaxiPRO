@@ -19,6 +19,15 @@ const PRO = {
   // Slider — featured articles
   slider: [
     {
+      id: 'p53', cat: 'bezpieczenstwo', img: 'uploads/sondaz-ibris-tak.png',
+      title: 'Sondaż IBRiS dla „Rz”: Aż 84% Polaków chce polskiego egzaminu na prawo jazdy dla taksówkarzy z zagranicy',
+      lead: 'Po wypadku w Ząbkach presja na zaostrzenie zasad dla kierowców przewozów nadal rośnie. Problemem jest Konwencja Wiedeńska o wzajemnym uznawaniu przez państwa praw jazdy.',
+      cats: ['bezpieczenstwo', 'przeglad-prasy'],
+      source: 'Rzeczpospolita',
+      link: 'https://www.rp.pl/spoleczenstwo/art44644601-prawo-jazdy-zrobione-tylko-w-polsce-nie-ufamy-taksowkarzom-obcokrajowcom',
+      date: '19 czerwca 2026', read: 4,
+    },
+    {
       id: 'p52', cat: 'autonomiczne', img: 'uploads/av-robotaxi-pe.png',
       title: '17 państw UE za wspólnymi testami robotaxi. Polska wśród sygnatariuszy',
       lead: '8 czerwca br. w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą transgraniczne testy pojazdów autonomicznych. To regulacyjna odpowiedź Europy na ekspansję Waymo, Tesli i Apollo Go, mająca dać szansę na rozwój ich europejskim konkurentom.',
@@ -57,6 +66,33 @@ const PRO = {
 
   // Full article pool (assigned to categories). lead + body paragraphs.
   articles: [
+    // PRZEGLĄD PRASY — Sondaż IBRiS ws. egzaminu dla kierowców z zagranicy (19 czerwca 2026)
+    {
+      "id": "p53",
+      "cat": "bezpieczenstwo",
+      "cats": ["bezpieczenstwo", "przeglad-prasy"],
+      "img": "uploads/sondaz-ibris-wiek.png",
+      "title": "Sondaż IBRiS dla „Rz”: Aż 84% Polaków chce polskiego egzaminu na prawo jazdy dla taksówkarzy z zagranicy",
+      "lead": "Po wypadku w Ząbkach presja na zaostrzenie zasad dla kierowców przewozów nadal rośnie. Problemem jest Konwencja Wiedeńska o wzajemnym uznawaniu przez państwa praw jazdy.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "source": "Rzeczpospolita",
+      "sourceCat": "Bezpieczeństwo i prawo",
+      "region": "Polska",
+      "link": "https://www.rp.pl/spoleczenstwo/art44644601-prawo-jazdy-zrobione-tylko-w-polsce-nie-ufamy-taksowkarzom-obcokrajowcom",
+      "date": "19 czerwca 2026",
+      "read": 4,
+      "hot": true,
+      "sources": [
+        "Rzeczpospolita, „Prawo jazdy zrobione tylko w Polsce. Nie ufamy taksówkarzom obcokrajowcom”, 19.06.2026 — https://www.rp.pl/spoleczenstwo/art44644601-prawo-jazdy-zrobione-tylko-w-polsce-nie-ufamy-taksowkarzom-obcokrajowcom"
+      ],
+      "body": [
+        "Badania opinii publicznej poświęcone wprost rynkowi taksówek pojawiają się rzadko, dlatego najnowszy sondaż IBRiS zlecony przez „Rzeczpospolitą” zasługuje na uwagę. Po wypadku w Ząbkach nie maleje presja opinii publicznej i komentatorów na poprawę bezpieczeństwa przewozów taxi, a większość głosów szanse na poprawę upatruje w zaostrzeniu wymagań formalnych w stosunku do kierowców z zagranicy. Za przyczynę wypadków upatruje się ich niską kulturę jazdy, sprzeczną z zasadami oczekiwanymi na polskich drogach. Po fali oskarżeń kierowców taksówek o przemoc na tle seksualnym, aktualna kwestia BRD wydaje się być najistotniejszym od lat kryzysem wizerunkowym branży.",
+        "Wyniki sondażu dla „Rzeczpospolitej” są jednoznaczne. Na pytanie, czy każdy taksówkarz — niezależnie od narodowości — powinien zdać egzamin na prawo jazdy w Polsce, twierdząco odpowiedziało 83,9% badanych. Tak wysoka zgodność jest w badaniach społecznych zjawiskiem wyjątkowym, zwłaszcza w temacie, który zwykle dzieli opinię publiczną. Warto odnotować zaangażowanie „Rzeczpospolitej” w relacjonowanie sytuacji w branży taxi w Polsce.",
+        "Co istotne, poparcie dla zaostrzenia zasad przecina podziały polityczne i pokoleniowe. Za obowiązkowym egzaminem opowiada się 92% wyborców koalicji rządzącej i 88% elektoratu opozycji. Wyraźny jest natomiast efekt wieku: od 62% wśród najmłodszych respondentów (18–29 lat), przez 72% i 85% w średnich grupach, aż do 94–99% wśród osób po pięćdziesiątym i sześćdziesiątym roku życia.",
+        "Sednem problemu pozostaje luka w obowiązujących przepisach. Od czerwca 2024 r. kierowca z zagranicy musi legitymować się prawem jazdy wydanym w Polsce, jednak urzędnik jedynie potwierdza autentyczność dokumentu zagranicznego — nie bada ani wiedzy o przepisach, ani realnych umiejętności prowadzenia pojazdu. Realne zaostrzenie zasad komplikuje przy tym ratyfikowana przez Polskę Konwencja wiedeńska o ruchu drogowym, która zobowiązuje do wzajemnego uznawania praw jazdy państw-sygnatariuszy, w tym wielu krajów spoza UE.",
+        "Branża od dawna sygnalizuje, że obecne wymogi mają charakter formalny. Postulaty środowiska taksówkarzy obejmują wprowadzenie obowiązkowego egzaminu w Polsce oraz testu znajomości języka polskiego, a Ministerstwo Infrastruktury zapowiada przepisy wykluczające z zawodu osoby z wyrokami w krajach spoza UE i EFTA. W tle pozostaje zasadniczy deficyt informacyjny: ani policja, ani resort nie gromadzą danych o liczbie cudzoziemców wykonujących przewóz osób, co utrudnia rzetelną ocenę skali zjawiska."
+      ]
+    },
     // ARTYKUŁ — Deklaracja UE ws. transgranicznych testów AV (8 czerwca 2026)
     {
       "id": "p52",
