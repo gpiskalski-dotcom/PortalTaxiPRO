@@ -19,7 +19,7 @@ const PRO = {
   // Slider — featured articles
   slider: [
     {
-      id: 'p53', cat: 'bezpieczenstwo', img: 'uploads/sondaz-ibris-tak.png',
+      id: 'p53', cat: 'bezpieczenstwo', img: 'uploads/sondaz-ibris-wiek.png',
       title: 'Sondaż IBRiS dla „Rz”: Aż 84% Polaków chce polskiego egzaminu na prawo jazdy dla taksówkarzy z zagranicy',
       lead: 'Po wypadku w Ząbkach presja na zaostrzenie zasad dla kierowców przewozów nadal rośnie. Problemem jest Konwencja Wiedeńska o wzajemnym uznawaniu przez państwa praw jazdy.',
       cats: ['bezpieczenstwo', 'przeglad-prasy'],
