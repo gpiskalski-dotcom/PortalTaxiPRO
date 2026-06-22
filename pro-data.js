@@ -1311,9 +1311,14 @@ const PRO = {
   ],
 
   about: {
-    title: 'O portalu',
+    title: 'PRO.portaltaxi.pl — branżowy serwis informacyjny rynku taxi',
     lead: 'Portal PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot i otoczenia rynkowego branży.',
-    body: 'Tworzymy treści dla profesjonalistów: właścicieli firm i flot taksówkowych, decydentów, organizacji branżowych, dziennikarzy oraz partnerów biznesowych. Śledzimy regulacje krajowe i unijne, analizujemy decyzje platform i dostarczamy danych, które pomagają podejmować decyzje biznesowe. Nie publikujemy poradników dla kierowców — skupiamy się na rynku, prawie, ekonomii i trendach.',
+    body: [
+      'PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy to, co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot oraz otoczenia rynkowego branży.',
+      'Piszemy o tym, co ważne dla firm działających w ekosystemie Ubera, Bolta, FreeNow oraz innych platform ride-hailingu. Polska to dziś dojrzały ekosystem platformowo-flotowy, w którym o pozycję rywalizują globalne aplikacje, profesjonalne floty partnerskie i tradycyjne lokalne korporacje taxi. To dynamicznie rosnący europejski rynek, którego wartość wynosi 5 mld zł rocznie. Ponad 70% kursów taxi w Polsce zamawianych jest przez aplikację — powyżej średniej europejskiej — a branża zatrudnia kilkadziesiąt tysięcy osób.',
+      'Stanowimy wiarygodne źródło wiedzy: informujemy o aktualnościach, pokazujemy trendy i porządkujemy informacje istotne dla rynku. Wspieramy branżę w okresie transformacji regulacyjnej, wejścia w erę elektromobilności i przygotowań do pojazdów autonomicznych.',
+      'Dostarczamy inwestorom, firmom partnerskim, właścicielom flot i uczestnikom rynku uporządkowany, weryfikowalny obraz polskiej branży taxi. Chcemy uczestniczyć w rozwoju rynku, bo wierzymy, że silna branża potrzebuje silnej infrastruktury informacyjnej.'
+    ],
   },
 
   newsletter: {

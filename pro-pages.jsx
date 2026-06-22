@@ -233,7 +233,7 @@ const StaticPage = ({ pageId }) => {
   const content = {
     'o-nas': {
       title: window.PRO.about.title,
-      body: [window.PRO.about.lead, window.PRO.about.body]
+      body: window.PRO.about.body
     },
     'kontakt': {
       title: 'Kontakt',
