@@ -30,7 +30,7 @@ const PRO = {
     {
       id: 'p52', cat: 'autonomiczne', img: 'uploads/av-robotaxi-pe.png',
       title: '17 państw UE za wspólnymi testami robotaxi. Polska wśród sygnatariuszy',
-      lead: '8 czerwca br. w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą transgraniczne testy pojazdów autonomicznych. To regulacyjna odpowiedź Europy na ekspansję Waymo, Tesli i Apollo Go, mająca dać szansę na rozwój ich europejskim konkurentom.',
+      lead: '8 czerwca br. w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą transgraniczne testy pojazdów autonomicznych.',
       cats: ['autonomiczne', 'regulacje-ue'],
       author: 'Redakcja PortalTaxiPRO',
       date: '15 czerwca 2026', read: 6,
@@ -100,7 +100,7 @@ const PRO = {
       "cats": ["autonomiczne", "regulacje-ue"],
       "img": "uploads/av-robotaxi-pe.png",
       "title": "17 państw UE za wspólnymi testami robotaxi. Polska wśród sygnatariuszy",
-      "lead": "8 czerwca w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą wprowadzenie przez UE transgranicznych testów pojazdów autonomicznych. To regulacyjna odpowiedź Europy na ekspansję Waymo, Tesli i Apollo Go, mająca dać szansę europejskim firmom konkurującym na rynku AV.",
+      "lead": "8 czerwca w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą wprowadzenie przez UE transgranicznych testów pojazdów autonomicznych.",
       "author": "Redakcja PortalTaxiPRO",
       "date": "15 czerwca 2026",
       "read": 6,
