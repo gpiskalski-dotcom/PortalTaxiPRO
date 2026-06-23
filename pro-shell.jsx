@@ -377,6 +377,7 @@ const ProFooter = ({ onNav }) => (
           <div style={footColHead}>Prawne</div>
           <a key="prywatnosc" href="/polityka-prywatnosci.html" style={footLink}>Polityka prywatności</a>
           <a key="cookies" href="/polityka-cookies.html" style={footLink}>Polityka cookies</a>
+          <a key="regulamin" href="/regulamin.html" style={footLink}>Regulamin</a>
           {[['ustawienia', 'Ustawienia prywatności']].map(([id, l]) => (
             <button key={id} onClick={() => onNav({ type: 'page', id })} style={footLink}>{l}</button>
           ))}
