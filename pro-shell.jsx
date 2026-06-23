@@ -369,15 +369,15 @@ const ProFooter = ({ onNav }) => (
         </div>
         <div>
           <div style={footColHead}>Serwis</div>
-          {[['o-nas', 'O nas'], ['regulamin', 'Regulamin'], ['reklama', 'Oferta reklamowa']].map(([id, l]) => (
+          {[['o-nas', 'O nas'], ['reklama', 'Oferta reklamowa']].map(([id, l]) => (
             <button key={id} onClick={() => onNav({ type: 'page', id })} style={footLink}>{l}</button>
           ))}
+          <a href="/regulamin.html" style={footLink}>Regulamin</a>
         </div>
         <div>
           <div style={footColHead}>Prawne</div>
           <a key="prywatnosc" href="/polityka-prywatnosci.html" style={footLink}>Polityka prywatności</a>
           <a key="cookies" href="/polityka-cookies.html" style={footLink}>Polityka cookies</a>
-          <a key="regulamin" href="/regulamin.html" style={footLink}>Regulamin</a>
           {[['ustawienia', 'Ustawienia prywatności']].map(([id, l]) => (
             <button key={id} onClick={() => onNav({ type: 'page', id })} style={footLink}>{l}</button>
           ))}
