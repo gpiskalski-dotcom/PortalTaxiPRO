@@ -234,7 +234,7 @@ const PRO = {
                 "rynek-polski",
                 "analizy"
           ],
-          "img": "pro/real-rynek-3.jpg",
+          "img": "pro/komiks-flota-miasto.jpg",
           "title": "Koszty działalności flot rosną szybciej niż stawki. Operatorzy tną marże",
           "lead": "Ubezpieczenia aut zarobkowych, serwis i amortyzacja windują koszty flot szybciej niż rosną stawki. Według naszych szacunków realny koszt utrzymania pojazdu w obrocie sięga ~0,72 zł/km. Analiza własna z jawnymi założeniami.",
           "author": "Redakcja PRO.portaltaxi.pl",
@@ -267,7 +267,7 @@ const PRO = {
                 "regulacje-ue",
                 "rynek-polski"
           ],
-          "img": "pro/cover-ue-2.png",
+          "img": "pro/komiks-regulacje-ue.jpg",
           "title": "Domniemanie stosunku pracy. Co zmieni dyrektywa platformowa dla operatorów",
           "lead": "Dyrektywa platformowa 2024/2831 odwraca ciężar dowodu: jeśli platforma realnie kontroluje pracę kierowcy, relacja może zostać uznana za stosunek pracy — z ZUS, urlopem i L4. Dla polskiego modelu B2B przez partnerów rozliczeniowych to test całej architektury współpracy. Termin wdrożenia: 2 grudnia 2026.",
           "author": "Redakcja PRO.portaltaxi.pl",
@@ -298,7 +298,7 @@ const PRO = {
                 "regulacje-ue",
                 "rynek-polski"
           ],
-          "img": "pro/cover-ue-3.png",
+          "img": "pro/komiks-kontrola.jpg",
           "title": "Licencje, kontrole i obowiązki pośredników. Nowy reżim odpowiedzialności platform",
           "lead": "Lex Uber przerzuca odpowiedzialność na pośredników: platforma musi osobiście zweryfikować każdego kierowcę, sprawdzić go w CEPiK i archiwizować dokumenty, a za naruszenia grożą kary do 1 mln zł. Operatorzy przebudowują procedury onboardingu.",
           "author": "Redakcja PRO.portaltaxi.pl",
@@ -329,7 +329,7 @@ const PRO = {
                 "regulacje-ue",
                 "rynek-polski"
           ],
-          "img": "pro/cover-ue-4.png",
+          "img": "pro/komiks-urzad.jpg",
           "title": "Postulat licencji metropolitalnych wraca do dyskusji. Koniec pułapki obszarowej?",
           "lead": "Licencja taksówkowa obowiązuje na obszarze jednej gminy — w aglomeracji łatwo wpaść w „pułapkę obszarową\" i ryzykować mandat 2000 zł. Branża chce licencji obejmujących całe aglomeracje. Co ciekawe, prawo już dziś dopuszcza porozumienia międzygminne.",
           "author": "Redakcja PRO.portaltaxi.pl",
@@ -454,7 +454,7 @@ const PRO = {
                 "przeglad-prasy",
                 "analizy"
           ],
-          "img": "pro/cover-prasa-1.png",
+          "img": "pro/komiks-przeglad-rynek.jpg",
           "title": "Przegląd prasy: rynek przewozów w raportach Instytutu Jagiellońskiego i ZDG TOR",
           "lead": "Raport Instytutu Jagiellońskiego wyceniał polski rynek ride-hailing na 2,5 mld zł (2022) i prognozował ok. 4,7 mld zł na 2025. Ponad 70% kursów taksówkowych zamawianych jest przez aplikacje. Zebraliśmy najważniejsze liczby i wnioski.",
           "author": "Redakcja PRO.portaltaxi.pl",
@@ -487,7 +487,7 @@ const PRO = {
                 "analizy",
                 "rynek-polski"
           ],
-          "img": "pro/cover-analizy-1.png",
+          "img": "pro/komiks-flota.jpg",
           "title": "Rentowność floty taxi w 2026. Analiza progu opłacalności pojazdu",
           "lead": "Przy szacowanym koszcie ~0,72 zł/km i prowizjach rzędu 28–31% obrotu próg rentowności pojazdu wymaga ok. 3 500 zł obrotu tygodniowo. To analiza własna z jawnymi założeniami — nie dane rejestrowe.",
           "author": "Redakcja PRO.portaltaxi.pl",
@@ -514,7 +514,7 @@ const PRO = {
                 "analizy",
                 "rynek-polski"
           ],
-          "img": "pro/cover-analizy-2.png",
+          "img": "pro/komiks-elektryczne.jpg",
           "title": "Elektromobilność we flotach taxi. Kiedy pojazd elektryczny zacznie się opłacać",
           "lead": "Energia z domowej ładowarki w taryfie nocnej to ok. 7–10 zł na 100 km — kilkukrotnie mniej niż paliwo. Ale wysoka cena zakupu i czas ładowania, który w taxi oznacza utracone godziny pracy, przesuwają próg opłacalności. Kiedy EV naprawdę się broni?",
           "author": "Redakcja PRO.portaltaxi.pl",
