@@ -228,15 +228,33 @@ const PRO = {
     // RYNEK POLSKI
 
     {
-      id: 'a2', cat: 'rynek-polski', img: 'pro/real-rynek-3.jpg',
-      title: 'Koszty działalności flot rosną szybciej niż stawki. Operatorzy tną marże',
-      lead: 'Ubezpieczenia TAXI, serwis i amortyzacja pojazdów obciążają budżety operatorów. Realny koszt utrzymania pojazdu w obrocie sięga 0,72 zł za kilometr — i rośnie.',
-      date: '31 maja 2026', read: 7, hot: true,
-      body: [
-        'Struktura kosztów operatora floty zmieniła się istotnie w ciągu ostatnich dwóch lat. Najszybciej rosnącą pozycją pozostają ubezpieczenia komunikacyjne dla pojazdów w zarobkowym przewozie osób, których stawki potrafią być o 50–100% wyższe niż w segmencie prywatnym.',
-        'Drugim obciążeniem jest amortyzacja. Intensywna eksploatacja — często powyżej 50 tys. km rocznie na pojazd — skraca cykl życia auta i wymusza częstsze wymiany floty. W przeliczeniu na kilometr realny koszt utrzymania pojazdu hybrydowego sięga 0,72 zł.',
-        'Operatorzy reagują optymalizacją: przechodzą na napęd hybrydowy i LPG, negocjują pakiety serwisowe i ubezpieczeniowe oraz zaostrzają kontrolę tygodniowych rozliczeń. Mimo to marże w segmencie wynajmu pojazdów pozostają pod presją.',
-      ],
+          "id": "a2",
+          "cat": "rynek-polski",
+          "cats": [
+                "rynek-polski",
+                "analizy"
+          ],
+          "img": "pro/real-rynek-3.jpg",
+          "title": "Koszty działalności flot rosną szybciej niż stawki. Operatorzy tną marże",
+          "lead": "Ubezpieczenia aut zarobkowych, serwis i amortyzacja windują koszty flot szybciej niż rosną stawki. Według naszych szacunków realny koszt utrzymania pojazdu w obrocie sięga ~0,72 zł/km. Analiza własna z jawnymi założeniami.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "31 maja 2026",
+          "read": 6,
+          "body": [
+                "Struktura kosztów operatora floty zmieniła się istotnie w ostatnich latach. Poniższe wartości to szacunki własne PRO.portaltaxi.pl na podstawie danych operatorów i raportów rynkowych — nie dane rejestrowe.",
+                "**Najszybciej rośnie ubezpieczenie**",
+                "Najszybciej rosnącą pozycją pozostają ubezpieczenia komunikacyjne (OC/AC) dla pojazdów w zarobkowym przewozie osób — ich stawki potrafią być o 50–100% wyższe niż w segmencie prywatnym, ze względu na wyższe przebiegi i ryzyko szkód.",
+                "**Amortyzacja i intensywna eksploatacja**",
+                "Drugim obciążeniem jest amortyzacja. Eksploatacja często powyżej 50 tys. km rocznie skraca cykl życia auta i wymusza częstsze wymiany floty. W przeliczeniu na kilometr realny koszt utrzymania pojazdu hybrydowego szacujemy na ok. 0,72 zł/km.",
+                "**Presja na marżę**",
+                "Przy prowizjach platform sięgających realnie 28–31% obrotu (z VAT), rosnące koszty stałe coraz mocniej ściskają marżę w segmencie wynajmu pojazdów. To jeden z głównych powodów konsolidacji rynku.",
+                "**Jak operatorzy reagują**",
+                "Odpowiedzią jest optymalizacja: przejście na napęd hybrydowy i LPG, negocjowanie pakietów serwisowych i ubezpieczeniowych, zaostrzenie kontroli tygodniowych rozliczeń oraz nacisk na efektywność godzin pracy, a nie samą liczbę kilometrów."
+          ],
+          "sources": [
+                "Instytut Jagielloński — raport ride-hailing (kontekst rynku i prowizji) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
+                "Analiza własna PRO.portaltaxi.pl na podstawie danych operatorów (szacunki, nie dane rejestrowe)."
+          ]
     },
 
 
@@ -274,24 +292,64 @@ const PRO = {
           ]
     },
     {
-      id: 'a6', cat: 'regulacje-ue', img: 'pro/cover-ue-3.png',
-      title: 'Licencje, kontrole i obowiązki pośredników. Nowy reżim odpowiedzialności platform',
-      lead: 'Po lex Uber 2.0 platformy odpowiadają za weryfikację kierowców i archiwizację dokumentów. Kary sięgają miliona złotych. Jak operatorzy dostosowują procedury.',
-      date: '30 maja 2026', read: 7,
-      body: [
-        'Nowelizacja przepisów o transporcie drogowym nałożyła na platformy obowiązek osobistej weryfikacji każdego kierowcy przed pierwszym kursem oraz archiwizacji cyfrowego odwzorowania dokumentów w bazach CEPiK.',
-        'Za naruszenia przewidziano kary do 1 mln zł dla platform i do 500 tys. zł za pośrednictwo bez licencji. To przesunęło ciężar zgodności na operatorów i pośredników rozliczeniowych, którzy muszą prowadzić rygorystyczną dokumentację.',
-      ],
+          "id": "a6",
+          "cat": "regulacje-ue",
+          "cats": [
+                "regulacje-ue",
+                "rynek-polski"
+          ],
+          "img": "pro/cover-ue-3.png",
+          "title": "Licencje, kontrole i obowiązki pośredników. Nowy reżim odpowiedzialności platform",
+          "lead": "Lex Uber przerzuca odpowiedzialność na pośredników: platforma musi osobiście zweryfikować każdego kierowcę, sprawdzić go w CEPiK i archiwizować dokumenty, a za naruszenia grożą kary do 1 mln zł. Operatorzy przebudowują procedury onboardingu.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "30 maja 2026",
+          "read": 6,
+          "body": [
+                "Kolejne nowelizacje tzw. lex Uber przesuwają ciężar zgodności na firmy pośredniczące w przewozie osób (Uber, Bolt) oraz współpracujących z nimi operatorów i partnerów rozliczeniowych. Z luźnego modelu rejestracji online robi się rygorystyczny proces z odpowiedzialnością prawną.",
+                "**Osobista weryfikacja kierowcy**",
+                "Kandydat na kierowcę musi stawić się osobiście przed pierwszym kursem. Firma potwierdza tożsamość (m.in. wykonuje zdjęcie), sprawdza uprawnienia oraz niekaralność. Wymagane jest polskie prawo jazdy, którego autentyczność weryfikuje się w Centralnej Ewidencji Kierowców (CEK/CEPiK) — kierowcy realizujący przejazdy są w bazie sprawdzani codziennie.",
+                "**Archiwizacja dokumentów**",
+                "Pośrednik ma obowiązek archiwizować cyfrowe odwzorowania dokumentu tożsamości i prawa jazdy kierowcy. Dane wykonujących przewóz można przetwarzać do 5 lat (licząc od końca roku, w którym kierowca zakończył współpracę).",
+                "**Kary do 1 mln zł**",
+                "Ustawa zaostrza sankcje — kary sięgają 1 mln zł, zarówno dla przedsiębiorców pośredniczących, jak i osób wykonujących przewóz z naruszeniem obowiązków. To realne ryzyko finansowe, które wymusza dyscyplinę dokumentacyjną.",
+                "**Co to znaczy dla operatorów**",
+                "Floty i partnerzy rozliczeniowi muszą wdrożyć powtarzalne procedury onboardingu, kontroli uprawnień i archiwizacji — oraz utrzymywać je w czasie. Efektem ubocznym jest dalsza profesjonalizacja rynku i wypychanie podmiotów działających po szarej stronie."
+          ],
+          "sources": [
+                "Forsal.pl — Kierowca tylko zweryfikowany. Od 1 października zmiany dla firm pośredniczących w przewozie osób — https://forsal.pl/transport/aktualnosci/artykuly/9301821,kierowca-tylko-zweryfikowany-od-1-pazdziernika-zmiany-dla-firm-posred.html",
+                "Rzeczpospolita — Nowe lex Uber wchodzi w życie: co się zmienia w taxi na aplikacje — https://www.rp.pl/prawo-drogowe/art39136931-nowe-lex-uber-wchodzi-w-zycie-oto-co-sie-zmienia-w-taxi-na-aplikacje",
+                "Fintek.pl — Weryfikacja kierowców w CEPiK i nagrania głosowe — https://fintek.pl/weryfikacja-kierowcow-w-cepik-i-nagrania-glosowe-uber-wprowadza-nowe-zabezpieczenia/",
+                "Infor.pl — Lex Uber: od 17 czerwca polskie prawo jazdy dla kierowców z aplikacji — https://kadry.infor.pl/kadry/inne_formy_zatrudnienia/cudzoziemcy/6630565,wazne-lex-uber-od-17-czerwca-polskie-prawo-jazdy-dla-kierowcow-z-aplikacji.html"
+          ]
     },
     {
-      id: 'a7', cat: 'regulacje-ue', img: 'pro/cover-ue-4.png',
-      title: 'Postulat licencji metropolitalnych wraca do dyskusji. Koniec pułapki obszarowej?',
-      lead: 'Branża postuluje licencje obejmujące całe aglomeracje zamiast pojedynczych gmin. To rozwiązałoby problem mandatów ITD za kursy między sąsiednimi miastami.',
-      date: '28 maja 2026', read: 6,
-      body: [
-        'Obecny system, w którym wypis z licencji obowiązuje wyłącznie na obszarze macierzystej gminy, generuje realne ryzyko prawne dla kierowców pracujących w aglomeracjach. Mandat Inspekcji Transportu Drogowego za kurs rozpoczęty poza obszarem licencji sięga 2 000 zł.',
-        'Postulat wprowadzenia licencji metropolitalnych, obejmujących całe aglomeracje takie jak Warszawa z gminami ościennymi, GZM czy Trójmiasto, wraca do debaty publicznej. Operatorzy wskazują, że uprościłoby to działalność i ograniczyło szarą strefę.',
-      ],
+          "id": "a7",
+          "cat": "regulacje-ue",
+          "cats": [
+                "regulacje-ue",
+                "rynek-polski"
+          ],
+          "img": "pro/cover-ue-4.png",
+          "title": "Postulat licencji metropolitalnych wraca do dyskusji. Koniec pułapki obszarowej?",
+          "lead": "Licencja taksówkowa obowiązuje na obszarze jednej gminy — w aglomeracji łatwo wpaść w „pułapkę obszarową\" i ryzykować mandat 2000 zł. Branża chce licencji obejmujących całe aglomeracje. Co ciekawe, prawo już dziś dopuszcza porozumienia międzygminne.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "28 maja 2026",
+          "read": 6,
+          "body": [
+                "Licencji na przewóz osób taksówką udziela się na konkretny pojazd i obszar jednej gminy (na okres od 2 do 50 lat). W aglomeracjach, gdzie codzienny ruch przekracza granice gmin, ten model tworzy realne ryzyko prawne dla kierowców.",
+                "**Czym jest pułapka obszarowa**",
+                "Kierowca może dowieźć pasażera poza obszar swojej licencji — np. z Legionowa do Warszawy — ale poza tym obszarem nie wolno mu już zabierać nowych pasażerów. Wyjątkiem jest kurs powrotny lub zamówienie złożone przez klienta z innego obszaru. Złamanie tej zasady grozi kontrolą ITD lub policji i mandatem: za przewóz taksówką niewpisaną do licencji przewidziano 2000 zł kary.",
+                "**Postulat licencji metropolitalnych**",
+                "Branża postuluje licencje obejmujące całe aglomeracje — Warszawę z gminami ościennymi, Górnośląsko-Zagłębiowską Metropolię (GZM) czy Trójmiasto. Argument: uprościłoby to działalność, zlikwidowało absurdy obszarowe i ograniczyło szarą strefę napędzaną przez przepisy nie do utrzymania w praktyce.",
+                "**Co już dziś jest możliwe**",
+                "Prawo dopuszcza, by licencja obejmowała kilka sąsiadujących gmin — pod warunkiem, że zawarły one odpowiednie porozumienie. Postulat sprowadza się więc do upowszechnienia i ujednolicenia istniejącego mechanizmu, a nie tworzenia go od zera.",
+                "**Dla operatorów**",
+                "Licencje metropolitalne oznaczałyby większą pewność prawną w aglomeracjach, mniej ryzyka mandatów i prostsze planowanie pracy floty. To jeden z tych postulatów, które realnie obniżają koszt zgodności bez luzowania wymogów bezpieczeństwa."
+          ],
+          "sources": [
+                "Biznes.gov.pl — Licencja na taksówkę (obszar gminy, zasady przewozu) — https://www.biznes.gov.pl/pl/portal/ou475",
+                "Poradnik Przedsiębiorcy — Licencja na taksówkę: co warto wiedzieć — https://poradnikprzedsiebiorcy.pl/-licencja-na-taksowke-co-warto-wiedziec"
+          ]
     },
 
     // RYNKI ZAGRANICZNE
@@ -390,38 +448,94 @@ const PRO = {
 
     // PRZEGLĄD PRASY
     {
-      id: 'a14', cat: 'przeglad-prasy', img: 'pro/cover-prasa-1.png',
-      title: 'Przegląd prasy: rynek przewozów w raportach Instytutu Jagiellońskiego i ZDG TOR',
-      lead: 'Najnowsze opracowania wyceniają polski rynek ride-hailing na 4,7 mld zł. Zebraliśmy najważniejsze liczby i wnioski z publikacji branżowych ostatniego miesiąca.',
-      date: '31 maja 2026', read: 4,
-      body: [
-        'W minionym miesiącu ukazało się kilka istotnych opracowań dotyczących rynku przewozów na aplikację. Wartość rynku oszacowano na 4,7 mld zł, a udział kursów zamawianych przez aplikację — na ponad 70% wszystkich przejazdów taksówkowych.',
-        'Publikacje zgodnie wskazują, że po zmianach regulacyjnych rynek wszedł w fazę większej koncentracji i profesjonalizacji. Przedstawiamy zestawienie kluczowych danych i tez.',
-      ],
+          "id": "a14",
+          "cat": "przeglad-prasy",
+          "cats": [
+                "przeglad-prasy",
+                "analizy"
+          ],
+          "img": "pro/cover-prasa-1.png",
+          "title": "Przegląd prasy: rynek przewozów w raportach Instytutu Jagiellońskiego i ZDG TOR",
+          "lead": "Raport Instytutu Jagiellońskiego wyceniał polski rynek ride-hailing na 2,5 mld zł (2022) i prognozował ok. 4,7 mld zł na 2025. Ponad 70% kursów taksówkowych zamawianych jest przez aplikacje. Zebraliśmy najważniejsze liczby i wnioski.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "31 maja 2026",
+          "read": 4,
+          "body": [
+                "Rynek przewozów na aplikację doczekał się kilku poważnych opracowań, na czele z raportem Instytutu Jagiellońskiego „Ride-hailing: pośrednictwo w przewozach osobowych – polska reforma\". Zebraliśmy z nich kluczowe dane.",
+                "**Wartość rynku: 2,5 mld zł (2022), prognoza ~4,7 mld zł (2025)**",
+                "W 2022 r. wartość rynku ride-hailing w Polsce sięgnęła 2,5 mld zł przy 18,6 mln aktywnych użytkowników aplikacji i ok. 112 mln zrealizowanych przejazdów. Prognoza na 2025 r. mówi o ok. 4,7 mld zł wartości usług i przychodach platform pośredniczących powyżej 886,5 mln zł (wartości na 2025 to prognoza, nie dane rejestrowe).",
+                "**Ponad 70% kursów przez aplikacje**",
+                "Szacunki wskazują, że w polskich miastach — zależnie od lokalizacji — co najmniej 70% wszystkich kursów taksówkowych realizowanych jest przez aplikacje. To pokazuje, jak dalece model platformowy zdominował rynek.",
+                "**Bezpieczeństwo i regulacja (ZDG TOR)**",
+                "Raport Instytutu Jagiellońskiego odwołuje się m.in. do prac zespołu doradców (ZDG TOR) dotyczących bezpieczeństwa przewozów na aplikację i analizuje działanie platform Bolt, FreeNow, iTaxi i Uber w Polsce, ze szczególnym naciskiem na czynniki ekonomiczne i społeczne reformy.",
+                "**Wniosek: koncentracja i profesjonalizacja**",
+                "Publikacje zgodnie wskazują, że po zmianach regulacyjnych rynek wszedł w fazę większej koncentracji i profesjonalizacji — z rosnącą rolą operatorów flotowych i partnerów rozliczeniowych."
+          ],
+          "sources": [
+                "Instytut Jagielloński — Ride-hailing: pośrednictwo w przewozach osobowych – polska reforma (raport) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
+                "Rzeczpospolita — Aplikacje generują ponad 70 proc. kursów taksówek — https://www.rp.pl/transport/art42095371-aplikacje-generuja-ponad-70-proc-kursow-taksowek",
+                "Bankier.pl — Rynek przewozu osób na aplikacje wart w Polsce 2,5 mld zł — https://www.bankier.pl/wiadomosc/Rynek-przewozu-osob-na-aplikacje-jest-wart-w-Polsce-2-5-mld-zl-ale-konieczne-jest-zwiekszenia-bezpieczenstwa-8504589.html"
+          ]
     },
 
 
     // ANALIZY
     {
-      id: 'a16', cat: 'analizy', img: 'pro/cover-analizy-1.png',
-      title: 'Rentowność floty taxi w 2026. Analiza progu opłacalności pojazdu',
-      lead: 'Przy realnym koszcie 0,72 zł/km i prowizjach sięgających 31% obrotu, próg rentowności pojazdu we flocie wymaga obrotu na poziomie 3 500 zł tygodniowo. Pełna analiza.',
-      date: '1 czerwca 2026', read: 9, hot: true,
-      body: [
-        'Rentowność pojedynczego pojazdu we flocie zależy od trzech zmiennych: obrotu tygodniowego, struktury kosztów stałych oraz poziomu prowizji. Przy realnym koszcie utrzymania 0,72 zł/km i prowizjach sięgających 31% obrotu, próg opłacalności wymaga obrotu rzędu 3 500 zł tygodniowo na pojazd.',
-        'Poniżej tego progu pojazd generuje koszty stałe — wynajem, ubezpieczenie, amortyzację — które pochłaniają cały przychód. W branży funkcjonuje na to określenie „jazda na sam czynsz".',
-        'Nasza analiza pokazuje, że kluczowym czynnikiem rentowności jest nie liczba przejechanych kilometrów, lecz efektywność godzin pracy — udział czasu spędzonego w realizacji kursów względem czasu oczekiwania.',
-      ],
+          "id": "a16",
+          "cat": "analizy",
+          "cats": [
+                "analizy",
+                "rynek-polski"
+          ],
+          "img": "pro/cover-analizy-1.png",
+          "title": "Rentowność floty taxi w 2026. Analiza progu opłacalności pojazdu",
+          "lead": "Przy szacowanym koszcie ~0,72 zł/km i prowizjach rzędu 28–31% obrotu próg rentowności pojazdu wymaga ok. 3 500 zł obrotu tygodniowo. To analiza własna z jawnymi założeniami — nie dane rejestrowe.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "1 czerwca 2026",
+          "read": 8,
+          "body": [
+                "Rentowność pojedynczego pojazdu we flocie zależy od trzech zmiennych: obrotu tygodniowego, struktury kosztów stałych i poziomu prowizji. Poniższe liczby to model i szacunki własne PRO.portaltaxi.pl — przedstawiamy je z jawnymi założeniami, nie jako dane rejestrowe.",
+                "**Próg opłacalności: ok. 3 500 zł tygodniowo**",
+                "Przy realnym koszcie utrzymania ~0,72 zł/km i prowizjach sięgających ~31% obrotu (z VAT) próg opłacalności wymaga obrotu rzędu 3 500 zł tygodniowo na pojazd. Poniżej tego poziomu koszty stałe — wynajem, ubezpieczenie, amortyzacja — pochłaniają cały przychód; w branży mówi się wtedy o „jeździe na sam czynsz\".",
+                "**Klucz: efektywność godzin, nie kilometry**",
+                "Najważniejszym czynnikiem rentowności nie jest liczba przejechanych kilometrów, lecz efektywność godzin pracy — udział czasu spędzonego w realizacji kursów względem czasu oczekiwania. To dlatego dwa auta o podobnym przebiegu mogą mieć skrajnie różny wynik.",
+                "**Założenia i zastrzeżenie**",
+                "Model opiera się na uśrednionych danych operatorów i raportach rynkowych. Rzeczywisty próg zależy od miasta, pory pracy, modelu auta i warunków umowy z platformą. Wartości oznaczone jako szacunek/prognoza nie są danymi rejestrowymi."
+          ],
+          "sources": [
+                "Instytut Jagielloński — raport ride-hailing (wartość rynku, prowizje) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
+                "Analiza własna PRO.portaltaxi.pl na podstawie danych operatorów (model i szacunki)."
+          ]
     },
     {
-      id: 'a17', cat: 'analizy', img: 'pro/cover-analizy-2.png',
-      title: 'Elektromobilność we flotach taxi. Kiedy pojazd elektryczny zacznie się opłacać',
-      lead: 'Koszt energii 0,12–0,20 zł/km kusi, ale wysoka cena zakupu i czas ładowania ograniczają adopcję. Analiza opłacalności EV w intensywnej eksploatacji taxi.',
-      date: '29 maja 2026', read: 8,
-      body: [
-        'Pojazd elektryczny oferuje najniższy koszt energii na kilometr — od 0,12 do 0,20 zł przy ładowaniu we własnym zakresie. To nawet o połowę mniej niż w przypadku hybrydy.',
-        'Barierą pozostaje wysoki koszt zakupu oraz czas ładowania, który w intensywnej eksploatacji taxi przekłada się na utracone godziny pracy. Analiza wskazuje, że EV opłaca się dziś przede wszystkim operatorom z własną infrastrukturą ładowania i przewidywalnym, miejskim profilem tras.',
-      ],
+          "id": "a17",
+          "cat": "analizy",
+          "cats": [
+                "analizy",
+                "rynek-polski"
+          ],
+          "img": "pro/cover-analizy-2.png",
+          "title": "Elektromobilność we flotach taxi. Kiedy pojazd elektryczny zacznie się opłacać",
+          "lead": "Energia z domowej ładowarki w taryfie nocnej to ok. 7–10 zł na 100 km — kilkukrotnie mniej niż paliwo. Ale wysoka cena zakupu i czas ładowania, który w taxi oznacza utracone godziny pracy, przesuwają próg opłacalności. Kiedy EV naprawdę się broni?",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "29 maja 2026",
+          "read": 7,
+          "body": [
+                "Pojazd elektryczny oferuje najniższy koszt energii na kilometr — ale w intensywnej eksploatacji taksówkarskiej równie ważny jak koszt jest czas. To dlatego rachunek opłacalności EV w taxi wygląda inaczej niż u kierowcy prywatnego.",
+                "**Koszt energii: przewaga przy ładowaniu w domu**",
+                "Przy domowym ładowaniu w taniej taryfie nocnej (G12, ok. 0,30–0,60 zł/kWh) przejechanie 100 km kosztuje ok. 7–10 zł, czyli ~0,07–0,10 zł/km. Na ładowarkach publicznych jest jednak znacznie drożej — w 2026 r. AC ok. 1,75–2,50 zł/kWh, a szybkie DC nawet 2,50–3,50 zł/kWh — co potrafi podnieść koszt energii do 0,50 zł/km i więcej.",
+                "**Bariera: cena zakupu i czas ładowania**",
+                "Dla kierowcy robiącego 15–20 tys. km rocznie domowe ładowanie pozwala zaoszczędzić 3–4 tys. zł rocznie względem benzyny. W taksówce, gdzie przebiegi sięgają 50 tys. km i więcej, oszczędność na energii jest większa — ale każda godzina pod ładowarką to godzina bez kursu. To właśnie czas ładowania, a nie sam koszt energii, jest dziś główną barierą.",
+                "**Infrastruktura**",
+                "Sieć rośnie: pod koniec 2025 r. w Polsce było ok. 11,3 tys. ogólnodostępnych punktów ładowania, z czego ok. 35% to szybkie ładowarki DC. To wciąż jednak wąskie gardło dla floty pracującej non stop.",
+                "**Kiedy EV się opłaca w taxi**",
+                "Elektryk wygrywa przede wszystkim u operatorów z własną infrastrukturą ładowania (najlepiej wspartą fotowoltaiką), taryfą nocną i przewidywalnym, miejskim profilem tras. Dla pozostałych hybryda plug-in pozostaje dziś rozsądnym kompromisem między kosztem energii a dostępnością auta."
+          ],
+          "sources": [
+                "Automarket.pl — Samochód elektryczny: koszt ładowania 2025 — https://automarket.pl/blog/serwis-i-uzytkowanie-samochodu/ile-kosztuje-ladowanie-samochodu-elektrycznego-2025",
+                "Superauto.pl — TCO samochodu elektrycznego: koszty eksploatacji — https://www.superauto.pl/artykuly/tco-samochodu-elektrycznego-koszty-eksploatacji-serwis-finansowanie",
+                "Greenkick — Ile kosztuje ładowanie samochodu elektrycznego w 2026 — https://greenkick.com.pl/blog/ile-kosztuje-ladowanie-samochodu-elektrycznego-w-2026-roku-porownanie-kosztow-z-autem-spalinowym/"
+          ]
     },
 
 
