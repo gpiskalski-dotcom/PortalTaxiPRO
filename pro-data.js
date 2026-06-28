@@ -170,24 +170,35 @@ const PRO = {
     },
     // Auto Świat — BYD Seal U DM-i jako taksówka (9 czerwca 2026)
     {
-      "id": "p48",
-      "cat": "rynek-polski",
-      "cats": ["rynek-polski", "przeglad-prasy"],
-      "img": "pro/real-byd-taxi.png",
-      "title": "BYD Seal U DM-i po 40 000 km w robocie taksówkarskim. Jak wypadł?",
-      "lead": "Warszawski taksówkarz wybrał chińską hybrydę plug-in zamiast sprawdzonych marek. Po pół roku i 40 000 km intensywnej pracy nie ma powodów do żalu — i bez wahania poleciłby auto kolegom po fachu.",
-      "source": "Auto Świat",
-      "sourceAuthor": "redakcja Auto Świat",
-      "sourceCat": "Taksówki i flota",
-      "region": "Polska",
-      "link": "https://www.auto-swiat.pl/wiadomosci/aktualnosci/czy-chinski-suv-to-dobre-auto-na-taksowke-tak-byd-seal-u-dm-i-wypadl-na-40000-km/72nd362",
-      "date": "9 czerwca 2026",
-      "read": 4,
-      "body": [
-        "Biały BYD Seal U DM-i na lotnisku Chopina — taki widok przykuł uwagę reportera i zapoczątkował rozmowę z jego właścicielem, kierowcą FreeNow. Mężczyzna postawił na chiński samochód świadomie, traktując zakup jako eksperyment. Po kilku miesiącach intensywnej eksploatacji przyznaje, że eksperyment się powiódł.",
-        "Koszt przejechania 100 km wynosi ok. 35 zł — nieco więcej niż w przypadku popularnych hybryd z LPG, ale kierowca uważa, że nadrabia to jakość wykonania i przestronność kabiny. Pasażerowie doceniają tylną kanapę i ogólny komfort jazdy, co przekłada się na wyższe oceny w aplikacji.",
-        "Materiał wpisuje się w szerszy cykl redakcji motoryzacyjnych o ekspansji chińskich producentów na Starym Kontynencie — temacie, który coraz mocniej wybrzmiewa też w polskich flotach taksówkarskich."
-      ]
+          "id": "p48",
+          "cat": "rynek-polski",
+          "cats": [
+                "rynek-polski",
+                "przeglad-prasy"
+          ],
+          "img": "pro/real-byd-taxi.png",
+          "title": "BYD Seal U DM-i po 40 000 km jako taksówka. Jak wypadła chińska hybryda?",
+          "lead": "Kierowca FreeNow postawił na chińską hybrydę plug-in zamiast sprawdzonych marek. Auto Świat sprawdziło auto po pół roku i 40 000 km intensywnej pracy — werdykt jest na korzyść BYD.",
+          "source": "Auto Świat",
+          "sourceAuthor": "redakcja Auto Świat",
+          "link": "https://www.auto-swiat.pl/wiadomosci/aktualnosci/czy-chinski-suv-to-dobre-auto-na-taksowke-tak-byd-seal-u-dm-i-wypadl-na-40000-km/72nd362",
+          "date": "9 czerwca 2026",
+          "read": 4,
+          "body": [
+                "Biały BYD Seal U DM-i jeżdżący jako taksówka FreeNow stał się pretekstem do dłuższej rozmowy reportera Auto Świata z jego właścicielem. Kierowca wybrał chińskie auto świadomie, traktując zakup jak eksperyment — a po 40 000 km intensywnej pracy ocenia, że eksperyment się powiódł.",
+                "**Dlaczego chiński SUV w taksówce**",
+                "Wybór wpisuje się w szerszy trend: w ramach strategicznej współpracy BYD z FreeNow do flot trafia kilkaset aut chińskiej marki. Seal U DM-i to przestronny SUV segmentu D w wersji hybrydy plug-in — z bogatym wyposażeniem w standardzie i ceną wyraźnie niższą niż u uznanych rywali, co czyni go kuszącym kandydatem do pracy w przewozach.",
+                "**Jak wypadł po 40 000 km**",
+                "Najmocniej kierowca chwali trwałość. Antykorozja wypada bardzo dobrze: nadwozie jest ocynkowane, a po ostrej zimie pod autem nie pojawiła się rdza — krytyczne miejsca BYD dodatkowo zabezpiecza powłoką bitumiczną. Do tego dochodzi przestronna, komfortowa kabina, którą doceniają pasażerowie — istotny atut w pracy na aplikację.",
+                "**Ekonomia i pozycja rynkowa**",
+                "Seal U DM-i kosztuje ok. 170 tys. zł — znacząco mniej niż porównywalne hybrydy plug-in pokroju Toyoty RAV4 PHEV czy Skody Kodiaq PHEV, przy bogatszym standardowym wyposażeniu i deklarowanym łącznym zasięgu do 1080 km. Dla operatora floty liczy się nie cena z cennika, lecz całkowity koszt posiadania (TCO) — i to właśnie kombinacja niskiej ceny wejścia, niskiego spalania w trybie hybrydowym i trwałości decyduje o atrakcyjności auta w taksówce.",
+                "**Co to znaczy dla flot**",
+                "Materiał wpisuje się w szerszą ekspansję chińskich producentów na rynku europejskim, która coraz mocniej wybrzmiewa w polskich flotach taksówkarskich. Umowa BYD–FreeNow i pozytywne doświadczenia z długiego dystansu to sygnał, że chińskie hybrydy stają się realną opcją dla operatorów szukających taniego i trwałego pojazdu do intensywnej eksploatacji."
+          ],
+          "sources": [
+                "Auto Świat — Czy chiński SUV to dobre auto na taksówkę? Tak BYD Seal U DM-i wypadł na 40 000 km — https://www.auto-swiat.pl/wiadomosci/aktualnosci/czy-chinski-suv-to-dobre-auto-na-taksowke-tak-byd-seal-u-dm-i-wypadl-na-40000-km/72nd362",
+                "Motoryzacja Interia — BYD Seal U DM-i: hybryda z Chin za ok. 170 tys. zł — https://motoryzacja.interia.pl/testy/pierwsza-jazda/news-byd-seal-u-dm-i-to-hybryda-za-170-tys-zl-cena-to-hit-a-jak-j,nId,7831327"
+          ]
     },
     // FEATURED — materiał partnera (Natviol / Infor)
     {
