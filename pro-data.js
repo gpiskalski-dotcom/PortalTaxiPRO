@@ -295,16 +295,7 @@ const PRO = {
     },
 
     // NEWSY Z PLATFORM
-    {
-      id: 'a11', cat: 'newsy-platform', img: 'pro/cover-platform-1.png',
-      title: 'Lyft przejmuje FreeNow za 175 mln EUR. Co to oznacza dla segmentu premium w Polsce',
-      lead: 'Amerykański Lyft wchodzi do Europy przez przejęcie FreeNow. Analitycy spodziewają się inwestycji w segment biznesowy i możliwych zmian w strukturze prowizji.',
-      date: '1 czerwca 2026', read: 6, hot: true,
-      body: [
-        'Przejęcie FreeNow przez Lyft za 175 mln EUR to jedno z największych wejść amerykańskiego gracza na europejski rynek przewozowy. FreeNow operuje w segmencie premium i biznesowym, z najniższymi prowizjami na rynku — od 7 do 12%.',
-        'Dla polskiego rynku kluczowe pytanie dotyczy strategii cenowej. Inwestycja może oznaczać agresywniejszą walkę o segment B2B oraz nowe funkcje dla operatorów flot. Branża obserwuje też ewentualne zmiany w strukturze prowizji.',
-      ],
-    },
+
 
 
 
