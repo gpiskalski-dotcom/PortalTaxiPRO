@@ -232,15 +232,35 @@ const PRO = {
 
     // REGULACJE UE
     {
-      id: 'a5', cat: 'regulacje-ue', img: 'pro/cover-ue-2.png',
-      title: 'Domniemanie stosunku pracy. Co zmieni dyrektywa platformowa dla operatorów',
-      lead: 'Jeśli platforma kontroluje sposób pracy kierowcy, ten może zostać uznany za pracownika — z pełnym ZUS, urlopami i L4. Operatorzy analizują skutki dla modelu B2B.',
-      date: '31 maja 2026', read: 9, hot: true,
-      body: [
-        'Dyrektywa Parlamentu Europejskiego i Rady 2024/2831 wprowadza tzw. domniemanie stosunku pracy w gospodarce platformowej. Jeśli platforma sprawuje kontrolę nad sposobem świadczenia usług — poprzez algorytmiczne przydzielanie zleceń, ocenianie czy blokady — relacja może zostać przekwalifikowana na stosunek pracy.',
-        'Dla polskiego rynku, w którym dominuje model współpracy B2B przez partnerów rozliczeniowych, oznacza to konieczność przemyślenia całej architektury kontraktowej. Operatorzy flot będą musieli wykazać, że kierowcy zachowują realną autonomię.',
-        'Termin wdrożenia dyrektywy do polskiego porządku prawnego upływa 2 grudnia 2026 r. Branża apeluje o przepisy, które pogodzą ochronę pracowników z elastycznością modelu, który wybiera większość kierowców.',
-      ],
+          "id": "a5",
+          "cat": "regulacje-ue",
+          "cats": [
+                "regulacje-ue",
+                "rynek-polski"
+          ],
+          "img": "pro/cover-ue-2.png",
+          "title": "Domniemanie stosunku pracy. Co zmieni dyrektywa platformowa dla operatorów",
+          "lead": "Dyrektywa platformowa 2024/2831 odwraca ciężar dowodu: jeśli platforma realnie kontroluje pracę kierowcy, relacja może zostać uznana za stosunek pracy — z ZUS, urlopem i L4. Dla polskiego modelu B2B przez partnerów rozliczeniowych to test całej architektury współpracy. Termin wdrożenia: 2 grudnia 2026.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "31 maja 2026",
+          "read": 6,
+          "body": [
+                "Unijna dyrektywa 2024/2831 w sprawie poprawy warunków pracy za pośrednictwem platform (tzw. dyrektywa platformowa) została przyjęta 23 października 2024 r. i weszła w życie 1 grudnia 2024 r. Państwa członkowskie, w tym Polska, mają czas na wdrożenie jej do prawa krajowego do 2 grudnia 2026 r. Dla rynku przewozów na aplikację to jedna z najważniejszych zmian regulacyjnych tej dekady.",
+                "**Na czym polega domniemanie stosunku pracy**",
+                "Sercem dyrektywy jest domniemanie istnienia stosunku pracy. Jeśli platforma wywiera istotny wpływ na sposób wykonywania pracy — ustala lub ogranicza stawki, narzuca godziny lub dostępność, algorytmicznie przydziela zlecenia, monitoruje wykonanie albo ogranicza swobodę przyjmowania zleceń i wyboru zleceniodawców — pracę domniemywa się jako zatrudnienie. Kluczowe jest odwrócenie ciężaru dowodu: to platforma lub pośrednik musi wykazać, że stosunku pracy nie ma, a nie kierowca, że jest.",
+                "**Co to znaczy dla polskiego modelu B2B**",
+                "Polski rynek opiera się w dużej mierze na współpracy B2B i partnerach rozliczeniowych — flotach pośredniczących między kierowcą a platformą. Jeśli kierowca zostanie uznany za pracownika, pojawiają się skutki, których model samozatrudnienia nie przewiduje: składki ZUS, płatny urlop, wynagrodzenie chorobowe i L4, ochrona przy rozwiązaniu współpracy. Operatorzy będą musieli albo wykazać realną autonomię kierowcy (swoboda stawek, godzin, przyjmowania zleceń, pracy dla wielu podmiotów), albo liczyć się z przekwalifikowaniem relacji i wyższymi kosztami.",
+                "**Zarządzanie algorytmiczne: nowe obowiązki**",
+                "Drugi filar dyrektywy to przejrzystość algorytmów. Platformy muszą informować pracujących o automatycznych systemach monitorowania i podejmowania decyzji (przydzielanie kursów, blokady, oceny), zapewnić ludzki nadzór nad istotnymi decyzjami oraz prawo do wyjaśnienia i odwołania. Ograniczone jest przetwarzanie niektórych danych wrażliwych, a kluczowych decyzji — takich jak zawieszenie konta — nie można podejmować wyłącznie automatycznie, bez nadzoru człowieka.",
+                "**Kalendarz i co robić teraz**",
+                "Do 2 grudnia 2026 r. Polska musi przyjąć przepisy wdrażające — kierunek krajowej ustawy przesądzi o skali skutków. Operatorzy i floty już dziś powinni: zmapować, gdzie realnie kontrolują pracę kierowcy, przejrzeć umowy i regulaminy pod kątem znamion stosunku pracy, oszacować koszt ewentualnego oskładkowania oraz przygotować warianty modelu współpracy. Branża apeluje o przepisy godzące ochronę pracujących z elastycznością, którą wybiera większość kierowców — ostateczny kształt zależy jednak od krajowej transpozycji."
+          ],
+          "sources": [
+                "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2024/2831 z 23.10.2024 (EUR-Lex) — https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=OJ:L_202402831",
+                "EY Polska — Dyrektywa platformowa: co się zmieni i jakie będą skutki finansowe — https://www.ey.com/pl_pl/insights/workforce/dyrektywa-platformowa-skutki-finansowe",
+                "Domański Zakrzewski Palinka (DZP), blog Labour — Dyrektywa platformowa coraz bliżej — https://www.dzp.pl/blog/labour/dyrektywa-platformowa-coraz-blizej-co-zmieni-sie-w-prawie-pracy",
+                "Staniek&Partners — Dyrektywa platformowa wprowadza domniemanie stosunku pracy — https://staniekandpartners.pl/blog/dyrektywa-platformowa-wprowadza-domniemania-stosunku-pracy/"
+          ]
     },
     {
       id: 'a6', cat: 'regulacje-ue', img: 'pro/cover-ue-3.png',
