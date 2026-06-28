@@ -215,18 +215,7 @@ const PRO = {
       "hot": true
     },
     // RYNEK POLSKI
-    {
-      id: 'a1', cat: 'rynek-polski', img: 'pro/real-rynek-2.jpg',
-      title: 'Konsolidacja flot przyspiesza. Mniejsi operatorzy szukają parasola większych partnerów',
-      lead: 'W największych aglomeracjach trwa cicha konsolidacja rynku partnerów rozliczeniowych. Małe floty łączą się lub przechodzą pod skrzydła dużych operatorów, by udźwignąć rosnące koszty zgodności.',
-      date: '1 czerwca 2026', read: 6, hot: true,
-      body: [
-        'Rynek partnerów flotowych w Polsce wchodzi w fazę dojrzewania. Po okresie gwałtownego wzrostu liczby pośredników rozliczeniowych — w szczytowym momencie działało ich w dużych miastach kilkadziesiąt — następuje naturalna selekcja. Rosnące wymogi formalne, presja na marże oraz oczekiwania platform wobec jakości obsługi sprawiają, że mniejsi gracze tracą rentowność.',
-        'Właściciele flot liczących od kilkunastu do kilkudziesięciu pojazdów coraz częściej decydują się na współpracę z większymi operatorami zamiast samodzielnego utrzymywania pełnego zaplecza administracyjnego. W praktyce oznacza to wspólne rozliczenia, współdzielone licencje i scentralizowaną obsługę kierowców.',
-        'Analitycy wskazują, że konsolidacja to zjawisko korzystne dla stabilności rynku, ale niesie ryzyko ograniczenia konkurencji. Im mniej podmiotów, tym silniejsza pozycja negocjacyjna dużych operatorów wobec kierowców i samych platform.',
-        'W perspektywie najbliższych kwartałów spodziewane jest dalsze zmniejszanie się liczby aktywnych partnerów rozliczeniowych, przy jednoczesnym wzroście średniej wielkości floty obsługiwanej przez jeden podmiot.',
-      ],
-    },
+
     {
       id: 'a2', cat: 'rynek-polski', img: 'pro/real-rynek-3.jpg',
       title: 'Koszty działalności flot rosną szybciej niż stawki. Operatorzy tną marże',
@@ -238,26 +227,8 @@ const PRO = {
         'Operatorzy reagują optymalizacją: przechodzą na napęd hybrydowy i LPG, negocjują pakiety serwisowe i ubezpieczeniowe oraz zaostrzają kontrolę tygodniowych rozliczeń. Mimo to marże w segmencie wynajmu pojazdów pozostają pod presją.',
       ],
     },
-    {
-      id: 'a3', cat: 'rynek-polski', img: 'pro/real-rynek-4.jpg',
-      title: 'Klasyczne korporacje taxi kontra platformy. Segment premium odzyskuje przewagę',
-      lead: 'Tradycyjne korporacje stawiają na segment biznesowy i klienta korporacyjnego. W obliczu rosnących cen na platformach, B2B znów staje się polem walki o marżę.',
-      date: '29 maja 2026', read: 6,
-      body: [
-        'Po latach defensywy klasyczne korporacje taksówkowe odnajdują nową przewagę w segmencie premium i obsłudze klienta biznesowego. Stałe umowy z firmami, przewidywalna jakość i faktury VAT to atuty, których platformy konsumenckie nie zawsze są w stanie zaoferować.',
-        'Integratorzy klasycznych korporacji rozwijają oferty B2B, łącząc zaplecze technologiczne z gwarancją obsługi. To odpowiedź na rosnące ceny kursów aplikacyjnych, które w godzinach szczytu potrafią rosnąć o 50%.',
-      ],
-    },
-    {
-      id: 'a4', cat: 'rynek-polski', img: 'pro/cover-rynek-5.png',
-      title: 'Mapa podaży kierowców w polskich miastach. Gdzie brakuje rąk do kierownicy',
-      lead: 'Warszawa, Wrocław i Trójmiasto raportują największy niedobór kierowców spełniających nowe wymogi. To winduje stawki i zmienia geografię opłacalności.',
-      date: '27 maja 2026', read: 5,
-      body: [
-        'Niedobór kierowców spełniających aktualne wymogi formalne jest najbardziej odczuwalny w największych aglomeracjach. Wysokie koszty życia i konkurencja o pracowników z innych sektorów logistyki sprawiają, że operatorzy mają trudność z utrzymaniem stabilnej floty kierowców.',
-        'Paradoksalnie, niedobór podaży sprzyja stawkom — średni kurs podrożał o 20–25%, co poprawia rentowność tych operatorów, którym udało się utrzymać kierowców.',
-      ],
-    },
+
+
 
     // REGULACJE UE
     {
@@ -334,26 +305,8 @@ const PRO = {
         'Dla polskiego rynku kluczowe pytanie dotyczy strategii cenowej. Inwestycja może oznaczać agresywniejszą walkę o segment B2B oraz nowe funkcje dla operatorów flot. Branża obserwuje też ewentualne zmiany w strukturze prowizji.',
       ],
     },
-    {
-      id: 'a12', cat: 'newsy-platform', img: 'pro/cover-platform-2.png',
-      title: 'Platformy wprowadzają panele dla operatorów flot. Więcej danych, więcej kontroli',
-      lead: 'Nowe narzędzia analityczne dla partnerów flotowych pozwalają śledzić rozliczenia w czasie rzeczywistym. To odpowiedź na postulaty transparentności rozliczeń.',
-      date: '30 maja 2026', read: 5,
-      body: [
-        'Platformy rozwijają panele zarządcze dedykowane operatorom flot. Nowe narzędzia umożliwiają śledzenie rozliczeń, prowizji i bonusów w czasie rzeczywistym, co odpowiada na rosnące oczekiwania transparentności.',
-        'Dla operatorów to szansa na lepszą kontrolę kosztów, ale też nowy obowiązek — kierowcy coraz częściej oczekują szczegółowych, weryfikowalnych raportów tygodniowych.',
-      ],
-    },
-    {
-      id: 'a13', cat: 'newsy-platform', img: 'pro/cover-platform-3.png',
-      title: 'Zmiany prowizji i struktury opłat. Operatorzy przeliczają modele współpracy',
-      lead: 'Ukryty VAT od importu usług sprawia, że realna prowizja platform sięga 28–31% obrotu. Operatorzy renegocjują modele opłat z kierowcami.',
-      date: '28 maja 2026', read: 6,
-      body: [
-        'Reklamowane prowizje platform — od 20 do 25% — nie obejmują VAT od importu usług, który ponoszą polscy pośrednicy. W efekcie realne obciążenie obrotu sięga 28–31%.',
-        'Operatorzy reagują, przechodząc z modelu prowizyjnego na stałą opłatę tygodniową, która jest korzystniejsza dla najbardziej aktywnych kierowców i bardziej przewidywalna dla obu stron.',
-      ],
-    },
+
+
 
     // PRZEGLĄD PRASY
     {
@@ -366,15 +319,7 @@ const PRO = {
         'Publikacje zgodnie wskazują, że po zmianach regulacyjnych rynek wszedł w fazę większej koncentracji i profesjonalizacji. Przedstawiamy zestawienie kluczowych danych i tez.',
       ],
     },
-    {
-      id: 'a15', cat: 'przeglad-prasy', img: 'pro/cover-prasa-2.png',
-      title: 'Media gospodarcze o przyszłości pracy platformowej. Zestawienie komentarzy',
-      lead: 'Dziennikarze gospodarczy i eksperci prawa pracy komentują nadchodzącą implementację dyrektywy UE. Subiektywny wybór najciekawszych głosów.',
-      date: '26 maja 2026', read: 4,
-      body: [
-        'Temat pracy platformowej zdominował komentarze gospodarcze ostatnich tygodni. Eksperci prawa pracy wskazują na trudność pogodzenia ochrony zatrudnienia z elastycznością, której oczekują sami kierowcy.',
-      ],
-    },
+
 
     // ANALIZY
     {
@@ -398,16 +343,7 @@ const PRO = {
         'Barierą pozostaje wysoki koszt zakupu oraz czas ładowania, który w intensywnej eksploatacji taxi przekłada się na utracone godziny pracy. Analiza wskazuje, że EV opłaca się dziś przede wszystkim operatorom z własną infrastrukturą ładowania i przewidywalnym, miejskim profilem tras.',
       ],
     },
-    {
-      id: 'a18', cat: 'analizy', img: 'pro/cover-analizy-3.png',
-      title: 'Przyszłość licencjonowania. Scenariusze dla rynku do 2030 roku',
-      lead: 'Trzy scenariusze rozwoju systemu licencyjnego: deregulacja, status quo i model metropolitalny. Który najbardziej sprzyja stabilności rynku?',
-      date: '24 maja 2026', read: 7,
-      body: [
-        'Przedstawiamy trzy scenariusze rozwoju systemu licencyjnego do 2030 roku. Pierwszy zakłada deregulację i otwarcie rynku, drugi — utrzymanie obecnego status quo gminnego, trzeci — wprowadzenie licencji metropolitalnych.',
-        'Każdy scenariusz niesie inne konsekwencje dla operatorów flot, klasycznych korporacji i platform. Analiza wskazuje, że model metropolitalny najlepiej godzi interesy rynku z postulatami uproszczenia.',
-      ],
-    },
+
 
     // ===== PRZEGLĄD PRASY — realne artykuły z bazy mediów 2024–2026 =====
     {
