@@ -296,33 +296,91 @@ const PRO = {
 
     // RYNKI ZAGRANICZNE
     {
-      id: 'a8', cat: 'rynki-zagraniczne', img: 'pro/cover-zagranica-2.png',
-      title: 'Hiszpania zaostrza limity podaży. Madryt i Barcelona testują nowe modele licencji',
-      lead: 'Hiszpańskie miasta wprowadzają proporcje licencji VTC do taxi. Model „1 do 30" budzi protesty platform, ale stabilizuje dochody klasycznych przewoźników.',
-      date: '30 maja 2026', read: 7,
-      body: [
-        'Hiszpania pozostaje jednym z najbardziej regulowanych rynków przewozowych w Europie. Proporcja licencji VTC do klasycznych taksówek, ustalona na poziomie jednej do trzydziestu, ogranicza podaż usług platformowych i chroni dochody tradycyjnych przewoźników.',
-        'Model budzi sprzeciw platform, które argumentują, że sztucznie ogranicza konkurencję. Dla polskiego ustawodawcy to jednak ważny punkt odniesienia w dyskusji o równowadze między regulacją a dostępnością usług.',
-      ],
+          "id": "a8",
+          "cat": "rynki-zagraniczne",
+          "cats": [
+                "rynki-zagraniczne"
+          ],
+          "img": "pro/cover-zagranica-2.png",
+          "title": "Hiszpania zaostrza limity podaży. Madryt i Barcelona testują nowe modele licencji",
+          "lead": "Hiszpania to jeden z najściślej regulowanych rynków przewozów w Europie: proporcja licencji VTC do taksówek 1:30 i obowiązek wcześniejszej rezerwacji. Po nowelizacjach Uber i Cabify wycofały się z Katalonii. Dla polskiego ustawodawcy — ważny punkt odniesienia.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "30 maja 2026",
+          "read": 6,
+          "body": [
+                "Hiszpania reguluje przewozy platformowe ostrzej niż większość krajów UE. Usługi typu Uber czy Cabify działają tam na licencjach VTC (wynajem pojazdu z kierowcą), które są limitowane ilościowo i obwarowane dodatkowymi wymogami — w odróżnieniu od klasycznych taksówek.",
+                "**Proporcja 1:30 i limit podaży**",
+                "Kluczowym narzędziem jest proporcja licencji: jedna licencja VTC może przypadać na trzydzieści licencji taksówkowych. W całej Hiszpanii wydano ok. 6,7 tys. licencji VTC, z czego ok. 2,7 tys. w Madrycie. Cel regulacji to zachowanie równowagi w transporcie miejskim i ochrona dochodów tradycyjnych przewoźników.",
+                "**Katalonia: rezerwacja z wyprzedzeniem**",
+                "W Katalonii obowiązuje wymóg wcześniejszej rezerwacji przejazdu VTC z minimum 15-minutowym wyprzedzeniem (Decret 111/2017), a rozważane jest dalsze zaostrzenie. Po nowelizacji przepisów Uber i Cabify wycofały się z Katalonii — według ówczesnych szacunków pracę miało stracić ponad 2 tys. osób.",
+                "**Spór: ochrona kontra konkurencja**",
+                "Platformy argumentują, że limity sztucznie ograniczają konkurencję i dostępność usług. Klasyczni przewoźnicy odpowiadają, że stabilizują rynek i chronią ich dochody przed presją podaży. To ten sam konflikt interesów, który przewija się przez całą europejską debatę o przewozach na aplikację.",
+                "**Czego uczy to Polskę**",
+                "Hiszpański model — twardy limit podaży plus obowiązek prerezerwacji — to skrajny punkt odniesienia w dyskusji o tym, jak wyważyć regulację i dostępność. Polska poszła inną drogą (lex Uber), ale doświadczenia Madrytu i Barcelony pokazują, jakie skutki rynkowe niosą ostre ograniczenia podaży."
+          ],
+          "sources": [
+                "Forsal.pl — Uber i Cabify wycofały się z Katalonii po nowelizacji prawa — https://forsal.pl/artykuly/1395688,uber-i-cabify-wycofaly-sie-z-katalonii-po-nowelizacji-prawa-ponad-2-tys-osob-straci-prace.html",
+                "EURACTIV.pl — Hiszpania: Uber i wielki strajk taksówkarzy — https://euractiv.pl/section/polityka-wewnetrzna-ue/news/hiszpania-uber-i-wielki-strajk-taksowkarzy/",
+                "Sekrety Hiszpanii — Uber, Bolt, Cabify w Hiszpanii: zasady, proporcja licencji i rezerwacja — https://www.sekretyhiszpanii.pl/praktyczne/uber-bolt-cabify-hiszpania/"
+          ]
     },
     {
-      id: 'a9', cat: 'rynki-zagraniczne', img: 'pro/cover-zagranica-3.png',
-      title: 'Niemcy: powrót obowiązku powrotu do bazy. Jak Berlin reguluje przewozy na aplikację',
-      lead: 'Niemiecki model zakłada obowiązek powrotu pojazdu do siedziby między kursami dla usług typu VTC. Operatorzy w Polsce obserwują skutki dla efektywności flot.',
-      date: '27 maja 2026', read: 6,
-      body: [
-        'Niemieckie prawo o przewozie osób utrzymuje rozróżnienie między klasyczną taksówką a usługą wynajmu pojazdu z kierowcą. Ta druga kategoria podlega obowiązkowi powrotu do bazy między zleceniami, co ogranicza efektywność i konkurencyjność cenową platform.',
-        'Dla polskich operatorów niemieckie doświadczenia są istotne — pokazują, jak szczegóły regulacji wpływają na ekonomikę floty i geografię opłacalności.',
-      ],
+          "id": "a9",
+          "cat": "rynki-zagraniczne",
+          "cats": [
+                "rynki-zagraniczne"
+          ],
+          "img": "pro/cover-zagranica-3.png",
+          "title": "Niemcy: obowiązek powrotu do bazy. Jak prawo ogranicza Ubera i Bolta",
+          "lead": "Niemiecki § 49 PBefG nakłada na wynajem pojazdu z kierowcą (model Ubera i Bolta) obowiązek powrotu do bazy po każdym kursie. 3 czerwca 2026 r. Federalny Trybunał (BGH) potwierdził tę zasadę, a operatorom grozi utrata licencji. Dla polskich flot to lekcja, jak detal regulacji kształtuje ekonomikę.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "5 czerwca 2026",
+          "read": 6,
+          "body": [
+                "Niemcy konsekwentnie odróżniają klasyczną taksówkę od usługi wynajmu pojazdu z kierowcą (Mietwagen) — a to właśnie w tej drugiej kategorii działają Uber i Bolt. Różnica w statusie pociąga za sobą zupełnie inne obowiązki.",
+                "**Na czym polega obowiązek powrotu (Rückkehrpflicht)**",
+                "Zgodnie z § 49 ust. 4 ustawy o przewozie osób (PBefG) pojazd wynajmu z kierowcą musi po wykonaniu zlecenia niezwłocznie wrócić do siedziby firmy — chyba że w trasie powrotnej przyjmie nowe zlecenie. W praktyce ogranicza to efektywność i konkurencyjność cenową platform, bo generuje puste przebiegi, których klasyczna taksówka nie ma.",
+                "**Wyrok BGH z czerwca 2026**",
+                "3 czerwca 2026 r. Federalny Trybunał Sprawiedliwości (BGH, sygn. I ZR 123/25) potwierdził, że — inaczej niż taksówki — auta zamawiane przez Ubera muszą po każdym kursie wracać na teren bazy. Wcześniej organy administracyjne cofały zezwolenia za powtarzające się naruszenia obowiązku powrotu (jednej firmie cofnięto cztery zezwolenia).",
+                "**Co to znaczy dla ekonomiki floty**",
+                "Obowiązek powrotu wprost przekłada się na geografię opłacalności: im dalej baza od centrum, tym więcej nieodpłatnych kilometrów. To pokazuje, że o modelu biznesowym przewozów decyduje nie tylko poziom prowizji, lecz także pozornie techniczne detale prawa.",
+                "**Lekcja dla Polski**",
+                "Niemiecki przykład dowodzi, że definicja „taksówka kontra wynajem z kierowcą\" potrafi przesądzić o całej ekonomice usługi. Przy dyskusji o krajowych przepisach warto śledzić, jak takie detale wpływają na koszty i konkurencję."
+          ],
+          "sources": [
+                "LTO — BGH: Uber muss nach Fahrt zurück zum Betriebsgelände (sygn. I ZR 123/25) — https://www.lto.de/recht/nachrichten/n/bgh-izr12325-rueckkehr-mietwagen-uber-taxis-betriebsgelaende",
+                "taxi heute — Verstöße gegen die Rückkehrpflicht wiegen immer schwer (PBefG) — https://www.taxi-heute.de/de/news/personenbefoerderungsrecht-auch-pbefg_verstoesse-gegen-die-rueckkehrpflicht-wiegen-immer-schwer-22781.html",
+                "Juraarchiv — Rückkehrpflicht für Mietwagenanbieter: BGH-Entscheidung, EU-Kontext und Folgen — https://www.juraarchiv.de/rueckkehrpflicht-fuer-mietwagenanbieter-bgh-entscheidung-eu-kontext-und-folgen-fuer-die-branche/"
+          ]
     },
     {
-      id: 'a10', cat: 'rynki-zagraniczne', img: 'pro/cover-zagranica-4.png',
-      title: 'Fala protestów przewoźników w Europie Zachodniej. Żądania równych reguł gry',
-      lead: 'Od Paryża po Lizbonę klasyczni taksówkarze protestują przeciw nierównym warunkom konkurencji. Branża domaga się jednolitych wymogów dla wszystkich operatorów.',
-      date: '25 maja 2026', read: 5,
-      body: [
-        'Protesty klasycznych przewoźników to stały element europejskiego krajobrazu rynku taxi. Główny postulat pozostaje niezmienny: jednolite wymogi licencyjne, podatkowe i bezpieczeństwa dla wszystkich podmiotów świadczących usługi przewozu osób.',
-      ],
+          "id": "a10",
+          "cat": "rynki-zagraniczne",
+          "cats": [
+                "rynki-zagraniczne"
+          ],
+          "img": "pro/cover-zagranica-4.png",
+          "title": "Fala protestów przewoźników w Europie Zachodniej. Żądania równych reguł gry",
+          "lead": "Od Frankfurtu po Monachium na ulice wychodzą i klasyczni taksówkarze, i kierowcy aplikacji — jedni o równe reguły dla wszystkich, drudzy o stawki pozwalające zarobić powyżej płacy minimalnej. Ten sam konflikt narasta także w Polsce.",
+          "author": "Redakcja PRO.portaltaxi.pl",
+          "date": "25 maja 2026",
+          "read": 5,
+          "body": [
+                "Protesty przewoźników to stały element europejskiego rynku taxi, ale dziś mają dwa wyraźnie różne źródła — i często toczą się równolegle.",
+                "**Dwa fronty protestów**",
+                "Pierwszy nurt to klasyczni taksówkarze, którzy domagają się jednolitych wymogów — licencyjnych, podatkowych i bezpieczeństwa — dla wszystkich podmiotów przewożących osoby, bez taryfy ulgowej dla platform. Drugi to sami kierowcy aplikacji, protestujący przeciw wysokim prowizjom i zarobkom, które nie wystarczają na pokrycie kosztów.",
+                "**Niemcy: konkretne przykłady**",
+                "W listopadzie 2024 r. strajkowano we Frankfurcie, a wiosną 2025 r. taksówkarze wyjechali na ulice Moguncji, Wiesbaden i Monachium z hasłem „równe warunki dla wszystkich\". Kierowcy Ubera i Bolta wskazywali z kolei, że wypłaty od platform bywają zbyt niskie, by pokryć choćby płacę minimalną.",
+                "**Hiszpania i szerszy kontekst**",
+                "Do tego dochodzą powracające strajki w Hiszpanii, gdzie spór taksówki kontra licencje VTC należy do najostrzejszych w Europie. Mimo różnic krajowych postulat bywa wspólny: uczciwe i równe warunki konkurencji.",
+                "**Echo w Polsce**",
+                "Ten sam mechanizm widać nad Wisłą — w 2025 r. kierowcy aplikacji organizowali w polskich miastach strajki przeciw wysokim prowizjom Ubera i Bolta. To sygnał, że napięcia z dojrzałych rynków zachodnich docierają również do Polski."
+          ],
+          "sources": [
+                "Rabbit Trans Poland — Dlaczego niemieckie taksówki wypowiedziały wojnę Uberowi (protesty: Frankfurt, Moguncja, Wiesbaden, Monachium) — https://www.rabbittranspoland.com/pl/post/dlaczego-niemieckie-taks%C3%B3wki-wypowiedzia%C5%82y-wojn%C4%99-uberowi",
+                "EURACTIV.pl — Hiszpania: Uber i wielki strajk taksówkarzy — https://euractiv.pl/section/polityka-wewnetrzna-ue/news/hiszpania-uber-i-wielki-strajk-taksowkarzy/",
+                "GoWork.pl — Strajk kierowców Uber i Bolt 2025 — https://www.gowork.pl/poradnik/17/wiadomosci/strajk-kierowcow-uber-i-bolt-trwa-mlody-ukrainiec-z-tiktoka-rzuca-wyzwanie-gigantom/"
+          ]
     },
 
     // NEWSY Z PLATFORM
