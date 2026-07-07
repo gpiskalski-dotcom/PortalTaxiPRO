@@ -227,6 +227,20 @@ const crumbBtn = { fontFamily: '"Archivo", sans-serif', fontSize: 12.5, color: '
 window.ArticlePage = ArticlePage;
 
 // ===== Static pages (O nas / Kontakt / legal) =====
+// Bot-safe e-mail: adres redakcji i schemat linku skladane w przegladarce z kodow znakow
+// (w zrodle nie wystepuje jawny adres ani slowo mailto), wiec roboty skanujace kod/HTML go nie znajda.
+const ContactMail = () => {
+  const T = window.T;
+  const addr = String.fromCharCode(112,114,111,64,112,111,114,116,97,108,116,97,120,105,46,112,108);
+  const href = String.fromCharCode(109,97,105,108,116,111,58) + addr;
+  return (
+    <a href={href}
+       style={{ fontFamily: T.ui, fontWeight: 700, color: T.ink, textDecoration: 'none', borderBottom: `2px solid ${T.yellow}` }}
+       onMouseEnter={e => { e.currentTarget.style.color = T.yellow; }}
+       onMouseLeave={e => { e.currentTarget.style.color = T.ink; }}>{addr}</a>);
+};
+window.ContactMail = ContactMail;
+
 const StaticPage = ({ pageId }) => {
   const T = window.T;
   pgUseEffect(() => {window.scrollTo(0, 0);}, [pageId]);
@@ -237,10 +251,10 @@ const StaticPage = ({ pageId }) => {
     },
     'kontakt': {
       title: 'Kontakt',
-      body: ['Redakcja PortalTaxiPRO.eu jest otwarta na sygnały, materiały i współpracę branżową.', 'E-mail redakcji: redakcja@portaltaxipro.eu', 'Oferta reklamowa i współpraca: biuro@portaltaxipro.eu']
+      body: ['Redakcja pro.portaltaxi.pl jest otwarta na sygnały, materiały i współpracę branżową.', 'Kontakt z redakcją oraz w sprawie reklamy i współpracy:']
     },
     'regulamin': { title: 'Regulamin', body: ['Treść regulaminu serwisu zostanie opublikowana wraz z uruchomieniem produkcyjnym portalu.'] },
-    'reklama': { title: 'Oferta reklamowa', body: ['PortalTaxiPRO.eu oferuje formaty reklamowe dla firm z sektora mobilności, flot, ubezpieczeń i technologii. Skontaktuj się: biuro@portaltaxipro.eu'] },
+    'reklama': { title: 'Oferta reklamowa', body: ['pro.portaltaxi.pl oferuje formaty reklamowe dla firm z sektora mobilności, flot, ubezpieczeń i technologii.', 'Skontaktuj się z nami:'] },
     'prywatnosc': { title: 'Polityka prywatności', body: ['Pełna polityka prywatności zostanie opublikowana wraz z uruchomieniem produkcyjnym.'] },
     'ustawienia': { title: 'Ustawienia prywatności', body: ['Panel zarządzania zgodami będzie dostępny w wersji produkcyjnej.'] },
     'cookies': { title: 'Polityka cookies', body: ['Informacje o plikach cookies zostaną opublikowane wraz z uruchomieniem produkcyjnym.'] }
@@ -252,6 +266,8 @@ const StaticPage = ({ pageId }) => {
       {content.body.map((p, i) =>
       <p key={i} style={{ fontFamily: T.serif, fontSize: i === 0 ? 19 : 17, lineHeight: 1.65, color: i === 0 ? T.ink : T.ink2, margin: '0 0 20px', fontWeight: i === 0 ? 500 : 400 }}>{p}</p>
       )}
+      {(pageId === 'kontakt' || pageId === 'reklama') &&
+      <p style={{ fontFamily: T.ui, fontSize: 22, fontWeight: 700, margin: '2px 0 30px' }}><ContactMail /></p>}
     </div>);
 
 };
