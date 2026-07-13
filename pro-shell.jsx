@@ -298,6 +298,26 @@ const AIAssistant = ({ open, onClose }) => {
 window.AIAssistant = AIAssistant;
 
 // ===== Newsletter popup =====
+// ===== Zapis na newsletter -> Supabase (tylko INSERT; anon key jest publiczny z zalozenia,
+// dostep ograniczony regula RLS do samego dodawania wierszy) =====
+const PRO_SB_URL = 'https://mysvdwfdthhbppdnicuz.supabase.co';
+const PRO_SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15c3Zkd2ZkdGhoYnBwZG5pY3V6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5ODEzNjAsImV4cCI6MjA5ODU1NzM2MH0.2R0WFqje8kFqKTqdNuQhT2T9mHo_5eZmEqWqzdiSDrc';
+window.PRO_subscribe = async function (email, source) {
+  const res = await fetch(PRO_SB_URL + '/rest/v1/newsletter_subscribers', {
+    method: 'POST',
+    headers: {
+      'apikey': PRO_SB_KEY,
+      'Authorization': 'Bearer ' + PRO_SB_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=minimal',
+    },
+    body: JSON.stringify({ email: String(email).trim().toLowerCase(), zrodlo: source || 'pro.portaltaxi.pl' }),
+  });
+  // 201 = zapisano; 409 = juz zapisany (unikat email) -> tez traktujemy jako sukces
+  if (res.status === 201 || res.status === 204 || res.status === 409) return true;
+  throw new Error('HTTP ' + res.status);
+};
+
 const NewsletterPopup = ({ open, onClose }) => {
   const [email, setEmail] = pUseState('');
   const [status, setStatus] = pUseState('idle');
@@ -327,19 +347,26 @@ const NewsletterPopup = ({ open, onClose }) => {
           </p>
           {status === 'ok' ? (
             <div style={{ fontFamily: T.ui, fontSize: 14, color: T.ok, fontWeight: 600, padding: '14px 0' }}>
-              ✓ Dziękujemy! Potwierdź zapis w wiadomości e-mail.
+              ✓ Dziękujemy! Zapis potwierdzony.
             </div>
           ) : (
-            <form onSubmit={e => { e.preventDefault(); setStatus(/\S+@\S+\.\S+/.test(email) ? 'ok' : 'err'); }}>
+            <form onSubmit={async e => {
+              e.preventDefault();
+              if (!/\S+@\S+\.\S+/.test(email)) { setStatus('err'); return; }
+              setStatus('sending');
+              try { await window.PRO_subscribe(email, 'pro:popup'); setStatus('ok'); }
+              catch (err) { setStatus('neterr'); }
+            }}>
               <input type="email" value={email} onChange={e => { setEmail(e.target.value); setStatus('idle'); }} placeholder="Twój adres e-mail" style={{
                 width: '100%', fontFamily: T.ui, fontSize: 15, padding: '13px 14px', border: `1px solid ${status === 'err' ? T.accentRed : T.line}`,
                 borderRadius: 2, outline: 'none', marginBottom: 10, boxSizing: 'border-box', color: T.ink,
               }} />
               {status === 'err' && <div style={{ fontFamily: T.ui, fontSize: 12, color: T.accentRed, marginBottom: 10 }}>Podaj poprawny adres e-mail.</div>}
-              <button type="submit" style={{
+              {status === 'neterr' && <div style={{ fontFamily: T.ui, fontSize: 12, color: T.accentRed, marginBottom: 10 }}>Nie udało się zapisać — spróbuj ponownie za chwilę.</div>}
+              <button type="submit" disabled={status === 'sending'} style={{
                 width: '100%', fontFamily: T.ui, fontWeight: 700, fontSize: 14, color: T.ink, background: T.yellow,
-                border: 'none', borderRadius: 2, padding: '14px', cursor: 'pointer', marginBottom: 8,
-              }}>Zapisz mnie</button>
+                border: 'none', borderRadius: 2, padding: '14px', cursor: status === 'sending' ? 'default' : 'pointer', marginBottom: 8, opacity: status === 'sending' ? 0.6 : 1,
+              }}>{status === 'sending' ? 'Zapisuję…' : 'Zapisz mnie'}</button>
               <button type="button" onClick={onClose} style={{
                 width: '100%', fontFamily: T.ui, fontWeight: 500, fontSize: 13, color: T.inkSoft, background: 'transparent',
                 border: 'none', cursor: 'pointer', padding: '6px',

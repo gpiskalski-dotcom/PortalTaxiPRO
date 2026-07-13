@@ -185,18 +185,27 @@ const SideTabs = ({ onOpen }) => {
 const NewsletterInline = () => {
   const T = window.T;
   const [email, setEmail] = hUseState('');
-  const [ok, setOk] = hUseState(false);
-  if (ok) return <div style={{ fontFamily: T.ui, fontSize: 13, color: T.yellow, fontWeight: 600 }}>✓ Zapisano. Potwierdź w e-mailu.</div>;
+  const [state, setState] = hUseState('idle'); // idle | sending | ok | err | neterr
+  if (state === 'ok') return <div style={{ fontFamily: T.ui, fontSize: 13, color: T.yellow, fontWeight: 600 }}>✓ Dziękujemy! Zapis potwierdzony.</div>;
+  const submit = async (e) => {
+    e.preventDefault();
+    if (!/\S+@\S+\.\S+/.test(email)) { setState('err'); return; }
+    setState('sending');
+    try { await window.PRO_subscribe(email, 'pro:mini-box'); setState('ok'); }
+    catch (err) { setState('neterr'); }
+  };
   return (
-    <form onSubmit={(e) => {e.preventDefault();if (/\S+@\S+\.\S+/.test(email)) setOk(true);}}>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Twój e-mail" style={{
+    <form onSubmit={submit}>
+      <input type="email" value={email} onChange={(e) => { setEmail(e.target.value); if (state === 'err' || state === 'neterr') setState('idle'); }} placeholder="Twój e-mail" style={{
         width: '100%', fontFamily: T.ui, fontSize: 13.5, padding: '11px 12px', border: 'none',
         borderRadius: 2, outline: 'none', marginBottom: 8, boxSizing: 'border-box'
       }} />
-      <button type="submit" style={{
+      {state === 'err' && <div style={{ fontFamily: T.ui, fontSize: 12, color: '#ffd9cf', marginBottom: 8 }}>Podaj poprawny e-mail.</div>}
+      {state === 'neterr' && <div style={{ fontFamily: T.ui, fontSize: 12, color: '#ffd9cf', marginBottom: 8 }}>Nie udało się zapisać — spróbuj ponownie.</div>}
+      <button type="submit" disabled={state === 'sending'} style={{
         width: '100%', fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.ink, background: T.yellow,
-        border: 'none', borderRadius: 2, padding: '11px', cursor: 'pointer'
-      }}>Zapisz mnie</button>
+        border: 'none', borderRadius: 2, padding: '11px', cursor: state === 'sending' ? 'default' : 'pointer', opacity: state === 'sending' ? 0.6 : 1
+      }}>{state === 'sending' ? 'Zapisuję…' : 'Zapisz mnie'}</button>
     </form>);
 
 };
