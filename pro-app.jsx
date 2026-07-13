@@ -20,6 +20,20 @@ const proHashFor = (r, a) => {
   return '#/';
 };
 
+// hash -> {type,id?,article?}
+const proParseHash = () => {
+  const h = (window.location.hash || '').replace(/^#\/?/, '');
+  const parts = h.split('/').filter(Boolean);
+  if (parts[0] === 'artykul') {
+    const m = (parts[1] || '').match(/^(p\d+|a\d+)/);
+    const a = m && window.PRO.articles.find((x) => x.id === m[1]);
+    if (a) return { type: 'article', article: a };
+  }
+  if (parts[0] === 'kategoria' && parts[1]) return { type: 'category', id: parts[1] };
+  if (parts[0] === 'strona' && parts[1]) return { type: 'page', id: parts[1] };
+  return { type: 'home' };
+};
+
 const ProApp = () => {
   const T = window.T;
   const [route, setRoute] = aUseState({ type: 'home' });
@@ -37,23 +51,18 @@ const ProApp = () => {
     } catch (e) {}
   };
 
-  // hash -> route (bez dopisywania do historii)
-  const applyHash = () => {
-    const h = (window.location.hash || '').replace(/^#\/?/, '');
-    const parts = h.split('/').filter(Boolean);
-    if (parts[0] === 'artykul') {
-      const m = (parts[1] || '').match(/^(p\d+|a\d+)/);
-      const a = m && window.PRO.articles.find((x) => x.id === m[1]);
-      if (a) { setArticle(a); setRoute({ type: 'article' }); window.scrollTo(0, 0); return; }
-    }
-    if (parts[0] === 'kategoria' && parts[1]) {
-      setArticle(null); setRoute({ type: 'category', id: parts[1] }); window.scrollTo(0, 0); return;
-    }
-    if (parts[0] === 'strona' && parts[1]) {
-      setArticle(null); setRoute({ type: 'page', id: parts[1] }); window.scrollTo(0, 0); return;
-    }
-    setArticle(null); setRoute({ type: 'home' });
+  // Zastosuj bieżący hash do stanu (bez dopisywania do historii)
+  const applyRoute = () => {
+    const p = proParseHash();
+    if (p.type === 'article') { setArticle(p.article); setRoute({ type: 'article' }); }
+    else if (p.type === 'category') { setArticle(null); setRoute({ type: 'category', id: p.id }); }
+    else if (p.type === 'page') { setArticle(null); setRoute({ type: 'page', id: p.id }); }
+    else { setArticle(null); setRoute({ type: 'home' }); }
+    window.scrollTo(0, 0);
   };
+  // ref, żeby nasłuch zdarzeń wołał ZAWSZE najnowszą wersję (bez nieaktualnego domknięcia)
+  const applyRef = aUseRef(applyRoute);
+  applyRef.current = applyRoute;
 
   // Newsletter popup auto-shows once per session, after a short delay
   aUseEffect(() => {
@@ -67,16 +76,31 @@ const ProApp = () => {
 
   // Deep link przy wejściu + obsługa wstecz/dalej i ręcznej zmiany adresu
   aUseEffect(() => {
-    const hh = window.location.hash || '';
-    if (hh && hh !== '#' && hh !== '#/') applyHash();
-    const onNavEvent = () => applyHash();
-    window.addEventListener('popstate', onNavEvent);
-    window.addEventListener('hashchange', onNavEvent);
+    const run = () => applyRef.current();
+    // przy wejściu z linku — po pierwszym renderze (unik wyścigu ze stanem początkowym)
+    const t = setTimeout(run, 0);
+    window.addEventListener('popstate', run);
+    window.addEventListener('hashchange', run);
     return () => {
-      window.removeEventListener('popstate', onNavEvent);
-      window.removeEventListener('hashchange', onNavEvent);
+      clearTimeout(t);
+      window.removeEventListener('popstate', run);
+      window.removeEventListener('hashchange', run);
     };
   }, []);
+
+  // Tytuł strony pod udostępnianie / SEO
+  aUseEffect(() => {
+    const base = 'pro.portaltaxi.pl — branżowy serwis rynku taxi';
+    let t = base;
+    if (route.type === 'article' && article) t = article.title + ' — pro.portaltaxi.pl';
+    else if (route.type === 'category') {
+      const c = window.PRO.categories.find((x) => x.id === route.id);
+      t = (c ? c.label : 'Kategoria') + ' — pro.portaltaxi.pl';
+    } else if (route.type === 'page') {
+      t = route.id.charAt(0).toUpperCase() + route.id.slice(1) + ' — pro.portaltaxi.pl';
+    }
+    document.title = t;
+  }, [route, article]);
 
   const nav = (r) => {
     if (r.type === 'newsletter') { setNlOpen(true); return; }
@@ -94,7 +118,7 @@ const ProApp = () => {
     pushHash({ type: 'article' }, a);
   };
 
-  // ===== Global API for PPTX/screenshot capture (drive views from showJs) =====
+  // ===== Global API (napęd widoków z zewnątrz / screenshoty) =====
   aUseEffect(() => {
     const shiftMain = (px) => {
       const m = document.querySelector('main');
