@@ -1,7 +1,15 @@
-# HTML zawsze świeży (żeby zmiany pokazywały się od razu po odświeżeniu).
-# Wersjonowane pliki .js/.jsx (?v=...) mogą się normalnie cache'ować.
+# HTML zawsze świeży (zmiany widoczne po zwykłym odświeżeniu)
 <IfModule mod_headers.c>
   <FilesMatch "\.html$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
+</IfModule>
+
+# Czyste adresy SPA bez #: nieistniejące ścieżki serwuj przez index.html
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
 </IfModule>
