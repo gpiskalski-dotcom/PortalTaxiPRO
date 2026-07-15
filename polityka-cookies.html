@@ -1,48 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Polityka cookies — Portal Taxi PRO</title>
-  <meta name="description" content="Informacja o plikach cookie używanych w Portal Taxi PRO: niezbędne oraz statystyczne (PostHog, region EU)." />
-  <style>
-    body{margin:0;background:#111;color:#eee;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif}
-    main{max-width:720px;margin:0 auto;padding:40px 20px}
-    h1{font-size:26px;text-transform:uppercase;letter-spacing:.05em}
-    h2{font-size:17px;text-transform:uppercase;letter-spacing:.05em;margin-top:28px}
-    p{color:#bbb}
-    code{background:#222;padding:2px 5px;border-radius:3px}
-    a{color:#ffd200}
-    button{cursor:pointer;margin-top:10px;border:1px solid #444;background:transparent;color:#eee;
-      border-radius:4px;padding:9px 16px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Polityka Cookies — portaltaxi.pl</title>
+<meta name="description" content="Polityka plików cookies pro.portaltaxi.pl." />
+<meta name="robots" content="noindex, follow" />
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #15140f;
+    background: #ffffff;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  h1 { font-size: 26px; margin-bottom: 6px; }
+  h2 { font-size: 19px; margin-top: 36px; margin-bottom: 10px; }
+  p { margin: 0 0 14px; }
+  .meta { color: #5a5849; font-size: 14px; margin-bottom: 28px; }
+  button.cookie-settings {
+    font-family: inherit; font-size: 14px; cursor: pointer;
+    background: #F2C200; color: #15140f; border: none; border-radius: 4px;
+    padding: 10px 18px; font-weight: 700; margin-top: 6px;
+  }
+</style>
 </head>
 <body>
-  <main>
-    <h1>Polityka cookies</h1>
-    <p>Portal Taxi PRO używa plików cookie oraz podobnych technologii (m.in. localStorage).
-       Poniżej opisujemy jakie kategorie stosujemy i w jakim celu.</p>
 
-    <h2>1. Niezbędne</h2>
-    <p>Konieczne do działania serwisu i zapamiętania Twojej zgody na cookies.
-       Nie wymagają zgody. Przechowywane w Twojej przeglądarce.</p>
+<h1>Polityka Cookies</h1>
+<p class="meta">Obowiązuje od: 22 czerwca 2026 · Zaktualizowano: 15 lipca 2026 · Dotyczy serwisu: pro.portaltaxi.pl · Administrator: "PortalTaxi.pl" Grzegorz Piskalski</p>
 
-    <h2>2. Statystyka (PostHog)</h2>
-    <p>Używamy PostHog do anonimowej analityki (np. które treści są odwiedzane).
-       Dane trafiają na serwery w regionie <strong>Unia Europejska</strong>
-       (<code>eu.i.posthog.com</code>). Włączane wyłącznie po Twojej wyraźnej zgodzie.
-       Nie prowadzimy nagrywania sesji. Działamy w trybie bez trwałych plików cookie
-       do śledzenia — identyfikator przechowujemy w pamięci przeglądarki (localStorage).</p>
-    <p><strong>Nie sprzedajemy ani nie udostępniamy Twoich danych reklamodawcom
-       ani innym stronom trzecim.</strong> Statystyki przetwarza wyłącznie PostHog
-       (serwery w UE) jako nasz podmiot przetwarzający, na podstawie umowy powierzenia.</p>
+<h2>1. Czym są pliki cookies?</h2>
+<p>Pliki cookies (tzw. ciasteczka) to małe pliki tekstowe zapisywane na urządzeniu końcowym użytkownika podczas przeglądania stron internetowych. Pozwalają one na rozpoznanie urządzenia przy kolejnych odwiedzinach oraz gromadzenie informacji o sposobie korzystania z serwisu.</p>
+<p>Serwis pro.portaltaxi.pl wykorzystuje pliki cookies oraz podobne technologie (np. local storage, session storage) w celu zapewnienia prawidłowego działania strony, poprawy jej funkcjonalności oraz — za zgodą użytkownika — analizy ruchu i statystyk odwiedzin.</p>
 
-    <h2>3. Twoje prawa</h2>
-    <p>W każdej chwili możesz wycofać lub zmienić zgodę:</p>
-    <button onclick="portalTaxiCookieSettings && portalTaxiCookieSettings()">Zmień ustawienia cookie</button>
+<h2>2. Jakie kategorie stosujemy</h2>
+<p><strong>Niezbędne.</strong> Konieczne do działania serwisu oraz do zapamiętania Twojej decyzji dotyczącej cookies. Przechowywane w pamięci lokalnej przeglądarki (localStorage), nie są przesyłane na serwer, nie identyfikują Cię i nie wymagają zgody.</p>
+<p><strong>Statystyczne (PostHog).</strong> Włączane <em>wyłącznie po Twojej wyraźnej zgodzie</em>. Służą do anonimowej analityki ruchu i sposobu korzystania z serwisu, aby poprawiać jakość treści. Szczegóły w punkcie 3.</p>
+<p><strong>Logi techniczne hostingu.</strong> Serwer może automatycznie zapisywać podstawowe logi dostępu (adres IP, czas żądania, adres URL) wyłącznie w celach bezpieczeństwa i diagnostyki technicznej.</p>
+<p>Nie stosujemy plików cookies marketingowych ani reklamowych. Nie korzystamy z Google Analytics, Facebook Pixel ani podobnych narzędzi śledzących na potrzeby reklamy.</p>
 
-    <p style="margin-top:32px"><a href="/">← Powrót na stronę główną</a></p>
-  </main>
-  <script src="/cookie-consent.js" defer></script>
+<h2>3. Statystyka — PostHog</h2>
+<p>Do analityki używamy narzędzia <strong>PostHog</strong>. Dane trafiają na serwery w regionie <strong>Unia Europejska</strong> (eu.i.posthog.com). Analityka jest domyślnie wyłączona i uruchamia się dopiero po kliknięciu „Akceptuję" w banerze zgody.</p>
+<p>Działamy w trybie ograniczającym prywatność do minimum: <strong>bez trwałych plików cookie do śledzenia</strong> (identyfikator przechowujemy w pamięci przeglądarki — localStorage), bez nagrywania sesji i bez automatycznego zbierania wszystkich kliknięć.</p>
+<p><strong>Nie sprzedajemy ani nie udostępniamy Twoich danych reklamodawcom ani innym stronom trzecim.</strong> Statystyki przetwarza wyłącznie PostHog (serwery w UE) jako nasz podmiot przetwarzający, na podstawie umowy powierzenia przetwarzania danych. Dane nie są transferowane poza Europejski Obszar Gospodarczy.</p>
+
+<h2>4. Jak zarządzać zgodą i cookies?</h2>
+<p>Zgodę na statystykę możesz w każdej chwili zmienić lub wycofać:</p>
+<p><button type="button" class="cookie-settings" onclick="portalTaxiCookieSettings && portalTaxiCookieSettings()">Zmień ustawienia cookie</button></p>
+<p>Niezależnie od tego możesz zarządzać cookies bezpośrednio w swojej przeglądarce:</p>
+<p>
+Chrome: Ustawienia → Prywatność i bezpieczeństwo → Pliki cookie i inne dane witryn<br>
+Firefox: Ustawienia → Prywatność i bezpieczeństwo → Cookies i dane witryn<br>
+Edge: Ustawienia → Pliki cookie i uprawnienia witryn<br>
+Safari: Preferencje → Prywatność → Zarządzaj danymi witryn
+</p>
+<p>Ograniczenie lub wyłączenie cookies w przeglądarce może wpłynąć na niektóre funkcje serwisu.</p>
+
+<h2>5. Podstawa prawna</h2>
+<p>
+Art. 173 ustawy z dnia 16 lipca 2004 r. Prawo telekomunikacyjne — obowiązek informacyjny i, tam gdzie wymagane, uzyskania zgody na korzystanie z cookies.<br>
+Art. 6 ust. 1 lit. a RODO — zgoda osoby, której dane dotyczą, dla cookies statystycznych (PostHog).
+</p>
+
+<h2>6. Kontakt</h2>
+<p>Pytania dotyczące niniejszej Polityki Cookies można kierować na adres: kontakt@portaltaxi.pl</p>
+
+<h2>7. Zmiany Polityki Cookies</h2>
+<p>Administrator zastrzega prawo do aktualizacji niniejszej Polityki w miarę rozwoju funkcjonalności serwisu.</p>
+<p>Szczegółowe zasady przetwarzania danych osobowych opisane są w <a href="/polityka-prywatnosci.html">Polityce Prywatności</a>.</p>
+
+<p class="meta">Ostatnia aktualizacja: 15 lipca 2026</p>
+
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>
