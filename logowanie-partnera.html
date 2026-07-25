@@ -88,6 +88,14 @@ input.f::placeholder{color:#9c968a}
 .pill.ok{background:#eaf6ef;border-color:#bfe0cd;color:var(--ok)}
 .pill.warn{background:#fffaea;border-color:#f0e0a8;color:#6b5405}
 
+.tabs{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden;margin-bottom:22px}
+.tabs button{flex:1;min-height:48px;border:0;border-right:1px solid var(--line);background:var(--paper2);
+  color:var(--inkSoft);font:700 14px var(--ui);transition:background .12s}
+.tabs button:last-child{border-right:0}
+.tabs button:hover{background:var(--paper3)}
+.tabs button.on{background:var(--yellow);color:var(--yellowInk)}
+.steps3{margin:0;padding:0 0 0 18px;font-size:12.5px;color:var(--inkSoft);line-height:1.75}
+.steps3 li::marker{color:var(--inkSoft);font-weight:700}
 .mail{text-align:center;padding:16px 0 4px}
 .mail .ic{font-size:40px;margin-bottom:10px}
 .spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(26,21,0,.25);
@@ -135,7 +143,7 @@ var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
 });
 
 var S = {
-  screen:'load', user:null, org:null, me:null, busy:false, msg:null, email:'',
+  screen:'load', mode:'login', user:null, org:null, me:null, busy:false, msg:null, email:'',
   f:{ imie:'', nazwisko:'', telefon:'', nip:'', nazwa:'', mailFaktur:'', osobneFaktury:false }
 };
 
@@ -160,25 +168,49 @@ function render(){
 
   if (S.screen === 'load') h = '<div class="center">Ładowanie…</div>';
 
-  else if (S.screen === 'login') h =
+  else if (S.screen === 'login') {
+    var nowe = S.mode === 'signup';
+    h =
     '<h1>Panel partnera flotowego</h1>'+
-    '<p class="lede">Zarządzaj ogłoszeniem, kontaktami od kierowców i płatnościami. '+
-    'Wyślemy link do logowania — <b>bez hasła</b>.</p>'+
+    '<p class="lede">Ogłoszenie w porównywarce, kontakty od kierowców i płatności — w jednym miejscu.</p>'+
+    '<div class="tabs">'+
+      '<button id="t-login"'+(nowe?'':' class="on"')+'>Mam konto</button>'+
+      '<button id="t-signup"'+(nowe?' class="on"':'')+'>Zakładam konto</button>'+
+    '</div>'+
     '<div class="card">'+
+      '<h2>'+(nowe?'Załóż konto firmy':'Zaloguj się')+'</h2>'+
+      '<div class="ch">'+(nowe
+        ? 'Bez hasła. Wystarczy służbowy adres e-mail.'
+        : 'Bez hasła. Podaj adres, na który zakładałeś konto.')+'</div>'+
       '<div class="grp"><label class="lbl">Służbowy e-mail</label>'+
       '<input class="f" id="i-email" type="email" inputmode="email" autocomplete="email" '+
       'placeholder="biuro@twojaflota.pl" value="'+esc(S.email)+'"></div>'+
       '<button class="btn pri" id="b-send"'+(S.busy?' disabled':'')+'>'+
-      (S.busy?'<span class="spin"></span> Wysyłam…':'Wyślij link do logowania')+'</button>'+
+      (S.busy
+        ? '<span class="spin"></span> Wysyłam…'
+        : (nowe?'Wyślij link i załóż konto':'Wyślij link do logowania'))+'</button>'+
       m+
     '</div>'+
-    '<div class="note info">Nie masz jeszcze konta? Ten sam formularz je zakłada — '+
-    'po kliknięciu w link poprosimy o NIP i dane firmy.</div>';
+    (nowe
+      ? '<div class="card"><h2>Co dalej</h2><div class="ch">Trzy kroki, jednorazowo.</div>'+
+        '<ol class="steps3">'+
+          '<li>Klikasz link, który wyślemy na podany adres.</li>'+
+          '<li>Podajesz NIP — dane firmy pobierzemy z rejestru, nic nie przesyłasz.</li>'+
+          '<li>Wypełniasz ogłoszenie i wybierasz, co kupujesz.</li>'+
+        '</ol>'+
+        '<div class="note info" style="margin-top:14px">Jeśli okaże się, że Twoja firma ma już konto, '+
+        'ten sam link po prostu Cię do niego wpuści.</div></div>'
+      : '<div class="note info">Nie pamiętasz, na jaki adres zakładano konto? '+
+        'Napisz do nas — sprawdzimy po NIP-ie firmy.</div>');
+  }
 
   else if (S.screen === 'sent') h =
     '<div class="card"><div class="mail"><div class="ic">✉</div>'+
     '<h1 style="font-size:21px">Sprawdź skrzynkę</h1>'+
-    '<p class="lede">Link do panelu poszedł na <b>'+esc(S.email)+'</b>. Jest ważny 60 minut.</p></div>'+
+    '<p class="lede">'+(S.mode==='signup'
+      ? 'Link do założenia konta poszedł na <b>'+esc(S.email)+'</b>. Po kliknięciu poprosimy o NIP. '
+      : 'Link do panelu poszedł na <b>'+esc(S.email)+'</b>. ')+
+    'Jest ważny 60 minut.</p></div>'+
     '<button class="btn ghost" id="b-back">← inny adres e-mail</button></div>'+
     '<div class="note warn">Nie ma maila? Zajrzyj do spamu. Jeśli wysyłasz kilka razy pod rząd, '+
     'odczekaj chwilę — obowiązuje limit wysyłek.</div>';
@@ -261,6 +293,12 @@ function bind(){
   if (g('b-send')) g('b-send').onclick = function(){ sendLink(g('i-email').value); };
   if (g('i-email')) g('i-email').onkeydown = function(e){ if(e.key==='Enter') sendLink(g('i-email').value); };
   if (g('b-back')) g('b-back').onclick = function(){ S.screen='login'; S.msg=null; render(); };
+  // Zakladki przelaczaja WYLACZNIE teksty. Mechanizm pod spodem jest jeden:
+  // ten sam magic link zaloguje istniejace konto i zalozy nowe.
+  if (g('t-login')) g('t-login').onclick = function(){
+    var e=g('i-email'); if(e) S.email=e.value; S.mode='login'; S.msg=null; render(); };
+  if (g('t-signup')) g('t-signup').onclick = function(){
+    var e=g('i-email'); if(e) S.email=e.value; S.mode='signup'; S.msg=null; render(); };
   if (g('b-logout')) g('b-logout').onclick = function(){
     sb.auth.signOut().then(function(){ S.user=null; S.org=null; S.screen='login'; S.msg=null; render(); });
   };
