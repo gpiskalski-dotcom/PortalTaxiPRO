@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Panel partnera — pro.portaltaxi.pl</title>
+<meta name="description" content="Panel partnera flotowego pro.portaltaxi.pl — logowanie i zarządzanie kontem firmy." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+<script src="/cookie-consent.js" defer></script>
+<style>
+:root{
+  --ink:#15140f; --ink2:#2e2a20; --inkSoft:#5c5648;
+  --line:#e4e0d6; --lineSoft:#eeebe2;
+  --paper:#ffffff; --paper2:#f7f5ef; --paper3:#f0ede4;
+  --yellow:#F2C200; --yellowInk:#1a1500; --navy:#16202e;
+  --ok:#1f7a4d; --bad:#b5482a;
+  --ui:'Archivo',system-ui,sans-serif; --serif:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+button{font-family:var(--ui);cursor:pointer}
+
+header.pt{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+header.pt .in{max-width:1240px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:14px}
+.logo{font:900 20px var(--ui);letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+.logo em{font-style:normal;background:var(--yellow);padding:0 5px}
+.logo small{font:700 9px var(--ui);letter-spacing:.16em;color:var(--inkSoft);vertical-align:super;margin-left:3px}
+header.pt .sp{flex:1}
+.who{font:600 12px var(--ui);color:var(--inkSoft)}
+
+.wrap{max-width:560px;margin:0 auto;padding:34px 24px 70px}
+h1{font:800 clamp(24px,5vw,32px)/1.15 var(--ui);letter-spacing:-.02em;margin:0 0 10px}
+p.lede{color:var(--inkSoft);font-size:15px;margin:0 0 26px;font-family:var(--serif)}
+p.lede b{color:var(--ink);font-weight:600}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px;margin-bottom:16px}
+.card h2{margin:0 0 3px;font-size:15px;font-weight:800}
+.card .ch{margin:0 0 16px;color:var(--inkSoft);font-size:12.5px}
+
+label.lbl{display:block;font:700 10px var(--ui);letter-spacing:.09em;text-transform:uppercase;color:var(--inkSoft);margin:0 0 7px}
+.grp{margin-bottom:18px}
+.grp:last-child{margin-bottom:0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:480px){.duo{grid-template-columns:1fr}}
+
+input.f{width:100%;min-height:50px;background:var(--paper);border:1px solid var(--line);border-radius:2px;
+  color:var(--ink);padding:0 14px;font:500 16px var(--ui);outline:none}
+input.f:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(242,194,0,.35)}
+input.f:disabled{background:var(--paper3);color:var(--inkSoft)}
+input.f::placeholder{color:#9c968a}
+
+.btn{width:100%;min-height:50px;border-radius:2px;border:1px solid var(--line);background:var(--paper2);
+  color:var(--ink);font:700 15px var(--ui);display:flex;align-items:center;justify-content:center;gap:9px;margin-top:10px}
+.btn.pri{background:var(--yellow);color:var(--yellowInk);border-color:var(--yellow)}
+.btn.pri:disabled{opacity:.5;cursor:default}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--inkSoft);font-weight:600;min-height:42px}
+.btn.dgr{border-color:#b5482a55;color:var(--bad)}
+.btn.sm{min-height:42px;font-size:13px}
+.btn.hdr{width:auto;min-height:38px;padding:0 16px;font-size:13.5px;margin:0}
+
+.cx{display:flex;gap:11px;align-items:flex-start;background:var(--paper2);border:1px solid var(--line);
+  border-radius:2px;padding:13px;margin-bottom:9px;color:var(--ink);width:100%;text-align:left}
+.cx.on{border-color:var(--ink);background:#fffdf3}
+.cx .bx{flex:0 0 20px;width:20px;height:20px;border-radius:2px;border:2px solid #b8b2a3;margin-top:1px;
+  display:grid;place-items:center;font:900 12px var(--ui);color:var(--yellowInk)}
+.cx.on .bx{background:var(--yellow);border-color:var(--yellow)}
+.cx.on .bx::after{content:'\2713'}
+.cx div strong{display:block;font-size:13.5px;font-weight:700;margin-bottom:2px}
+.cx div span{color:var(--inkSoft);font-size:11.5px}
+
+.row{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--lineSoft);font-size:14px}
+.row:last-of-type{border-bottom:0}
+.row .rk{color:var(--inkSoft);font-size:12.5px;flex:0 0 116px}
+.row .rv{font-weight:600;flex:1;word-break:break-word}
+
+.note{border-radius:2px;padding:12px 14px;font-size:13px;margin-top:12px;border:1px solid;line-height:1.5}
+.note.info{background:#f2f6fb;border-color:#cfdcec;color:#20364f}
+.note.ok{background:#f0f8f3;border-color:#c2e2d0;color:#175c3a}
+.note.bad{background:#fdf3f0;border-color:#eccbc0;color:#8e3520}
+.note.warn{background:#fffaea;border-color:#f0e0a8;color:#6b5405}
+.note b{color:inherit;font-weight:700}
+.pill{display:inline-block;font:700 9.5px var(--ui);letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 7px;border:1px solid var(--line);color:var(--inkSoft);vertical-align:middle}
+.pill.ok{background:#eaf6ef;border-color:#bfe0cd;color:var(--ok)}
+.pill.warn{background:#fffaea;border-color:#f0e0a8;color:#6b5405}
+
+.mail{text-align:center;padding:16px 0 4px}
+.mail .ic{font-size:40px;margin-bottom:10px}
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(26,21,0,.25);
+  border-top-color:var(--yellowInk);border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.center{text-align:center;padding:44px 0;color:var(--inkSoft);font-size:14px}
+footer.pt{border-top:1px solid var(--line);padding:24px;text-align:center;color:var(--inkSoft);font-size:12.5px;background:var(--paper2)}
+footer.pt a{color:var(--inkSoft)}
+</style>
+</head>
+<body>
+
+<header class="pt">
+  <div class="in">
+    <a class="logo" href="/">PRO<em>.</em>portaltaxi.pl<small>PANEL</small></a>
+    <div class="sp"></div>
+    <div class="who" id="who"></div>
+  </div>
+</header>
+
+<div class="wrap" id="app"><div class="center">Ładowanie…</div></div>
+
+<footer class="pt">
+  <a href="/polityka-prywatnosci.html">Polityka prywatności</a> ·
+  <a href="/polityka-cookies.html">Polityka cookies</a> ·
+  <a href="/regulamin.html">Regulamin</a> ·
+  <a href="#" onclick="portalTaxiCookieSettings&&portalTaxiCookieSettings();return false">Ustawienia cookie</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+/* =========================================================================
+   PANEL PARTNERA — logowanie linkiem z maila + rejestracja firmy.
+   Klucz anon jest publiczny z zalozenia; dostepu pilnuje RLS w bazie
+   (partner_orgs / partner_members — polityki tylko na wlasna firme).
+
+   storageKey celowo INNY niz u kierowcy — sesja partnera i kierowcy
+   nigdy sie nie nadpisza, nawet gdyby strony stanely pod jednym adresem.
+   ========================================================================= */
+var SUPABASE_URL = "https://mysvdwfdthhbppdnicuz.supabase.co";
+var SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15c3Zkd2ZkdGhoYnBwZG5pY3V6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5ODEzNjAsImV4cCI6MjA5ODU1NzM2MH0.2R0WFqje8kFqKTqdNuQhT2T9mHo_5eZmEqWqzdiSDrc";
+
+var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: { storageKey: 'pt-partner-auth', persistSession: true, autoRefreshToken: true }
+});
+
+var S = {
+  screen:'load', user:null, org:null, me:null, busy:false, msg:null, email:'',
+  f:{ imie:'', nazwisko:'', telefon:'', nip:'', nazwa:'', mailFaktur:'', osobneFaktury:false }
+};
+
+var app = document.getElementById('app');
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+/* NIP — suma kontrolna, lapie literowke zanim poleci zapytanie */
+function nipOk(nip){
+  var d = String(nip||'').replace(/[^0-9]/g,'');
+  if (d.length !== 10) return false;
+  var w = [6,5,7,2,3,4,5,6,7], s = 0;
+  for (var i=0;i<9;i++) s += w[i] * parseInt(d[i],10);
+  var c = s % 11;
+  return c !== 10 && c === parseInt(d[9],10);
+}
+
+function render(){
+  document.getElementById('who').textContent = S.user ? S.user.email : '';
+  var m = S.msg ? '<div class="note '+S.msg[0]+'">'+S.msg[1]+'</div>' : '';
+  var h = '';
+
+  if (S.screen === 'load') h = '<div class="center">Ładowanie…</div>';
+
+  else if (S.screen === 'login') h =
+    '<h1>Panel partnera flotowego</h1>'+
+    '<p class="lede">Zarządzaj ogłoszeniem, kontaktami od kierowców i płatnościami. '+
+    'Wyślemy link do logowania — <b>bez hasła</b>.</p>'+
+    '<div class="card">'+
+      '<div class="grp"><label class="lbl">Służbowy e-mail</label>'+
+      '<input class="f" id="i-email" type="email" inputmode="email" autocomplete="email" '+
+      'placeholder="biuro@twojaflota.pl" value="'+esc(S.email)+'"></div>'+
+      '<button class="btn pri" id="b-send"'+(S.busy?' disabled':'')+'>'+
+      (S.busy?'<span class="spin"></span> Wysyłam…':'Wyślij link do logowania')+'</button>'+
+      m+
+    '</div>'+
+    '<div class="note info">Nie masz jeszcze konta? Ten sam formularz je zakłada — '+
+    'po kliknięciu w link poprosimy o NIP i dane firmy.</div>';
+
+  else if (S.screen === 'sent') h =
+    '<div class="card"><div class="mail"><div class="ic">✉</div>'+
+    '<h1 style="font-size:21px">Sprawdź skrzynkę</h1>'+
+    '<p class="lede">Link do panelu poszedł na <b>'+esc(S.email)+'</b>. Jest ważny 60 minut.</p></div>'+
+    '<button class="btn ghost" id="b-back">← inny adres e-mail</button></div>'+
+    '<div class="note warn">Nie ma maila? Zajrzyj do spamu. Jeśli wysyłasz kilka razy pod rząd, '+
+    'odczekaj chwilę — obowiązuje limit wysyłek.</div>';
+
+  else if (S.screen === 'register') h =
+    '<h1>Załóż konto firmy</h1>'+
+    '<p class="lede">Jednorazowo. Potem logujesz się samym linkiem z maila.</p>'+
+    '<div class="card"><h2>Osoba kontaktowa</h2>'+
+      '<div class="ch">Kto zarządza kontem. Kolejne osoby dodasz później w panelu.</div>'+
+      '<div class="duo">'+
+        '<div class="grp"><label class="lbl">Imię</label><input class="f" id="i-imie" value="'+esc(S.f.imie)+'"></div>'+
+        '<div class="grp"><label class="lbl">Nazwisko</label><input class="f" id="i-nazwisko" value="'+esc(S.f.nazwisko)+'"></div>'+
+      '</div>'+
+      '<div class="grp"><label class="lbl">Telefon</label>'+
+      '<input class="f" id="i-telefon" type="tel" inputmode="tel" placeholder="+48 600 100 200" value="'+esc(S.f.telefon)+'"></div>'+
+      '<div class="grp"><label class="lbl">E-mail (z logowania)</label>'+
+      '<input class="f" value="'+esc(S.user?S.user.email:'')+'" disabled></div>'+
+    '</div>'+
+    '<div class="card"><h2>Firma</h2>'+
+      '<div class="ch">NIP potwierdzamy w rejestrze — nie musisz nic przesyłać.</div>'+
+      '<div class="grp"><label class="lbl">NIP (10 cyfr)</label>'+
+      '<input class="f" id="i-nip" inputmode="numeric" placeholder="1234567890" value="'+esc(S.f.nip)+'">'+
+      '<div id="nip-hint"></div></div>'+
+      '<div class="grp"><label class="lbl">Nazwa widoczna w ogłoszeniu</label>'+
+      '<input class="f" id="i-nazwa" placeholder="np. Nowa Flota" value="'+esc(S.f.nazwa)+'"></div>'+
+    '</div>'+
+    '<div class="card"><h2>Faktury</h2>'+
+      '<div class="ch">Domyślnie wysyłamy na adres z logowania.</div>'+
+      '<button class="cx'+(S.f.osobneFaktury?' on':'')+'" id="c-fakt"><span class="bx"></span>'+
+      '<div><strong>Faktury na inny adres</strong><span>np. bezpośrednio do księgowości</span></div></button>'+
+      (S.f.osobneFaktury
+        ? '<div class="grp" style="margin-top:10px"><label class="lbl">E-mail do faktur</label>'+
+          '<input class="f" id="i-mailf" type="email" placeholder="ksiegowosc@twojaflota.pl" value="'+esc(S.f.mailFaktur)+'"></div>'
+        : '')+
+    '</div>'+
+    m+
+    '<button class="btn pri" id="b-register"'+(S.busy?' disabled':'')+'>'+
+    (S.busy?'<span class="spin"></span> Zakładam konto…':'Załóż konto firmy')+'</button>'+
+    '<button class="btn ghost" id="b-logout">Wyloguj</button>';
+
+  else if (S.screen === 'panel') {
+    var o = S.org || {}, me = S.me || {};
+    var vst = o.nip_status === 'verified'
+      ? '<span class="pill ok">zweryfikowany</span>'
+      : '<span class="pill warn">weryfikacja w toku</span>';
+    h =
+    '<h1>'+esc(o.display_name || 'Twoja firma')+'</h1>'+
+    '<p class="lede">Zalogowany jako <b>'+esc([me.first_name,me.last_name].filter(Boolean).join(' ') || S.user.email)+'</b>'+
+    ' · rola: '+esc(me.role || '—')+'</p>'+
+    m+
+    '<div class="card"><h2>Firma</h2><div class="ch">Nazwa rejestrowa i adres pochodzą z rejestru.</div>'+
+      '<div class="row"><div class="rk">NIP</div><div class="rv">'+esc(o.nip)+' '+vst+'</div></div>'+
+      '<div class="row"><div class="rk">Nazwa rejestrowa</div><div class="rv">'+esc(o.legal_name || '—')+'</div></div>'+
+      '<div class="row"><div class="rk">Nazwa handlowa</div><div class="rv">'+esc(o.display_name || '—')+'</div></div>'+
+      '<div class="row"><div class="rk">Kontakt</div><div class="rv">'+esc(o.contact_email || '—')+'<br>'+esc(o.contact_phone || '')+'</div></div>'+
+      '<div class="row"><div class="rk">Faktury na</div><div class="rv">'+esc(o.billing_email || o.contact_email || '—')+'</div></div>'+
+    '</div>'+
+    '<div class="card"><h2>Zmień dane kontaktowe</h2>'+
+      '<div class="ch">Nazwy rejestrowej i NIP-u nie da się zmienić z panelu — pilnuje tego baza.</div>'+
+      '<div class="grp"><label class="lbl">Nazwa handlowa</label><input class="f" id="e-nazwa" value="'+esc(o.display_name||'')+'"></div>'+
+      '<div class="grp"><label class="lbl">Telefon</label><input class="f" id="e-tel" value="'+esc(o.contact_phone||'')+'"></div>'+
+      '<div class="grp"><label class="lbl">E-mail do faktur</label><input class="f" id="e-mailf" type="email" value="'+esc(o.billing_email||'')+'"></div>'+
+      '<button class="btn pri sm" id="b-save"'+(S.busy?' disabled':'')+'>'+
+      (S.busy?'<span class="spin"></span> Zapisuję…':'Zapisz zmiany')+'</button>'+
+    '</div>'+
+    '<div class="card"><h2>Ogłoszenie i płatności</h2>'+
+      '<div class="ch">Edytor oferty, statystyki i kontakty od kierowców.</div>'+
+      '<div class="note warn">Ta część panelu jest w budowie. Konto firmy już istnieje — '+
+      'ogłoszenie podepniemy do niego automatycznie.</div>'+
+    '</div>'+
+    '<button class="btn ghost" id="b-logout">Wyloguj</button>';
+  }
+
+  app.innerHTML = h;
+  bind();
+}
+
+function bind(){
+  var g = function(id){ return document.getElementById(id); };
+  if (g('b-send')) g('b-send').onclick = function(){ sendLink(g('i-email').value); };
+  if (g('i-email')) g('i-email').onkeydown = function(e){ if(e.key==='Enter') sendLink(g('i-email').value); };
+  if (g('b-back')) g('b-back').onclick = function(){ S.screen='login'; S.msg=null; render(); };
+  if (g('b-logout')) g('b-logout').onclick = function(){
+    sb.auth.signOut().then(function(){ S.user=null; S.org=null; S.screen='login'; S.msg=null; render(); });
+  };
+  if (g('c-fakt')) g('c-fakt').onclick = function(){ grab(); S.f.osobneFaktury = !S.f.osobneFaktury; render(); };
+  if (g('i-nip')) g('i-nip').oninput = function(){
+    var v = g('i-nip').value, hint = g('nip-hint');
+    if (!v.replace(/[^0-9]/g,'').length) { hint.innerHTML=''; return; }
+    hint.innerHTML = nipOk(v)
+      ? '<div class="note ok">✓ Numer poprawny — potwierdzimy go w rejestrze.</div>'
+      : '<div class="note bad">Ten NIP nie przechodzi kontroli — sprawdź, czy nie ma literówki.</div>';
+  };
+  if (g('b-register')) g('b-register').onclick = doRegister;
+  if (g('b-save')) g('b-save').onclick = saveOrg;
+}
+
+function grab(){
+  var g = function(id){ var e=document.getElementById(id); return e?e.value:''; };
+  S.f.imie=g('i-imie'); S.f.nazwisko=g('i-nazwisko'); S.f.telefon=g('i-telefon');
+  S.f.nip=g('i-nip'); S.f.nazwa=g('i-nazwa'); S.f.mailFaktur=g('i-mailf');
+}
+
+function sendLink(email){
+  email = (email||'').trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) {
+    S.msg = ['bad','Podaj poprawny adres e-mail.']; render(); return;
+  }
+  S.email = email; S.busy = true; S.msg = null; render();
+  sb.auth.signInWithOtp({
+    email: email,
+    options: { emailRedirectTo: location.origin + '/logowanie-partnera.html' }
+  }).then(function(r){
+    S.busy = false;
+    if (r.error) {
+      S.msg = ['bad','Nie udało się wysłać linku: '+esc(r.error.message)+
+        '<br>Jeśli to limit wysyłek — odczekaj kilka minut.'];
+      render();
+    } else { S.screen = 'sent'; render(); }
+  });
+}
+
+function doRegister(){
+  grab();
+  if (!S.f.imie.trim() || !S.f.nazwisko.trim()) { S.msg=['warn','Podaj imię i nazwisko.']; render(); return; }
+  if (!nipOk(S.f.nip)) { S.msg=['warn','Sprawdź NIP — numer nie przechodzi kontroli.']; render(); return; }
+  if (!S.f.nazwa.trim()) { S.msg=['warn','Podaj nazwę widoczną w ogłoszeniu.']; render(); return; }
+
+  S.busy = true; S.msg = null; render();
+  sb.rpc('register_partner_org', {
+    p_nip: S.f.nip.replace(/[^0-9]/g,''),
+    p_display_name: S.f.nazwa.trim(),
+    p_contact_email: S.user.email,
+    p_contact_phone: S.f.telefon.trim() || null,
+    p_first_name: S.f.imie.trim(),
+    p_last_name: S.f.nazwisko.trim()
+  }).then(function(r){
+    if (r.error) {
+      S.busy = false;
+      var msg = String(r.error.message||'');
+      if (msg.indexOf('NIP_TAKEN') > -1)
+        S.msg = ['bad','<b>Ta firma ma już konto.</b> Poproś osobę, która je założyła, o zaproszenie — '+
+                 'albo napisz do nas, jeśli nie wiesz kto to.'];
+      else if (msg.indexOf('ALREADY_MEMBER') > -1) S.msg = ['bad','To konto należy już do innej firmy.'];
+      else if (msg.indexOf('BAD_NIP') > -1) S.msg = ['bad','NIP jest niepoprawny.'];
+      else S.msg = ['bad','Nie udało się założyć konta: '+esc(msg)];
+      render(); return;
+    }
+    var patch = {};
+    if (S.f.osobneFaktury && S.f.mailFaktur.trim()) patch.billing_email = S.f.mailFaktur.trim();
+    if (!Object.keys(patch).length) return loadOrg();
+    return sb.from('partner_orgs').update(patch).eq('id', r.data).then(loadOrg);
+  }).then(function(){
+    if (S.org) {
+      S.busy=false; S.screen='panel'; S.msg=['ok','✓ Konto firmy założone.']; render();
+      setTimeout(function(){ S.msg=null; render(); }, 3000);
+    }
+  }).catch(function(e){
+    S.busy=false; S.msg=['bad','Błąd: '+esc(e && e.message)]; render();
+  });
+}
+
+function saveOrg(){
+  var g = function(id){ var e=document.getElementById(id); return e?e.value.trim():''; };
+  S.busy = true; S.msg = null; render();
+  sb.from('partner_orgs').update({
+    display_name: g('e-nazwa') || null,
+    contact_phone: g('e-tel') || null,
+    billing_email: g('e-mailf') || null
+  }).eq('id', S.org.id).then(function(r){
+    if (r.error) { S.busy=false; S.msg=['bad','Nie udało się zapisać: '+esc(r.error.message)]; render(); return; }
+    return loadOrg().then(function(){
+      S.busy=false; S.msg=['ok','✓ Zapisano.']; render();
+      setTimeout(function(){ S.msg=null; render(); }, 2600);
+    });
+  });
+}
+
+function loadOrg(){
+  return sb.from('partner_members').select('org_id, role, first_name, last_name')
+    .eq('user_id', S.user.id).maybeSingle()
+    .then(function(r){
+      if (r.error || !r.data) { S.org = null; S.me = null; return; }
+      S.me = r.data;
+      return sb.from('partner_orgs').select('*').eq('id', r.data.org_id).maybeSingle()
+        .then(function(r2){ S.org = r2.data || null; });
+    });
+}
+
+sb.auth.getSession().then(function(r){
+  var s = r.data ? r.data.session : null;
+  if (!s) { S.screen = 'login'; render(); return; }
+  S.user = s.user;
+  loadOrg().then(function(){ S.screen = S.org ? 'panel' : 'register'; render(); });
+});
+
+sb.auth.onAuthStateChange(function(evt, session){
+  if (evt === 'SIGNED_IN' && session && (!S.user || S.user.id !== session.user.id)) {
+    S.user = session.user;
+    loadOrg().then(function(){ S.screen = S.org ? 'panel' : 'register'; S.msg=null; render(); });
+  }
+  if (evt === 'SIGNED_OUT') { S.user=null; S.org=null; S.screen='login'; render(); }
+});
+</script>
+</body>
+</html>

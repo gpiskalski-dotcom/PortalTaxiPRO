@@ -118,6 +118,16 @@ const ProHeader = ({ route, onNav, onOpenAI }) => {
               <span style={{ flex: 1, fontFamily: T.ui, fontSize: 13, color: T.inkSoft }}>Zapytaj asystenta AI…</span>
               <span style={{ fontFamily: T.ui, fontSize: 10, fontWeight: 700, color: T.ink, background: T.yellow, padding: '2px 6px', letterSpacing: '0.05em' }}>AI</span>
             </button>
+            <a className="pro-login" href="/logowanie-partnera.html" style={{
+              display: 'inline-flex', alignItems: 'center', gap: 7, textDecoration: 'none',
+              background: T.yellow, color: T.yellowInk, border: `1px solid ${T.yellow}`, borderRadius: 2,
+              padding: '10px 16px', fontFamily: T.ui, fontSize: 13.5, fontWeight: 700, whiteSpace: 'nowrap',
+            }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={T.yellowInk} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+              Zaloguj
+            </a>
             <button className="pro-burger" onClick={() => setMobileOpen(o => !o)} aria-label="Menu" style={{
               display: 'none', background: 'transparent', border: `1px solid ${T.line}`, cursor: 'pointer', padding: 9, borderRadius: 2,
             }}>
@@ -156,6 +166,10 @@ const ProHeader = ({ route, onNav, onOpenAI }) => {
               cursor: 'pointer', padding: '14px 0',
             }}>{c.label}</button>
           ))}
+          <a href="/logowanie-partnera.html" style={{
+            display: 'block', width: '100%', textAlign: 'left', fontFamily: T.ui, fontSize: 15, fontWeight: 700,
+            color: T.ink, textDecoration: 'none', padding: '14px 0',
+          }}>Zaloguj \u2014 panel partnera</a>
         </div>
       )}
     </header>
