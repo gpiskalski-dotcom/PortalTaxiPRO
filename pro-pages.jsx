@@ -28,10 +28,10 @@ const CategoryPage = ({ catId, onOpen, onOpenAI }) => {
           onMouseEnter={(e) => e.currentTarget.querySelector('h2').style.color = window.catColor(catId)}
           onMouseLeave={(e) => e.currentTarget.querySelector('h2').style.color = T.ink}>
               <div style={{ aspectRatio: '16/8', overflow: 'hidden', background: T.paper3, marginBottom: 16 }}>
-                <img src={window.proImg(lead.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={window.proImg(lead.imgHome || lead.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-                <window.Badge cat={lead.cat} small /><span style={{ fontFamily: T.ui, fontSize: 12, color: T.inkSoft }}>{lead.date} · {lead.read} min</span>
+                <window.Badge cat={lead.cat} small /><span style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.04em', color: T.inkFaint }}>{lead.date} · {lead.read} MIN</span>
               </div>
               <h2 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 28, lineHeight: 1.15, letterSpacing: '-0.02em', color: T.ink, margin: '0 0 10px', transition: 'color .15s' }}>{lead.title}</h2>
               <p style={{ fontFamily: T.serif, fontSize: 16, lineHeight: 1.55, color: T.ink2, margin: 0 }}>{lead.lead}</p>
@@ -43,26 +43,13 @@ const CategoryPage = ({ catId, onOpen, onOpenAI }) => {
           }
         </div>
 
-        {/* Sidebar: AI promo + popular */}
+        {/* Sidebar: popular (asystent AI wyłączony 5.11.2026) */}
         <aside>
-          <div style={{ background: T.ink, padding: '24px 20px', marginBottom: 24 }}>
-            <div style={{ display: 'inline-flex', width: 34, height: 34, borderRadius: '50%', background: T.yellow, alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill={T.ink}><path d="M12 2l2.4 6.3L21 9l-5 4.2L17.6 21 12 17.3 6.4 21 8 13.2 3 9l6.6-.7z" /></svg>
-            </div>
-            <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 18, color: '#fff', marginBottom: 8, lineHeight: 1.2 }}>Zapytaj asystenta AI</div>
-            <p style={{ fontFamily: T.serif, fontSize: 13.5, lineHeight: 1.5, color: '#9a9384', margin: '0 0 16px' }}>
-              Masz pytanie o regulacje, rynek lub platformy? Zapytaj naszego asystenta.
-            </p>
-            <button onClick={onOpenAI} style={{
-              width: '100%', fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.ink, background: T.yellow,
-              border: 'none', padding: '12px', cursor: 'pointer'
-            }}>Otwórz asystenta →</button>
-          </div>
           <div style={{ border: `1px solid ${T.line}` }}>
             <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: T.ink, padding: '14px 16px', borderBottom: `2px solid ${T.ink}`, textTransform: 'uppercase' }}>Popularne</div>
             {window.PRO.articles.filter((a) => a.hot).slice(0, 5).map((a, idx) =>
             <div key={a.id} onClick={() => onOpen(a)} style={{ display: 'grid', gridTemplateColumns: '24px 1fr', gap: 12, padding: '14px 16px', borderBottom: idx < 4 ? `1px solid ${T.lineSoft}` : 'none', cursor: 'pointer' }}>
-                <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 16, color: T.yellow, lineHeight: 1 }}>{idx + 1}</span>
+                <span style={{ fontFamily: T.mono, fontWeight: 800, fontSize: 16, color: T.goldText, lineHeight: 1 }}>{idx + 1}</span>
                 <div style={{ fontFamily: T.ui, fontWeight: 600, fontSize: 14, lineHeight: 1.3, color: T.ink }}>{a.title}</div>
               </div>
             )}
@@ -73,6 +60,67 @@ const CategoryPage = ({ catId, onOpen, onOpenAI }) => {
 
 };
 window.CategoryPage = CategoryPage;
+
+// ===== Blok treści artykułu =====
+// Konwencje w body (tablica stringów):
+//  "## Tytuł" / "### Tytuł" lub "1. Tytuł" -> śródtytuł; "> tekst" -> ramka (wyróżnienie);
+//  linie zaczynające się od "|" -> tabela; linie "- " -> lista; "Zastrzeżenie…" -> przypis;
+//  **pogrubienie**, [tekst](https://adres) -> link.
+const proInline = (text) => {
+  const T = window.T;
+  const parts = String(text).split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)\s]+\))/);
+  return parts.map((part, j) => {
+    if (/^\*\*[^*]+\*\*$/.test(part)) return <strong key={j}>{part.slice(2, -2)}</strong>;
+    const m = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
+    if (m) {
+      const intId = (m[2].match(/^\/artykul\/([pa]\d+)/) || [])[1];
+      if (intId && !window.PRO.articles.some((a) => a.id === intId)) return m[1]; // tekst jeszcze nieopublikowany
+      const ext = /^https?:\/\//.test(m[2]);
+      return <a key={j} href={m[2]} target={ext ? '_blank' : undefined} rel={ext ? 'noopener noreferrer' : undefined} style={{ color: T.ink, textDecoration: 'underline', textDecorationThickness: 1, textUnderlineOffset: 3 }}>{m[1]}</a>;
+    }
+    return part;
+  });
+};
+window.proInline = proInline;
+
+const ProBlock = ({ p }) => {
+  const T = window.T;
+  const txt = String(p);
+  const lines = txt.split('\n');
+  if (/^#{2,3}\s/.test(txt) || /^\d+\.\s/.test(txt)) {
+    const h = txt.replace(/^#{2,3}\s+/, '').replace(/^\d+\.\s+/, '');
+    return <h2 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 20, letterSpacing: '-0.01em', color: T.ink, margin: '32px 0 12px' }}>{proInline(h)}</h2>;
+  }
+  const imgM = txt.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
+  if (imgM) {
+    return (
+      <figure style={{ margin: '4px 0 26px' }}>
+        <img src={window.proImg(imgM[2])} alt={imgM[1]} onError={function(e){e.currentTarget.style.opacity='0.1';}} style={{ width: '100%', display: 'block' }} />
+        {imgM[1] && <figcaption style={{ fontFamily: T.ui, fontSize: 12, color: T.inkSoft, marginTop: 8 }}>{imgM[1]}</figcaption>}
+      </figure>);
+  }
+  if (txt.startsWith('> ')) {
+    return <blockquote style={{ borderLeft: `4px solid ${T.yellow}`, background: T.paper2, margin: '0 0 24px', padding: '14px 18px', fontFamily: T.ui, fontSize: 16.5, lineHeight: 1.55, color: T.ink }}>{proInline(txt.slice(2))}</blockquote>;
+  }
+  if (lines.every((l) => l.trim().startsWith('|'))) {
+    const rows = lines.filter((l) => !/^\|\s*:?-{2,}/.test(l.trim())).map((l) => l.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim()));
+    const [head, ...body] = rows;
+    const cell = { padding: '9px 10px', borderBottom: `1px solid ${T.line}`, textAlign: 'left', verticalAlign: 'top' };
+    return (
+      <div style={{ overflowX: 'auto', margin: '0 0 24px' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: T.ui, fontSize: 14, lineHeight: 1.45, color: T.ink }}>
+          <thead><tr>{head.map((c, k) => <th key={k} style={{ ...cell, fontWeight: 800, borderBottom: `2px solid ${T.ink}` }}>{proInline(c)}</th>)}</tr></thead>
+          <tbody>{body.map((r, k) => <tr key={k}>{r.map((c, n) => <td key={n} style={cell}>{proInline(c)}</td>)}</tr>)}</tbody>
+        </table>
+      </div>);
+  }
+  if (lines.every((l) => l.startsWith('- '))) {
+    return <ul style={{ margin: '0 0 22px', paddingLeft: 22 }}>{lines.map((l, k) => <li key={k} style={{ fontFamily: T.serif, fontSize: 18, lineHeight: 1.6, color: T.ink, marginBottom: 8 }}>{proInline(l.slice(2))}</li>)}</ul>;
+  }
+  const isDisclaimer = txt.startsWith('Zastrzeżenie');
+  return <p style={{ fontFamily: T.serif, fontSize: isDisclaimer ? 14 : 18, lineHeight: 1.7, color: isDisclaimer ? T.inkSoft : T.ink, margin: '0 0 22px', fontStyle: isDisclaimer ? 'italic' : 'normal' }}>{proInline(txt)}</p>;
+};
+window.ProBlock = ProBlock;
 
 // ===== Single article view =====
 const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
@@ -97,11 +145,11 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
           <h1 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 38, lineHeight: 1.12, letterSpacing: '-0.025em', color: T.ink, margin: '0 0 18px' }}>
             {article.title}
           </h1>
-          <p style={{ fontFamily: T.serif, fontSize: 20, lineHeight: 1.5, color: T.ink2, fontWeight: 500, margin: '0 0 22px', fontStyle: 'italic' }}>
+          <p style={{ fontFamily: T.ui, fontSize: 20, lineHeight: 1.5, color: T.ink2, fontWeight: 500, margin: '0 0 22px' }}>
             {article.lead}
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 0', borderTop: `1px solid ${T.line}`, borderBottom: `1px solid ${T.line}`, marginBottom: 28 }}>
-            <span style={{ fontFamily: T.ui, fontSize: 13, color: T.inkSoft }}>
+            <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.03em', color: T.inkSoft }}>
               {article.author ?
               article.author :
               article.source ?
@@ -109,27 +157,15 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
               'Redakcja PortalTaxiPRO'}
             </span>
             <span style={{ width: 3, height: 3, borderRadius: '50%', background: T.inkSoft }} />
-            <span style={{ fontFamily: T.ui, fontSize: 13, color: T.inkSoft }}>{article.date}</span>
+            <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.03em', color: T.inkSoft }}>{article.date}</span>
             <span style={{ width: 3, height: 3, borderRadius: '50%', background: T.inkSoft }} />
-            <span style={{ fontFamily: T.ui, fontSize: 13, color: T.inkSoft }}>{article.read} min czytania</span>
+            <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.03em', color: T.inkSoft }}>{article.read} min czytania</span>
           </div>
-          <div style={{ aspectRatio: '16/9', overflow: 'hidden', background: T.paper3, marginBottom: 28 }}>
-            <img src={window.proImg(article.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ aspectRatio: '16/9', overflow: 'hidden', background: T.paper3, marginBottom: article.imgCaption ? 8 : 28 }}>
+            <img src={window.proImg(article.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt={article.imgCaption || ''} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
-          {(article.body || [article.lead]).map((p, i) => {
-            const isHeader = /^\d+\.\s/.test(p);
-            const isDisclaimer = p.startsWith('Zastrzeżenie');
-            const renderText = (text) => {
-              if (!text.includes('**')) return text;
-              return text.split(/(\*\*[^*]+\*\*)/).map((part, j) =>
-                part.startsWith('**') ? <strong key={j}>{part.slice(2, -2)}</strong> : part
-              );
-            };
-            const headerText = isHeader ? p.replace(/^\d+\.\s+/, '') : p;
-            return isHeader
-              ? <h2 key={i} style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 20, letterSpacing: '-0.01em', color: T.ink, margin: '32px 0 12px' }}>{headerText}</h2>
-              : <p key={i} style={{ fontFamily: T.serif, fontSize: isDisclaimer ? 14 : 18, lineHeight: 1.7, color: isDisclaimer ? T.inkSoft : T.ink, margin: '0 0 22px', fontStyle: isDisclaimer ? 'italic' : 'normal' }}>{renderText(p)}</p>;
-          })}
+          {article.imgCaption && <div style={{ fontFamily: T.ui, fontSize: 12, color: T.inkSoft, margin: '0 0 28px' }}>{article.imgCaption}</div>}
+          {(article.body || [article.lead]).map((p, i) => <window.ProBlock key={i} p={p} />)}
 
           {article.author && (
             <p style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 16, color: T.ink, margin: '8px 0 28px', textAlign: 'right', letterSpacing: '-0.01em' }}>
@@ -160,7 +196,7 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
               <div style={{ fontFamily: T.ui, fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: T.inkSoft, marginBottom: 8 }}>Źródło materiału</div>
               <div style={{ fontFamily: T.ui, fontSize: 15, fontWeight: 700, color: T.ink }}>{article.source}{article.sourceAuthor && !/redakcja|komunikat/i.test(article.sourceAuthor) ? ' — ' + article.sourceAuthor : ''}</div>
               {article.region && <div style={{ fontFamily: T.ui, fontSize: 12.5, color: T.inkSoft, marginTop: 2 }}>{article.region} · {article.date}</div>}
-              <a href={article.link} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 12, fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.ink, background: T.yellow, padding: '10px 16px', textDecoration: 'none' }}>Czytaj w oryginale →</a>
+              <a href={article.link} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 12, fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.paper3, background: T.ink, borderRadius: 8, padding: '11px 18px', textDecoration: 'none' }}>Czytaj w oryginale →</a>
             </div>
           }
 
@@ -178,16 +214,6 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
         {/* Sidebar */}
         <aside>
           <div style={{ position: 'sticky', top: 130 }}>
-            <div style={{ background: T.ink, padding: '24px 20px', marginBottom: 24 }}>
-              <div style={{ display: 'inline-flex', width: 34, height: 34, borderRadius: '50%', background: T.yellow, alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill={T.ink}><path d="M12 2l2.4 6.3L21 9l-5 4.2L17.6 21 12 17.3 6.4 21 8 13.2 3 9l6.6-.7z" /></svg>
-              </div>
-              <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 17, color: '#fff', marginBottom: 8, lineHeight: 1.2 }}>Pogłęb temat z AI</div>
-              <p style={{ fontFamily: T.serif, fontSize: 13.5, lineHeight: 1.5, color: '#9a9384', margin: '0 0 16px' }}>
-                Zadaj pytanie o szczegóły tego tematu naszemu asystentowi AI.
-              </p>
-              <button onClick={onOpenAI} style={{ width: '100%', fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.ink, background: T.yellow, border: 'none', padding: '12px', cursor: 'pointer' }}>Otwórz asystenta →</button>
-            </div>
             {related.length > 0 &&
             <div style={{ border: `1px solid ${T.line}` }}>
                 <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: T.ink, padding: '14px 16px', borderBottom: `2px solid ${T.ink}`, textTransform: 'uppercase' }}>Powiązane</div>
@@ -210,12 +236,12 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
         <window.SectionHead accent={window.catColor(article.cat)}>Więcej: {window.catLabel(article.cat)}</window.SectionHead>
         <div className="pro-cat-strip" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginTop: 20 }}>
           {related.map((a) =>
-          <article key={a.id} onClick={() => onOpen(a)} style={{ cursor: 'pointer' }}>
-              <div style={{ aspectRatio: '3/2', overflow: 'hidden', background: T.paper3, marginBottom: 12 }}>
+          <article key={a.id} onClick={() => onOpen(a)} style={{ cursor: 'pointer', borderTop: `3px solid ${T.ink}`, paddingTop: 14 }}>
+              <div style={{ aspectRatio: '3/2', overflow: 'hidden', background: T.paper3, borderRadius: 8, marginBottom: 12 }}>
                 <img src={window.proThumb(a.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <div style={{ fontFamily: T.ui, fontSize: 11.5, color: T.inkSoft, marginBottom: 6 }}>{a.date}</div>
-              <h3 style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 16, lineHeight: 1.25, color: T.ink, margin: 0 }}>{a.title}</h3>
+              <div style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.04em', color: T.inkFaint, marginBottom: 6 }}>{a.date}</div>
+              <h3 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 16, lineHeight: 1.25, color: T.ink, margin: 0 }}>{a.title}</h3>
             </article>
           )}
         </div>

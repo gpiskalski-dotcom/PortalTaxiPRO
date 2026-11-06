@@ -9,11 +9,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
 
 <style>
-  html, body { margin: 0; padding: 0; background: #ffffff; }
+  html, body { margin: 0; padding: 0; background: #faf7f0; }
   body { font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #15140f; }
+  .num, .pro-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   * { box-sizing: border-box; }
   a { color: inherit; }
   button { font-family: inherit; }
@@ -33,8 +34,12 @@
   /* ===== Responsive ===== */
   /* Tablet */
   @media (max-width: 1000px) {
-    .pro-home-grid, .pro-article-grid { grid-template-columns: 1fr !important; }
+    .pro-home-grid, .pro-article-grid { grid-template-columns: minmax(0,1fr) !important; }
+    .pro-article-grid article a { overflow-wrap: anywhere; }
     .pro-cat-strip { grid-template-columns: repeat(2, 1fr) !important; }
+    .pro-hero-grid { grid-template-columns: 1fr !important; }
+    .pro-press-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .pro-data-grid { grid-template-columns: 1fr !important; }
     .pro-slider { height: 420px !important; }
     .pro-slide-content h1 { font-size: 30px !important; }
     .pro-footer-grid { grid-template-columns: 1fr 1fr !important; }
@@ -44,17 +49,24 @@
     .pro-ai-trigger button:first-child { min-width: 0 !important; width: 44px !important; padding: 10px !important; }
     .pro-ai-trigger button:first-child span:nth-child(2), .pro-ai-trigger button:first-child span:nth-child(3) { display: none !important; }
     .pro-burger { display: inline-flex !important; }
+    /* nagłówek mieści się w 375 px: mniejsze odstępy, logo może się zwężać */
+    .pro-head-inner { padding: 0 16px !important; gap: 10px !important; }
+    .pro-head-inner > :first-child { min-width: 0; flex-shrink: 1; }
+    .pro-head-right { gap: 8px !important; flex-shrink: 0; }
+    .pro-head-right > button:not(.pro-burger) { padding: 9px 12px !important; font-size: 13px !important; }
     /* przycisk Zaloguj chowamy na mobile — jest w menu pod burgerem */
     .pro-login { display: none !important; }
-    .pro-nav-inner { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .pro-nav-inner::-webkit-scrollbar { display: none; }
+    .pro-nav-inner, .pro-kierowcy-link { display: none !important; }
     .pro-cat-strip { grid-template-columns: 1fr !important; }
+    .pro-press-grid { grid-template-columns: 1fr !important; }
     .pro-slider { height: 380px !important; }
     .pro-slide-content h1 { font-size: 24px !important; }
     .pro-footer-grid { grid-template-columns: 1fr !important; }
     /* article rows stack image on top */
     .pro-art-row { grid-template-columns: 1fr !important; }
   }
+  html { overflow-x: clip; }
+  @media (max-width: 420px) { .pro-head-inner > :first-child > span:nth-child(3) { display: none !important; } }
   @media (min-width: 681px) {
     .pro-nav-inner { flex-wrap: wrap; }
   }
@@ -74,11 +86,11 @@ window.proThumb = window.proThumb || function(src) { if(!src) return window.proI
 <body>
 <div id="root"></div>
 
-<script src="pro-data.js?v=20260725a"></script>
-<script type="text/babel" src="pro-shell.jsx?v=20260725a"></script>
-<script type="text/babel" src="pro-home.jsx?v=20260725a"></script>
-<script type="text/babel" src="pro-pages.jsx?v=20260725a"></script>
-<script type="text/babel" src="pro-app.jsx?v=20260725a"></script>
+<script src="pro-data.js?v=20261105b"></script>
+<script type="text/babel" src="pro-shell.jsx?v=20261105b"></script>
+<script type="text/babel" src="pro-home.jsx?v=20261105b"></script>
+<script type="text/babel" src="pro-pages.jsx?v=20261105b"></script>
+<script type="text/babel" src="pro-app.jsx?v=20261105b"></script>
   <script src="/cookie-consent.js" defer></script>
 
 </body>

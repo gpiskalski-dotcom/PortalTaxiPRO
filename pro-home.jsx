@@ -28,7 +28,7 @@ const HeroSlider = ({ onOpen }) => {
           position: 'absolute', inset: 0, opacity: idx === i ? 1 : 0,
           transition: 'opacity .6s ease', pointerEvents: idx === i ? 'auto' : 'none'
         }}>
-            <img src={window.proImg(sl.img)} onError={function (e) {e.currentTarget.style.opacity = '0.1';}} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src={window.proImg(sl.imgHome || sl.img)} onError={function (e) {e.currentTarget.style.opacity = '0.1';}} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(15,14,10,0.75) 0%, rgba(15,14,10,0.55) 38%, rgba(15,14,10,0.1) 100%)' }} />
           </div>
         )}
@@ -54,7 +54,7 @@ const HeroSlider = ({ onOpen }) => {
                 fontFamily: T.ui, fontWeight: 700, fontSize: 14, color: T.ink, background: T.yellow,
                 border: 'none', padding: '13px 22px', cursor: 'pointer', letterSpacing: '0.01em'
               }}>Czytaj więcej →</button>
-              <span style={{ fontFamily: T.ui, fontSize: 12.5, color: '#9a9384' }}>{s.date} · {s.read} min czytania</span>
+              <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.04em', color: '#b0a996' }}>{s.date} · {s.read} MIN</span>
             </div>
           </div>
         </div>
@@ -109,9 +109,9 @@ const ArticleRow = ({ a, onOpen }) => {
               <span style={{ fontFamily: T.ui, fontSize: 12.5, color: T.ink2, fontWeight: 600, fontStyle: 'italic' }}>{a.source}</span>
             </> :
           <window.Badge cat={a.cat} small />}
-          <span style={{ fontFamily: T.ui, fontSize: 12, color: T.inkSoft }}>{a.date}</span>
+          <span style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.04em', color: T.inkFaint }}>{a.date}</span>
         </div>
-        <h3 style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 21, lineHeight: 1.2, letterSpacing: '-0.015em', color: T.ink, margin: '0 0 8px', transition: 'color .15s' }}>
+        <h3 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 21, lineHeight: 1.2, letterSpacing: '-0.015em', color: T.ink, margin: '0 0 8px', transition: 'color .15s' }}>
           {a.title}
         </h3>
         <p style={{ fontFamily: T.serif, fontSize: 15, lineHeight: 1.5, color: T.ink2, margin: 0 }}>
@@ -154,8 +154,8 @@ const SideTabs = ({ onOpen }) => {
           onMouseEnter={(e) => e.currentTarget.style.background = T.paper2}
           onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
               {tab === 'najnowsze' ?
-            <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 12, color: window.catColor(a.cat), lineHeight: 1.25 }}>{a.date.replace(/^(\d+)\s+(\w{3})\w*/, '$1 $2')}</span> :
-            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 16, color: T.yellow, lineHeight: 1 }}>{idx + 1}</span>}
+            <span style={{ fontFamily: T.mono, fontWeight: 500, fontSize: 11, letterSpacing: '0.03em', color: window.catColor(a.cat), lineHeight: 1.25 }}>{a.date.replace(/^(\d+)\s+(\w{3})\w*/, '$1 $2')}</span> :
+            <span style={{ fontFamily: T.mono, fontWeight: 800, fontSize: 16, color: T.goldText, lineHeight: 1 }}>{idx + 1}</span>}
               <div>
                 <div style={{ fontFamily: T.ui, fontWeight: 600, fontSize: 14, lineHeight: 1.3, color: T.ink }}>{a.title}</div>
               </div>
@@ -164,7 +164,7 @@ const SideTabs = ({ onOpen }) => {
         </div>
         <button onClick={() => onOpen(null, true)} style={{
           width: '100%', fontFamily: T.ui, fontWeight: 700, fontSize: 12.5, letterSpacing: '0.08em',
-          color: T.ink, background: T.yellow, border: 'none', padding: '14px', cursor: 'pointer', textTransform: 'uppercase'
+          color: T.paper3, background: T.ink, border: 'none', padding: '14px', cursor: 'pointer', textTransform: 'uppercase'
         }}>Więcej wiadomości →</button>
       </div>
 
@@ -243,14 +243,14 @@ const CategoryStrip = ({ catId, onOpen, onNav }) => {
       </div>
       <div className="pro-cat-strip" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginTop: 20 }}>
         {arts.map((a) =>
-        <article key={a.id} onClick={() => onOpen(a)} style={{ cursor: 'pointer' }}
+        <article key={a.id} onClick={() => onOpen(a)} style={{ cursor: 'pointer', borderTop: `3px solid ${T.ink}`, paddingTop: 14 }}
         onMouseEnter={(e) => e.currentTarget.querySelector('h3').style.color = window.catColor(a.cat)}
         onMouseLeave={(e) => e.currentTarget.querySelector('h3').style.color = T.ink}>
-            <div style={{ aspectRatio: '3/2', overflow: 'hidden', background: T.paper3, marginBottom: 12 }}>
+            <div style={{ aspectRatio: '3/2', overflow: 'hidden', background: T.paper3, borderRadius: 8, marginBottom: 12 }}>
               <img src={window.proThumb(a.img)} onError={function (e) {e.currentTarget.style.opacity = '0.1';}} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
-            <div style={{ fontFamily: T.ui, fontSize: 11.5, color: T.inkSoft, marginBottom: 6 }}>{a.date} · {a.read} min</div>
-            <h3 style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 16.5, lineHeight: 1.25, letterSpacing: '-0.01em', color: T.ink, margin: 0, transition: 'color .15s' }}>{a.title}</h3>
+            <div style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.04em', color: T.inkFaint, marginBottom: 6 }}>{a.date} · {a.read} MIN</div>
+            <h3 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 16.5, lineHeight: 1.25, letterSpacing: '-0.01em', color: T.ink, margin: 0, transition: 'color .15s' }}>{a.title}</h3>
           </article>
         )}
       </div>
@@ -258,29 +258,108 @@ const CategoryStrip = ({ catId, onOpen, onNav }) => {
 
 };
 
+// ===== Hero: materiał wiodący + Najnowsze/Popularne =====
+const HeroLead = ({ onOpen }) => {
+  const T = window.T;
+  const arts = window.PRO.articles;
+  const lead = arts.find((a) => a.featured) || arts.find((a) => (a.cats || [a.cat]).includes('regulacje-ue')) || arts[0];
+  return (
+    <div style={{ maxWidth: 1160, margin: '0 auto', padding: '40px 24px 0' }}>
+      <div className="pro-hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 48, alignItems: 'start' }}>
+        <div>
+          <div onClick={() => onOpen(lead)} style={{ cursor: 'pointer', aspectRatio: '16/10', overflow: 'hidden', background: T.paper3, borderRadius: 10 }}>
+            <img src={window.proImg(lead.imgHome || lead.img)} onError={function (e) { e.currentTarget.style.opacity = '0.1'; }} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
+          <div style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.1em', color: T.inkFaint, margin: '8px 0 16px' }}>{(lead.imgHomeCaption || lead.imgCaption || 'Fot. materiały własne').toUpperCase()}</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
+            <window.Badge cat={lead.cat} small />
+            <span style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.04em', color: T.inkFaint }}>{lead.date} · {lead.read} MIN</span>
+          </div>
+          <h1 onClick={() => onOpen(lead)} style={{ cursor: 'pointer', fontFamily: T.ui, fontWeight: 800, fontSize: 38, lineHeight: 1.08, letterSpacing: '-0.03em', color: T.ink, margin: '0 0 16px' }}>{lead.title}</h1>
+          <p style={{ fontFamily: T.ui, fontSize: 19, lineHeight: 1.5, color: T.ink2, margin: '0 0 22px', maxWidth: '34em' }}>{lead.lead}</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+            <button onClick={() => onOpen(lead)} style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 15, color: T.paper3, background: T.ink, border: 'none', borderRadius: 8, padding: '13px 22px', cursor: 'pointer' }}>Czytaj tekst</button>
+          </div>
+        </div>
+        <SideTabs onOpen={onOpen} />
+      </div>
+    </div>
+  );
+};
+
+// ===== Karta prasowa =====
+const PressCard = ({ a, onOpen }) => {
+  const T = window.T;
+  return (
+    <article onClick={() => onOpen(a)} style={{ cursor: 'pointer', borderTop: `3px solid ${T.ink}`, paddingTop: 14 }}
+      onMouseEnter={(e) => e.currentTarget.querySelector('h3').style.color = window.catColor(a.cat)}
+      onMouseLeave={(e) => e.currentTarget.querySelector('h3').style.color = T.ink}>
+      <div style={{ aspectRatio: '3/2', overflow: 'hidden', background: T.paper3, borderRadius: 8, marginBottom: 14 }}>
+        <img src={window.proThumb(a.img)} onError={function (e) { e.currentTarget.style.opacity = '0.1'; }} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </div>
+      <div style={{ fontFamily: T.mono, fontSize: 10, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: T.goldText, marginBottom: 8 }}>{window.catLabel(a.cat)}</div>
+      <h3 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 20, lineHeight: 1.2, color: T.ink, margin: '0 0 8px', transition: 'color .15s' }}>{a.title}</h3>
+      <p style={{ fontFamily: T.ui, fontSize: 14, lineHeight: 1.5, color: T.ink2, margin: '0 0 12px' }}>{a.lead}</p>
+      <div style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.04em', color: T.inkFaint }}>{a.date} · {a.read} MIN</div>
+    </article>
+  );
+};
+const PressCards = ({ onOpen }) => {
+  const T = window.T;
+  const arts = window.PRO.articles;
+  // pomiń materiał wiodący z HeroLead, żeby się nie dublował
+  const heroLead = arts.find((a) => a.featured) || arts.find((a) => (a.cats || [a.cat]).includes('regulacje-ue')) || arts[0];
+  const used = new Set(heroLead ? [heroLead.id] : []);
+  const cards = [];
+  ['regulacje-ue', 'newsy-platform', 'rynki-zagraniczne'].forEach((c) => {
+    const a = arts.find((x) => (x.cats || [x.cat]).includes(c) && !used.has(x.id));
+    if (a) { used.add(a.id); cards.push(a); }
+  });
+  while (cards.length < 3) { const a = arts.find((x) => !used.has(x.id)); if (!a) break; used.add(a.id); cards.push(a); }
+  return (
+    <div style={{ maxWidth: 1160, margin: '0 auto', padding: '48px 24px 0' }}>
+      <div style={{ borderTop: `1px solid ${T.line}`, paddingTop: 40 }}>
+        <div className="pro-press-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+          {cards.map((a) => <PressCard key={a.id} a={a} onOpen={onOpen} />)}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ===== Blok newslettera (inwersyjny) =====
+const NewsletterBlockBig = () => {
+  const T = window.T;
+  const [email, setEmail] = hUseState('');
+  const [state, setState] = hUseState('idle');
+  const submit = async (e) => { e.preventDefault(); if (!/\S+@\S+\.\S+/.test(email)) { setState('err'); return; } setState('sending'); try { await window.PRO_subscribe(email, 'pro:home-big'); setState('ok'); } catch (x) { setState('neterr'); } };
+  return (
+    <div style={{ background: T.ink, borderRadius: 12, padding: '28px 32px', color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <div style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: T.yellow, marginBottom: 12 }}>NEWSLETTER BRANŻOWY</div>
+      <h2 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 25, lineHeight: 1.15, color: '#fff', margin: '0 0 10px' }}>Co tydzień jedna analiza rynku i kalendarz regulacji</h2>
+      <p style={{ fontFamily: T.ui, fontSize: 15, lineHeight: 1.5, color: '#c9c3b4', margin: '0 0 20px' }}>Dla właścicieli flot i operatorów. Bez ofert pracy dla kierowców.</p>
+      {state === 'ok' ? (
+        <div style={{ fontFamily: T.ui, fontSize: 14, color: T.yellow, fontWeight: 600, padding: '12px 0' }}>✓ Dziękujemy! Zapis potwierdzony.</div>
+      ) : (
+        <form onSubmit={submit} style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          <input type="email" value={email} onChange={(e) => { setEmail(e.target.value); if (state !== 'idle') setState('idle'); }} placeholder="adres@firma.pl" style={{ flex: '1 1 240px', fontFamily: T.ui, fontSize: 15, padding: '13px 16px', border: 'none', borderRadius: 9, background: T.paper3, color: T.inkSoft, outline: 'none' }} />
+          <button type="submit" disabled={state === 'sending'} style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 15, color: T.yellowInk, background: T.yellow, border: 'none', borderRadius: 9, padding: '13px 26px', cursor: 'pointer' }}>{state === 'sending' ? 'Zapisuję…' : 'Zapisz się'}</button>
+        </form>
+      )}
+      <div style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.06em', color: '#8f887a', marginTop: 14 }}>REZYGNACJA JEDNYM KLIKNIĘCIEM</div>
+    </div>
+  );
+};
+
 // ===== Homepage =====
 const ProHome = ({ onOpen, onNav }) => {
   const T = window.T;
-  const main = window.PRO.articles.slice(0, 5);
   return (
     <div>
-      <HeroSlider onOpen={onOpen} />
-      <div style={{ maxWidth: 1240, margin: '0 auto', padding: '44px 24px 0' }}>
-        <div className="pro-home-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 48 }}>
-          {/* Main column */}
-          <div>
-            <window.SectionHead>Najnowsze artykuły</window.SectionHead>
-            <div>
-              {main.map((a) => <window.ArticleRow key={a.id} a={a} onOpen={onOpen} />)}
-            </div>
-            <CategoryStrip catId="regulacje-ue" onOpen={onOpen} onNav={onNav} />
-            <CategoryStrip catId="przeglad-prasy" onOpen={onOpen} onNav={onNav} />
-            <CategoryStrip catId="analizy" onOpen={onOpen} onNav={onNav} />
-            <CategoryStrip catId="rynki-zagraniczne" onOpen={onOpen} onNav={onNav} />
-          </div>
-          {/* Sidebar */}
-          <SideTabs onOpen={onOpen} />
-        </div>
+      <HeroLead onOpen={onOpen} />
+      <PressCards onOpen={onOpen} />
+      <div style={{ maxWidth: 1160, margin: '0 auto', padding: '48px 24px 0' }}>
+        <NewsletterBlockBig />
       </div>
     </div>);
 

@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<!-- partner panel v2 · build 2026-08-11b -->
+<title>Panel partnera — pro.portaltaxi.pl</title>
+<meta name="description" content="Panel partnera flotowego pro.portaltaxi.pl — logowanie, rejestracja firmy, wybór pakietu i zarządzanie ogłoszeniem." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+<script src="/cookie-consent.js" defer></script>
+<style>
+:root{
+  --ink:#15140f; --ink2:#2e2a20; --inkSoft:#5c5648;
+  --line:#e4e0d6; --lineSoft:#eeebe2;
+  --paper:#ffffff; --paper2:#f7f5ef; --paper3:#f0ede4;
+  --yellow:#F2C200; --yellowInk:#1a1500; --navy:#16202e;
+  --ok:#1f7a4d; --bad:#b5482a;
+  --ui:'Archivo',system-ui,sans-serif; --serif:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+button{font-family:var(--ui);cursor:pointer}
+
+header.pt{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+header.pt .in{max-width:1240px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:14px}
+.logo{font:900 20px var(--ui);letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+.logo em{font-style:normal;background:var(--yellow);padding:0 5px}
+.logo small{font:700 9px var(--ui);letter-spacing:.16em;color:var(--inkSoft);vertical-align:super;margin-left:3px}
+header.pt .sp{flex:1}
+.who{font:600 12px var(--ui);color:var(--inkSoft)}
+
+.wrap{max-width:560px;margin:0 auto;padding:34px 24px 70px}
+h1{font:800 clamp(24px,5vw,32px)/1.15 var(--ui);letter-spacing:-.02em;margin:0 0 10px}
+p.lede{color:var(--inkSoft);font-size:15px;margin:0 0 26px;font-family:var(--serif)}
+p.lede b{color:var(--ink);font-weight:600}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px;margin-bottom:16px}
+.card h2{margin:0 0 3px;font-size:15px;font-weight:800}
+.card .ch{margin:0 0 16px;color:var(--inkSoft);font-size:12.5px}
+
+label.lbl{display:block;font:700 10px var(--ui);letter-spacing:.09em;text-transform:uppercase;color:var(--inkSoft);margin:0 0 7px}
+.grp{margin-bottom:18px}
+.grp:last-child{margin-bottom:0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:480px){.duo{grid-template-columns:1fr}}
+
+input.f{width:100%;min-height:50px;background:var(--paper);border:1px solid var(--line);border-radius:2px;
+  color:var(--ink);padding:0 14px;font:500 16px var(--ui);outline:none}
+input.f:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(242,194,0,.35)}
+input.f:disabled{background:var(--paper3);color:var(--inkSoft)}
+input.f::placeholder{color:#9c968a}
+
+.btn{width:100%;min-height:50px;border-radius:2px;border:1px solid var(--line);background:var(--paper2);
+  color:var(--ink);font:700 15px var(--ui);display:flex;align-items:center;justify-content:center;gap:9px;margin-top:10px}
+.btn.pri{background:var(--yellow);color:var(--yellowInk);border-color:var(--yellow)}
+.btn.pri:disabled{opacity:.5;cursor:default}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--inkSoft);font-weight:600;min-height:42px}
+.btn.dgr{border-color:#b5482a55;color:var(--bad)}
+.btn.sm{min-height:42px;font-size:13px}
+.btn.hdr{width:auto;min-height:38px;padding:0 16px;font-size:13.5px;margin:0}
+.btnrow{display:flex;gap:10px}
+.btnrow .btn{flex:1}
+
+.cx{display:flex;gap:11px;align-items:flex-start;background:var(--paper2);border:1px solid var(--line);
+  border-radius:2px;padding:13px;margin-bottom:9px;color:var(--ink);width:100%;text-align:left}
+.cx.on{border-color:var(--ink);background:#fffdf3}
+.cx .bx{flex:0 0 20px;width:20px;height:20px;border-radius:2px;border:2px solid #b8b2a3;margin-top:1px;
+  display:grid;place-items:center;font:900 12px var(--ui);color:var(--yellowInk)}
+.cx.on .bx{background:var(--yellow);border-color:var(--yellow)}
+.cx.on .bx::after{content:'\2713'}
+.cx div strong{display:block;font-size:13.5px;font-weight:700;margin-bottom:2px}
+.cx div span{color:var(--inkSoft);font-size:11.5px}
+.cx .pr{margin-left:auto;font:800 15px var(--ui);white-space:nowrap;padding-left:10px}
+
+.row{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--lineSoft);font-size:14px}
+.row:last-of-type{border-bottom:0}
+.row .rk{color:var(--inkSoft);font-size:12.5px;flex:0 0 116px}
+.row .rv{font-weight:600;flex:1;word-break:break-word}
+.row.tot .rk,.row.tot .rv{font-weight:800;font-size:15px;color:var(--ink)}
+
+.seg{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden;margin-bottom:14px}
+.seg button{flex:1;min-height:44px;border:0;border-right:1px solid var(--line);background:var(--paper2);
+  color:var(--inkSoft);font:700 13px var(--ui)}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--yellow);color:var(--yellowInk)}
+
+.note{border-radius:2px;padding:12px 14px;font-size:13px;margin-top:12px;border:1px solid;line-height:1.5}
+.note.info{background:#f2f6fb;border-color:#cfdcec;color:#20364f}
+.note.ok{background:#f0f8f3;border-color:#c2e2d0;color:#175c3a}
+.note.bad{background:#fdf3f0;border-color:#eccbc0;color:#8e3520}
+.note.warn{background:#fffaea;border-color:#f0e0a8;color:#6b5405}
+.note b{color:inherit;font-weight:700}
+.pill{display:inline-block;font:700 9.5px var(--ui);letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 7px;border:1px solid var(--line);color:var(--inkSoft);vertical-align:middle}
+.pill.ok{background:#eaf6ef;border-color:#bfe0cd;color:var(--ok)}
+.pill.warn{background:#fffaea;border-color:#f0e0a8;color:#6b5405}
+
+.tabs{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden;margin-bottom:22px}
+.tabs button{flex:1;min-height:48px;border:0;border-right:1px solid var(--line);background:var(--paper2);
+  color:var(--inkSoft);font:700 14px var(--ui);transition:background .12s}
+.tabs button:last-child{border-right:0}
+.tabs button:hover{background:var(--paper3)}
+.tabs button.on{background:var(--yellow);color:var(--yellowInk)}
+.steps3{margin:0;padding:0 0 0 18px;font-size:12.5px;color:var(--inkSoft);line-height:1.75}
+.steps3 li::marker{color:var(--inkSoft);font-weight:700}
+
+.prog{display:flex;gap:6px;margin:0 0 20px}
+.prog i{flex:1;height:5px;border-radius:3px;background:var(--paper3)}
+.prog i.on{background:var(--yellow)}
+.eyebrow{font:700 10px var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--inkSoft);margin:0 0 8px}
+
+.mail{text-align:center;padding:16px 0 4px}
+.mail .ic{font-size:40px;margin-bottom:10px}
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(26,21,0,.25);
+  border-top-color:var(--yellowInk);border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.center{text-align:center;padding:44px 0;color:var(--inkSoft);font-size:14px}
+footer.pt{border-top:1px solid var(--line);padding:24px;text-align:center;color:var(--inkSoft);font-size:12.5px;background:var(--paper2)}
+footer.pt a{color:var(--inkSoft)}
+</style>
+</head>
+<body>
+
+<header class="pt">
+  <div class="in">
+    <a class="logo" href="/">PRO<em>.</em>portaltaxi.pl<small>PANEL</small></a>
+    <div class="sp"></div>
+    <div class="who" id="who"></div>
+  </div>
+</header>
+
+<div class="wrap" id="app"><div class="center">Ładowanie…</div></div>
+
+<footer class="pt">
+  <a href="/polityka-prywatnosci.html">Polityka prywatności</a> ·
+  <a href="/polityka-cookies.html">Polityka cookies</a> ·
+  <a href="/regulamin.html">Regulamin</a> ·
+  <a href="#" onclick="portalTaxiCookieSettings&&portalTaxiCookieSettings();return false">Ustawienia cookie</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+/* =========================================================================
+   PANEL PARTNERA /partner — logowanie linkiem + rejestracja 3 kroki
+   (dane firmy → wybór pakietu → karta) + panel firmy.
+
+   WAŻNE: partner_subscriptions i lead_packages są dla przeglądarki TYLKO do
+   odczytu (zapis robi webhook Stripe kluczem service_role). Dlatego wybór
+   pakietu i "karta" to na razie UI — zapisujemy wybór lokalnie i pokazujemy
+   "płatność w przygotowaniu". Realną subskrypcję uruchomi dopiero Stripe.
+
+   storageKey celowo INNY niz u kierowcy — sesje sie nie nadpisza.
+   ========================================================================= */
+var SUPABASE_URL = "https://mysvdwfdthhbppdnicuz.supabase.co";
+var SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15c3Zkd2ZkdGhoYnBwZG5pY3V6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5ODEzNjAsImV4cCI6MjA5ODU1NzM2MH0.2R0WFqje8kFqKTqdNuQhT2T9mHo_5eZmEqWqzdiSDrc";
+
+var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, {
+  auth: { storageKey: 'pt-partner-auth', persistSession: true, autoRefreshToken: true }
+});
+
+var CENY = { mies: 399, rok: 3990, leady: 500 };
+
+var S = {
+  screen:'load', mode:'login', user:null, org:null, me:null, sub:null, plan:null,
+  busy:false, msg:null, email:'', step:1,
+  f:{ imie:'', nazwisko:'', telefon:'', nip:'', nazwa:'', mailFaktur:'', osobneFaktury:false },
+  p:{ cykl:'mies', leady:false, kod:'' }
+};
+
+var app = document.getElementById('app');
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function zl(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ') + ' zł'; }
+
+/* NIP — suma kontrolna, lapie literowke zanim poleci zapytanie */
+function nipOk(nip){
+  var d = String(nip||'').replace(/[^0-9]/g,'');
+  if (d.length !== 10) return false;
+  var w = [6,5,7,2,3,4,5,6,7], s = 0;
+  for (var i=0;i<9;i++) s += w[i] * parseInt(d[i],10);
+  var c = s % 11;
+  return c !== 10 && c === parseInt(d[9],10);
+}
+
+/* wybór pakietu trzymamy lokalnie do czasu Stripe */
+function planKey(){ return S.org ? 'pt-partner-plan-'+S.org.id : null; }
+function savePlan(){
+  var k = planKey(); if (!k) return;
+  try{ localStorage.setItem(k, JSON.stringify({cykl:S.p.cykl, leady:S.p.leady, kod:(S.p.kod||'').trim(), ts:Date.now()})); }catch(e){}
+}
+function loadPlan(){
+  var k = planKey(); if (!k) { S.plan=null; return; }
+  try{ var v = localStorage.getItem(k); S.plan = v ? JSON.parse(v) : null; }catch(e){ S.plan=null; }
+}
+
+function render(){
+  document.getElementById('who').textContent = S.user ? S.user.email : '';
+  var m = S.msg ? '<div class="note '+S.msg[0]+'">'+S.msg[1]+'</div>' : '';
+  var h = '';
+
+  if (S.screen === 'load') h = '<div class="center">Ładowanie…</div>';
+
+  /* ---------- LOGOWANIE ---------- */
+  else if (S.screen === 'login') {
+    var nowe = S.mode === 'signup';
+    h =
+    '<h1>Panel partnera flotowego</h1>'+
+    '<p class="lede">Ogłoszenie w porównywarce, kontakty od kierowców i płatności — w jednym miejscu.</p>'+
+    '<div class="tabs">'+
+      '<button id="t-login"'+(nowe?'':' class="on"')+'>Mam konto</button>'+
+      '<button id="t-signup"'+(nowe?' class="on"':'')+'>Zakładam konto</button>'+
+    '</div>'+
+    '<div class="card">'+
+      '<h2>'+(nowe?'Załóż konto firmy':'Zaloguj się')+'</h2>'+
+      '<div class="ch">'+(nowe
+        ? 'Bez hasła. Wystarczy służbowy adres e-mail.'
+        : 'Bez hasła. Podaj adres, na który zakładałeś konto.')+'</div>'+
+      '<div class="grp"><label class="lbl">Służbowy e-mail</label>'+
+      '<input class="f" id="i-email" type="email" inputmode="email" autocomplete="email" '+
+      'placeholder="biuro@twojaflota.pl" value="'+esc(S.email)+'"></div>'+
+      '<button class="btn pri" id="b-send"'+(S.busy?' disabled':'')+'>'+
+      (S.busy
+        ? '<span class="spin"></span> Wysyłam…'
+        : (nowe?'Wyślij link i załóż konto':'Wyślij link do logowania'))+'</button>'+
+      m+
+    '</div>'+
+    (nowe
+      ? '<div class="card"><h2>Co dalej</h2><div class="ch">Trzy kroki, jednorazowo.</div>'+
+        '<ol class="steps3">'+
+          '<li>Klikasz link, który wyślemy na podany adres.</li>'+
+          '<li>Podajesz dane firmy (NIP) i wybierasz pakiet.</li>'+
+          '<li>Ogłoszenie trafia do porównywarki na portaltaxi.pl.</li>'+
+        '</ol></div>'
+      : '<div class="note info">Nie pamiętasz, na jaki adres zakładano konto? '+
+        'Napisz do nas — sprawdzimy po NIP-ie firmy.</div>');
+  }
+
+  /* ---------- LINK WYSŁANY ---------- */
+  else if (S.screen === 'sent') h =
+    '<div class="card"><div class="mail"><div class="ic">✉</div>'+
+    '<h1 style="font-size:21px">Sprawdź skrzynkę</h1>'+
+    '<p class="lede">Link poszedł na <b>'+esc(S.email)+'</b>. Jest ważny 60 minut.</p></div>'+
+    '<button class="btn ghost" id="b-back">← inny adres e-mail</button></div>'+
+    '<div class="note warn">Nie ma maila? Zajrzyj do spamu. Jeśli wysyłasz kilka razy pod rząd, '+
+    'odczekaj chwilę — obowiązuje limit wysyłek.</div>';
+
+  /* ---------- KROK 1: DANE FIRMY ---------- */
+  else if (S.screen === 'reg1') h =
+    prog(1)+
+    '<p class="eyebrow">Krok 1 z 3 · Dane firmy</p>'+
+    '<h1>Twoje dane i dane firmy</h1>'+
+    '<p class="lede">Jednorazowo. Potem logujesz się samym linkiem z maila.</p>'+
+    '<div class="card"><h2>Osoba kontaktowa</h2>'+
+      '<div class="ch">Kto zarządza kontem. Kolejne osoby dodasz później w panelu.</div>'+
+      '<div class="duo">'+
+        '<div class="grp"><label class="lbl">Imię</label><input class="f" id="i-imie" value="'+esc(S.f.imie)+'"></div>'+
+        '<div class="grp"><label class="lbl">Nazwisko</label><input class="f" id="i-nazwisko" value="'+esc(S.f.nazwisko)+'"></div>'+
+      '</div>'+
+      '<div class="grp"><label class="lbl">Telefon</label>'+
+      '<input class="f" id="i-telefon" type="tel" inputmode="tel" placeholder="+48 600 100 200" value="'+esc(S.f.telefon)+'"></div>'+
+      '<div class="grp"><label class="lbl">E-mail (z logowania)</label>'+
+      '<input class="f" value="'+esc(S.user?S.user.email:'')+'" disabled></div>'+
+    '</div>'+
+    '<div class="card"><h2>Firma</h2>'+
+      '<div class="ch">NIP potwierdzamy w rejestrze — nie musisz nic przesyłać.</div>'+
+      '<div class="grp"><label class="lbl">NIP (10 cyfr)</label>'+
+      '<input class="f" id="i-nip" inputmode="numeric" placeholder="1234567890" value="'+esc(S.f.nip)+'">'+
+      '<div id="nip-hint"></div></div>'+
+      '<div class="grp"><label class="lbl">Nazwa widoczna w ogłoszeniu</label>'+
+      '<input class="f" id="i-nazwa" placeholder="np. Nowa Flota" value="'+esc(S.f.nazwa)+'"></div>'+
+    '</div>'+
+    '<div class="card"><h2>Faktury</h2>'+
+      '<div class="ch">Domyślnie wysyłamy na adres z logowania.</div>'+
+      '<button class="cx'+(S.f.osobneFaktury?' on':'')+'" id="c-fakt"><span class="bx"></span>'+
+      '<div><strong>Faktury na inny adres</strong><span>np. bezpośrednio do księgowości</span></div></button>'+
+      (S.f.osobneFaktury
+        ? '<div class="grp" style="margin-top:10px"><label class="lbl">E-mail do faktur</label>'+
+          '<input class="f" id="i-mailf" type="email" placeholder="ksiegowosc@twojaflota.pl" value="'+esc(S.f.mailFaktur)+'"></div>'
+        : '')+
+    '</div>'+
+    m+
+    '<button class="btn pri" id="b-next1">Dalej — wybór pakietu →</button>'+
+    '<button class="btn ghost" id="b-logout">Wyloguj</button>';
+
+  /* ---------- KROK 2: WYBÓR PAKIETU ---------- */
+  else if (S.screen === 'reg2') {
+    var mies = S.p.cykl === 'mies';
+    var baza = mies ? CENY.mies : CENY.rok;
+    var suma = baza + (S.p.leady ? CENY.leady : 0);
+    var kod = (S.p.kod||'').trim();
+    h =
+    prog(2)+
+    '<p class="eyebrow">Krok 2 z 3 · Co kupujesz</p>'+
+    '<h1>Wybierz pakiet</h1>'+
+    '<p class="lede">Wyróżnienie podnosi ogłoszenie na górę porównywarki. Pakiet leadów to gotowe kontakty od kierowców.</p>'+
+    '<div class="card"><h2>Wyróżnienie ogłoszenia</h2>'+
+      '<div class="ch">Ogłoszenie ze znakiem ★ na górze listy na portaltaxi.pl.</div>'+
+      '<div class="seg">'+
+        '<button id="s-mies"'+(mies?' class="on"':'')+'>Miesięcznie · '+CENY.mies+' zł</button>'+
+        '<button id="s-rok"'+(mies?'':' class="on"')+'>Rocznie · '+zl(CENY.rok)+'</button>'+
+      '</div>'+
+      '<div class="note info">Płatność co '+(mies?'miesiąc':'rok')+', odnawialna. Rezygnujesz kiedy chcesz — ogłoszenie zostaje, gaśnie tylko wyróżnienie.</div>'+
+    '</div>'+
+    '<div class="card"><h2>Dodatki</h2>'+
+      '<button class="cx'+(S.p.leady?' on':'')+'" id="c-leady"><span class="bx"></span>'+
+      '<div><strong>Pakiet leadów</strong><span>25 kontaktów od kierowców · ważny 90 dni</span></div>'+
+      '<span class="pr">'+zl(CENY.leady)+'</span></button>'+
+    '</div>'+
+    '<div class="card"><h2>Kod rabatowy</h2>'+
+      '<div class="ch">Z kodem pierwszy miesiąc 0 zł (jeden trial na firmę).</div>'+
+      '<input class="f" id="i-kod" placeholder="np. START2026" value="'+esc(kod)+'">'+
+    '</div>'+
+    '<div class="card"><h2>Podsumowanie</h2>'+
+      '<div class="row"><div class="rk">Wyróżnienie</div><div class="rv">'+(mies?CENY.mies+' zł / mies.':zl(CENY.rok)+' / rok')+'</div></div>'+
+      (S.p.leady?'<div class="row"><div class="rk">Pakiet leadów</div><div class="rv">'+zl(CENY.leady)+' jednorazowo</div></div>':'')+
+      (kod?'<div class="row"><div class="rk">Kod</div><div class="rv">'+esc(kod)+' — pierwszy miesiąc 0 zł</div></div>':'')+
+      '<div class="row tot"><div class="rk">Do zapłaty teraz</div><div class="rv">'+(kod?'0 zł (trial)':zl(suma))+'</div></div>'+
+    '</div>'+
+    m+
+    '<div class="btnrow">'+
+      '<button class="btn" id="b-back2">← wstecz</button>'+
+      '<button class="btn pri" id="b-next2">Dalej — płatność →</button>'+
+    '</div>';
+  }
+
+  /* ---------- KROK 3: KARTA (STUB) ---------- */
+  else if (S.screen === 'reg3') {
+    var kod3 = (S.p.kod||'').trim();
+    h =
+    prog(3)+
+    '<p class="eyebrow">Krok 3 z 3 · Płatność</p>'+
+    '<h1>Dane karty</h1>'+
+    '<p class="lede">'+(kod3
+      ? 'Z kodem pierwszy miesiąc jest bezpłatny — kartę podłączysz przy pierwszej płatności.'
+      : 'Karta potwierdza subskrypcję. Pieniądze potwierdza serwer, nie przeglądarka.')+'</p>'+
+    '<div class="card"><h2>Karta</h2>'+
+      '<div class="grp"><label class="lbl">Numer karty</label><input class="f" placeholder="1234 1234 1234 1234" disabled></div>'+
+      '<div class="duo">'+
+        '<div class="grp"><label class="lbl">Ważna do</label><input class="f" placeholder="MM / RR" disabled></div>'+
+        '<div class="grp"><label class="lbl">CVC</label><input class="f" placeholder="123" disabled></div>'+
+      '</div>'+
+      '<div class="grp"><label class="lbl">Imię i nazwisko na karcie</label><input class="f" placeholder="Jan Kowalski" disabled></div>'+
+      '<div class="note warn"><b>Płatności online w przygotowaniu.</b> Podłączamy Stripe (karta / BLIK / P24). '+
+      'Na razie zakładamy konto firmy i zapisujemy wybór pakietu — bez obciążenia karty.</div>'+
+    '</div>'+
+    m+
+    '<div class="btnrow">'+
+      '<button class="btn" id="b-back3">← wstecz</button>'+
+      '<button class="btn pri" id="b-finish"'+(S.busy?' disabled':'')+'>'+
+      (S.busy?'<span class="spin"></span> Zakładam konto…':'Załóż konto i zapisz pakiet')+'</button>'+
+    '</div>';
+  }
+
+  /* ---------- PANEL ---------- */
+  else if (S.screen === 'panel') {
+    var o = S.org || {}, me = S.me || {};
+    var vst = o.nip_status === 'verified'
+      ? '<span class="pill ok">zweryfikowany</span>'
+      : '<span class="pill warn">weryfikacja w toku</span>';
+    h =
+    '<h1>'+esc(o.display_name || 'Twoja firma')+'</h1>'+
+    '<p class="lede">Zalogowany jako <b>'+esc([me.first_name,me.last_name].filter(Boolean).join(' ') || S.user.email)+'</b>'+
+    ' · rola: '+esc(me.role || '—')+'</p>'+
+    m+
+    planCard()+
+    '<div class="card"><h2>Firma</h2><div class="ch">Nazwa rejestrowa i adres pochodzą z rejestru.</div>'+
+      '<div class="row"><div class="rk">NIP</div><div class="rv">'+esc(o.nip)+' '+vst+'</div></div>'+
+      '<div class="row"><div class="rk">Nazwa rejestrowa</div><div class="rv">'+esc(o.legal_name || '—')+'</div></div>'+
+      '<div class="row"><div class="rk">Nazwa handlowa</div><div class="rv">'+esc(o.display_name || '—')+'</div></div>'+
+      '<div class="row"><div class="rk">Kontakt</div><div class="rv">'+esc(o.contact_email || '—')+'<br>'+esc(o.contact_phone || '')+'</div></div>'+
+      '<div class="row"><div class="rk">Faktury na</div><div class="rv">'+esc(o.billing_email || o.contact_email || '—')+'</div></div>'+
+    '</div>'+
+    '<div class="card"><h2>Zmień dane kontaktowe</h2>'+
+      '<div class="ch">Nazwy rejestrowej i NIP-u nie da się zmienić z panelu — pilnuje tego baza.</div>'+
+      '<div class="grp"><label class="lbl">Nazwa handlowa</label><input class="f" id="e-nazwa" value="'+esc(o.display_name||'')+'"></div>'+
+      '<div class="grp"><label class="lbl">Telefon</label><input class="f" id="e-tel" value="'+esc(o.contact_phone||'')+'"></div>'+
+      '<div class="grp"><label class="lbl">E-mail do faktur</label><input class="f" id="e-mailf" type="email" value="'+esc(o.billing_email||'')+'"></div>'+
+      '<button class="btn pri sm" id="b-save"'+(S.busy?' disabled':'')+'>'+
+      (S.busy?'<span class="spin"></span> Zapisuję…':'Zapisz zmiany')+'</button>'+
+    '</div>'+
+    '<div class="card"><h2>Ogłoszenie i kontakty od kierowców</h2>'+
+      '<div class="ch">Edytor oferty, statystyki i leady.</div>'+
+      '<div class="note info">Ta część panelu jest w budowie — dokładamy edytor ogłoszenia (te same pola co karta w porównywarce) i listę zgłoszeń. Konto i pakiet są już zapisane.</div>'+
+    '</div>'+
+    '<button class="btn ghost" id="b-logout">Wyloguj</button>';
+  }
+
+  app.innerHTML = h;
+  bind();
+}
+
+function prog(step){
+  var i = function(n){ return '<i'+(n<=step?' class="on"':'')+'></i>'; };
+  return '<div class="prog">'+i(1)+i(2)+i(3)+'</div>';
+}
+
+function planCard(){
+  var sub = S.sub, pl = S.plan;
+  var statusPill = '', body = '';
+  if (sub && sub.status){
+    var ok = (sub.status==='trialing' || sub.status==='active');
+    statusPill = '<span class="pill '+(ok?'ok':'warn')+'">'+esc(sub.status)+'</span>';
+    body = '<div class="row"><div class="rk">Plan</div><div class="rv">'+esc(sub.plan||'—')+'</div></div>'+
+           '<div class="row"><div class="rk">Wyróżnienie</div><div class="rv">'+(ok?'aktywne':'wyłączone')+'</div></div>';
+  } else if (pl){
+    var mies = pl.cykl==='mies';
+    statusPill = '<span class="pill warn">oczekuje na płatność</span>';
+    body = '<div class="row"><div class="rk">Wybrany plan</div><div class="rv">Wyróżnienie '+(mies?CENY.mies+' zł / mies.':zl(CENY.rok)+' / rok')+'</div></div>'+
+           (pl.leady?'<div class="row"><div class="rk">Dodatek</div><div class="rv">Pakiet leadów '+zl(CENY.leady)+'</div></div>':'')+
+           (pl.kod?'<div class="row"><div class="rk">Kod</div><div class="rv">'+esc(pl.kod)+' — trial</div></div>':'')+
+           '<div class="note warn" style="margin-top:12px"><b>Płatność w przygotowaniu.</b> Podłączamy Stripe — wtedy wyróżnienie ruszy automatycznie.</div>';
+  } else {
+    statusPill = '<span class="pill">brak</span>';
+    body = '<div class="note info">Nie masz jeszcze wybranego pakietu. '+
+           '<a href="#" id="b-choose"><b>Wybierz wyróżnienie →</b></a></div>';
+  }
+  return '<div class="card"><h2>Twój plan '+statusPill+'</h2>'+
+         '<div class="ch">Wyróżnienie decyduje, czy ogłoszenie jest na górze porównywarki.</div>'+body+'</div>';
+}
+
+function bind(){
+  var g = function(id){ return document.getElementById(id); };
+  if (g('b-send')) g('b-send').onclick = function(){ sendLink(g('i-email').value); };
+  if (g('i-email')) g('i-email').onkeydown = function(e){ if(e.key==='Enter') sendLink(g('i-email').value); };
+  if (g('b-back')) g('b-back').onclick = function(){ S.screen='login'; S.msg=null; render(); };
+  if (g('t-login')) g('t-login').onclick = function(){ var e=g('i-email'); if(e) S.email=e.value; S.mode='login'; S.msg=null; render(); };
+  if (g('t-signup')) g('t-signup').onclick = function(){ var e=g('i-email'); if(e) S.email=e.value; S.mode='signup'; S.msg=null; render(); };
+  if (g('b-logout')) g('b-logout').onclick = function(){
+    sb.auth.signOut().then(function(){ S.user=null; S.org=null; S.screen='login'; S.msg=null; render(); }); };
+
+  /* krok 1 */
+  if (g('c-fakt')) g('c-fakt').onclick = function(){ grab1(); S.f.osobneFaktury = !S.f.osobneFaktury; render(); };
+  if (g('i-nip')) g('i-nip').oninput = function(){
+    var v = g('i-nip').value, hint = g('nip-hint');
+    if (!v.replace(/[^0-9]/g,'').length) { hint.innerHTML=''; return; }
+    hint.innerHTML = nipOk(v)
+      ? '<div class="note ok">✓ Numer poprawny — potwierdzimy go w rejestrze.</div>'
+      : '<div class="note bad">Ten NIP nie przechodzi kontroli — sprawdź, czy nie ma literówki.</div>';
+  };
+  if (g('b-next1')) g('b-next1').onclick = function(){
+    grab1();
+    if (!S.f.imie.trim() || !S.f.nazwisko.trim()) { S.msg=['warn','Podaj imię i nazwisko.']; render(); return; }
+    if (!nipOk(S.f.nip)) { S.msg=['warn','Sprawdź NIP — numer nie przechodzi kontroli.']; render(); return; }
+    if (!S.f.nazwa.trim()) { S.msg=['warn','Podaj nazwę widoczną w ogłoszeniu.']; render(); return; }
+    S.msg=null; S.screen='reg2'; render();
+  };
+
+  /* krok 2 */
+  if (g('s-mies')) g('s-mies').onclick = function(){ grab2(); S.p.cykl='mies'; render(); };
+  if (g('s-rok')) g('s-rok').onclick = function(){ grab2(); S.p.cykl='rok'; render(); };
+  if (g('c-leady')) g('c-leady').onclick = function(){ grab2(); S.p.leady=!S.p.leady; render(); };
+  if (g('b-back2')) g('b-back2').onclick = function(){ grab2(); S.msg=null; S.screen='reg1'; render(); };
+  if (g('b-next2')) g('b-next2').onclick = function(){ grab2(); S.msg=null; S.screen='reg3'; render(); };
+
+  /* krok 3 */
+  if (g('b-back3')) g('b-back3').onclick = function(){ S.msg=null; S.screen='reg2'; render(); };
+  if (g('b-finish')) g('b-finish').onclick = doRegister;
+
+  /* panel */
+  if (g('b-save')) g('b-save').onclick = saveOrg;
+  if (g('b-choose')) g('b-choose').onclick = function(e){ e.preventDefault(); S.screen='reg2'; S.msg=null; render(); };
+}
+
+function grab1(){
+  var g = function(id){ var e=document.getElementById(id); return e?e.value:''; };
+  S.f.imie=g('i-imie'); S.f.nazwisko=g('i-nazwisko'); S.f.telefon=g('i-telefon');
+  S.f.nip=g('i-nip'); S.f.nazwa=g('i-nazwa'); if(document.getElementById('i-mailf')) S.f.mailFaktur=g('i-mailf');
+}
+function grab2(){
+  var e=document.getElementById('i-kod'); if(e) S.p.kod=e.value;
+}
+
+function sendLink(email){
+  email = (email||'').trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) { S.msg = ['bad','Podaj poprawny adres e-mail.']; render(); return; }
+  S.email = email; S.busy = true; S.msg = null; render();
+  sb.auth.signInWithOtp({
+    email: email,
+    options: { emailRedirectTo: location.origin + '/partner' }
+  }).then(function(r){
+    S.busy = false;
+    if (r.error) {
+      S.msg = ['bad','Nie udało się wysłać linku: '+esc(r.error.message)+'<br>Jeśli to limit wysyłek — odczekaj kilka minut.'];
+      render();
+    } else { S.screen = 'sent'; render(); }
+  });
+}
+
+function doRegister(){
+  S.busy = true; S.msg = null; render();
+  sb.rpc('register_partner_org', {
+    p_nip: S.f.nip.replace(/[^0-9]/g,''),
+    p_display_name: S.f.nazwa.trim(),
+    p_contact_email: S.user.email,
+    p_contact_phone: S.f.telefon.trim() || null,
+    p_first_name: S.f.imie.trim(),
+    p_last_name: S.f.nazwisko.trim()
+  }).then(function(r){
+    if (r.error) {
+      S.busy = false;
+      var msg = String(r.error.message||'');
+      if (msg.indexOf('NIP_TAKEN') > -1)
+        S.msg = ['bad','<b>Ta firma ma już konto.</b> Poproś osobę, która je założyła, o zaproszenie — albo napisz do nas.'];
+      else if (msg.indexOf('ALREADY_MEMBER') > -1) S.msg = ['bad','To konto należy już do innej firmy.'];
+      else if (msg.indexOf('BAD_NIP') > -1) S.msg = ['bad','NIP jest niepoprawny.'];
+      else S.msg = ['bad','Nie udało się założyć konta: '+esc(msg)];
+      S.screen='reg1'; render(); return;
+    }
+    var patch = {};
+    if (S.f.osobneFaktury && S.f.mailFaktur.trim()) patch.billing_email = S.f.mailFaktur.trim();
+    if (!Object.keys(patch).length) return loadOrg();
+    return sb.from('partner_orgs').update(patch).eq('id', r.data).then(loadOrg);
+  }).then(function(){
+    if (S.org) {
+      savePlan(); loadPlan();
+      S.busy=false; S.screen='panel'; S.msg=['ok','✓ Konto firmy założone i pakiet zapisany.']; render();
+      setTimeout(function(){ S.msg=null; render(); }, 3500);
+    }
+  }).catch(function(e){
+    S.busy=false; S.msg=['bad','Błąd: '+esc(e && e.message)]; S.screen='reg1'; render();
+  });
+}
+
+function saveOrg(){
+  var g = function(id){ var e=document.getElementById(id); return e?e.value.trim():''; };
+  S.busy = true; S.msg = null; render();
+  sb.from('partner_orgs').update({
+    display_name: g('e-nazwa') || null,
+    contact_phone: g('e-tel') || null,
+    billing_email: g('e-mailf') || null
+  }).eq('id', S.org.id).then(function(r){
+    if (r.error) { S.busy=false; S.msg=['bad','Nie udało się zapisać: '+esc(r.error.message)]; render(); return; }
+    return loadOrg().then(function(){
+      S.busy=false; S.msg=['ok','✓ Zapisano.']; render();
+      setTimeout(function(){ S.msg=null; render(); }, 2600);
+    });
+  });
+}
+
+function loadSub(){
+  if (!S.org) { S.sub=null; return Promise.resolve(); }
+  return sb.from('partner_subscriptions').select('plan,status,trial_end')
+    .eq('org_id', S.org.id).order('created_at',{ascending:false}).limit(1).maybeSingle()
+    .then(function(r){ S.sub = (r && r.data) ? r.data : null; })
+    .catch(function(){ S.sub=null; });
+}
+
+function loadOrg(){
+  return sb.from('partner_members').select('org_id, role, first_name, last_name')
+    .eq('user_id', S.user.id).maybeSingle()
+    .then(function(r){
+      if (r.error || !r.data) { S.org = null; S.me = null; return; }
+      S.me = r.data;
+      return sb.from('partner_orgs').select('*').eq('id', r.data.org_id).maybeSingle()
+        .then(function(r2){ S.org = r2.data || null; });
+    });
+}
+
+sb.auth.getSession().then(function(r){
+  var s = r.data ? r.data.session : null;
+  if (!s) { S.screen = 'login'; render(); return; }
+  S.user = s.user;
+  loadOrg().then(function(){
+    if (!S.org) { S.screen='reg1'; render(); return; }
+    loadPlan();
+    loadSub().then(function(){ S.screen='panel'; render(); });
+  });
+});
+
+sb.auth.onAuthStateChange(function(evt, session){
+  if (evt === 'SIGNED_IN' && session && (!S.user || S.user.id !== session.user.id)) {
+    S.user = session.user;
+    loadOrg().then(function(){
+      if (!S.org) { S.screen='reg1'; S.msg=null; render(); return; }
+      loadPlan();
+      loadSub().then(function(){ S.screen='panel'; S.msg=null; render(); });
+    });
+  }
+  if (evt === 'SIGNED_OUT') { S.user=null; S.org=null; S.screen='login'; render(); }
+});
+</script>
+</body>
+</html>

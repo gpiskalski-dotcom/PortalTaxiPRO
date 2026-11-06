@@ -6,20 +6,26 @@ const { useState: pUseState, useEffect: pUseEffect, useRef: pUseRef } = React;
 // ===== Design tokens =====
 const T = {
   ink: '#15140f',
-  ink2: '#2b2922',
-  inkSoft: '#5c5648',
-  line: '#e4e0d6',
-  lineSoft: '#eeebe2',
+  ink2: '#3f3a2e',
+  inkSoft: '#5c574a',
+  inkFaint: '#7c7462',
+  line: '#e0d8c6',
+  lineSoft: '#f2ede1',
   paper: '#ffffff',
-  paper2: '#f7f5ef',
-  paper3: '#f0ede4',
+  paper2: '#f2ede1',
+  paper3: '#faf7f0',
+  bg: '#faf7f0',
   yellow: '#F2C200',
-  yellowInk: '#1a1500',
+  yellowInk: '#15140f',
+  goldText: '#8a6d00',
   navy: '#16202e',
-  accentRed: '#b5482a',
+  accentRed: '#a33a2b',
   ok: '#1f7a4d',
+  up: '#1f7a4d',
+  down: '#a33a2b',
   ui: '"Archivo", system-ui, sans-serif',
-  serif: '"Source Serif 4", Georgia, serif',
+  serif: '"Archivo", system-ui, sans-serif',
+  mono: '"JetBrains Mono", ui-monospace, monospace',
 };
 window.T = T;
 
@@ -41,9 +47,9 @@ window.catLabel = catLabel;
 // ===== Category badge =====
 const Badge = ({ cat, small }) => (
   <span style={{
-    display: 'inline-block', fontFamily: T.ui, fontWeight: 700,
-    fontSize: small ? 10 : 11, letterSpacing: '0.08em', textTransform: 'uppercase',
-    color: '#fff', background: catColor(cat), padding: small ? '3px 7px' : '4px 9px',
+    display: 'inline-block', fontFamily: T.mono, fontWeight: 700,
+    fontSize: small ? 10 : 11, letterSpacing: '0.1em', textTransform: 'uppercase',
+    color: T.yellow, background: T.ink, padding: small ? '4px 8px' : '5px 9px', borderRadius: 5,
   }}>
     {catLabel(cat)}
   </span>
@@ -69,7 +75,7 @@ const ProTopBar = ({ onNav }) => (
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg>
         </a>
         <span style={{ width: 1, height: 18, background: '#3a382f', marginRight: 4 }} />
-        <a href="#" onClick={e=>{e.preventDefault();}} aria-label="LinkedIn" style={topIconStyle}>
+        <a href="https://www.linkedin.com/in/grzegorz-piskalski/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" style={topIconStyle}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0H12v2.2h.07c.62-1.17 2.14-2.4 4.4-2.4 4.7 0 5.57 3.1 5.57 7.14V24h-5v-6.96c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.8-2.68 3.68V24h-5V8z"/></svg>
         </a>
         <button onClick={() => onNav({ type: 'newsletter' })} style={topLinkStyle}>
@@ -88,88 +94,68 @@ const topLinkStyle = { display: 'inline-flex', alignItems: 'center', gap: 6, fon
 // ===== Logo =====
 const Logo = ({ onClick, size = 1 }) => (
   <button onClick={onClick} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'baseline', gap: 0 }}>
-    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink, background: T.yellow, padding: `0 ${7 * size}px`, marginRight: 0 }}>PRO.</span>
-    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink }}>portaltaxi.pl</span>
+    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink, background: T.yellow, padding: `0 ${6 * size}px`, borderRadius: 4, marginRight: 1 }}>PRO</span>
+    <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 30 * size, letterSpacing: '-0.03em', color: T.ink }}>.portaltaxi.pl</span>
+    <span style={{ fontFamily: T.mono, fontWeight: 700, fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase', color: T.inkFaint, border: `1px solid ${T.line}`, borderRadius: 4, padding: '1px 5px', marginLeft: 7, alignSelf: 'center' }}>beta</span>
   </button>
 );
 window.Logo = Logo;
 
-// ===== Header with menu + AI trigger =====
+// ===== Header (minimal, wg makiety) =====
+const PRO_NAV = [
+  { id: 'rynek-polski', label: 'Rynek PL' },
+  { id: 'regulacje-ue', label: 'Regulacje' },
+  { id: 'rynki-zagraniczne', label: 'Rynki zagraniczne' },
+  { id: 'newsy-platform', label: 'Platformy' },
+  { id: 'analizy', label: 'Analizy' },
+];
 const ProHeader = ({ route, onNav, onOpenAI }) => {
   const [mobileOpen, setMobileOpen] = pUseState(false);
-  const cats = window.PRO.categories;
   const activeCat = route.type === 'category' ? route.id : null;
-
   return (
     <header style={{ background: T.paper, borderBottom: `1px solid ${T.line}`, position: 'sticky', top: 0, zIndex: 50 }}>
-      <div style={{ maxWidth: 1240, margin: '0 auto', padding: '0 24px' }}>
-        {/* Logo row */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 0 16px' }}>
-          <Logo onClick={() => onNav({ type: 'home' })} />
-          <div className="pro-ai-trigger" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <button onClick={onOpenAI} style={{
-              display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer',
-              background: T.paper2, border: `1px solid ${T.line}`, borderRadius: 2,
-              padding: '10px 16px', minWidth: 280, textAlign: 'left',
-            }}>
-              <span style={{ display: 'inline-flex', width: 22, height: 22, borderRadius: '50%', background: T.ink, alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill={T.yellow}><path d="M12 2l2.4 6.3L21 9l-5 4.2L17.6 21 12 17.3 6.4 21 8 13.2 3 9l6.6-.7z"/></svg>
-              </span>
-              <span style={{ flex: 1, fontFamily: T.ui, fontSize: 13, color: T.inkSoft }}>Zapytaj asystenta AI…</span>
-              <span style={{ fontFamily: T.ui, fontSize: 10, fontWeight: 700, color: T.ink, background: T.yellow, padding: '2px 6px', letterSpacing: '0.05em' }}>AI</span>
-            </button>
-            <a className="pro-login" href="/logowanie-partnera.html" style={{
-              display: 'inline-flex', alignItems: 'center', gap: 7, textDecoration: 'none',
-              background: T.yellow, color: T.yellowInk, border: `1px solid ${T.yellow}`, borderRadius: 2,
-              padding: '10px 16px', fontFamily: T.ui, fontSize: 13.5, fontWeight: 700, whiteSpace: 'nowrap',
-            }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={T.yellowInk} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-              </svg>
-              Zaloguj
-            </a>
-            <button className="pro-burger" onClick={() => setMobileOpen(o => !o)} aria-label="Menu" style={{
-              display: 'none', background: 'transparent', border: `1px solid ${T.line}`, cursor: 'pointer', padding: 9, borderRadius: 2,
-            }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" stroke={T.ink} strokeWidth="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      {/* Nav row */}
-      <nav style={{ borderTop: `1px solid ${T.lineSoft}`, background: T.paper }}>
-        <div className="pro-nav-inner" style={{ maxWidth: 1240, margin: '0 auto', padding: '0 24px', display: 'flex', gap: 0 }}>
-          {cats.map(c => {
+      <div className="pro-head-inner" style={{ maxWidth: 1160, margin: '0 auto', padding: '0 24px', height: 72, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
+        <Logo onClick={() => onNav({ type: 'home' })} size={0.62} />
+        <nav className="pro-nav-inner" style={{ display: 'flex', gap: 26, flex: 1, justifyContent: 'center' }}>
+          {PRO_NAV.map(c => {
             const active = activeCat === c.id;
             return (
               <button key={c.id} onClick={() => onNav({ type: 'category', id: c.id })} style={{
-                fontFamily: T.ui, fontSize: 13.5, fontWeight: active ? 700 : 600,
+                fontFamily: T.ui, fontSize: 15, fontWeight: active ? 700 : 600,
                 color: active ? T.ink : T.ink2, background: 'transparent', border: 'none',
-                borderBottom: active ? `3px solid ${T.yellow}` : '3px solid transparent',
-                cursor: 'pointer', padding: '14px 16px', whiteSpace: 'nowrap', letterSpacing: '0.01em',
+                borderBottom: active ? `2px solid ${T.yellow}` : '2px solid transparent',
+                cursor: 'pointer', padding: '4px 0', whiteSpace: 'nowrap',
               }}
-                onMouseEnter={e => { if (!active) e.currentTarget.style.color = catColor(c.id); }}
+                onMouseEnter={e => { if (!active) e.currentTarget.style.color = T.ink; }}
                 onMouseLeave={e => { if (!active) e.currentTarget.style.color = T.ink2; }}>
                 {c.label}
               </button>
             );
           })}
+        </nav>
+        <div className="pro-head-right" style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+          <a href="https://portaltaxi.pl" className="pro-kierowcy-link" style={{ fontFamily: T.ui, fontSize: 14, fontWeight: 600, color: T.inkSoft, textDecoration: 'none', whiteSpace: 'nowrap' }}>portaltaxi.pl dla kierowców →</a>
+          <button onClick={() => onNav({ type: 'newsletter' })} style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 14, color: T.yellowInk, background: T.yellow, border: 'none', borderRadius: 8, padding: '10px 18px', cursor: 'pointer', whiteSpace: 'nowrap' }}>Newsletter</button>
+          <button className="pro-burger" onClick={() => setMobileOpen(o => !o)} aria-label="Menu" style={{
+            display: 'none', background: 'transparent', border: `1px solid ${T.line}`, cursor: 'pointer', padding: 9, borderRadius: 8,
+          }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" stroke={T.ink} strokeWidth="2"><path d="M3 7h18M3 17h18"/></svg>
+          </button>
         </div>
-      </nav>
-      {/* Mobile menu */}
+      </div>
       {mobileOpen && (
         <div className="pro-mobile-menu" style={{ borderTop: `1px solid ${T.line}`, background: T.paper, padding: '8px 24px 16px' }}>
-          {cats.map(c => (
+          {PRO_NAV.map(c => (
             <button key={c.id} onClick={() => { onNav({ type: 'category', id: c.id }); setMobileOpen(false); }} style={{
               display: 'block', width: '100%', textAlign: 'left', fontFamily: T.ui, fontSize: 15, fontWeight: 600,
               color: T.ink, background: 'transparent', border: 'none', borderBottom: `1px solid ${T.lineSoft}`,
               cursor: 'pointer', padding: '14px 0',
             }}>{c.label}</button>
           ))}
-          <a href="/logowanie-partnera.html" style={{
+          <a href="https://portaltaxi.pl" style={{
             display: 'block', width: '100%', textAlign: 'left', fontFamily: T.ui, fontSize: 15, fontWeight: 700,
-            color: T.ink, textDecoration: 'none', padding: '14px 0',
-          }}>Zaloguj \u2014 panel partnera</a>
+            color: T.goldText, textDecoration: 'none', padding: '14px 0',
+          }}>portaltaxi.pl dla kierowców →</a>
         </div>
       )}
     </header>
@@ -394,41 +380,50 @@ const NewsletterPopup = ({ open, onClose }) => {
 };
 window.NewsletterPopup = NewsletterPopup;
 
-// ===== Footer =====
+// ===== Footer (4 kolumny, jasny — wg makiety) =====
+const footColHead = { fontFamily: T.mono, fontWeight: 700, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: T.inkFaint, marginBottom: 14 };
+const footLink = { display: 'block', fontFamily: T.ui, fontSize: 14, color: T.ink2, background: 'transparent', border: 'none', cursor: 'pointer', padding: '5px 0', textAlign: 'left', textDecoration: 'none' };
 const ProFooter = ({ onNav }) => (
-  <footer style={{ background: T.ink, color: '#b8b2a3', marginTop: 64 }}>
-    <div style={{ maxWidth: 1240, margin: '0 auto', padding: '52px 24px 28px' }}>
-      <div className="pro-footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr', gap: 40, paddingBottom: 36, borderBottom: '1px solid #2b2922' }}>
+  <footer style={{ background: T.sunk, color: T.ink, marginTop: 64, borderTop: `1px solid ${T.line}` }}>
+    <div style={{ maxWidth: 1160, margin: '0 auto', padding: '40px 24px 28px' }}>
+      <div className="pro-footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: 32, paddingBottom: 32, borderBottom: `1px solid ${T.line}` }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'baseline', marginBottom: 16 }}>
-            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 24, color: T.ink, background: T.yellow, padding: '0 6px', marginRight: 0 }}>PRO.</span>
-            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 24, color: '#fff', letterSpacing: '-0.03em' }}>portaltaxi.pl</span>
+          <div style={{ display: 'flex', alignItems: 'baseline', marginBottom: 14 }}>
+            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 22, color: T.ink, background: T.yellow, padding: '0 6px', borderRadius: 4, marginRight: 1 }}>PRO</span>
+            <span style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 22, color: T.ink, letterSpacing: '-0.03em' }}>.portaltaxi.pl</span>
           </div>
-          <p style={{ fontFamily: T.serif, fontSize: 14.5, lineHeight: 1.55, color: '#9a9384', maxWidth: 460, margin: 0 }}>
-            {window.PRO.about.lead}
+          <p style={{ fontFamily: T.ui, fontSize: 14, lineHeight: 1.55, color: T.inkSoft, maxWidth: 300, margin: 0 }}>
+            Branżowy serwis rynku taxi. Część ekosystemu taxiportal.pl.
           </p>
         </div>
         <div>
           <div style={footColHead}>Serwis</div>
-          {[['o-nas', 'O nas'], ['reklama', 'Oferta reklamowa']].map(([id, l]) => (
-            <button key={id} onClick={() => onNav({ type: 'page', id })} style={footLink}>{l}</button>
+          {[['rynek-polski','Rynek PL'],['regulacje-ue','Regulacje'],['newsy-platform','Platformy'],['analizy','Analizy']].map(([id,l]) => (
+            <button key={id} onClick={() => onNav({ type: 'category', id })} style={footLink}>{l}</button>
           ))}
-          <a href="/regulamin.html" style={footLink}>Regulamin</a>
         </div>
         <div>
-          <div style={footColHead}>Prawne</div>
-          <a key="prywatnosc" href="/polityka-prywatnosci.html" style={footLink}>Polityka prywatności</a>
-          <a key="cookies" href="/polityka-cookies.html" style={footLink}>Polityka cookies</a>
-          <button onClick={() => window.portalTaxiCookieSettings ? window.portalTaxiCookieSettings() : null} style={footLink}>Ustawienia prywatności</button>
+          <div style={footColHead}>Dla firm</div>
+          <button onClick={() => onNav({ type: 'page', id: 'reklama' })} style={footLink}>Oferta reklamowa</button>
+          <button onClick={() => onNav({ type: 'page', id: 'reklama' })} style={footLink}>Patronat raportu</button>
+          <button onClick={() => onNav({ type: 'page', id: 'kontakt' })} style={footLink}>Kontakt redakcji</button>
+          <a href="https://www.linkedin.com/in/grzegorz-piskalski/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" style={{ ...footLink, display: 'inline-flex', alignItems: 'center', gap: 8, color: '#0A66C2' }}>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+            LinkedIn
+          </a>
+        </div>
+        <div>
+          <div style={footColHead}>Newsletter</div>
+          <button onClick={() => onNav({ type: 'newsletter' })} style={footLink}>Zapisz się</button>
+          <a href="/polityka-prywatnosci.html" style={footLink}>Polityka prywatności</a>
+          <a href="/polityka-cookies.html" style={footLink}>Polityka cookies</a>
         </div>
       </div>
-      <div style={{ paddingTop: 22, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-        <span style={{ fontFamily: T.ui, fontSize: 12, color: '#6f6a5d' }}>© 2026 pro.portaltaxi.pl · Wszelkie prawa zastrzeżone</span>
-        <span style={{ fontFamily: T.ui, fontSize: 12, color: '#6f6a5d' }}>Treści mają charakter informacyjny, nie stanowią porady prawnej.</span>
+      <div style={{ paddingTop: 20, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+        <span style={{ fontFamily: T.mono, fontSize: 10.5, letterSpacing: '0.06em', color: T.inkFaint }}>© 2026 PRO.PORTALTAXI.PL</span>
+        <a href="https://portaltaxi.pl" style={{ fontFamily: T.mono, fontSize: 10.5, letterSpacing: '0.06em', color: T.goldText, textDecoration: 'none' }}>SERWIS DLA KIEROWCÓW: PORTALTAXI.PL →</a>
       </div>
     </div>
   </footer>
 );
-const footColHead = { fontFamily: T.ui, fontWeight: 700, fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#fff', marginBottom: 14 };
-const footLink = { display: 'block', fontFamily: T.ui, fontSize: 13.5, color: '#b8b2a3', background: 'transparent', border: 'none', cursor: 'pointer', padding: '6px 0', textAlign: 'left' };
 window.ProFooter = ProFooter;

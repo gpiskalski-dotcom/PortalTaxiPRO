@@ -1,109 +1,593 @@
-// pro-data.js — content for PortalTaxiPRO.eu (B2B industry portal)
-// All copy is realistic Polish industry placeholder text, generated from the
-// 22-article source guide + the brief. Not driver how-tos — market/regulation/analysis.
+// pro-data.js — treści PRO.portaltaxi.pl. Wygenerowano 2026-11-05T13:14:39.701Z (build/build.js).
+// Artykuł z polem pub (ISO) pojawia się w serwisie dopiero od tej chwili (harmonogram publikacji).
 
 const PRO = {
-  brand: { name: 'portaltaxi', pro: 'PRO', tld: '.eu' },
-
-  categories: [
-    { id: 'rynek-polski', label: 'Rynek polski', desc: 'Sytuacja firm i flot w polskich miastach, konsolidacja, koszty działalności, konkurencja korporacji z platformami.' },
-    { id: 'regulacje-ue', label: 'Regulacje i Dyrektywa UE', desc: 'Nowe obowiązki platform, unijna dyrektywa o pracy platformowej, licencje, kontrole i obowiązki pośredników.' },
-    { id: 'rynki-zagraniczne', label: 'Rynki zagraniczne', desc: 'Regulacje taxi w Europie, modele platform, protesty branży, zmiany w aglomeracjach, porównania z Polską.' },
-    { id: 'newsy-platform', label: 'Newsy z platform', desc: 'Zmiany w aplikacjach, funkcje dla flot, decyzje Ubera, Bolta i FreeNow, prowizje, wymagania wobec partnerów.' },
-    { id: 'przeglad-prasy', label: 'Przegląd prasy', desc: 'Streszczenia publikacji branżowych, cytowania raportów, omówienia mediów gospodarczych, komentarze redakcji.' },
-    { id: 'analizy', label: 'Analizy', desc: 'Rentowność flot, wpływ kosztów paliwa i energii, przyszłość licencjonowania, elektromobilność, skutki regulacji.' },
-    { id: 'bezpieczenstwo', label: 'Bezpieczeństwo', desc: 'Przestępczość w kursach na aplikację, weryfikacja kierowców, kontrole policji i ITD, bezpieczeństwo pasażerów.' },
-    { id: 'autonomiczne', label: 'Autonomiczne taxi', desc: 'Robotaxi i pojazdy bez kierowcy w Polsce i na świecie — testy, regulacje i wpływ na rynek przewozów.' },
+  "brand": {
+    "name": "portaltaxi",
+    "pro": "PRO",
+    "tld": ".eu"
+  },
+  "categories": [
+    {
+      "id": "rynek-polski",
+      "label": "Rynek polski",
+      "desc": "Sytuacja firm i flot w polskich miastach, konsolidacja, koszty działalności, konkurencja korporacji z platformami."
+    },
+    {
+      "id": "regulacje-ue",
+      "label": "Regulacje i Dyrektywa UE",
+      "desc": "Nowe obowiązki platform, unijna dyrektywa o pracy platformowej, licencje, kontrole i obowiązki pośredników."
+    },
+    {
+      "id": "rynki-zagraniczne",
+      "label": "Rynki zagraniczne",
+      "desc": "Regulacje taxi w Europie, modele platform, protesty branży, zmiany w aglomeracjach, porównania z Polską."
+    },
+    {
+      "id": "newsy-platform",
+      "label": "Newsy z platform",
+      "desc": "Zmiany w aplikacjach, funkcje dla flot, decyzje Ubera, Bolta i FreeNow, prowizje, wymagania wobec partnerów."
+    },
+    {
+      "id": "przeglad-prasy",
+      "label": "Przegląd prasy",
+      "desc": "Streszczenia publikacji branżowych, cytowania raportów, omówienia mediów gospodarczych, komentarze redakcji."
+    },
+    {
+      "id": "analizy",
+      "label": "Analizy",
+      "desc": "Rentowność flot, wpływ kosztów paliwa i energii, przyszłość licencjonowania, elektromobilność, skutki regulacji."
+    },
+    {
+      "id": "bezpieczenstwo",
+      "label": "Bezpieczeństwo",
+      "desc": "Przestępczość w kursach na aplikację, weryfikacja kierowców, kontrole policji i ITD, bezpieczeństwo pasażerów."
+    },
+    {
+      "id": "autonomiczne",
+      "label": "Autonomiczne taxi",
+      "desc": "Robotaxi i pojazdy bez kierowcy w Polsce i na świecie — testy, regulacje i wpływ na rynek przewozów."
+    }
   ],
-
-  // Slider — featured articles
-  slider: [
+  "articles": [
     {
-      id: 'p53', cat: 'bezpieczenstwo', img: 'uploads/sondaz-ibris-wiek.png',
-      title: 'Sondaż IBRiS dla „Rz”: Aż 84% Polaków chce polskiego egzaminu na prawo jazdy dla taksówkarzy z zagranicy',
-      lead: 'Po wypadku w Ząbkach presja na zaostrzenie zasad dla kierowców przewozów nadal rośnie. Problemem jest Konwencja Wiedeńska o wzajemnym uznawaniu przez państwa praw jazdy.',
-      cats: ['bezpieczenstwo', 'przeglad-prasy'],
-      source: 'Rzeczpospolita',
-      link: 'https://www.rp.pl/spoleczenstwo/art44644601-prawo-jazdy-zrobione-tylko-w-polsce-nie-ufamy-taksowkarzom-obcokrajowcom',
-      date: '19 czerwca 2026', read: 4,
+      "id": "p58",
+      "pub": "2026-11-16T10:00:00+01:00",
+      "date": "16 listopada 2026",
+      "cat": "rynek-polski",
+      "cats": [
+        "rynek-polski",
+        "regulacje-ue"
+      ],
+      "img": "pro/n-pzpa-zwiazek.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "PZPA podwoił liczbę członków. Związek partnerów aplikacyjnych przed ustawą platformową",
+      "lead": "Do Polskiego Związku Partnerów Aplikacyjnych dołączyły latem FLAGMAN i Flow Apps. Związek zrzesza 20 firm i deklaruje udział w pracach nad ustawą platformową.",
+      "body": [
+        "Polski Związek Partnerów Aplikacyjnych (PZPA) zrzesza 20 firm, dwa razy więcej niż rok temu. Latem dołączyły do niego FLAGMAN (17 lipca) i Flow Apps (24 sierpnia) – podaje związek. PZPA reprezentuje firmy pośredniczące między platformami a kierowcami i kurierami.",
+        "## Letni zlot",
+        "7 sierpnia 2026 r. przedstawiciele związku spotkali się na letnim zlocie. Omówili wyniki pierwszego półrocza i priorytety na kolejne miesiące: bezpieczeństwo uczestników rynku, udział w tworzeniu przepisów i informowanie o problemach branży taxi i dostaw. Związek nie podał konkretnych ustaleń.",
+        "PZPA wymienił 19 firm: 3M Drivers, Agmer Taxi, Avalon Logistics, BitBus, DEPartner, Eres Partner, Eternis, Evelstar, FLAGMAN, Flow Apps, Fobest, JK Partner, KM Partners, MB Partner, Natviol, NB Pro, Onefleet Partner, Select i Udriver.",
+        "## Ustawa platformowa",
+        "W sierpniu projekt ustawy wdrażającej dyrektywę platformową omawiała Rada Dialogu Społecznego, z udziałem ministerstwa pracy, pracodawców i związków zawodowych. Spornymi kwestiami były domniemanie stosunku pracy i odpowiedzialność solidarna. PZPA deklaruje otwartość na dialog i liczy na „kompromisową propozycję samoregulacji”, która uwzględni specyfikę branży ([o projekcie ustawy](/artykul/p54-dyrektywa-platformowa-polska-nie-zdazy-na-2-grudnia)). We wrześniu związek zapraszał na spotkania podczas Forum Ekonomicznego w Karpaczu (8–10 września).",
+        "> PZPA przyjął wcześniej Kodeks Dobrych Praktyk (2025) i był zapraszany na posiedzenia Parlamentarnego Zespołu ds. Regulacji Rynku Taxi i Przewozu Osób. Wnioski zespołu trafiły do Ministerstwa Infrastruktury, które w lipcu wpisało do wykazu projekt UD431 ([szczegóły projektu](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr)). Związek proponuje też centralny rejestr licencji i kierowców (CELT)."
+      ],
+      "sources": [
+        "PZPA — aktualności — https://pzpa.pl/",
+        "PZPA — Letni zlot przedstawicieli PZPA 2026, 7.08.2026 — https://pzpa.pl/letni-zlot-przedstawicieli-pzpa-2026/",
+        "PZPA — Posiedzenie Rady Dialogu Społecznego ws. projektu dyrektywy platformowej, 28.08.2026 — https://pzpa.pl/posiedzenie-rady-dialogu-spolecznego-ws-projektu-dyrektywy-platformowej/",
+        "PZPA — 6. posiedzenie Zespołu Parlamentarnego ds. Regulacji Rynku Taxi, 12.12.2025 — https://pzpa.pl/posiedzenie-zespolu-parlamentarnego-ds-regulacji-rynku-taxi-2/",
+        "Infor.pl — Kodeks Dobrych Praktyk PZPA, 2.06.2025 — https://mojafirma.infor.pl/wiadomosci/6960352,kodeks-dobrych-praktyk-pzpa-nowe-standardy-etyczne-i-operacyjne-w-br.html"
+      ],
+      "read": 2
     },
     {
-      id: 'p52', cat: 'autonomiczne', img: 'uploads/av-robotaxi-pe.png',
-      title: '17 państw UE za wspólnymi testami robotaxi. Polska wśród sygnatariuszy',
-      lead: '8 czerwca br. w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą transgraniczne testy pojazdów autonomicznych.',
-      cats: ['autonomiczne', 'regulacje-ue'],
-      author: 'Redakcja PortalTaxiPRO',
-      date: '15 czerwca 2026', read: 6,
+      "id": "p67",
+      "pub": "2026-11-13T10:00:00+01:00",
+      "date": "13 listopada 2026",
+      "cat": "rynki-zagraniczne",
+      "cats": [
+        "rynki-zagraniczne",
+        "regulacje-ue"
+      ],
+      "img": "pro/n-monachium-ceny.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Monachium: sąd wstrzymał ceny minimalne dla Ubera i Bolta",
+      "lead": "Sąd administracyjny w Monachium wstrzymał miejskie ceny minimalne dla przewozów na zamówienie. Gmina może je ustalać tylko dla kursów w całości na swoim terenie. Sprawa ma znaczenie dla polskiej dyskusji o cenach ustalanych przez gminy.",
+      "body": [
+        "Sąd administracyjny w Monachium (Verwaltungsgericht München) wstrzymał ze skutkiem natychmiastowym miejskie ceny minimalne dla przewozów na zamówienie. Postanowienie zapadło w trybie pilnym na wniosek pięciu firm przewozowych; media opisały je 9 października 2026 r. Przejazdy przez Ubera i Bolta w Monachium znowu mogą być tańsze niż taksówką.",
+        "## Dlaczego sąd wstrzymał ceny",
+        "W Niemczech przewozy typu Uber i Bolt wykonują firmy wynajmu aut z kierowcą (Mietwagen). Ustawa o przewozie osób (PBefG) pozwala gminom ustalać dla nich ceny minimalne (§ 51a). Monachium wprowadziło je zarządzeniem z lipca 2026 r.",
+        "Sąd uznał, że gmina może ustalać ceny minimalne tylko dla przejazdów w całości na swoim terenie. Monachijskie zarządzenie obejmowało też kursy na przedmieścia i trasy częściowo poza miastem, np. obwodnicą A 99. Tej części nie da się oddzielić, więc całe zarządzenie jest prawdopodobnie niezgodne z prawem.",
+        "> Postanowienie nie jest prawomocne. Miasto może złożyć zażalenie do Bawarskiego Trybunału Administracyjnego, a postępowanie główne trwa.",
+        "## Stanowiska",
+        "Uber domaga się całkowitego wycofania zarządzenia. Branża taksówkowa jest rozczarowana. Bolt krytykuje sposób regulacji i postuluje elastyczniejsze taryfy. Ceny minimalne dla przewozów typu Uber wprowadziły też inne niemieckie miasta, m.in. Heidelberg.",
+        "## Znaczenie dla Polski",
+        "Polski projekt UD431 przewiduje, że rady gmin będą ustalać ceny przewozów okazjonalnych pojazdami na 8–9 osób ([szczegóły projektu](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr)). Według mediów ministerstwo rozważa też szersze uprawnienia gmin do ustalania cen maksymalnych taksówek, także dla przejazdów przez aplikację. Sprawa z Monachium pokazuje problem, który może dotyczyć także takich rozwiązań: kursów przekraczających granicę gminy.",
+        "Wcześniej pisaliśmy o [obowiązku powrotu do bazy w Niemczech](/artykul/a9-niemcy-obowiazek-powrotu-do-bazy-jak-prawo-ogranicza-ubera-i-bolta) (5.06.2026)."
+      ],
+      "sources": [
+        "Heidelberg24 — Gericht kippt Mindestpreise für Uber und Bolt in München, 9.10.2026 (postanowienie VG München, sygn. M 23 S 26.5032) — https://www.heidelberg24.de/verbraucher/gericht-kippt-mindestpreise-fuer-uber-und-bolt-in-muenchen-zr-94533062.html",
+        "IamExpat — Ubers to get more expensive in Heidelberg as city introduces minimum fares — https://www.iamexpat.de/expat-info/germany-news/ubers-get-more-expensive-heidelberg-city-introduces-minimum-fares",
+        "Personenbeförderungsgesetz (PBefG), § 51a — https://www.gesetze-im-internet.de/pbefg/__51a.html"
+      ],
+      "read": 2
     },
     {
-      id: 'p50', cat: 'bezpieczenstwo', img: 'uploads/przeglad-nowe-zasady.png',
-      title: 'Licencja z weryfikacją. Ministerstwo zmieni wymogi dla zagranicznych taksówkarzy',
-      lead: 'Resort infrastruktury chce uszczelnić dostęp do zawodu taksówkarza. Cudzoziemcy spoza UE będą musieli udowodnić niekaralność nie tylko w Polsce, ale i w kraju, z którego pochodzą.',
-      cats: ['bezpieczenstwo', 'przeglad-prasy'],
-      source: 'RMF24', sourceAuthor: 'Waldemar Stelmach',
-      link: 'https://www.rmf24.pl/fakty/polska/news-praca-nie-dla-przestepcow-beda-zmiany-dla-kierowcow-taxi,nId,8089932',
-      date: '11 czerwca 2026', read: 3,
+      "id": "p66",
+      "pub": "2026-11-12T10:00:00+01:00",
+      "date": "12 listopada 2026",
+      "cat": "autonomiczne",
+      "cats": [
+        "autonomiczne",
+        "rynki-zagraniczne"
+      ],
+      "img": "pro/n-robotaxi-europa.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Robotaxi w Europie: Zagrzeb jeździ, Monachium i Madryt w kolejce",
+      "lead": "Uber z Pony.ai prowadzi robotaxi w Zagrzebiu i zapowiada cztery kolejne miasta. Waymo wybrało Monachium, WeRide – Madryt, a Baidu celuje w Londyn. Gdzie w Europie jeżdżą lub mają jeździć autonomiczne taksówki.",
+      "body": [
+        "Z ogłoszonych projektów dużych platform w Europie działa dziś robotaxi Ubera w Zagrzebiu, prowadzone razem z Pony.ai i lokalnym operatorem Verne. Usługa działa od wiosny 2026 r. W sierpniu firmy zapowiedziały cztery kolejne miasta w Europie i flotę ponad 2000 pojazdów, bez podania nazw miast.",
+        "## Kto i gdzie",
+        "| Firma | Miasto | Status (stan na 4.11.2026) |\n| --- | --- | --- |\n| Uber + Pony.ai (operator Verne) | Zagrzeb | działa od wiosny 2026; zapowiedź 4 kolejnych miast |\n| Waymo | Monachium | ogłoszenie 25.08.2026; mapowanie z kierowcami; przejazdy komercyjne do końca 2027 r., jeśli będą zgody urzędów federalnych, Bawarii i miasta |\n| Uber + WeRide | Madryt | planowana pierwsza usługa w Hiszpanii |\n| Uber + Autobrains | Monachium | projekt |\n| Baidu (Apollo Go) + Lyft | Niemcy, Wielka Brytania | Baidu liczy na przejazdy bez kierowcy w Londynie w 2027 r. |",
+        "Waymo podaje ponad 20 mln przejazdów w USA. Monachium będzie jej trzecim rynkiem poza USA, po Londynie i Tokio.",
+        "> Platformy przewozowe wchodzą w robotaxi jako pośrednicy, nie producenci. Uber i Lyft łączą technologię Pony.ai, WeRide czy Baidu z lokalnym operatorem floty – tak jak dziś łączą kierowców z partnerami flotowymi.",
+        "## Polska",
+        "W czerwcu ministrowie transportu kilkunastu państw, w tym Polski, podpisali deklarację o wspólnych testach pojazdów autonomicznych ([pisaliśmy o tym](/artykul/p52-17-panstw-ue-za-wspolnymi-testami-robotaxi-polska-wsrod-sygnatariuszy)). Komisja Europejska przeznaczyła na infrastrukturę testów 20 mln euro z instrumentu „Łącząc Europę” (CEF). W maju prezes Eternis Kamil Leszczyński mówił „Rzeczpospolitej”, że firma planuje zakup aut autonomicznych i testy, być może jeszcze w 2026 r. Daty ani miejsca testów firma nie podała."
+      ],
+      "sources": [
+        "CKPAP — Robotaxis enter Europe: Uber and Pony.ai expand fleet, Waymo chooses Munich, 4.09.2026 — https://ckpap.its.waw.pl/en/2026/09/04/robotaxis-enter-europe-uber-and-pony-ai-expand-fleet-waymo-chooses-munich/",
+        "The Detroit News — China’s Baidu hopes for driverless robotaxis in London in 2027, 23.10.2026 — https://www.detroitnews.com/story/business/autos/2026/10/23/chinas-baidu-hopes-for-driverless-robotaxis-in-london-in-2027/92394440007/",
+        "Bezprawnik — Taksówki bez kierowcy wjadą na polskie drogi (plany Eternis), 7.05.2026 — https://bezprawnik.pl/testy-autonomicznych-taksowek-w-polsce/"
+      ],
+      "read": 2
     },
     {
-      id: 'p49', cat: 'bezpieczenstwo', img: 'uploads/jazda-deszcz-warszawa.png',
-      title: 'Wypadek w Ząbkach otwiera na nowo debatę o bezpieczeństwie taksówek na aplikację',
-      lead: 'Śmiertelny wypadek w Ząbkach spowodował powrót do debaty publicznej kwestii bezpieczeństwa taksówek i umiejętności zagranicznych kierowców. Postuluje się zawieszanie licencji za naruszenia przepisów drogowych.',
-      cats: ['bezpieczenstwo', 'przeglad-prasy'],
-      source: 'Rzeczpospolita', sourceAuthor: 'Piotr Szymaniak',
-      link: 'https://www.rp.pl/prawo-drogowe/art44586391-po-wypadku-w-zabkach-eksperci-o-tym-jak-zwiekszyc-bezpieczenstwo-przewozow-na-aplikacje',
-      date: '9 czerwca 2026', read: 5,
+      "id": "p59",
+      "pub": "2026-11-10T10:00:00+01:00",
+      "date": "10 listopada 2026",
+      "cat": "rynek-polski",
+      "cats": [
+        "rynek-polski",
+        "analizy"
+      ],
+      "img": "pro/n-konsolidacja-rynku.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Znikają firmy taksówkowe, rosną pośrednicy. Konsolidacja rynku w 2026 roku",
+      "lead": "W I półroczu 2026 r. z rejestrów wykreślono ok. 1,2 tys. firm taksówkowych. Zyskują platformy i obsługujący je pośrednicy flotowi. Co to oznacza dla rynku przed ustawą platformową.",
+      "body": [
+        "W pierwszym półroczu 2026 r. z rejestrów wykreślono ok. 1,2 tys. firm taksówkowych, głównie jednoosobowych działalności – podaje „Rzeczpospolita” za Dun & Bradstreet. Zarejestrowano w tym czasie 676 nowych firm, więc ubytek netto wyniósł ok. 650, średnio ok. 4 firmy dziennie. Od początku 2019 r. zniknęło ok. 7 tys. firm, czyli ok. 13 proc. rynku. Zlecenia przejmują platformy i obsługujący je pośrednicy.",
+        "## Kto zyskuje",
+        "„Rzeczpospolita” jako największych beneficjentów wymienia pośredników dostarczających kierowców platformom: Natviol, Fobest, Avalon i Eternis. Platformy nie mają własnych kierowców ani aut, więc skala partnerów flotowych rośnie razem z udziałem aplikacji w rynku. Eternis zapowiadał w marcu wejście do Czech i Niemiec.",
+        "Te same firmy organizują się branżowo. Wszystkie cztery uczestniczyły w letnim zlocie Polskiego Związku Partnerów Aplikacyjnych, który zrzesza dziś 20 firm ([więcej o PZPA](/artykul/p58-pzpa-podwoil-liczbe-czlonkow-zwiazek-partnerow-aplikacyjnych-przed-ust)).",
+        "> Konsolidacja zmienia strukturę ryzyka. Gdy więcej kierowców pracuje przez kilku dużych pośredników, przepisy o odpowiedzialności solidarnej platform i pośredników obejmą większą część rynku ([projekt ustawy platformowej](/artykul/p54-dyrektywa-platformowa-polska-nie-zdazy-na-2-grudnia)).",
+        "## Model pośrednika poza przewozami",
+        "Z modelu partnerów flotowych korzysta też rynek dostaw. W lipcu 2026 r. Pyszne.pl zapowiedziało zakończenie zatrudnienia ok. 5 tys. kurierów i przejście na współpracę przez partnerów flotowych. Ministra pracy wnioskowała o kontrole PIP i ZUS w spółce. Sprawa pokazuje, że model pośrednika będzie jednym z głównych tematów prac nad ustawą platformową.",
+        "O rekordowej liczbie upadłości pisaliśmy w styczniu: [Rekord upadłości w branży taksówek](/artykul/p29-katarzyna-kucharczyk-znikajace-taksowki-quo-vadis-gospodarko)."
+      ],
+      "sources": [
+        "Rzeczpospolita — Wielka ucieczka taksówkarzy do aplikacji (dane Dun & Bradstreet), 24.07.2026 — https://pro.rp.pl/raporty-ekonomiczne/art44875511-wielka-ucieczka-taksowkarzy-do-aplikacji-rewolucja-w-przewozie-osob",
+        "Interia — Firmy taksówkarskie znikają z rejestrów. Najwięksi wygrani — https://biznes.interia.pl/gospodarka/news-firmy-taksowkarskie-znikaja-z-rejestrow-najwiekszymi-wygrany,nId,23518973",
+        "PZPA — Letni zlot przedstawicieli PZPA 2026 — https://pzpa.pl/letni-zlot-przedstawicieli-pzpa-2026/",
+        "Wiadomości Handlowe — Pyszne.pl zwalnia tysiące kurierów, 20.07.2026 — https://www.wiadomoscihandlowe.pl/rynek-pracy-w-handlu/pyszne-pl-zwalnia-tysiace-kurierow-politycy-i-zwiazki-alarmuja-2536632"
+      ],
+      "read": 2
     },
     {
-      id: 'p47', cat: 'rynek-polski', img: 'uploads/rynek-skrzyzowanie-warszawa.png',
-      title: 'Zawody odporne na AI. Dlaczego taksówkarz i kurier mają przewagę nad automatyzacją?',
-      lead: 'Natviol w analizie dla Infor przekonuje, że kierowcy i kurierzy mają coś, czego algorytmy na razie nie zastąpią: fizyczną obecność i mobilność. To sprawia, że ich praca pozostaje w dużej mierze poza zasięgiem automatyzacji.',
-      cats: ['rynek-polski', 'autonomiczne', 'przeglad-prasy'],
-      source: 'Infor (Kadry)', sourceAuthor: 'materiał partnera Natviol', region: 'Polska',
-      link: 'https://kadry.infor.pl/wiadomosci/7595683,taksowkarz-i-kurier-bezpieczny-zawod-w-dobie-sztucznej-inteligencji-to-najliczniejsza-grupa-niezaleznych-pracownikow.html',
-      date: '2 czerwca 2026', read: 3,
+      "id": "p65",
+      "pub": "2026-11-09T10:00:00+01:00",
+      "date": "9 listopada 2026",
+      "cat": "bezpieczenstwo",
+      "cats": [
+        "bezpieczenstwo",
+        "regulacje-ue"
+      ],
+      "img": "pro/n-kontrole-policja.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Fałszywe prawa jazdy i kierowcy bez uprawnień. Co wykazały kontrole przewozów na aplikację",
+      "lead": "W lipcu warszawska policja przeprowadziła 213 kontroli osób świadczących przewozy lub pośredniczących w nich. 22 osoby kierowały bez uprawnień, cztery miały fałszywe prawa jazdy. Zestawienie wyników z 2026 r.",
+      "body": [
+        "W lipcu 2026 r. warszawska policja skontrolowała 213 osób świadczących przewozy lub pośredniczących w nich. 22 osoby kierowały bez uprawnień, cztery miały fałszywe prawa jazdy. Kontrole w ramach działań „Bezpieczne przewozy” prowadził Wydział Ruchu Drogowego Komendy Stołecznej Policji ze Strażą Graniczną i przedstawicielem urzędu miasta.",
+        "## Wyniki kontroli w 2026 roku",
+        "| Akcja | Skala | Najważniejsze wyniki |\n| --- | --- | --- |\n| Warszawa, lipiec | 213 kontroli | 112 mandatów, 13 wniosków do sądu, 59 zatrzymanych dowodów rejestracyjnych, 19 odholowanych aut, 10 zatrzymanych praw jazdy, 22 kierowców bez uprawnień, 4 fałszywe prawa jazdy, 2 nietrzeźwych, 3 osoby poszukiwane, 5 wniosków o zobowiązanie cudzoziemca do powrotu |\n| Siedlce, koniec lipca | 18 pojazdów (8 kierowców z zagranicy) | 2 zatrzymane dowody rejestracyjne, 4 mandaty |\n| Ogólnopolska akcja „TAXI”, noc 20/21 marca | 9111 kierujących | 2165 wykroczeń drogowych, 84 naruszenia ustawy o transporcie drogowym |",
+        "Źródło danych: policja, za Infor.pl (5.08.2026). Liczb z różnych akcji nie należy porównywać: zakres i metoda kontroli były różne.",
+        "> Kontrole obejmują także pośredników. Kierowca bez uprawnień w aplikacji oznacza, że weryfikacja zawiodła na etapie platformy lub partnera flotowego.",
+        "## Co ma się zmienić w weryfikacji",
+        "Projekt UD431 Ministerstwa Infrastruktury przewiduje ogólnopolski identyfikator kierowcy taksówki, szerszy katalog przestępstw wykluczających i obowiązek sprawdzania przez pośredników badania technicznego i OC taksówki ([szczegóły projektu](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr)). Polski Związek Partnerów Aplikacyjnych proponuje Centralną Ewidencję Licencji Taksówkarskich i Taksówkarzy (CELT). Rejestr pokazywałby w czasie rzeczywistym ważność licencji i orzeczeń lekarskich, tak by pośrednik mógł od razu zablokować kierowcę, który stracił uprawnienia – podaje GazetaPrawna.pl. CELT jest propozycją branży, a nie częścią projektu.",
+        "Wcześniej pisaliśmy o [wypadku w Ząbkach i debacie o bezpieczeństwie](/artykul/p49-wypadek-w-zabkach-otwiera-na-nowo-debate-o-bezpieczenstwie-przewozow-n) (9.06.2026)."
+      ],
+      "sources": [
+        "Infor.pl — Sprawdzili przewoźników na aplikację: niesprawne pojazdy, fałszywe prawa jazdy, 5.08.2026 — https://www.infor.pl/prawo/nowosci-prawne/7636105,sprawdzili-przewoznikow-na-aplikacje-niesprawne-pojazdy-falszywe-p.html",
+        "TVN Turbo — Kontrole przewozów na aplikację w Warszawie, 7.08.2026 — https://tvnturbo.pl/aktualnosci/kontrole-przewozow-na-aplikacje-w-warszawie-policja-ujawnila-skale-nieprawidlowosci-st9179392",
+        "GazetaPrawna.pl — Centralna Ewidencja Licencji Taksówkarskich (CELT) — https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/11274829,koniec-latwego-dorabiania-taxi-nowe-przepisy-2027.html"
+      ],
+      "read": 2
     },
-  ],
-
-  // Full article pool (assigned to categories). lead + body paragraphs.
-  articles: [
-    // PRZEGLĄD PRASY — Sondaż IBRiS ws. egzaminu dla kierowców z zagranicy (19 czerwca 2026)
+    {
+      "id": "p56",
+      "pub": "2026-11-06T10:00:00+01:00",
+      "date": "6 listopada 2026",
+      "cat": "regulacje-ue",
+      "cats": [
+        "regulacje-ue",
+        "bezpieczenstwo"
+      ],
+      "img": "pro/n-ud431-licencje.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "hot": true,
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Projekt UD431: identyfikator kierowcy, OC taksówki i nowe obowiązki pośredników",
+      "lead": "Ministerstwo Infrastruktury przygotowuje zmiany w ustawie o transporcie drogowym. Pośrednicy mają sprawdzać badanie techniczne i OC taksówki, a kierowcy dostaną ogólnopolski identyfikator. Projekt jest na etapie założeń.",
+      "body": [
+        "Pośrednicy w przewozie osób będą musieli sprawdzać, czy pojazd ma dodatkowe badanie techniczne dla taksówki i dedykowane OC. Tak przewidują założenia projektu ustawy UD431, który Ministerstwo Infrastruktury wpisało do wykazu prac legislacyjnych rządu 7 lipca 2026 r. Projekt jest na etapie założeń, tekstu ustawy jeszcze nie ma (stan na 4.11.2026).",
+        "## Skąd projekt",
+        "Projekt dotyczy zmian w ustawie o transporcie drogowym, ustawie – Prawo przewozowe i ustawie – Prawo o ruchu drogowym. Ministerstwo wskazało go w odpowiedzi na petycję w sprawie przewozu osób taksówkami z 8 lipca 2026 r. Zapowiedź zmian pojawiła się po czerwcowym wypadku w Ząbkach ([pisaliśmy o nim](/artykul/p49-wypadek-w-zabkach-otwiera-na-nowo-debate-o-bezpieczenstwie-przewozow-n)). Wnioski do ministerstwa przekazał też wcześniej Parlamentarny Zespół ds. Regulacji Rynku Taxi i Przewozu Osób.",
+        "## Co przewidują założenia",
+        "| Kogo dotyczy | Zmiana |\n| --- | --- |\n| Kierowcy taksówek | Szerszy wymóg niekaralności: także przestępstwa karne skarbowe i wybrane przestępstwa umyślne, m.in. przeciwko bezpieczeństwu w komunikacji, mieniu, obrotowi gospodarczemu, wiarygodności dokumentów oraz z ustawy o przeciwdziałaniu narkomanii |\n| Kierowcy spoza UE/EFTA-EOG | Zaświadczenie o niekaralności z państwa pochodzenia, przetłumaczone przez tłumacza przysięgłego lub konsula |\n| Kierowcy taksówek | Ogólnopolski identyfikator kierowcy potwierdzający spełnienie wymagań |\n| Licencje | Pojazd można zgłosić najwyżej do dwóch licencji z danego obszaru licencyjnego |\n| Pośrednicy | Weryfikacja dodatkowego badania technicznego taksówki i dedykowanego OC; aplikacja ma spełniać wymogi dla kas rejestrujących w postaci oprogramowania |\n| Pośrednicy | Niższe kary, proporcjonalne do naruszeń |\n| Przewozy okazjonalne (pojazdy 8–9 osób z kierowcą) | Rada gminy może ustalać ceny; przed przejazdem pasażer dostaje informację o cenie i ją akceptuje |",
+        "> Dla partnerów flotowych i aplikacji zmiana oznacza nowy obowiązek weryfikacji pojazdu. Dziś pośrednik sprawdza przede wszystkim kierowcę i licencję.",
+        "## Pojęcia",
+        "> **Pośrednik przy przewozie osób** – przedsiębiorca, który przyjmuje zlecenia przewozu i przekazuje je przewoźnikom (ustawa o transporcie drogowym). W praktyce: aplikacje i część partnerów flotowych. **Obszar licencyjny** – gmina lub związek gmin, na którego terenie licencja uprawnia do przewozu taksówką.",
+        "## Co dalej",
+        "Rząd ma przyjąć projekt w I kwartale 2027 r. – podają Interia i Gazoo.pl; w dokumencie ministerstwa harmonogramu nie ma. Według mediów ministerstwo rozważa też szersze uprawnienia gmin do ustalania cen maksymalnych taksówek, także dla przejazdów przez aplikację. PZPA proponuje dodatkowo centralny rejestr licencji i kierowców (CELT) – piszemy o nim w tekście o [kontrolach przewozów](/artykul/p65-falszywe-prawa-jazdy-i-kierowcy-bez-uprawnien-co-wykazaly-kontrole-prz). Treść przepisów może się zmienić w konsultacjach i w parlamencie.",
+        "Wcześniej pisaliśmy o [zmianie wymogów dla zagranicznych taksówkarzy](/artykul/p50-licencja-z-weryfikacja-ministerstwo-zmieni-wymogi-dla-zagranicznych-ta) (11.06.2026)."
+      ],
+      "sources": [
+        "Ministerstwo Infrastruktury — zawiadomienie o sposobie załatwienia petycji, 8.07.2026 — https://www.gov.pl/attachment/223c5013-3192-45de-89a2-ba274eb86a4a",
+        "Interia Motoryzacja — Rząd bierze się za taksówkarzy — https://motoryzacja.interia.pl/wiadomosci/news-rzad-bierze-sie-za-taksowkarzy-maksymalne-ceny-i-dodatkowe-w,nId,23511172",
+        "Gazoo.pl — Rząd bierze się za Ubera i Bolta, 9.07.2026 — https://gazoo.pl/rzad-bierze-sie-za-ubera-i-bolta-pasazer-ma-wiedziec-kto-i-czym-go-wiezie.html",
+        "GazetaPrawna.pl — Centralna Ewidencja Licencji Taksówkarskich. Nowe przepisy w 2027 r. — https://www.gazetaprawna.pl/wiadomosci/kraj/artykuly/11274829,koniec-latwego-dorabiania-taxi-nowe-przepisy-2027.html"
+      ],
+      "read": 2
+    },
+    {
+      "id": "p68",
+      "pub": "2026-11-05T13:30:00+01:00",
+      "date": "5 listopada 2026",
+      "cat": "newsy-platform",
+      "cats": [
+        "newsy-platform",
+        "rynek-polski",
+        "rynki-zagraniczne"
+      ],
+      "img": "pro/lyft-wejscie-polska.jpg",
+      "imgHome": "pro/lyft-wejscie-polska-home.jpg",
+      "imgHomeCaption": "Fot. Filip Klimaszewski / Freenow by Lyft, materiały prasowe",
+      "featured": true,
+      "imgCaption": "Autonomiczny pojazd May Mobility zamawiany przez aplikację Lyft w USA. Fot. Lyft, materiały prasowe",
+      "hot": true,
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Lyft wchodzi do Polski: Freenow zmienia się w Lyft – co to oznacza dla flot i kierowców",
+      "lead": "Amerykański Lyft, który od 2025 r. jest właścicielem Freenow, w I kwartale 2027 r. zacznie zastępować w Polsce markę Freenow własną. Obie aplikacje mają przez pewien czas działać równolegle, a firma deklaruje, że w 2027 r. chce co najmniej podwoić liczbę przejazdów w Polsce i wejść do 15–20 kolejnych mniejszych miast. Zmiana dotyczy pasażerów, ponad 10 tys. aktywnych kierowców współpracujących z Freenow i firm partnerskich, przez które ci kierowcy jeżdżą.",
+      "body": [
+        "## Czym jest Lyft",
+        "Lyft to amerykańska platforma ride-hailingu (przewozów zamawianych w aplikacji) z siedzibą w San Francisco, notowana na giełdzie Nasdaq. Do 2025 r. działała wyłącznie w Ameryce Północnej (USA i Kanada), gdzie jest drugim graczem po Uberze. Firmą kieruje David Risher.",
+        "W II kwartale 2026 r. Lyft zrealizował 262,4 mln przejazdów (+12% r/r), miał 30,5 mln aktywnych pasażerów (+17%) i 5,5 mld USD wartości brutto zamówień (gross bookings, +23%). Przychody wyniosły 1,84 mld USD, a zysk netto 50,3 mln USD ([Lyft, wyniki Q2 2026](https://investor.lyft.com/news-events-presentations/press-releases/detail/202/lyft-reports-strong-q2-2026-results)). Spółka podaje, że wzrost przejazdów wynikał częściowo z wyników Freenow by Lyft w Europie, ale nie publikuje osobnych danych dla tego segmentu.",
+        "W odróżnieniu od Ubera i Bolta Lyft nie rozwija dostaw jedzenia ani zakupów. Koncentruje się na przewozach osób, a w USA także na hulajnogach, rowerach miejskich i współpracy z operatorami pojazdów autonomicznych (m.in. Waymo w Nashville).",
+        "## Skala: Lyft na tle Ubera, Bolta i iTaxi",
+        "W przewozach osób Uber jest około pięciokrotnie większy od Lyftu: w II kwartale 2026 r. wartość brutto zamówień w segmencie Mobility Ubera wyniosła 29,0 mld USD wobec 5,5 mld USD całego Lyftu. Bolt nie jest spółką giełdową i nie publikuje danych kwartalnych; jego roczna wartość brutto zamówień (w tempie z końca 2025 r.) to ok. 14 mld USD, czyli mniej niż Lyftu w ujęciu rocznym. Dla polskiego kontekstu zestawienie obejmuje też iTaxi – polską platformę taksówkową, która działa wyłącznie w kraju, opiera się na klientach biznesowych i od kilku lat skupuje regionalne korporacje (16 przejęć, w listopadzie 2025 r. Ele Taxi). Jej roczne przychody (90,7 mln zł w 2025 r.) to ułamek skali globalnych graczy.",
+        "| Wskaźnik | Lyft | Uber | Bolt | iTaxi |\n| --- | --- | --- | --- | --- |\n| Okres danych | Q2 2026 | Q2 2026 | rok 2025 | rok 2025 |\n| Wartość brutto zamówień | 5,5 mld USD (kwartał, tylko przewozy) | 58,0 mld USD (kwartał, w tym Mobility 29,0 mld USD) | ok. 14 mld USD (roczny run-rate) | nie publikuje |\n| Przychody | 1,84 mld USD (kwartał) | 14,2 mld USD (kwartał) | 2,27 mld EUR (rok) | 90,7 mln zł (rok) |\n| Przejazdy / zamówienia | 262,4 mln (kwartał) | 3,87 mld (kwartał, przejazdy i dostawy) | brak danych | nie publikuje |\n| Aktywni użytkownicy | 30,5 mln | 208 mln (miesięcznie aktywni) | brak aktualnych danych | nie publikuje |\n| Zasięg | USA, Kanada + 9 krajów Europy (Freenow) | kilkadziesiąt krajów | ponad 50 krajów | Polska: m.in. Warszawa, Kraków, Wrocław, Poznań, Trójmiasto, Olsztyn; od XI 2025 r. także sieć Ele Taxi / Taxi Polska (29 miast) |\n| Model | ride-hailing; w Europie taxi (Freenow) | ride-hailing, taxi, dostawy | ride-hailing, taxi, dostawy, mikromobilność | wyłącznie taxi, nacisk na B2B |\n| Wynik netto | +50,3 mln USD (kwartał) | zysk | +0,92 mln EUR (rok, pierwszy zysk w historii) | +2,5 mln zł (rok) |",
+        "Porównanie jest orientacyjne: firmy liczą wskaźniki różnie, a dane Ubera obejmują też dostawy. Uber podał już wyniki za III kwartał 2026 r. (59,8 mld USD wartości zamówień, 4,1 mld przejazdów i dostaw, [komunikat z 4.11.2026](https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Results-for-Third-Quarter-2026/default.aspx)); Lyft swoich jeszcze nie opublikował, dlatego tabela zestawia II kwartał.",
+        "> Udziałów poszczególnych platform w polskim rynku żadna z firm nie publikuje. W Polsce działają trzy duże platformy: Bolt, Uber i Freenow by Lyft.",
+        "## Przejęcie Freenow",
+        "Lyft ogłosił zakup Freenow 16 kwietnia 2025 r. za ok. 175 mln EUR (ok. 197 mln USD) gotówką. Sprzedającymi byli BMW i Mercedes-Benz Mobility, współwłaściciele platformy od czasów marki mytaxi ([TechCrunch, 16.04.2025](https://techcrunch.com/2025/04/16/lyft-to-buy-taxi-app-freenow-for-197m-to-enter-europe)). Transakcję zamknięto 31 lipca 2025 r. ([Lyft, 31.07.2025](https://www.lyft.com/blog/posts/lyft-goes-global-freenow-acquisition-complete)).",
+        "Freenow działa w ponad 200 miastach w dziewięciu krajach (dane Lyftu z 2026 r.; w chwili przejęcia – ponad 180): Irlandii, Wielkiej Brytanii, Niemczech, Grecji, Hiszpanii, Włoszech, Polsce, Francji i Austrii. W chwili ogłoszenia transakcji jego działalność taksówkowa rosła o 13% rocznie, a firma osiągnęła próg rentowności. Lyft szacował, że przejęcie doda mu ok. 1,14 mld USD rocznej wartości brutto zamówień.",
+        "Po zamknięciu transakcji zespół Freenow pozostał na stanowiskach, a krajami nadal zarządzają lokalni dyrektorzy. Prezes Freenow Thomas Zimmermann podlega Jeremy’emu Birdowi, wiceprezesowi Lyftu odpowiedzialnemu za doświadczenia kierowców. Lyft zadeklarował też, że w Europie pozostanie przy taksówkach, czyli przy modelu, na którym Freenow opierał działalność od początku.",
+        "## Ta sama zmiana w całej Europie",
+        "Polska nie jest wyjątkiem: Lyft przenosi na własną aplikację wszystkie dziewięć krajów Freenow. W materiałach do wyników za II kwartał 2026 r. spółka podała, że wspólną aplikację testuje w ponad kilkunastu miastach Europy, m.in. w Atenach, Barcelonie, Dublinie, Madrycie, Monachium, Paryżu i Rzymie, i planuje udostępnić ją szeroko w 2027 r. Oznakowanie „Freenow by Lyft” jest już na samochodach „od Aten po Londyn i Warszawę” ([Lyft, 6.08.2026](https://www.lyft.com/blog/posts/lyft-q2-2026-earnings-prepared-remarks)). W czerwcu 2026 r. Jeremy Bird, wiceprezes Lyftu ds. globalnego wzrostu, zapowiedział jedną globalną aplikację dla przejazdów, taxi i mikromobilności w ciągu 12 miesięcy ([Lyft, 8.06.2026](https://www.lyft.com/blog/posts/growing-out-up-going-global-our-way)).",
+        "To zmiana kursu. W czerwcu 2025 r., jeszcze przed zamknięciem transakcji, kierownictwo Lyftu mówiło „Handelsblattowi”, że marka Freenow zostaje, bo kolejna zmiana nazwy w Europie byłaby zbyt ryzykowna, a wspólna aplikacja powstanie w dalszej przyszłości ([Taxi Times za „Handelsblattem”, 2.06.2025](https://taxi-times.com/was-plant-lyft-mit-free-now/)).",
+        "W poszczególnych krajach Lyft dopasowuje model do lokalnych przepisów:",
+        "- Hiszpania: Freenow deklaruje, że stawia „w 100% na taxi” i nie planuje zmiany modelu, wskazując, że ride-hailing w amerykańskiej formie jest tam niedozwolony ([La Gaceta del Taxi, 16.06.2026](https://www.gacetadeltaxi.com/articulo/noticias-del-taxi/freenow-reafirma-modelo-taxi-espana-pese-futura-integracion-aplicacion-lyft/20260616114832038731.html)).\n- Irlandia: Freenow przejął dwie centrale taksówkowe, Lynk z Dublina i Swift Taxis z Limerick ([Taxi Point](https://www.taxi-point.co.uk/post/lyft-snaps-up-two-irish-taxi-giants-in-major-expansion-across-dublin-and-limerick)). Przy zamknięciu przejęcia „The Irish Times” podawał, że przychody Freenow w Irlandii wyniosły w 2023 r. 46,1 mln EUR ([The Irish Times, 31.07.2025](https://www.irishtimes.com/business/2025/07/31/freenow-passengers-face-no-immediate-change-after-lyft-deal/)).\n- Wielka Brytania: w kwietniu 2026 r. Lyft ogłosił przejęcie brytyjskiej części Gett; razem z Freenow ma obejmować większość zarejestrowanych kierowców black cab w Wielkim Londynie ([Lyft, 23.04.2026](https://investor.lyft.com/news-events-presentations/press-releases/detail/195/lyft-expands-in-london-with-gett-uk-acquisition)).\n- Grecja, Hiszpania, Włochy: według Lyftu to one napędzały wzrost przejazdów Freenow w II kwartale 2026 r.; w ciągu roku od przejęcia sieć powiększyła się o ok. 20 miast ([Lyft, 2026](https://www.lyft.com/blog/posts/one-year-in-freenow-growth-since-joining-lyft)).",
+        "## Jak będzie wyglądać zmiana w Polsce",
+        "![Taksówka Freenow by Lyft w Warszawie. Fot. Filip Klimaszewski / Freenow by Lyft, materiały prasowe](pro/lyft-warszawa-ulica.jpg)",
+        "Zmiana marki jest rozłożona w czasie i nie ma daty zakończenia. Ramy wyznaczają komunikaty Lyftu (jedna aplikacja szeroko dostępna w 2027 r.), a szczegóły dla Polski podał Krzysztof Urban, dyrektor zarządzający Freenow by Lyft w Polsce ([„Rzeczpospolita”, 3.11.2026](https://www.rp.pl/uslugi/art45406401-koniec-z-freenow-nadchodzi-lyft-krzysztof-urban-chcemy-podwoic-liczbe-przejazdow)):",
+        "- Od przejęcia (2025 r.): aplikacja działa jako „Freenow by Lyft”. Konta, historia przejazdów i metody płatności działają bez zmian.\n- Od listopada 2026 r.: w Warszawie startuje roaming – użytkownicy Lyftu z Ameryki Północnej zamawiają przejazdy w Polsce we własnej aplikacji, bez instalowania Freenow. Kursy realizują kierowcy współpracujący z Freenow.\n- I kwartał 2027 r.: początek migracji do marki Lyft i pełnej platformy Lyftu w Europie. Przez pewien czas obie aplikacje działają równolegle.\n- W ciągu 2027 r.: pasażerowie są stopniowo zachęcani do przejścia na aplikację Lyft; nazwa i logo Freenow mają zniknąć z samochodów.",
+        "Urban zapewnił, że użytkownicy nie będą zmuszeni z dnia na dzień usuwać Freenow i instalować Lyftu („Nie, absolutnie takiego scenariusza nie będzie”). Tempo zmiany ma zależeć od reakcji klientów, bo marka Lyft jest w Polsce mało znana.",
+        "> Firma nie podała dotąd, jak przebiegnie migracja kont kierowców i partnerów flotowych ani czy zmienią się zasady rozliczeń i prowizje. Stan na 5.11.2026.",
+        "Model usługi w Polsce się nie zmienia: Freenow współpracuje z kierowcami posiadającymi licencję na przewóz osób, często przez firmy partnerskie (partnerów flotowych) będące przewoźnikami. Lyft zapowiedział wcześniej, że kierowcy mogą z czasem dostać narzędzia stosowane przez niego w innych krajach, ale bez terminów ([Ramnext, aktualizacja 23.10.2026](https://www.ramnext.pl/lyft-w-polsce/)).",
+        "## Plany na 2027 r.",
+        "Lyft nie podał kwoty inwestycji w Polsce. Deklarowane cele dotyczą skali działania (wszystkie według Krzysztofa Urbana, [„Rzeczpospolita”, 3.11.2026](https://www.rp.pl/uslugi/art45406401-koniec-z-freenow-nadchodzi-lyft-krzysztof-urban-chcemy-podwoic-liczbe-przejazdow)):",
+        "- co najmniej dwukrotny wzrost liczby przejazdów w Polsce w 2027 r.; rynek przejazdów zamawianych w aplikacjach rośnie według Urbana o 5–10% rocznie, a cel podwojenia wymaga – to wniosek redakcji – odebrania części klientów konkurencji;\n- wejście do 15–20 kolejnych mniejszych miast; dziś Freenow działa w 25 miastach, w tym w ok. 17 mniejszych ośrodkach; w części z nich tygodniowa liczba przejazdów wzrosła w ostatnim kwartale prawie dziesięciokrotnie;\n- umocnienie pozycji w dużych miastach;\n- udział w przetargach na obsługę lotnisk i dworców, jeśli zostaną ogłoszone;\n- możliwe przejęcia lokalnych firm – Urban ich nie wyklucza, ale nie wskazuje celów; podobnie Lyft postąpił w Irlandii i Wielkiej Brytanii.",
+        "Według Urbana Freenow jest w Polsce rentowny od 2024 r. i współpracuje z ponad 10 tys. aktywnych kierowców; ok. jednej trzeciej z nich to cudzoziemcy, najczęściej z Ukrainy.",
+        "W dłuższej perspektywie Lyft wymienia pojazdy autonomiczne. W Londynie testuje komercyjne robotaksówki z chińskim Baidu, z planowanym startem w 2027 r. W Polsce takich testów nie ma; Urban wskazuje, że barierą są przepisy, a nie technologia, i opisuje docelowy model jako mieszany – auta autonomiczne uzupełniałyby kierowców w godzinach szczytu, nocą i na peryferyjnych trasach. To deklaracja kierunku, nie harmonogram.",
+        "## Co to oznacza dla flot i kierowców",
+        "Na dziś zasady współpracy z Freenow się nie zmieniają, a firma nie ogłosiła nowych warunków dla kierowców ani partnerów flotowych. Poniższe punkty to wnioski redakcji z deklaracji firmy, nie zapowiedzi Lyftu.",
+        "- Popyt w mniejszych miastach. Wejście do 15–20 nowych ośrodków oznacza zapotrzebowanie na kierowców z licencją i na partnerów flotowych tam, gdzie dotąd platforma nie działała. Urban zwraca uwagę, że czas uzyskania licencji różni się między miastami: w Warszawie ok. czterech miesięcy na licencję taxi i ponad rok na identyfikator kierowcy, w Krakowie i Trójmieście 2–3 dni robocze.\n- Silniejsza konkurencja o kierowców. Cel podwojenia przejazdów przy wzroście rynku o 5–10% rocznie zapowiada walkę z Uberem i Boltem o pasażerów i kierowców, w tym promocjami. Jak długo potrwa i kto na niej zyska, nie da się dziś ocenić.\n- Turysta z Ameryki Północnej jako nowy klient. Roaming w Warszawie może dodać zleceń z lotniska i hoteli; firma nie podała, ilu klientów się spodziewa.\n- Migracja aplikacji w 2027 r. Dla flot oznacza to możliwą zmianę narzędzi (aplikacja kierowcy, panel partnera, raporty rozliczeń). Szczegółów jeszcze nie ma.\n- Regulacje. Freenow sprzeciwia się objęciu taxi przyszłymi przepisami o pracy platformowej, które wdrażają dyrektywę (UE) 2024/2831, i wskazuje na ryzyko w projektowanym domniemaniu zatrudnienia oraz wspólnej odpowiedzialności platformy i partnera flotowego. To stanowisko firmy wobec projektu przepisów, a nie obowiązujące prawo ([o stanie prac nad projektem pisaliśmy tutaj](/artykul/p54-dyrektywa-platformowa-polska-nie-zdazy-na-2-grudnia)). Firma popiera natomiast ostrzejszą weryfikację kierowców spoza UE, w tym zaświadczenia o niekaralności z kraju pochodzenia.",
+        "> W I kwartale 2027 r. warto sprawdzić w panelu partnera i komunikatach Freenow, jak przebiegnie migracja kont oraz czy zmieniają się warunki rozliczeń.",
+        "## Pojęcia",
+        "- Ride-hailing – przewozy osób zamawiane w aplikacji mobilnej.\n- Wartość brutto zamówień (gross bookings, GMV) – łączna kwota płacona przez klientów za przejazdy, przed odliczeniem części dla kierowców i partnerów; nie jest to przychód platformy.\n- Run-rate – wynik z ostatniego okresu przeliczony na cały rok.\n- Roaming – zamawianie przejazdu za granicą we własnej aplikacji, realizowane przez partnerskiego operatora."
+      ],
+      "sources": [
+        "„Rzeczpospolita” — Koniec z Freenow, nadchodzi Lyft. Krzysztof Urban: Chcemy podwoić liczbę przejazdów (3.11.2026) — https://www.rp.pl/uslugi/art45406401-koniec-z-freenow-nadchodzi-lyft-krzysztof-urban-chcemy-podwoic-liczbe-przejazdow",
+        "Lyft — Q2 2026 Prepared Remarks (6.08.2026) — https://www.lyft.com/blog/posts/lyft-q2-2026-earnings-prepared-remarks",
+        "Lyft — Growing out, up, going global, Jeremy Bird (8.06.2026) — https://www.lyft.com/blog/posts/growing-out-up-going-global-our-way",
+        "Lyft — One year in: Freenow growth since joining Lyft (2026) — https://www.lyft.com/blog/posts/one-year-in-freenow-growth-since-joining-lyft",
+        "Lyft — Lyft Expands in London with Gett UK Acquisition (23.04.2026) — https://investor.lyft.com/news-events-presentations/press-releases/detail/195/lyft-expands-in-london-with-gett-uk-acquisition",
+        "Lyft — Lyft Goes Global: FREENOW Acquisition Complete (31.07.2025) — https://www.lyft.com/blog/posts/lyft-goes-global-freenow-acquisition-complete",
+        "Lyft — Lyft Reports Strong Q2 2026 Results (6.08.2026) — https://investor.lyft.com/news-events-presentations/press-releases/detail/202/lyft-reports-strong-q2-2026-results",
+        "Uber — Uber Announces Results for Second Quarter 2026 (5.08.2026) — https://www.businesswire.com/news/home/20260805020613/en/Uber-Announces-Results-for-Second-Quarter-2026",
+        "Uber — Uber Announces Results for Third Quarter 2026 (4.11.2026) — https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Results-for-Third-Quarter-2026/default.aspx",
+        "The Irish Times — Freenow passengers face no immediate change after Lyft deal (31.07.2025) — https://www.irishtimes.com/business/2025/07/31/freenow-passengers-face-no-immediate-change-after-lyft-deal/",
+        "Taxi Times — Was plant Lyft mit Free Now? (2.06.2025, za „Handelsblattem”) — https://taxi-times.com/was-plant-lyft-mit-free-now/",
+        "La Gaceta del Taxi — FreeNow reafirma su modelo de taxi en España (16.06.2026) — https://www.gacetadeltaxi.com/articulo/noticias-del-taxi/freenow-reafirma-modelo-taxi-espana-pese-futura-integracion-aplicacion-lyft/20260616114832038731.html",
+        "Taxi Point — Lyft snaps up two Irish taxi giants — https://www.taxi-point.co.uk/post/lyft-snaps-up-two-irish-taxi-giants-in-major-expansion-across-dublin-and-limerick",
+        "TechCrunch — Lyft to buy taxi app Freenow for $197M (16.04.2025) — https://techcrunch.com/2025/04/16/lyft-to-buy-taxi-app-freenow-for-197m-to-enter-europe",
+        "Trade with Estonia — Bolt hits €2.27 billion in revenue (07.2026) — https://tradewithestonia.com/bolt-profit-2025/",
+        "BizRaport — ITAXI.PL S.A., KRS 0000922228, dane finansowe 2023–2025 — https://www.bizraport.pl/krs/0000922228/itaxipl-spolka-akcyjna",
+        "„Rzeczpospolita” — iTaxi przejmuje Ele Taxi (XI 2025) — https://www.rp.pl/transport/art43291911-wielkie-przejecie-na-rynku-taksowek-w-polsce-lacza-sie-dwie-popularne-sieci",
+        "Ramnext — Lyft w Polsce: Freenow staje się Freenow by Lyft — https://www.ramnext.pl/lyft-w-polsce/"
+      ],
+      "read": 9
+    },
+    {
+      "id": "p55",
+      "pub": "2026-11-05T10:00:00+01:00",
+      "date": "5 listopada 2026",
+      "cat": "regulacje-ue",
+      "cats": [
+        "regulacje-ue",
+        "rynki-zagraniczne"
+      ],
+      "img": "pro/n-slowacja-transpozycja.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Słowacja pierwsza z ustawą platformową. Gdzie jest reszta UE",
+      "lead": "Słowacka ustawa wdrażająca dyrektywę 2024/2831 wchodzi w życie 2 grudnia 2026 r. i obejmuje wprost przewóz osób. Na miesiąc przed terminem żadne państwo UE nie ma w pełni obowiązującej transpozycji.",
+      "body": [
+        "Słowacja jako pierwsze państwo UE ma uchwaloną ustawę wdrażającą w całości dyrektywę o pracy platformowej. Rada Narodowa przyjęła ustawę o pracy za pośrednictwem cyfrowej platformy pracy 23 września 2026 r., a prezydent podpisał ją 14 października. Przepisy wchodzą w życie 2 grudnia 2026 r., w dniu upływu terminu transpozycji.",
+        "## Co zmienia słowacka ustawa",
+        "- **Domniemanie zatrudnienia.** Jeśli wykonawca wykaże cechy pracy zależnej, np. że platforma ustala wynagrodzenie, czas lub sposób pracy, platforma musi udowodnić, że stosunku pracy nie ma. Przy umowach zawartych przed 2 grudnia domniemanie działa od tej daty.\n- **Przewóz osób.** Ustawa obejmuje wprost aplikacje do przewozu osób i kierowców.\n- **Algorytmy.** Blokady konta i obniżenia wynagrodzenia nie może przeprowadzić wyłącznie system automatyczny. Platforma musi wyjaśnić, jak działają jej algorytmy i jakie dane zbiera.\n- **Dane.** Zakaz przetwarzania danych o stanie psychicznym, prywatnej komunikacji i poglądach politycznych oraz monitorowania poza pracą.\n- **Rejestr i kary.** Platformy zgłaszają działalność Narodowemu Inspektoratowi Pracy i przekazują dane o liczbie wykonawców, ich dochodach i czasie pracy. Powstanie publiczny rejestr platform. Kara za naruszenie: do 50 000 euro.",
+        "> Słowacki rynek przewozów zna już spory z platformami. 30 marca 2026 r. część kierowców Bolta wyłączyła aplikację w całym kraju, domagając się minimalnej stawki za kilometr i limitu prowizji. Bolt podawał, że usługa działała normalnie.",
+        "## Stan transpozycji w UE",
+        "Na miesiąc przed terminem żadne państwo nie ma w pełni obowiązujących przepisów. Zestawienie opiera się na trackerze firmy Teamed (stan na 27.10.2026). Teamed świadczy usługi zatrudniania (EOR), dlatego statusy wymagają potwierdzenia w dziennikach ustaw.",
+        "| Status | Liczba państw | Państwa |\n| --- | --- | --- |\n| Ustawa przyjęta, jeszcze nie obowiązuje | 1 | Słowacja |\n| Domniemanie zatrudnienia częściowo w prawie krajowym | 6 | Belgia, Chorwacja, Hiszpania, Malta (tylko dostawy), Portugalia, Włochy |\n| Opublikowany projekt | 11 | m.in. Polska (UC160) |\n| Brak projektu | 9 | — |",
+        "Częściowe przepisy w szóstce państw powstały zwykle przed dyrektywą i nie wdrażają jej w całości; np. hiszpańska „ley rider” dotyczy dostaw. Stan prac w Polsce opisujemy w tekście [Polska nie zdąży na 2 grudnia](/artykul/p54-dyrektywa-platformowa-polska-nie-zdazy-na-2-grudnia)."
+      ],
+      "sources": [
+        "Právne noviny — Prácu cez digitálne platformy čaká od decembra domnienka zamestnania — https://pravnenoviny.sk/praca-cez-digitalne-platformy/",
+        "Teamed — EU Platform Work Directive: transposition tracker (stan na 27.10.2026) — https://www.teamed.global/eu-platform-work/transposition-tracker",
+        "Slov-lex — tekst ustawy (numer w Zbierce zákonov do potwierdzenia) — https://static.slov-lex.sk/static/SK/ZZ/2026/262/vyhlasene_znenie.html",
+        "Noviny.sk — Taxikári naprieč Slovenskom vypli aplikácie, 30.03.2026 — https://www.noviny.sk/slovensko/1189030-taxikari-napriec-slovenskom-vypli-aplikacie-a-protestovali-proti-podmienkam"
+      ],
+      "read": 2
+    },
+    {
+      "id": "p64",
+      "pub": "2026-11-05T10:00:00+01:00",
+      "date": "5 listopada 2026",
+      "cat": "analizy",
+      "cats": [
+        "analizy",
+        "rynek-polski"
+      ],
+      "img": "pro/n-paliwa-cpn.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Ceny maksymalne paliw do końca roku. Floty na LPG bez ochrony",
+      "lead": "Od 3 października do 31 grudnia 2026 r. obowiązują ceny maksymalne benzyny i oleju napędowego oraz 8-proc. VAT. Autogaz nie jest objęty programem. Co to oznacza dla kosztów flot.",
+      "body": [
+        "Do 31 grudnia 2026 r. benzyna i olej napędowy mają urzędowe ceny maksymalne, a autogaz nie. Rząd uruchomił 3 października trzecią edycję programu „Ceny Paliw Niżej” (CPN): VAT na paliwa spadł z 23 do 8 proc., obniżono akcyzę i wprowadzono ceny maksymalne ustalane codziennie.",
+        "## Ceny w październiku",
+        "| Paliwo | Cena maksymalna 30.10.2026 | Najwyższa w tej edycji |\n| --- | --- | --- |\n| Benzyna 95 | 6,51 zł/l | 7,11 zł/l (14.10) |\n| Benzyna 98 | 7,36 zł/l | — |\n| Olej napędowy | 8,19 zł/l | 8,28 zł/l (28.10) |",
+        "Wysokie ceny oleju napędowego wynikają z ograniczeń podaży na rynkach światowych, m.in. napięć wokół cieśniny Ormuz – podaje „Auto Świat”. Program jest finansowany częściowo z nowego podatku od nadzwyczajnych zysków firm paliwowych.",
+        "## LPG poza programem",
+        "Ministerstwo Finansów wskazuje, że CPN obejmuje tylko wybrane paliwa silnikowe, i nie planuje objęcia autogazu tarczą. W maju 2026 r. cena LPG wzrosła w kilka tygodni z 2,59 do 3,94 zł/l – podawał money.pl.",
+        "> Przewaga LPG nad benzyną, na której wiele flot oparło rachunek kosztów, zmalała. Przy cenach maksymalnych benzyna w hybrydzie może wypadać taniej niż gaz w aucie z instalacją LPG.",
+        "## Hipotetyczne wyliczenie: paliwo na 100 km",
+        "Założenia redakcji (nie dane producentów): hybryda benzynowa 5 l/100 km, auto z LPG 10 l/100 km, diesel 6 l/100 km. Ceny benzyny i oleju napędowego z 30.10.2026, cena LPG z maja 2026 r.",
+        "| Napęd | Zużycie | Cena | Koszt na 100 km |\n| --- | --- | --- | --- |\n| Hybryda (Pb95) | 5 l | 6,51 zł | 32,55 zł |\n| LPG | 10 l | 3,94 zł | 39,40 zł |\n| Diesel | 6 l | 8,19 zł | 49,14 zł |",
+        "Wynik zależy od realnego zużycia w mieście i aktualnej ceny LPG. Rachunek nie obejmuje kosztów instalacji, serwisu ani amortyzacji.",
+        "## Co po 31 grudnia",
+        "Rząd nie ogłosił, czy program zostanie przedłużony (stan na 4.11.2026). Jeśli nie, ceny benzyny i oleju napędowego od stycznia wrócą do poziomu rynkowego z pełnym VAT. Floty planujące budżet na 2027 r. powinny przyjąć oba warianty.",
+        "Wcześniej pisaliśmy o [rentowności floty taxi w 2026 r.](/artykul/a16-rentownosc-floty-taxi-w-2026-szacunek-progu-oplacalnosci-pojazdu) i [elektromobilności we flotach](/artykul/a17-elektromobilnosc-we-flotach-taxi-kiedy-auto-elektryczne-zaczyna-sie-op)."
+      ],
+      "sources": [
+        "Auto Świat — Ceny paliw w Polsce w piątek 30 października 2026 r. — https://www.auto-swiat.pl/wiadomosci/aktualnosci/ceny-paliw-w-polsce-w-piatek-30-pazdziernika-2026-r-diesel-nadal-drogi/wxfnykr",
+        "Money.pl — Ceny LPG wystrzeliły w kilka tygodni. Tych kierowców tarcza nie chroni, 25.05.2026 — https://direct.money.pl/artykuly/porady/ceny-lpg-wystrzelily-w-kilka-tygodni-tych-kierowcow-tarcza-nie-chroni"
+      ],
+      "read": 2
+    },
+    {
+      "id": "p54",
+      "pub": "2026-11-04T10:00:00+01:00",
+      "date": "4 listopada 2026",
+      "cat": "regulacje-ue",
+      "cats": [
+        "regulacje-ue",
+        "rynek-polski"
+      ],
+      "img": "pro/n-dyrektywa-polska.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "hot": true,
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Dyrektywa platformowa: Polska nie zdąży na 2 grudnia",
+      "lead": "Projekt ustawy wdrażającej dyrektywę 2024/2831 wciąż czeka na przyjęcie przez rząd. Termin transpozycji mija 2 grudnia 2026 r. Co przewiduje projekt i co oznacza dla platform i partnerów flotowych.",
+      "body": [
+        "Polska nie wdroży dyrektywy o pracy platformowej w terminie. Państwa UE mają czas do 2 grudnia 2026 r., a polski projekt ustawy (UC160) wciąż czeka na przyjęcie przez rząd. Po nim musi przejść jeszcze przez Sejm i Senat oraz zostać podpisany przez prezydenta.",
+        "## Gdzie jest projekt",
+        "Projekt ustawy o wykonywaniu pracy za pośrednictwem cyfrowych platform pracy przygotowało Ministerstwo Rodziny, Pracy i Polityki Społecznej. Trafił do wykazu prac legislacyjnych rządu 4 sierpnia 2026 r., a jego tekst opublikowano 6 sierpnia. Według wykazu Rada Ministrów ma go przyjąć w IV kwartale 2026 r. Ustawa ma wejść w życie około miesiąca po publikacji (stan na 4.11.2026).",
+        "Źródła w ministerstwie mówiły money.pl, że ustawa nie będzie gotowa na czas. Oficjalnie resort nie podał nowego terminu. Polska nie jest wyjątkiem: według zestawienia firmy Teamed (stan na 27.10.2026) żadne państwo UE nie ma jeszcze w pełni obowiązującej transpozycji. Piszemy o tym w tekście [Słowacja pierwsza z ustawą platformową](/artykul/p55-slowacja-pierwsza-z-ustawa-platformowa-gdzie-jest-reszta-ue).",
+        "## Co przewiduje projekt",
+        "- **Domniemanie stosunku pracy.** Osoba wykonująca pracę przez platformę, w tym kierowca przewozu osób, nie musi dowodzić, że jest pracownikiem. To platforma musi wykazać, że stosunku pracy nie ma.\n- **Umowy już zawarte.** Domniemanie obejmie także umowy obowiązujące w dniu wejścia ustawy w życie, za okresy od 2 grudnia 2026 r.\n- **Odpowiedzialność solidarna.** Platforma odpowiada solidarnie z pośrednikiem, który rozlicza wynagrodzenie wykonawcy. W przewozach osób takim pośrednikiem jest zwykle partner flotowy.\n- **Zarządzanie algorytmiczne.** Decyzje automatyczne, np. blokada konta, mają podlegać kontroli człowieka.",
+        "> Dla partnerów flotowych najważniejsza jest odpowiedzialność solidarna. Wiąże ona platformę i pośrednika przy roszczeniach wykonawcy, więc umowy między nimi mogą wymagać zmian.",
+        "## Zastrzeżenia pracodawców",
+        "Organizacje pracodawców zgłosiły w konsultacjach, że definicja platformy jest nieostra, domniemanie zbyt łatwo powstaje, a czas na jego obalenie jest za krótki. Krytykują też objęcie domniemaniem umów już zawartych. Polski Związek Partnerów Aplikacyjnych (PZPA) proponuje samoregulację branży ([więcej o PZPA](/artykul/p58-pzpa-podwoil-liczbe-czlonkow-zwiazek-partnerow-aplikacyjnych-przed-ust)). Ostateczny kształt przepisów będzie znany po pracach rządu i parlamentu.",
+        "## Co po 2 grudnia",
+        "Po upływie terminu Komisja Europejska może wszcząć wobec państwa postępowanie w sprawie uchybienia zobowiązaniom (art. 258 Traktatu o funkcjonowaniu UE). Czy i w jakim zakresie przepisy dyrektywy działają przed wejściem polskiej ustawy w życie, to kwestia sporna. Firmy, które chcą ocenić swój model współpracy z kierowcami, powinny skonsultować go z prawnikiem prawa pracy.",
+        "Wcześniej pisaliśmy o tym, [co zmieni domniemanie stosunku pracy dla operatorów](/artykul/a5-domniemanie-stosunku-pracy-co-zmieni-dyrektywa-platformowa-dla-operato) (31.05.2026)."
+      ],
+      "sources": [
+        "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2024/2831, EUR-Lex — https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=OJ:L_202402831",
+        "MRPiPS — Projekt ustawy platformowej wpisany do wykazu prac legislacyjnych rządu — https://www.gov.pl/web/rodzina/projekt-ustawy-platformowej-wpisany-do-wykazu-prac-legislacyjnych-rzadu-jeszcze-w-tym-tygodniu-trafi-do-konsultacji-publicznych",
+        "Firmove.pl — Praca platformowa: projekt ustawy po konsultacjach — https://firmove.pl/aktualnosci/biznes/prowadzenie-firmy/news-praca-platformowa-projekt-ustawy-po-konsultacjach",
+        "Money.pl — Kluczowa ustawa utknęła w resorcie — https://www.money.pl/praca/kurierzy-traca-prace-a-rzad-zwleka-kluczowa-ustawa-utknela-w-resorcie-7309798145808480a.html",
+        "Teamed — EU Platform Work Directive: transposition tracker (stan na 27.10.2026) — https://www.teamed.global/eu-platform-work/transposition-tracker"
+      ],
+      "read": 2
+    },
+    {
+      "id": "p57",
+      "pub": "2026-11-04T10:00:00+01:00",
+      "date": "4 listopada 2026",
+      "cat": "newsy-platform",
+      "cats": [
+        "newsy-platform",
+        "rynek-polski"
+      ],
+      "img": "pro/n-bolt-drive.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Bolt Drive w Warszawie. Pierwsza własna flota platformy w Polsce",
+      "lead": "Pod koniec lipca Bolt uruchomił w Warszawie wynajem samochodów w aplikacji. Na start dał prawie 400 hybrydowych Toyot, a do końca 2027 r. zapowiada ponad 150 mln zł inwestycji w Polsce. Co to oznacza dla rynku flot.",
+      "body": [
+        "Pod koniec lipca 2026 r. Bolt uruchomił w Warszawie usługę Bolt Drive, czyli wynajem samochodów na minuty, godziny i doby z poziomu aplikacji. Na start w aplikacji pojawiło się prawie 400 nowych hybrydowych Toyot. Do końca 2027 r. firma zapowiada ponad 150 mln zł inwestycji w rozwój floty i usługi w Polsce.",
+        "## Flota i zasady",
+        "- **Auta:** Toyoty Yaris i Yaris Cross, hybrydy z automatyczną skrzynią. Według Interii Bolt zamówił 300 Yarisów (Carolina Toyota Wola) i 202 Yarisy Cross (Toyota W&J Wiśniewski); kolejne modele mają dojść później.\n- **Monitoring:** wszystkie auta mają OC i system oceniający styl jazdy (Driving Score). Firma może skontaktować się z kierowcą przy ryzykownej jeździe.\n- **Wymogi:** minimum 23 lata i prawo jazdy od co najmniej roku; weryfikacja dokumentów i selfie w aplikacji.\n- **Rozliczenie:** za czas i kilometry albo pakiety godzinowe i dobowe; system wybiera tańszą opcję. Opłaty za strefę płatnego parkowania w Warszawie są w cenie. Rezerwacja na 15 minut jest bezpłatna.",
+        "Bolt Drive działał wcześniej w Estonii, na Łotwie, Litwie, w Niemczech i Czechach. W Polsce wchodzi na rynek, z którego w marcu 2025 r. wycofał się Panek, a Traficar ograniczył obecność w wielu miastach.",
+        "> Bolt Drive to usługa dla klientów, a nie wynajem aut do przewozów. Platforma po raz pierwszy w Polsce sama kupuje, serwisuje i ubezpiecza flotę – w przewozach te zadania wykonują partnerzy flotowi.",
+        "Bolt nie informował, czy planuje wykorzystanie własnych aut także w przewozach osób (stan na 4.11.2026)."
+      ],
+      "sources": [
+        "Android.com.pl — Bolt Drive uruchamia flotę w Warszawie, 27.07.2026 — https://android.com.pl/moto/1068560-bolt-drive-polska-flota-carsharing/",
+        "Tabletowo — Bolt Drive: wynajem samochodu, 28.07.2026 — https://www.tabletowo.pl/wynajem-samochodu-bolt-drive-400-aut/",
+        "Interia Motoryzacja — Bolt Drive rusza w Polsce. Firma inwestuje 150 mln zł — https://motoryzacja.interia.pl/wiadomosci/news-bolt-drive-rusza-w-polsce-firma-inwestuje-150-mln-zl-i-stawi,nId,23521262"
+      ],
+      "read": 2
+    },
+    {
+      "id": "p60",
+      "pub": "2026-11-04T10:00:00+01:00",
+      "date": "4 listopada 2026",
+      "cat": "przeglad-prasy",
+      "cats": [
+        "przeglad-prasy",
+        "rynek-polski"
+      ],
+      "img": "pro/n-przeglad-lipiec.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Lipiec 2026 w branży: projekt UD431, kontrole w Warszawie, zwolnienia w Pyszne.pl",
+      "lead": "Ministerstwo Infrastruktury wpisało do wykazu prac rządu projekt zmian dla taksówkarzy i pośredników, a warszawska policja opublikowała wyniki kontroli przewozów na aplikację. Najważniejsze wydarzenia lipca.",
+      "body": [
+        "W lipcu Ministerstwo Infrastruktury wpisało do wykazu prac rządu projekt zmian dla taksówkarzy i pośredników, a warszawska policja opublikowała wyniki kontroli przewozów na aplikację.",
+        "- **7 lipca – projekt UD431.** Zmiany w ustawie o transporcie drogowym: ogólnopolski identyfikator kierowcy, szerszy wymóg niekaralności, nowe obowiązki pośredników. Szczegóły: [Projekt UD431](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr).\n- **Lipiec – kontrole „Bezpieczne przewozy”.** 213 kontroli w Warszawie, 112 mandatów, 22 kierowców bez uprawnień. Szczegóły: [wyniki kontroli](/artykul/p65-falszywe-prawa-jazdy-i-kierowcy-bez-uprawnien-co-wykazaly-kontrole-prz).\n- **17 lipca – FLAGMAN w PZPA.** Kolejna firma dołącza do Polskiego Związku Partnerów Aplikacyjnych.\n- **20 lipca – Pyszne.pl.** Spółka kończy zatrudnienie ok. 5 tys. kurierów i przechodzi na współpracę przez partnerów flotowych; ministra pracy wnioskuje o kontrole PIP i ZUS.\n- **24 lipca – dane o firmach.** W I półroczu wykreślono ok. 1,2 tys. firm taksówkowych, zarejestrowano 676; ubytek netto ok. 650 – „Rzeczpospolita” za Dun & Bradstreet. Szczegóły: [konsolidacja rynku](/artykul/p59-znikaja-firmy-taksowkowe-rosna-posrednicy-konsolidacja-rynku-w-2026-ro).\n- **27 lipca – Bolt Drive.** Bolt uruchamia w Warszawie wynajem aut w aplikacji, prawie 400 hybrydowych Toyot na start. Szczegóły: [Bolt Drive w Warszawie](/artykul/p57-bolt-drive-w-warszawie-pierwsza-wlasna-flota-platformy-w-polsce)."
+      ],
+      "sources": [
+        "Ministerstwo Infrastruktury — zawiadomienie o załatwieniu petycji, 8.07.2026 — https://www.gov.pl/attachment/223c5013-3192-45de-89a2-ba274eb86a4a",
+        "Infor.pl — Sprawdzili przewoźników na aplikację, 5.08.2026 — https://www.infor.pl/prawo/nowosci-prawne/7636105,sprawdzili-przewoznikow-na-aplikacje-niesprawne-pojazdy-falszywe-p.html",
+        "PZPA — aktualności — https://pzpa.pl/",
+        "Wiadomości Handlowe — Pyszne.pl zwalnia tysiące kurierów, 20.07.2026 — https://www.wiadomoscihandlowe.pl/rynek-pracy-w-handlu/pyszne-pl-zwalnia-tysiace-kurierow-politycy-i-zwiazki-alarmuja-2536632",
+        "Rzeczpospolita — Wielka ucieczka taksówkarzy do aplikacji, 24.07.2026 — https://pro.rp.pl/raporty-ekonomiczne/art44875511-wielka-ucieczka-taksowkarzy-do-aplikacji-rewolucja-w-przewozie-osob",
+        "Android.com.pl — Bolt Drive uruchamia flotę w Warszawie, 27.07.2026 — https://android.com.pl/moto/1068560-bolt-drive-polska-flota-carsharing/"
+      ],
+      "read": 2
+    },
+    {
+      "id": "p61",
+      "pub": "2026-11-04T10:00:00+01:00",
+      "date": "4 listopada 2026",
+      "cat": "przeglad-prasy",
+      "cats": [
+        "przeglad-prasy",
+        "regulacje-ue"
+      ],
+      "img": "pro/n-przeglad-sierpien.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Sierpień 2026 w branży: projekt ustawy platformowej i robotaxi w Europie",
+      "lead": "Rząd opublikował projekt ustawy wdrażającej dyrektywę o pracy platformowej, Waymo wybrało Monachium, a Uber i Pony.ai rozszerzyły współpracę w Europie. Najważniejsze wydarzenia sierpnia.",
+      "body": [
+        "W sierpniu rząd opublikował projekt ustawy wdrażającej dyrektywę o pracy platformowej, a dwie firmy ogłosiły plany robotaxi w Europie.",
+        "- **4–6 sierpnia – projekt UC160.** Projekt ustawy o wykonywaniu pracy za pośrednictwem cyfrowych platform pracy trafia do wykazu prac rządu i do konsultacji. Szczegóły: [Polska nie zdąży z dyrektywą](/artykul/p54-dyrektywa-platformowa-polska-nie-zdazy-na-2-grudnia).\n- **7 sierpnia – zlot PZPA.** Związek zrzesza 20 firm, dwa razy więcej niż rok wcześniej. Szczegóły: [PZPA](/artykul/p58-pzpa-podwoil-liczbe-czlonkow-zwiazek-partnerow-aplikacyjnych-przed-ust).\n- **14 sierpnia – Uber i Pony.ai.** Partnerzy zapowiadają robotaxi w czterech kolejnych miastach Europy i flotę ponad 2000 aut.\n- **24 sierpnia – Flow Apps w PZPA.**\n- **25 sierpnia – Waymo w Monachium.** Pierwszy rynek firmy w UE; przejazdy komercyjne do końca 2027 r., jeśli będą zgody. Szczegóły: [robotaxi w Europie](/artykul/p66-robotaxi-w-europie-zagrzeb-jezdzi-monachium-i-madryt-w-kolejce).\n- **Sierpień – Rada Dialogu Społecznego** omawia projekt ustawy platformowej."
+      ],
+      "sources": [
+        "MRPiPS — Projekt ustawy platformowej w wykazie prac legislacyjnych — https://www.gov.pl/web/rodzina/projekt-ustawy-platformowej-wpisany-do-wykazu-prac-legislacyjnych-rzadu-jeszcze-w-tym-tygodniu-trafi-do-konsultacji-publicznych",
+        "PZPA — Letni zlot przedstawicieli PZPA 2026 — https://pzpa.pl/letni-zlot-przedstawicieli-pzpa-2026/",
+        "CKPAP — Robotaxis enter Europe, 4.09.2026 — https://ckpap.its.waw.pl/en/2026/09/04/robotaxis-enter-europe-uber-and-pony-ai-expand-fleet-waymo-chooses-munich/",
+        "PZPA — Posiedzenie Rady Dialogu Społecznego ws. projektu dyrektywy platformowej — https://pzpa.pl/posiedzenie-rady-dialogu-spolecznego-ws-projektu-dyrektywy-platformowej/"
+      ],
+      "read": 2
+    },
+    {
+      "id": "p62",
+      "pub": "2026-11-04T10:00:00+01:00",
+      "date": "4 listopada 2026",
+      "cat": "przeglad-prasy",
+      "cats": [
+        "przeglad-prasy",
+        "rynki-zagraniczne"
+      ],
+      "img": "pro/n-przeglad-wrzesien.jpg",
+      "imgCaption": "Ilustracja wygenerowana przez AI",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Wrzesień i październik 2026 w branży: Słowacja, ceny paliw, wyrok w Monachium",
+      "lead": "Słowacja jako pierwsza w UE uchwaliła ustawę platformową, rząd wprowadził ceny maksymalne paliw, a sąd w Monachium wstrzymał ceny minimalne dla Ubera i Bolta. Najważniejsze wydarzenia września i października.",
+      "body": [
+        "We wrześniu Słowacja jako pierwsze państwo UE uchwaliła ustawę wdrażającą w całości dyrektywę o pracy platformowej. W październiku rząd obniżył VAT na paliwa i wprowadził ceny maksymalne, a sąd w Monachium wstrzymał ceny minimalne dla przewozów na aplikację.",
+        "## Wrzesień",
+        "- **8–10 września – Forum Ekonomiczne w Karpaczu.** PZPA zaprasza na spotkania podczas forum.\n- **23 września – Słowacja.** Rada Narodowa przyjmuje ustawę o pracy platformowej; domniemanie zatrudnienia obejmuje przewóz osób. Szczegóły: [Słowacja pierwsza z ustawą](/artykul/p55-slowacja-pierwsza-z-ustawa-platformowa-gdzie-jest-reszta-ue).",
+        "## Październik",
+        "- **3 października – program CPN.** Ceny maksymalne benzyny i oleju napędowego, VAT 8 proc., do 31 grudnia; LPG poza programem. Szczegóły: [ceny paliw a koszty flot](/artykul/p64-ceny-maksymalne-paliw-do-konca-roku-floty-na-lpg-bez-ochrony).\n- **9 października – Monachium.** Sąd administracyjny wstrzymuje miejskie ceny minimalne dla przewozów typu Uber i Bolt. Szczegóły: [wyrok w Monachium](/artykul/p67-monachium-sad-wstrzymal-ceny-minimalne-dla-ubera-i-bolta).\n- **14 października – Słowacja.** Prezydent podpisuje ustawę platformową; wchodzi ona w życie 2 grudnia.\n- **Październik – Baidu** liczy na robotaxi bez kierowcy w Londynie w 2027 r.\n- **Październik – konsolidacja.** Media opisują wzrost pośredników flotowych; wymieniane są Natviol, Fobest, Avalon i Eternis."
+      ],
+      "sources": [
+        "PZPA — aktualności — https://pzpa.pl/",
+        "Právne noviny — Prácu cez digitálne platformy čaká od decembra domnienka zamestnania — https://pravnenoviny.sk/praca-cez-digitalne-platformy/",
+        "Auto Świat — Ceny paliw w Polsce 30.10.2026 — https://www.auto-swiat.pl/wiadomosci/aktualnosci/ceny-paliw-w-polsce-w-piatek-30-pazdziernika-2026-r-diesel-nadal-drogi/wxfnykr",
+        "Heidelberg24 — Gericht kippt Mindestpreise für Uber und Bolt in München, 9.10.2026 — https://www.heidelberg24.de/verbraucher/gericht-kippt-mindestpreise-fuer-uber-und-bolt-in-muenchen-zr-94533062.html",
+        "Teamed — EU Platform Work Directive: transposition tracker — https://www.teamed.global/eu-platform-work/transposition-tracker",
+        "The Detroit News — China’s Baidu hopes for driverless robotaxis in London in 2027, 23.10.2026 — https://www.detroitnews.com/story/business/autos/2026/10/23/chinas-baidu-hopes-for-driverless-robotaxis-in-london-in-2027/92394440007/",
+        "Interia — Firmy taksówkarskie znikają z rejestrów — https://biznes.interia.pl/gospodarka/news-firmy-taksowkarskie-znikaja-z-rejestrow-najwiekszymi-wygrany,nId,23518973"
+      ],
+      "read": 2
+    },
     {
       "id": "p53",
       "cat": "bezpieczenstwo",
-      "cats": ["bezpieczenstwo", "przeglad-prasy"],
+      "cats": [
+        "bezpieczenstwo",
+        "przeglad-prasy"
+      ],
       "img": "uploads/sondaz-ibris-wiek.png",
-      "title": "Sondaż IBRiS dla „Rz”: Aż 84% Polaków chce polskiego egzaminu na prawo jazdy dla taksówkarzy z zagranicy",
-      "lead": "Po wypadku w Ząbkach presja na zaostrzenie zasad dla kierowców przewozów nadal rośnie. Problemem jest Konwencja Wiedeńska o wzajemnym uznawaniu przez państwa praw jazdy.",
+      "title": "Sondaż IBRiS dla „Rz”: 84 proc. badanych chce polskiego egzaminu na prawo jazdy dla taksówkarzy z zagranicy",
+      "lead": "83,9 proc. respondentów IBRiS uważa, że każdy taksówkarz powinien zdać egzamin na prawo jazdy w Polsce. Sondaż „Rzeczpospolitej” pojawił się po wypadku w Ząbkach, w debacie o zaostrzeniu wymogów dla kierowców z zagranicy.",
       "author": "Redakcja PRO.portaltaxi.pl",
       "source": "Rzeczpospolita",
       "sourceCat": "Bezpieczeństwo i prawo",
       "region": "Polska",
       "link": "https://www.rp.pl/spoleczenstwo/art44644601-prawo-jazdy-zrobione-tylko-w-polsce-nie-ufamy-taksowkarzom-obcokrajowcom",
       "date": "19 czerwca 2026",
-      "read": 4,
+      "read": 2,
       "hot": true,
       "sources": [
-        "Rzeczpospolita, „Prawo jazdy zrobione tylko w Polsce. Nie ufamy taksówkarzom obcokrajowcom”, 19.06.2026 — https://www.rp.pl/spoleczenstwo/art44644601-prawo-jazdy-zrobione-tylko-w-polsce-nie-ufamy-taksowkarzom-obcokrajowcom"
+        "Rzeczpospolita — Prawo jazdy zrobione tylko w Polsce. Nie ufamy taksówkarzom obcokrajowcom, 19.06.2026 — https://www.rp.pl/spoleczenstwo/art44644601-prawo-jazdy-zrobione-tylko-w-polsce-nie-ufamy-taksowkarzom-obcokrajowcom"
       ],
       "body": [
-        "Badania opinii publicznej poświęcone wprost rynkowi taksówek pojawiają się rzadko, dlatego najnowszy sondaż IBRiS zlecony przez „Rzeczpospolitą” zasługuje na uwagę. Po wypadku w Ząbkach nie maleje presja opinii publicznej i komentatorów na poprawę bezpieczeństwa przewozów taxi, a większość głosów szanse na poprawę upatruje w zaostrzeniu wymagań formalnych w stosunku do kierowców z zagranicy. Za przyczynę wypadków upatruje się ich niską kulturę jazdy, sprzeczną z zasadami oczekiwanymi na polskich drogach. Po fali oskarżeń kierowców taksówek o przemoc na tle seksualnym, aktualna kwestia BRD wydaje się być najistotniejszym od lat kryzysem wizerunkowym branży.",
-        "Wyniki sondażu dla „Rzeczpospolitej” są jednoznaczne. Na pytanie, czy każdy taksówkarz — niezależnie od narodowości — powinien zdać egzamin na prawo jazdy w Polsce, twierdząco odpowiedziało 83,9% badanych. Tak wysoka zgodność jest w badaniach społecznych zjawiskiem wyjątkowym, zwłaszcza w temacie, który zwykle dzieli opinię publiczną. Warto odnotować zaangażowanie „Rzeczpospolitej” w relacjonowanie sytuacji w branży taxi w Polsce.",
-        "Co istotne, poparcie dla zaostrzenia zasad przecina podziały polityczne i pokoleniowe. Za obowiązkowym egzaminem opowiada się 92% wyborców koalicji rządzącej i 88% elektoratu opozycji. Wyraźny jest natomiast efekt wieku: od 62% wśród najmłodszych respondentów (18–29 lat), przez 72% i 85% w średnich grupach, aż do 94–99% wśród osób po pięćdziesiątym i sześćdziesiątym roku życia.",
-        "Sednem problemu pozostaje luka w obowiązujących przepisach. Od czerwca 2024 r. kierowca z zagranicy musi legitymować się prawem jazdy wydanym w Polsce, jednak urzędnik jedynie potwierdza autentyczność dokumentu zagranicznego — nie bada ani wiedzy o przepisach, ani realnych umiejętności prowadzenia pojazdu. Realne zaostrzenie zasad komplikuje przy tym ratyfikowana przez Polskę Konwencja wiedeńska o ruchu drogowym, która zobowiązuje do wzajemnego uznawania praw jazdy państw-sygnatariuszy, w tym wielu krajów spoza UE.",
-        "Branża od dawna sygnalizuje, że obecne wymogi mają charakter formalny. Postulaty środowiska taksówkarzy obejmują wprowadzenie obowiązkowego egzaminu w Polsce oraz testu znajomości języka polskiego, a Ministerstwo Infrastruktury zapowiada przepisy wykluczające z zawodu osoby z wyrokami w krajach spoza UE i EFTA. W tle pozostaje zasadniczy deficyt informacyjny: ani policja, ani resort nie gromadzą danych o liczbie cudzoziemców wykonujących przewóz osób, co utrudnia rzetelną ocenę skali zjawiska."
+        "Na pytanie, czy każdy taksówkarz – niezależnie od narodowości – powinien zdać egzamin na prawo jazdy w Polsce, twierdząco odpowiedziało 83,9 proc. badanych. Sondaż IBRiS przeprowadzono na zlecenie „Rzeczpospolitej” po czerwcowym wypadku w Ząbkach, w którym zginęły dwie osoby.",
+        "## Wyniki według elektoratów i wieku",
+        "Według „Rzeczpospolitej” za obowiązkowym egzaminem opowiada się 92 proc. wyborców koalicji rządzącej i 88 proc. wyborców opozycji. Poparcie rośnie z wiekiem: od 62 proc. w grupie 18–29 lat, przez 72 i 85 proc. w grupach średnich, do 94–99 proc. wśród osób po 50. i 60. roku życia.",
+        "## Co mówią przepisy",
+        "Od czerwca 2024 r. kierowca przewozu osób musi mieć prawo jazdy wydane w Polsce. Przy wymianie dokumentu zagranicznego urząd sprawdza jego autentyczność, ale nie bada wiedzy o przepisach ani umiejętności prowadzenia pojazdu. Wprowadzenie egzaminu dla wszystkich komplikuje konwencja wiedeńska o ruchu drogowym, która zobowiązuje Polskę do uznawania praw jazdy z państw-stron, także spoza UE.",
+        "> Ani policja, ani Ministerstwo Infrastruktury nie zbierają danych o liczbie cudzoziemców wykonujących przewóz osób – zwraca uwagę „Rzeczpospolita”. Utrudnia to ocenę skali problemu.",
+        "Środowisko taksówkarzy postuluje obowiązkowy egzamin w Polsce i test znajomości języka polskiego. Ministerstwo Infrastruktury zapowiedziało przepisy wykluczające z zawodu osoby skazane w państwach spoza UE i EFTA ([projekt UD431](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr))."
       ]
     },
-    // ARTYKUŁ — Deklaracja UE ws. transgranicznych testów AV (8 czerwca 2026)
     {
       "id": "p52",
       "cat": "autonomiczne",
-      "cats": ["autonomiczne", "regulacje-ue"],
+      "cats": [
+        "autonomiczne",
+        "regulacje-ue"
+      ],
       "img": "uploads/av-robotaxi-pe.png",
       "title": "17 państw UE za wspólnymi testami robotaxi. Polska wśród sygnatariuszy",
-      "lead": "8 czerwca w Luksemburgu 17 ministrów transportu UE — w tym polski — podpisało deklarację popierającą wprowadzenie przez UE transgranicznych testów pojazdów autonomicznych.",
+      "lead": "8 czerwca 2026 r. w Luksemburgu ministrowie transportu 17 państw UE, w tym Polski, podpisali deklarację popierającą transgraniczne testy pojazdów autonomicznych. Na infrastrukturę testów Komisja Europejska przeznaczyła 20 mln euro.",
       "author": "Redakcja PortalTaxiPRO",
       "date": "15 czerwca 2026",
-      "read": 6,
+      "read": 2,
       "hot": true,
       "sources": [
         "Euronews, 8.06.2026 — https://www.euronews.com/business/2026/06/08/robotaxis-are-coming-to-europe-and-the-eu-wants-to-speed-things-up",
@@ -111,96 +595,106 @@ const PRO = {
         "electrive.com, 9.06.2026 — https://www.electrive.com/2026/06/09/17-eu-member-states-eye-cross-border-autonomous-driving-tests/"
       ],
       "body": [
-        "8 czerwca w Luksemburgu komisarz UE ds. transportu Apostolos Tzitzikostas i ministrowie transportu siedemnastu państw członkowskich podpisali deklarację polityczną popierającą wielkoskalowe, transgraniczne testy pojazdów autonomicznych (AV). Wśród sygnatariuszy znalazła się Polska. Celem deklaracji jest zastąpienie rozproszonych krajowych pilotaży wspólnymi zasadami dopuszczeń i zharmonizowanymi procedurami zezwoleń — tak, by europejska branża mogła dogonić Stany Zjednoczone i Chiny.",
-        "**Sygnatariusze i nieobecni**",
-        "Pod deklaracją podpisały się: Austria, Belgia, Chorwacja, Cypr, Czechy, Estonia, Finlandia, Francja, Niemcy, Grecja, Węgry, Irlandia, Włochy, Luksemburg, Holandia, Polska i Szwecja (część źródeł wymienia też Litwę — wtedy 18 państw). Deklaracji nie podpisało ok. 9–10 krajów: Bułgaria, Dania, Łotwa, Malta, Portugalia, Rumunia, Słowacja, Słowenia i Hiszpania. Powodów oficjalnie nie podano — dokument był dobrowolny i otwarty, więc brak podpisu nie oznacza sprzeciwu; państwa mogą dołączyć w każdej chwili. Warta uwagi jest nieobecność Hiszpanii — to duży, mocno sporny rynek przewozów na aplikację (napięcie taxi vs VTC), a jej brak wśród sygnatariuszy jest istotnym sygnałem politycznym.",
-        "**Pierwsze pieniądze: 20 mln EUR z CEF 2026**",
-        "Pierwszym instrumentem wsparcia jest Connecting Europe Facility (CEF) 2026: 20 mln EUR przeznaczonych na infrastrukturę cyfrową dla jazdy autonomicznej. Nabór wniosków uruchamiany jest w czerwcu 2026 r. Kwota nie jest imponująca, ale otwiera formalny kanał finansowania, który może rosnąć w kolejnych rundach — szczególnie jeśli państwa szybko przedstawią wspólne testbedy.",
-        "**Dlaczego harmonizacja przepisów jest kluczowa**",
-        "Pojazd autonomiczny nie zna granic. AV dopuszczone w Niemczech mogło dotychczas okazać się nielegalne tuż za granicą — bo każde z 27 państw prowadziło własny pilotaż według własnych zasad. Producenci i operatorzy nie zbudują opłacalnej usługi na 27 różnych zestawach przepisów. Jeden wspólny standard pozwala wdrażać raz i działać w całej UE, co obniża ryzyko regulacyjne i przyciąga kapitał. To samo dotyczy infrastruktury: wspólne reguły ułatwiają budowę spójnej komunikacji pojazd–infrastruktura i wymianę danych między krajami.",
-        "Bez harmonizacji powstają wyspy regulacyjne — część krajów wyprzedza resztę, technologie się nie łączą, a mniejsze rynki (takie jak Polska) ryzykują, że standardy ustalą za nich inni.",
-        "**Kontekst rynkowy: robotaxi w Europie już działa**",
-        "W tym samym tygodniu Londyn ogłosił rychłe starcie operatorów robotaxi: Waymo, Wayve (z Uberem) i Apollo Go (Baidu). Bolt i Uber równolegle zawierają partnerstwa z chińskimi firmami AV — Pony.ai, WeRide i Momenta — z myślą o rynkach w Madrycie, Monachium i Zagrzebiu. Deklaracja UE to regulacyjna odpowiedź na tę presję ze strony globalnych graczy.",
-        "**Co to oznacza dla polskiego rynku taxi**",
-        "Deklaracja to kierunek, nie prawo. Realne ramy dopuszczeń AV dopiero powstaną, a tempo ich wdrożenia zależy od prac na poziomie krajowym. Wpływ na polski rynek przewozów osób to perspektywa kilkuletnia, nie najbliższych miesięcy. Warto jednak obserwować kilka kwestii: nabór CEF 2026 (szansa dla polskich miast i firm na finansowanie testbedów), stanowisko Ministerstwa Infrastruktury wobec wspólnych ram UE oraz ewentualne polskie testbedy AV.",
-        "Szansa leży w tym, że wcześniejsza obecność Polski w pracach UE może przyspieszyć krajowe pilotaże. Ryzyko — że globalni gracze (Uber, Bolt) i chińscy dostawcy AV wchodzą do Europy szybciej niż lokalne podmioty zdążą określić swoją rolę: jako operator floty, pośrednik, integrator technologii czy dostawca infrastruktury. Firmy z sektora taxi i mobility powinny już dziś mapować, gdzie w tym ekosystemie jest dla nich miejsce."
+        "8 czerwca 2026 r. w Luksemburgu komisarz UE ds. transportu Apostolos Tzitzikostas i ministrowie transportu 17 państw członkowskich podpisali deklarację polityczną popierającą transgraniczne testy pojazdów autonomicznych (AV). Wśród sygnatariuszy jest Polska. Deklaracja ma zastąpić rozproszone krajowe pilotaże wspólnymi zasadami dopuszczeń i procedurami zezwoleń.",
+        "## Sygnatariusze",
+        "Deklarację podpisały: Austria, Belgia, Chorwacja, Cypr, Czechy, Estonia, Finlandia, Francja, Grecja, Holandia, Irlandia, Luksemburg, Niemcy, Polska, Szwecja, Węgry i Włochy. Część źródeł wymienia też Litwę – wtedy sygnatariuszy jest 18. Nie podpisały: Bułgaria, Dania, Hiszpania, Łotwa, Malta, Portugalia, Rumunia, Słowacja i Słowenia. Deklaracja jest dobrowolna i otwarta, więc brak podpisu nie oznacza sprzeciwu.",
+        "## Finansowanie: 20 mln euro z CEF",
+        "Pierwszym instrumentem jest instrument „Łącząc Europę” (Connecting Europe Facility, CEF) 2026: 20 mln euro na infrastrukturę cyfrową dla jazdy autonomicznej. Nabór wniosków ruszył w czerwcu 2026 r.",
+        "## Po co wspólne zasady",
+        "Dziś pojazd dopuszczony do testów w jednym państwie może nie mieć zgody tuż za granicą, bo każde państwo prowadzi pilotaże według własnych reguł. Wspólne procedury mają pozwolić operatorom uzyskać zgodę raz i testować w kilku krajach.",
+        "> Deklaracja to kierunek polityczny, nie prawo. Ramy dopuszczeń AV dopiero powstaną, a wpływ na polski rynek przewozów to perspektywa kilku lat.",
+        "## Kontekst rynkowy",
+        "W tym samym tygodniu w Londynie zapowiedziano start usług robotaxi m.in. Waymo, Wayve z Uberem i Apollo Go (Baidu). Uber i Bolt zawierają partnerstwa z firmami AV, m.in. Pony.ai, WeRide i Momentą, z myślą o Madrycie, Monachium i Zagrzebiu. Aktualny stan wdrożeń opisujemy w tekście [Robotaxi w Europie](/artykul/p66-robotaxi-w-europie-zagrzeb-jezdzi-monachium-i-madryt-w-kolejce).",
+        "## Dla polskiego rynku",
+        "Warto śledzić nabór CEF (szansa dla polskich miast i firm na finansowanie miejsc testów), stanowisko Ministerstwa Infrastruktury wobec wspólnych ram UE i ewentualne polskie pilotaże. Firmy przewozowe muszą też określić swoją rolę w nowym modelu: operator floty, pośrednik czy dostawca infrastruktury."
       ]
     },
-    // RMF24 — zmiany przepisów dla kierowców taxi (11 czerwca 2026)
     {
       "id": "p50",
       "cat": "bezpieczenstwo",
-      "cats": ["bezpieczenstwo", "przeglad-prasy"],
+      "cats": [
+        "bezpieczenstwo",
+        "przeglad-prasy"
+      ],
       "img": "uploads/przeglad-nowe-zasady.png",
       "title": "Licencja z weryfikacją. Ministerstwo zmieni wymogi dla zagranicznych taksówkarzy",
-      "lead": "Resort infrastruktury chce uszczelnić dostęp do zawodu taksówkarza. Cudzoziemcy spoza UE będą musieli udowodnić niekaralność nie tylko w Polsce, ale i w kraju, z którego pochodzą.",
+      "lead": "Ministerstwo Infrastruktury zapowiedziało, że kierowcy taksówek spoza UE i EFTA będą musieli przedstawić zaświadczenie o niekaralności także z kraju pochodzenia. Dziś wystarcza zaświadczenie z polskiego rejestru.",
       "source": "RMF24",
       "sourceAuthor": "Waldemar Stelmach",
       "sourceCat": "Bezpieczeństwo i prawo",
       "region": "Polska",
       "link": "https://www.rmf24.pl/fakty/polska/news-praca-nie-dla-przestepcow-beda-zmiany-dla-kierowcow-taxi,nId,8089932",
       "date": "11 czerwca 2026",
-      "read": 3,
+      "read": 2,
       "body": [
-        "Aktualne przepisy wymagają jedynie zaświadczenia o niekaralności z polskiego KRK. Luka prawna sprawia, że osoba wcześniej skazana za poważne przestępstwo — np. w Gruzji, Pakistanie lub Ukrainie — może bez przeszkód uzyskać polską licencję przewozową, jeśli nie figuruje w krajowym rejestrze.",
-        "Planowana zmiana zobowiąże obywateli państw spoza Unii Europejskiej i EFTA do dołączenia analogicznego dokumentu z państwa, z którego pochodzą. Zaświadczenie będzie wymagało tłumaczenia przez tłumacza przysięgłego lub poświadczenia przez konsula.",
-        "Projekt regulacji ma wkrótce pojawić się w wykazie prac rządu. Branża transportowa od miesięcy apeluje o skuteczniejsze narzędzia weryfikacji kierowców — temat powraca za każdym razem, gdy dochodzi do głośnego wypadku z udziałem taksówkarza pracującego na aplikację."
+        "Kierowcy taksówek spoza Unii Europejskiej i EFTA będą musieli przedstawić zaświadczenie o niekaralności z kraju pochodzenia, a nie tylko z polskiego Krajowego Rejestru Karnego. Zmianę zapowiedziało Ministerstwo Infrastruktury – podało RMF24.",
+        "Dziś licencję może uzyskać osoba skazana za granicą, jeśli nie figuruje w polskim rejestrze. Nowe zaświadczenie ma wymagać tłumaczenia przez tłumacza przysięgłego lub poświadczenia przez konsula.",
+        "Branża od miesięcy postuluje skuteczniejszą weryfikację kierowców. Temat wraca po każdym głośnym wypadku z udziałem kierowcy przewozu na aplikację.",
+        "> Aktualizacja (4.11.2026): 7 lipca 2026 r. ministerstwo wpisało projekt do wykazu prac rządu jako UD431. Obejmuje on także m.in. ogólnopolski identyfikator kierowcy i nowe obowiązki pośredników – [szczegóły projektu](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr)."
+      ],
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "sources": [
+        "RMF24 — Praca nie dla przestępców. Będą zmiany dla kierowców taxi — https://www.rmf24.pl/fakty/polska/news-praca-nie-dla-przestepcow-beda-zmiany-dla-kierowcow-taxi,nId,8089932"
       ]
     },
-    // Rzeczpospolita — wypadek w Ząbkach, bezpieczeństwo przewozów (9 czerwca 2026)
     {
       "id": "p49",
       "cat": "bezpieczenstwo",
-      "cats": ["bezpieczenstwo", "przeglad-prasy"],
+      "cats": [
+        "bezpieczenstwo",
+        "przeglad-prasy"
+      ],
       "img": "uploads/jazda-deszcz-warszawa.png",
-      "title": "Wypadek w Ząbkach otwiera na nowo debatę o bezpieczeństwie taksówek na aplikację",
-      "lead": "Tragedia na skrzyżowaniu w Ząbkach z udziałem zagranicznego kierowcy przywróciła pytanie o standardy weryfikacji taksówkarzy. Prawnicy wskazują, że skuteczniejsze niż egzaminy byłoby szybkie zawieszanie licencji za naruszenia.",
+      "title": "Wypadek w Ząbkach otwiera na nowo debatę o bezpieczeństwie przewozów na aplikację",
+      "lead": "Kierowca wykonujący kurs z aplikacji zawrócił tuż przed skrzyżowaniem w Ząbkach; zginęły dwie osoby. Prawnicy cytowani przez „Rzeczpospolitą” wskazują, że skuteczniejsze od egzaminów byłoby szybkie zawieszanie licencji za naruszenia.",
       "source": "Rzeczpospolita",
       "sourceAuthor": "Piotr Szymaniak",
       "sourceCat": "Bezpieczeństwo i prawo",
       "region": "Polska",
       "link": "https://www.rp.pl/prawo-drogowe/art44586391-po-wypadku-w-zabkach-eksperci-o-tym-jak-zwiekszyc-bezpieczenstwo-przewozow-na-aplikacje",
       "date": "9 czerwca 2026",
-      "read": 5,
+      "read": 2,
       "body": [
-        "Do wypadku doszło, gdy kierowca wykonujący kurs na platformie zawrócił z prawego pasa tuż przed skrzyżowaniem, uderzając w nadjeżdżający pojazd. Dwie osoby zginęły, jedna trafiła w ciężkim stanie do szpitala. Prokuratura skierowała wniosek o areszt tymczasowy.",
-        "Skala problemu jest niebagatalna: w ubiegłym roku służby ujawniły ponad 100 kierowców bez ważnych uprawnień i kilkanaście tysięcy wykroczeń w przewozach na aplikację. Wymóg posiadania polskiego prawa jazdy obowiązuje od dwóch lat, ale samo przekwalifikowanie dokumentu nie wiąże się z żadnym egzaminem praktycznym.",
-        "Zdaniem prawników specjalizujących się w transporcie skuteczniejszym narzędziem od obowiązkowych testów byłby mechanizm szybkiego zawieszania i cofania licencji za stwierdzone naruszenia. Taki system działałby równomiernie wobec wszystkich kierowców, niezależnie od ich pochodzenia."
+        "Kierowca wykonujący kurs z aplikacji zawrócił z prawego pasa tuż przed skrzyżowaniem w Ząbkach i uderzył w nadjeżdżający samochód. Dwie osoby zginęły, jedna trafiła do szpitala w ciężkim stanie. Prokuratura wnioskowała o tymczasowe aresztowanie kierowcy.",
+        "Według „Rzeczpospolitej” w ubiegłym roku służby ujawniły ponad 100 kierowców przewozów na aplikację bez ważnych uprawnień i kilkanaście tysięcy wykroczeń. Wymóg polskiego prawa jazdy obowiązuje od czerwca 2024 r., ale wymiana dokumentu zagranicznego nie wymaga egzaminu praktycznego.",
+        "Prawnicy specjalizujący się w transporcie, z którymi rozmawiała „Rzeczpospolita”, uważają, że skuteczniejszy od obowiązkowych testów byłby mechanizm szybkiego zawieszania i cofania licencji za stwierdzone naruszenia. Działałby on tak samo wobec wszystkich kierowców, niezależnie od ich pochodzenia.",
+        "Po wypadku Ministerstwo Infrastruktury zapowiedziało zmiany w przepisach – opisujemy je w tekście [Projekt UD431](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr). Wyniki kontroli przewozów w 2026 r. zebraliśmy w tekście [Co wykazały kontrole](/artykul/p65-falszywe-prawa-jazdy-i-kierowcy-bez-uprawnien-co-wykazaly-kontrole-prz)."
+      ],
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "sources": [
+        "Rzeczpospolita — Po wypadku w Ząbkach eksperci o tym, jak zwiększyć bezpieczeństwo przewozów na aplikację — https://www.rp.pl/prawo-drogowe/art44586391-po-wypadku-w-zabkach-eksperci-o-tym-jak-zwiekszyc-bezpieczenstwo-przewozow-na-aplikacje"
       ]
     },
-    // Auto Świat — BYD Seal U DM-i jako taksówka (9 czerwca 2026)
     {
-          "id": "p48",
-          "cat": "rynek-polski",
-          "cats": [
-                "rynek-polski",
-                "przeglad-prasy"
-          ],
-          "img": "pro/real-byd-taxi.png",
-          "title": "BYD Seal U DM-i po 40 000 km jako taksówka. Jak wypadła chińska hybryda?",
-          "lead": "Kierowca FreeNow postawił na chińską hybrydę plug-in zamiast sprawdzonych marek. Auto Świat sprawdziło auto po pół roku i 40 000 km intensywnej pracy — werdykt jest na korzyść BYD.",
-          "source": "Auto Świat",
-          "sourceAuthor": "redakcja Auto Świat",
-          "link": "https://www.auto-swiat.pl/wiadomosci/aktualnosci/czy-chinski-suv-to-dobre-auto-na-taksowke-tak-byd-seal-u-dm-i-wypadl-na-40000-km/72nd362",
-          "date": "9 czerwca 2026",
-          "read": 4,
-          "body": [
-                "Biały BYD Seal U DM-i jeżdżący jako taksówka FreeNow stał się pretekstem do dłuższej rozmowy reportera Auto Świata z jego właścicielem. Kierowca wybrał chińskie auto świadomie, traktując zakup jak eksperyment — a po 40 000 km intensywnej pracy ocenia, że eksperyment się powiódł.",
-                "**Dlaczego chiński SUV w taksówce**",
-                "Wybór wpisuje się w szerszy trend: w ramach strategicznej współpracy BYD z FreeNow do flot trafia kilkaset aut chińskiej marki. Seal U DM-i to przestronny SUV segmentu D w wersji hybrydy plug-in — z bogatym wyposażeniem w standardzie i ceną wyraźnie niższą niż u uznanych rywali, co czyni go kuszącym kandydatem do pracy w przewozach.",
-                "**Jak wypadł po 40 000 km**",
-                "Najmocniej kierowca chwali trwałość. Antykorozja wypada bardzo dobrze: nadwozie jest ocynkowane, a po ostrej zimie pod autem nie pojawiła się rdza — krytyczne miejsca BYD dodatkowo zabezpiecza powłoką bitumiczną. Do tego dochodzi przestronna, komfortowa kabina, którą doceniają pasażerowie — istotny atut w pracy na aplikację.",
-                "**Ekonomia i pozycja rynkowa**",
-                "Seal U DM-i kosztuje ok. 170 tys. zł — znacząco mniej niż porównywalne hybrydy plug-in pokroju Toyoty RAV4 PHEV czy Skody Kodiaq PHEV, przy bogatszym standardowym wyposażeniu i deklarowanym łącznym zasięgu do 1080 km. Dla operatora floty liczy się nie cena z cennika, lecz całkowity koszt posiadania (TCO) — i to właśnie kombinacja niskiej ceny wejścia, niskiego spalania w trybie hybrydowym i trwałości decyduje o atrakcyjności auta w taksówce.",
-                "**Co to znaczy dla flot**",
-                "Materiał wpisuje się w szerszą ekspansję chińskich producentów na rynku europejskim, która coraz mocniej wybrzmiewa w polskich flotach taksówkarskich. Umowa BYD–FreeNow i pozytywne doświadczenia z długiego dystansu to sygnał, że chińskie hybrydy stają się realną opcją dla operatorów szukających taniego i trwałego pojazdu do intensywnej eksploatacji."
-          ],
-          "sources": [
-                "Auto Świat — Czy chiński SUV to dobre auto na taksówkę? Tak BYD Seal U DM-i wypadł na 40 000 km — https://www.auto-swiat.pl/wiadomosci/aktualnosci/czy-chinski-suv-to-dobre-auto-na-taksowke-tak-byd-seal-u-dm-i-wypadl-na-40000-km/72nd362",
-                "Motoryzacja Interia — BYD Seal U DM-i: hybryda z Chin za ok. 170 tys. zł — https://motoryzacja.interia.pl/testy/pierwsza-jazda/news-byd-seal-u-dm-i-to-hybryda-za-170-tys-zl-cena-to-hit-a-jak-j,nId,7831327"
-          ]
+      "id": "p48",
+      "cat": "rynek-polski",
+      "cats": [
+        "rynek-polski",
+        "przeglad-prasy"
+      ],
+      "img": "pro/real-byd-taxi.png",
+      "title": "BYD Seal U DM-i po 40 000 km jako taksówka. Doświadczenia kierowcy",
+      "lead": "Kierowca współpracujący z FreeNow przejechał chińską hybrydą plug-in 40 000 km w pół roku. W rozmowie z „Auto Światem” chwali trwałość i komfort. Dla flot to jeden z pierwszych opisanych przypadków BYD w polskich przewozach.",
+      "source": "Auto Świat",
+      "sourceAuthor": "redakcja Auto Świat",
+      "link": "https://www.auto-swiat.pl/wiadomosci/aktualnosci/czy-chinski-suv-to-dobre-auto-na-taksowke-tak-byd-seal-u-dm-i-wypadl-na-40000-km/72nd362",
+      "date": "9 czerwca 2026",
+      "read": 2,
+      "body": [
+        "Kierowca współpracujący z FreeNow kupił BYD Seala U DM-i do pracy w przewozach i po pół roku oraz 40 000 km ocenia wybór pozytywnie – relacjonuje „Auto Świat”. Najwyżej ocenia zabezpieczenie antykorozyjne i przestronną kabinę.",
+        "## Auto i oferta FreeNow",
+        "Seal U DM-i to SUV segmentu D z napędem hybrydowym plug-in. Według „Interii” kosztuje ok. 170 tys. zł, a producent deklaruje łączny zasięg do 1080 km. FreeNow i BYD zawarły w 2025 r. partnerstwo, w ramach którego do flot obsługujących platformę trafia kilkaset aut tej marki.",
+        "## Co kierowca ocenia dobrze",
+        "- nadwozie bez śladów korozji po zimie (ocynkowanie i dodatkowa powłoka w miejscach krytycznych);\n- przestronne wnętrze, doceniane przez pasażerów;\n- niskie zużycie paliwa w trybie hybrydowym.",
+        "> To relacja jednego użytkownika, a nie test porównawczy. Dla operatora floty o wyborze auta decyduje całkowity koszt posiadania (TCO): cena zakupu, zużycie paliwa lub energii, serwis, ubezpieczenie i wartość rezydualna.",
+        "O kosztach paliwa w różnych napędach piszemy w tekście [Ceny maksymalne paliw a koszty flot](/artykul/p64-ceny-maksymalne-paliw-do-konca-roku-floty-na-lpg-bez-ochrony)."
+      ],
+      "sources": [
+        "Auto Świat — Czy chiński SUV to dobre auto na taksówkę? Tak BYD Seal U DM-i wypadł na 40 000 km — https://www.auto-swiat.pl/wiadomosci/aktualnosci/czy-chinski-suv-to-dobre-auto-na-taksowke-tak-byd-seal-u-dm-i-wypadl-na-40000-km/72nd362",
+        "Motoryzacja Interia — BYD Seal U DM-i: hybryda z Chin za ok. 170 tys. zł — https://motoryzacja.interia.pl/testy/pierwsza-jazda/news-byd-seal-u-dm-i-to-hybryda-za-170-tys-zl-cena-to-hit-a-jak-j,nId,7831327"
+      ],
+      "author": "Redakcja PRO.portaltaxi.pl"
     },
-    // FEATURED — materiał partnera (Natviol / Infor)
     {
       "id": "p47",
       "cat": "rynek-polski",
@@ -210,336 +704,323 @@ const PRO = {
         "przeglad-prasy"
       ],
       "img": "uploads/rynek-skrzyzowanie-warszawa.png",
-      "title": "Zawody odporne na AI. Dlaczego taksówkarz i kurier mają przewagę nad automatyzacją?",
-      "lead": "Natviol w analizie dla Infor przekonuje, że kierowcy i kurierzy mają coś, czego algorytmy na razie nie zastąpią: fizyczną obecność i mobilność. To sprawia, że ich praca pozostaje w dużej mierze poza zasięgiem automatyzacji.",
+      "title": "Natviol: zawód kierowcy i kuriera jest odporny na AI. Co mówi materiał partnera flotowego",
+      "lead": "W materiale partnerskim opublikowanym w Infor.pl firma flotowa Natviol przekonuje, że kierowcy i kurierzy są największą grupą niezależnych pracowników platform, a ich pracy nie da się w najbliższych latach zautomatyzować.",
       "source": "Infor (Kadry)",
       "sourceAuthor": "materiał partnera Natviol",
       "sourceCat": "Rynek pracy i AI",
       "region": "Polska",
       "link": "https://kadry.infor.pl/wiadomosci/7595683,taksowkarz-i-kurier-bezpieczny-zawod-w-dobie-sztucznej-inteligencji-to-najliczniejsza-grupa-niezaleznych-pracownikow.html",
       "date": "2 czerwca 2026",
-      "read": 3,
+      "read": 2,
       "body": [
-        "Pod względem liczebności kierowcy i kurierzy stanowią największą grupę wśród niezależnych pracowników platform w Polsce. Dynamicznie rozwijający się sektor dostaw na bieżąco generuje zapotrzebowanie na nowe ręce do pracy — a specyfika tego zajęcia sprawia, że trudno je zastąpić algorytmem czy robotem.",
-        "Natviol nie bagatelizuje długoterminowych trendów: robotaxi i zautomatyzowane dostawy są realną perspektywą. Ale w horyzoncie najbliższych lat branża potrzebuje konkretnych ludzi za kierownicą — i to bardziej niż w poprzednich dekadach."
+        "Kierowcy i kurierzy to najliczniejsza grupa niezależnych pracowników platform w Polsce – przekonuje partner flotowy Natviol w materiale partnerskim w serwisie Infor.pl. Firma argumentuje, że praca wymagająca fizycznej obecności i mobilności pozostaje w dużej mierze poza zasięgiem automatyzacji.",
+        "Natviol przyznaje, że robotaxi i zautomatyzowane dostawy to realna perspektywa. W horyzoncie najbliższych lat branża ma jednak potrzebować więcej kierowców niż dotąd.",
+        "> To stanowisko firmy, która zatrudnia kierowców i kurierów, opublikowane jako materiał partnera. Stan wdrożeń robotaxi w Europie opisujemy w tekście [Robotaxi w Europie](/artykul/p66-robotaxi-w-europie-zagrzeb-jezdzi-monachium-i-madryt-w-kolejce)."
       ],
-      "hot": true
-    },
-    // RYNEK POLSKI
-
-    {
-          "id": "a2",
-          "cat": "rynek-polski",
-          "cats": [
-                "rynek-polski",
-                "analizy"
-          ],
-          "img": "pro/komiks-flota-miasto.jpg",
-          "title": "Koszty działalności flot rosną szybciej niż stawki. Operatorzy tną marże",
-          "lead": "Ubezpieczenia aut zarobkowych, serwis i amortyzacja windują koszty flot szybciej niż rosną stawki. Według naszych szacunków realny koszt utrzymania pojazdu w obrocie sięga ~0,72 zł/km. Analiza własna z jawnymi założeniami.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "31 maja 2026",
-          "read": 6,
-          "body": [
-                "Struktura kosztów operatora floty zmieniła się istotnie w ostatnich latach. Poniższe wartości to szacunki własne PRO.portaltaxi.pl na podstawie danych operatorów i raportów rynkowych — nie dane rejestrowe.",
-                "**Najszybciej rośnie ubezpieczenie**",
-                "Najszybciej rosnącą pozycją pozostają ubezpieczenia komunikacyjne (OC/AC) dla pojazdów w zarobkowym przewozie osób — ich stawki potrafią być o 50–100% wyższe niż w segmencie prywatnym, ze względu na wyższe przebiegi i ryzyko szkód.",
-                "**Amortyzacja i intensywna eksploatacja**",
-                "Drugim obciążeniem jest amortyzacja. Eksploatacja często powyżej 50 tys. km rocznie skraca cykl życia auta i wymusza częstsze wymiany floty. W przeliczeniu na kilometr realny koszt utrzymania pojazdu hybrydowego szacujemy na ok. 0,72 zł/km.",
-                "**Presja na marżę**",
-                "Przy prowizjach platform sięgających realnie 28–31% obrotu (z VAT), rosnące koszty stałe coraz mocniej ściskają marżę w segmencie wynajmu pojazdów. To jeden z głównych powodów konsolidacji rynku.",
-                "**Jak operatorzy reagują**",
-                "Odpowiedzią jest optymalizacja: przejście na napęd hybrydowy i LPG, negocjowanie pakietów serwisowych i ubezpieczeniowych, zaostrzenie kontroli tygodniowych rozliczeń oraz nacisk na efektywność godzin pracy, a nie samą liczbę kilometrów."
-          ],
-          "sources": [
-                "Instytut Jagielloński — raport ride-hailing (kontekst rynku i prowizji) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
-                "Analiza własna PRO.portaltaxi.pl na podstawie danych operatorów (szacunki, nie dane rejestrowe)."
-          ]
-    },
-
-
-
-    // REGULACJE UE
-    {
-          "id": "a5",
-          "cat": "regulacje-ue",
-          "cats": [
-                "regulacje-ue",
-                "rynek-polski"
-          ],
-          "img": "pro/komiks-regulacje-ue.jpg",
-          "title": "Domniemanie stosunku pracy. Co zmieni dyrektywa platformowa dla operatorów",
-          "lead": "Dyrektywa platformowa 2024/2831 odwraca ciężar dowodu: jeśli platforma realnie kontroluje pracę kierowcy, relacja może zostać uznana za stosunek pracy — z ZUS, urlopem i L4. Dla polskiego modelu B2B przez partnerów rozliczeniowych to test całej architektury współpracy. Termin wdrożenia: 2 grudnia 2026.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "31 maja 2026",
-          "read": 6,
-          "body": [
-                "Unijna dyrektywa 2024/2831 w sprawie poprawy warunków pracy za pośrednictwem platform (tzw. dyrektywa platformowa) została przyjęta 23 października 2024 r. i weszła w życie 1 grudnia 2024 r. Państwa członkowskie, w tym Polska, mają czas na wdrożenie jej do prawa krajowego do 2 grudnia 2026 r. Dla rynku przewozów na aplikację to jedna z najważniejszych zmian regulacyjnych tej dekady.",
-                "**Na czym polega domniemanie stosunku pracy**",
-                "Sercem dyrektywy jest domniemanie istnienia stosunku pracy. Jeśli platforma wywiera istotny wpływ na sposób wykonywania pracy — ustala lub ogranicza stawki, narzuca godziny lub dostępność, algorytmicznie przydziela zlecenia, monitoruje wykonanie albo ogranicza swobodę przyjmowania zleceń i wyboru zleceniodawców — pracę domniemywa się jako zatrudnienie. Kluczowe jest odwrócenie ciężaru dowodu: to platforma lub pośrednik musi wykazać, że stosunku pracy nie ma, a nie kierowca, że jest.",
-                "**Co to znaczy dla polskiego modelu B2B**",
-                "Polski rynek opiera się w dużej mierze na współpracy B2B i partnerach rozliczeniowych — flotach pośredniczących między kierowcą a platformą. Jeśli kierowca zostanie uznany za pracownika, pojawiają się skutki, których model samozatrudnienia nie przewiduje: składki ZUS, płatny urlop, wynagrodzenie chorobowe i L4, ochrona przy rozwiązaniu współpracy. Operatorzy będą musieli albo wykazać realną autonomię kierowcy (swoboda stawek, godzin, przyjmowania zleceń, pracy dla wielu podmiotów), albo liczyć się z przekwalifikowaniem relacji i wyższymi kosztami.",
-                "**Zarządzanie algorytmiczne: nowe obowiązki**",
-                "Drugi filar dyrektywy to przejrzystość algorytmów. Platformy muszą informować pracujących o automatycznych systemach monitorowania i podejmowania decyzji (przydzielanie kursów, blokady, oceny), zapewnić ludzki nadzór nad istotnymi decyzjami oraz prawo do wyjaśnienia i odwołania. Ograniczone jest przetwarzanie niektórych danych wrażliwych, a kluczowych decyzji — takich jak zawieszenie konta — nie można podejmować wyłącznie automatycznie, bez nadzoru człowieka.",
-                "**Kalendarz i co robić teraz**",
-                "Do 2 grudnia 2026 r. Polska musi przyjąć przepisy wdrażające — kierunek krajowej ustawy przesądzi o skali skutków. Operatorzy i floty już dziś powinni: zmapować, gdzie realnie kontrolują pracę kierowcy, przejrzeć umowy i regulaminy pod kątem znamion stosunku pracy, oszacować koszt ewentualnego oskładkowania oraz przygotować warianty modelu współpracy. Branża apeluje o przepisy godzące ochronę pracujących z elastycznością, którą wybiera większość kierowców — ostateczny kształt zależy jednak od krajowej transpozycji."
-          ],
-          "sources": [
-                "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2024/2831 z 23.10.2024 (EUR-Lex) — https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=OJ:L_202402831",
-                "EY Polska — Dyrektywa platformowa: co się zmieni i jakie będą skutki finansowe — https://www.ey.com/pl_pl/insights/workforce/dyrektywa-platformowa-skutki-finansowe",
-                "Domański Zakrzewski Palinka (DZP), blog Labour — Dyrektywa platformowa coraz bliżej — https://www.dzp.pl/blog/labour/dyrektywa-platformowa-coraz-blizej-co-zmieni-sie-w-prawie-pracy",
-                "Staniek&Partners — Dyrektywa platformowa wprowadza domniemanie stosunku pracy — https://staniekandpartners.pl/blog/dyrektywa-platformowa-wprowadza-domniemania-stosunku-pracy/"
-          ]
+      "hot": true,
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "sources": [
+        "Infor.pl (materiał partnera: Natviol) — Taksówkarz i kurier: bezpieczny zawód w dobie sztucznej inteligencji — https://kadry.infor.pl/wiadomosci/7595683,taksowkarz-i-kurier-bezpieczny-zawod-w-dobie-sztucznej-inteligencji-to-najliczniejsza-grupa-niezaleznych-pracownikow.html"
+      ]
     },
     {
-          "id": "a6",
-          "cat": "regulacje-ue",
-          "cats": [
-                "regulacje-ue",
-                "rynek-polski"
-          ],
-          "img": "pro/komiks-kontrola.jpg",
-          "title": "Licencje, kontrole i obowiązki pośredników. Nowy reżim odpowiedzialności platform",
-          "lead": "Lex Uber przerzuca odpowiedzialność na pośredników: platforma musi osobiście zweryfikować każdego kierowcę, sprawdzić go w CEPiK i archiwizować dokumenty, a za naruszenia grożą kary do 1 mln zł. Operatorzy przebudowują procedury onboardingu.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "30 maja 2026",
-          "read": 6,
-          "body": [
-                "Kolejne nowelizacje tzw. lex Uber przesuwają ciężar zgodności na firmy pośredniczące w przewozie osób (Uber, Bolt) oraz współpracujących z nimi operatorów i partnerów rozliczeniowych. Z luźnego modelu rejestracji online robi się rygorystyczny proces z odpowiedzialnością prawną.",
-                "**Osobista weryfikacja kierowcy**",
-                "Kandydat na kierowcę musi stawić się osobiście przed pierwszym kursem. Firma potwierdza tożsamość (m.in. wykonuje zdjęcie), sprawdza uprawnienia oraz niekaralność. Wymagane jest polskie prawo jazdy, którego autentyczność weryfikuje się w Centralnej Ewidencji Kierowców (CEK/CEPiK) — kierowcy realizujący przejazdy są w bazie sprawdzani codziennie.",
-                "**Archiwizacja dokumentów**",
-                "Pośrednik ma obowiązek archiwizować cyfrowe odwzorowania dokumentu tożsamości i prawa jazdy kierowcy. Dane wykonujących przewóz można przetwarzać do 5 lat (licząc od końca roku, w którym kierowca zakończył współpracę).",
-                "**Kary do 1 mln zł**",
-                "Ustawa zaostrza sankcje — kary sięgają 1 mln zł, zarówno dla przedsiębiorców pośredniczących, jak i osób wykonujących przewóz z naruszeniem obowiązków. To realne ryzyko finansowe, które wymusza dyscyplinę dokumentacyjną.",
-                "**Co to znaczy dla operatorów**",
-                "Floty i partnerzy rozliczeniowi muszą wdrożyć powtarzalne procedury onboardingu, kontroli uprawnień i archiwizacji — oraz utrzymywać je w czasie. Efektem ubocznym jest dalsza profesjonalizacja rynku i wypychanie podmiotów działających po szarej stronie."
-          ],
-          "sources": [
-                "Forsal.pl — Kierowca tylko zweryfikowany. Od 1 października zmiany dla firm pośredniczących w przewozie osób — https://forsal.pl/transport/aktualnosci/artykuly/9301821,kierowca-tylko-zweryfikowany-od-1-pazdziernika-zmiany-dla-firm-posred.html",
-                "Rzeczpospolita — Nowe lex Uber wchodzi w życie: co się zmienia w taxi na aplikacje — https://www.rp.pl/prawo-drogowe/art39136931-nowe-lex-uber-wchodzi-w-zycie-oto-co-sie-zmienia-w-taxi-na-aplikacje",
-                "Fintek.pl — Weryfikacja kierowców w CEPiK i nagrania głosowe — https://fintek.pl/weryfikacja-kierowcow-w-cepik-i-nagrania-glosowe-uber-wprowadza-nowe-zabezpieczenia/",
-                "Infor.pl — Lex Uber: od 17 czerwca polskie prawo jazdy dla kierowców z aplikacji — https://kadry.infor.pl/kadry/inne_formy_zatrudnienia/cudzoziemcy/6630565,wazne-lex-uber-od-17-czerwca-polskie-prawo-jazdy-dla-kierowcow-z-aplikacji.html"
-          ]
+      "id": "a2",
+      "cat": "rynek-polski",
+      "cats": [
+        "rynek-polski",
+        "analizy"
+      ],
+      "img": "pro/komiks-flota-miasto.jpg",
+      "title": "Koszty działalności flot rosną szybciej niż stawki. Operatorzy tną marże",
+      "lead": "Ubezpieczenia aut w przewozie osób, serwis i amortyzacja rosną szybciej niż stawki. Redakcja szacuje koszt utrzymania hybrydy w intensywnej eksploatacji na ok. 0,72 zł/km. To szacunek, nie dane rejestrowe.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "31 maja 2026",
+      "read": 2,
+      "body": [
+        "Ubezpieczenie, amortyzacja i serwis rosną we flotach szybciej niż stawki za przejazd. Wartości poniżej to szacunki redakcji PRO.portaltaxi.pl na podstawie informacji od operatorów i raportów rynkowych, a nie dane rejestrowe.",
+        "## Ubezpieczenie",
+        "Najszybciej rośnie ubezpieczenie komunikacyjne (OC i AC) pojazdów w zarobkowym przewozie osób. Według informacji od operatorów stawki bywają o 50–100 proc. wyższe niż w segmencie prywatnym ze względu na większe przebiegi i ryzyko szkód.",
+        "## Amortyzacja",
+        "Przebiegi powyżej 50 tys. km rocznie skracają cykl życia auta i wymuszają częstszą wymianę floty. Koszt utrzymania hybrydy szacujemy na ok. 0,72 zł/km.",
+        "## Marża",
+        "Przy prowizjach platform sięgających ok. 28–31 proc. obrotu (z VAT) rosnące koszty stałe zmniejszają marżę operatorów wynajmujących auta kierowcom. Może to być jedna z przyczyn konsolidacji rynku ([konsolidacja w 2026 r.](/artykul/p59-znikaja-firmy-taksowkowe-rosna-posrednicy-konsolidacja-rynku-w-2026-ro)).",
+        "## Jak reagują operatorzy",
+        "- przechodzą na napęd hybrydowy i LPG;\n- negocjują pakiety serwisowe i ubezpieczeniowe;\n- ściślej kontrolują tygodniowe rozliczenia;\n- mierzą efektywność godzin pracy, a nie samą liczbę kilometrów.",
+        "Zastrzeżenie: wartości w tekście to szacunki redakcji, które zależą od miasta, modelu auta i warunków umów. Ceny paliw od października: [Ceny maksymalne paliw](/artykul/p64-ceny-maksymalne-paliw-do-konca-roku-floty-na-lpg-bez-ochrony)."
+      ],
+      "sources": [
+        "Instytut Jagielloński — raport ride-hailing (kontekst rynku i prowizji) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
+        "Analiza własna PRO.portaltaxi.pl na podstawie danych operatorów (szacunki, nie dane rejestrowe)."
+      ]
     },
     {
-          "id": "a7",
-          "cat": "regulacje-ue",
-          "cats": [
-                "regulacje-ue",
-                "rynek-polski"
-          ],
-          "img": "pro/komiks-urzad.jpg",
-          "title": "Postulat licencji metropolitalnych wraca do dyskusji. Koniec pułapki obszarowej?",
-          "lead": "Licencja taksówkowa obowiązuje na obszarze jednej gminy — w aglomeracji łatwo wpaść w „pułapkę obszarową\" i ryzykować mandat 2000 zł. Branża chce licencji obejmujących całe aglomeracje. Co ciekawe, prawo już dziś dopuszcza porozumienia międzygminne.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "28 maja 2026",
-          "read": 6,
-          "body": [
-                "Licencji na przewóz osób taksówką udziela się na konkretny pojazd i obszar jednej gminy (na okres od 2 do 50 lat). W aglomeracjach, gdzie codzienny ruch przekracza granice gmin, ten model tworzy realne ryzyko prawne dla kierowców.",
-                "**Czym jest pułapka obszarowa**",
-                "Kierowca może dowieźć pasażera poza obszar swojej licencji — np. z Legionowa do Warszawy — ale poza tym obszarem nie wolno mu już zabierać nowych pasażerów. Wyjątkiem jest kurs powrotny lub zamówienie złożone przez klienta z innego obszaru. Złamanie tej zasady grozi kontrolą ITD lub policji i mandatem: za przewóz taksówką niewpisaną do licencji przewidziano 2000 zł kary.",
-                "**Postulat licencji metropolitalnych**",
-                "Branża postuluje licencje obejmujące całe aglomeracje — Warszawę z gminami ościennymi, Górnośląsko-Zagłębiowską Metropolię (GZM) czy Trójmiasto. Argument: uprościłoby to działalność, zlikwidowało absurdy obszarowe i ograniczyło szarą strefę napędzaną przez przepisy nie do utrzymania w praktyce.",
-                "**Co już dziś jest możliwe**",
-                "Prawo dopuszcza, by licencja obejmowała kilka sąsiadujących gmin — pod warunkiem, że zawarły one odpowiednie porozumienie. Postulat sprowadza się więc do upowszechnienia i ujednolicenia istniejącego mechanizmu, a nie tworzenia go od zera.",
-                "**Dla operatorów**",
-                "Licencje metropolitalne oznaczałyby większą pewność prawną w aglomeracjach, mniej ryzyka mandatów i prostsze planowanie pracy floty. To jeden z tych postulatów, które realnie obniżają koszt zgodności bez luzowania wymogów bezpieczeństwa."
-          ],
-          "sources": [
-                "Biznes.gov.pl — Licencja na taksówkę (obszar gminy, zasady przewozu) — https://www.biznes.gov.pl/pl/portal/ou475",
-                "Poradnik Przedsiębiorcy — Licencja na taksówkę: co warto wiedzieć — https://poradnikprzedsiebiorcy.pl/-licencja-na-taksowke-co-warto-wiedziec"
-          ]
-    },
-
-    // RYNKI ZAGRANICZNE
-    {
-          "id": "a8",
-          "cat": "rynki-zagraniczne",
-          "cats": [
-                "rynki-zagraniczne"
-          ],
-          "img": "pro/cover-zagranica-2.png",
-          "title": "Hiszpania zaostrza limity podaży. Madryt i Barcelona testują nowe modele licencji",
-          "lead": "Hiszpania to jeden z najściślej regulowanych rynków przewozów w Europie: proporcja licencji VTC do taksówek 1:30 i obowiązek wcześniejszej rezerwacji. Po nowelizacjach Uber i Cabify wycofały się z Katalonii. Dla polskiego ustawodawcy — ważny punkt odniesienia.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "30 maja 2026",
-          "read": 6,
-          "body": [
-                "Hiszpania reguluje przewozy platformowe ostrzej niż większość krajów UE. Usługi typu Uber czy Cabify działają tam na licencjach VTC (wynajem pojazdu z kierowcą), które są limitowane ilościowo i obwarowane dodatkowymi wymogami — w odróżnieniu od klasycznych taksówek.",
-                "**Proporcja 1:30 i limit podaży**",
-                "Kluczowym narzędziem jest proporcja licencji: jedna licencja VTC może przypadać na trzydzieści licencji taksówkowych. W całej Hiszpanii wydano ok. 6,7 tys. licencji VTC, z czego ok. 2,7 tys. w Madrycie. Cel regulacji to zachowanie równowagi w transporcie miejskim i ochrona dochodów tradycyjnych przewoźników.",
-                "**Katalonia: rezerwacja z wyprzedzeniem**",
-                "W Katalonii obowiązuje wymóg wcześniejszej rezerwacji przejazdu VTC z minimum 15-minutowym wyprzedzeniem (Decret 111/2017), a rozważane jest dalsze zaostrzenie. Po nowelizacji przepisów Uber i Cabify wycofały się z Katalonii — według ówczesnych szacunków pracę miało stracić ponad 2 tys. osób.",
-                "**Spór: ochrona kontra konkurencja**",
-                "Platformy argumentują, że limity sztucznie ograniczają konkurencję i dostępność usług. Klasyczni przewoźnicy odpowiadają, że stabilizują rynek i chronią ich dochody przed presją podaży. To ten sam konflikt interesów, który przewija się przez całą europejską debatę o przewozach na aplikację.",
-                "**Czego uczy to Polskę**",
-                "Hiszpański model — twardy limit podaży plus obowiązek prerezerwacji — to skrajny punkt odniesienia w dyskusji o tym, jak wyważyć regulację i dostępność. Polska poszła inną drogą (lex Uber), ale doświadczenia Madrytu i Barcelony pokazują, jakie skutki rynkowe niosą ostre ograniczenia podaży."
-          ],
-          "sources": [
-                "Forsal.pl — Uber i Cabify wycofały się z Katalonii po nowelizacji prawa — https://forsal.pl/artykuly/1395688,uber-i-cabify-wycofaly-sie-z-katalonii-po-nowelizacji-prawa-ponad-2-tys-osob-straci-prace.html",
-                "EURACTIV.pl — Hiszpania: Uber i wielki strajk taksówkarzy — https://euractiv.pl/section/polityka-wewnetrzna-ue/news/hiszpania-uber-i-wielki-strajk-taksowkarzy/",
-                "Sekrety Hiszpanii — Uber, Bolt, Cabify w Hiszpanii: zasady, proporcja licencji i rezerwacja — https://www.sekretyhiszpanii.pl/praktyczne/uber-bolt-cabify-hiszpania/"
-          ]
+      "id": "a5",
+      "cat": "regulacje-ue",
+      "cats": [
+        "regulacje-ue",
+        "rynek-polski"
+      ],
+      "img": "pro/komiks-regulacje-ue.jpg",
+      "title": "Domniemanie stosunku pracy. Co zmieni dyrektywa platformowa dla operatorów",
+      "lead": "Dyrektywa 2024/2831 przenosi ciężar dowodu na platformę: jeśli fakty wskazują na kontrolę i kierownictwo, relację domniemywa się jako stosunek pracy. Dla polskiego modelu współpracy przez partnerów flotowych to test całej konstrukcji. Termin wdrożenia: 2 grudnia 2026 r.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "31 maja 2026",
+      "read": 2,
+      "body": [
+        "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2024/2831 w sprawie poprawy warunków pracy za pośrednictwem platform internetowych (dyrektywa platformowa) została przyjęta 23 października 2024 r. i weszła w życie 1 grudnia 2024 r. Państwa członkowskie, w tym Polska, mają czas na wdrożenie jej do 2 grudnia 2026 r.",
+        "## Na czym polega domniemanie stosunku pracy",
+        "Zgodnie z art. 5 dyrektywy stosunek między platformą a osobą wykonującą pracę domniemywa się jako stosunek pracy, gdy zostaną ustalone fakty wskazujące na kontrolę i kierownictwo. Ostateczna wersja dyrektywy nie zawiera zamkniętej listy kryteriów: fakty ocenia się według prawa krajowego, układów zbiorowych i orzecznictwa TSUE. W debacie jako przykłady podaje się ustalanie stawek, narzucanie godzin lub dostępności, algorytmiczne przydzielanie zleceń i ograniczanie swobody ich przyjmowania.",
+        "> Ciężar dowodu się odwraca: to platforma musi wykazać, że stosunku pracy nie ma, a nie kierowca, że on istnieje.",
+        "## Co to oznacza dla modelu z partnerami flotowymi",
+        "Polski rynek przewozów opiera się na współpracy przez partnerów flotowych, którzy pośredniczą między kierowcą a platformą. Jeśli kierowca zostanie uznany za pracownika, pojawiają się składki ZUS, płatny urlop, wynagrodzenie chorobowe i ochrona przy rozwiązaniu umowy. Operatorzy będą musieli wykazać realną samodzielność kierowcy (swobodę godzin, przyjmowania zleceń, pracy dla wielu podmiotów) albo liczyć się z przekwalifikowaniem relacji.",
+        "## Zarządzanie algorytmiczne",
+        "Platformy muszą informować pracujących o automatycznych systemach monitorowania i podejmowania decyzji (przydział kursów, blokady, oceny), zapewnić nadzór człowieka nad istotnymi decyzjami oraz prawo do wyjaśnienia i odwołania. Decyzji o zawieszeniu konta nie można podejmować wyłącznie automatycznie.",
+        "## Co mogą zrobić operatorzy",
+        "- zmapować, gdzie realnie kontrolują pracę kierowcy;\n- przejrzeć umowy i regulaminy pod kątem cech stosunku pracy;\n- oszacować koszt ewentualnego oskładkowania;\n- przygotować warianty modelu współpracy i skonsultować je z prawnikiem prawa pracy.",
+        "> Aktualizacja (4.11.2026): polski projekt ustawy (UC160) czeka na przyjęcie przez rząd i nie wejdzie w życie przed 2 grudnia – [Polska nie zdąży z dyrektywą](/artykul/p54-dyrektywa-platformowa-polska-nie-zdazy-na-2-grudnia).",
+        "Zastrzeżenie: tekst zaktualizowany redakcyjnie 4 listopada 2026 r."
+      ],
+      "sources": [
+        "Dyrektywa Parlamentu Europejskiego i Rady (UE) 2024/2831 z 23.10.2024 (EUR-Lex) — https://eur-lex.europa.eu/legal-content/PL/TXT/PDF/?uri=OJ:L_202402831",
+        "EY Polska — Dyrektywa platformowa: co się zmieni i jakie będą skutki finansowe — https://www.ey.com/pl_pl/insights/workforce/dyrektywa-platformowa-skutki-finansowe",
+        "Domański Zakrzewski Palinka (DZP), blog Labour — Dyrektywa platformowa coraz bliżej — https://www.dzp.pl/blog/labour/dyrektywa-platformowa-coraz-blizej-co-zmieni-sie-w-prawie-pracy",
+        "Staniek&Partners — Dyrektywa platformowa wprowadza domniemanie stosunku pracy — https://staniekandpartners.pl/blog/dyrektywa-platformowa-wprowadza-domniemania-stosunku-pracy/"
+      ]
     },
     {
-          "id": "a9",
-          "cat": "rynki-zagraniczne",
-          "cats": [
-                "rynki-zagraniczne"
-          ],
-          "img": "pro/cover-zagranica-3.png",
-          "title": "Niemcy: obowiązek powrotu do bazy. Jak prawo ogranicza Ubera i Bolta",
-          "lead": "Niemiecki § 49 PBefG nakłada na wynajem pojazdu z kierowcą (model Ubera i Bolta) obowiązek powrotu do bazy po każdym kursie. 3 czerwca 2026 r. Federalny Trybunał (BGH) potwierdził tę zasadę, a operatorom grozi utrata licencji. Dla polskich flot to lekcja, jak detal regulacji kształtuje ekonomikę.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "5 czerwca 2026",
-          "read": 6,
-          "body": [
-                "Niemcy konsekwentnie odróżniają klasyczną taksówkę od usługi wynajmu pojazdu z kierowcą (Mietwagen) — a to właśnie w tej drugiej kategorii działają Uber i Bolt. Różnica w statusie pociąga za sobą zupełnie inne obowiązki.",
-                "**Na czym polega obowiązek powrotu (Rückkehrpflicht)**",
-                "Zgodnie z § 49 ust. 4 ustawy o przewozie osób (PBefG) pojazd wynajmu z kierowcą musi po wykonaniu zlecenia niezwłocznie wrócić do siedziby firmy — chyba że w trasie powrotnej przyjmie nowe zlecenie. W praktyce ogranicza to efektywność i konkurencyjność cenową platform, bo generuje puste przebiegi, których klasyczna taksówka nie ma.",
-                "**Wyrok BGH z czerwca 2026**",
-                "3 czerwca 2026 r. Federalny Trybunał Sprawiedliwości (BGH, sygn. I ZR 123/25) potwierdził, że — inaczej niż taksówki — auta zamawiane przez Ubera muszą po każdym kursie wracać na teren bazy. Wcześniej organy administracyjne cofały zezwolenia za powtarzające się naruszenia obowiązku powrotu (jednej firmie cofnięto cztery zezwolenia).",
-                "**Co to znaczy dla ekonomiki floty**",
-                "Obowiązek powrotu wprost przekłada się na geografię opłacalności: im dalej baza od centrum, tym więcej nieodpłatnych kilometrów. To pokazuje, że o modelu biznesowym przewozów decyduje nie tylko poziom prowizji, lecz także pozornie techniczne detale prawa.",
-                "**Lekcja dla Polski**",
-                "Niemiecki przykład dowodzi, że definicja „taksówka kontra wynajem z kierowcą\" potrafi przesądzić o całej ekonomice usługi. Przy dyskusji o krajowych przepisach warto śledzić, jak takie detale wpływają na koszty i konkurencję."
-          ],
-          "sources": [
-                "LTO — BGH: Uber muss nach Fahrt zurück zum Betriebsgelände (sygn. I ZR 123/25) — https://www.lto.de/recht/nachrichten/n/bgh-izr12325-rueckkehr-mietwagen-uber-taxis-betriebsgelaende",
-                "taxi heute — Verstöße gegen die Rückkehrpflicht wiegen immer schwer (PBefG) — https://www.taxi-heute.de/de/news/personenbefoerderungsrecht-auch-pbefg_verstoesse-gegen-die-rueckkehrpflicht-wiegen-immer-schwer-22781.html",
-                "Juraarchiv — Rückkehrpflicht für Mietwagenanbieter: BGH-Entscheidung, EU-Kontext und Folgen — https://www.juraarchiv.de/rueckkehrpflicht-fuer-mietwagenanbieter-bgh-entscheidung-eu-kontext-und-folgen-fuer-die-branche/"
-          ]
+      "id": "a6",
+      "cat": "regulacje-ue",
+      "cats": [
+        "regulacje-ue",
+        "rynek-polski"
+      ],
+      "img": "pro/komiks-kontrola.jpg",
+      "title": "Licencje, kontrole i obowiązki pośredników. Reżim odpowiedzialności po lex Uber",
+      "lead": "Nowelizacje tzw. lex Uber przerzuciły na pośredników obowiązek osobistej weryfikacji kierowcy, sprawdzania go w ewidencji kierowców i archiwizowania dokumentów. Za naruszenia grożą wysokie kary. Projekt UD431 przewiduje kolejne obowiązki, ale niższe kary.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "30 maja 2026",
+      "read": 2,
+      "body": [
+        "Kolejne nowelizacje ustawy o transporcie drogowym, nazywane lex Uber, przesunęły obowiązki zgodności na firmy pośredniczące w przewozie osób (Uber, Bolt) i współpracujących z nimi partnerów flotowych. Rejestracja online zamieniła się w proces z odpowiedzialnością prawną.",
+        "## Osobista weryfikacja kierowcy",
+        "Kandydat musi stawić się osobiście przed pierwszym kursem. Pośrednik potwierdza tożsamość, sprawdza uprawnienia i niekaralność. Wymagane jest polskie prawo jazdy, którego ważność weryfikuje się w Centralnej Ewidencji Kierowców. Według Fintek.pl Uber sprawdza w ewidencji aktywnych kierowców codziennie.",
+        "## Archiwizacja dokumentów",
+        "Pośrednik archiwizuje cyfrowe kopie dokumentu tożsamości i prawa jazdy kierowcy. Dane można przetwarzać przez 5 lat od końca roku, w którym kierowca zakończył współpracę.",
+        "## Kary",
+        "Według Forsal.pl kary za naruszenie obowiązków sięgają 1 mln zł i dotyczą zarówno pośredników, jak i osób wykonujących przewóz.",
+        "> Aktualizacja (4.11.2026): projekt UD431 Ministerstwa Infrastruktury przewiduje nowy obowiązek pośredników – sprawdzanie badania technicznego i OC taksówki – a jednocześnie niższe, proporcjonalne kary ([szczegóły projektu](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr)).",
+        "## Dla operatorów",
+        "Floty i partnerzy muszą utrzymywać powtarzalne procedury rejestracji kierowców, kontroli uprawnień i archiwizacji. Efektem jest dalsza profesjonalizacja rynku.",
+        "Zastrzeżenie: tekst zaktualizowany redakcyjnie 4 listopada 2026 r."
+      ],
+      "sources": [
+        "Forsal.pl — Kierowca tylko zweryfikowany. Od 1 października zmiany dla firm pośredniczących w przewozie osób — https://forsal.pl/transport/aktualnosci/artykuly/9301821,kierowca-tylko-zweryfikowany-od-1-pazdziernika-zmiany-dla-firm-posred.html",
+        "Rzeczpospolita — Nowe lex Uber wchodzi w życie: co się zmienia w taxi na aplikacje — https://www.rp.pl/prawo-drogowe/art39136931-nowe-lex-uber-wchodzi-w-zycie-oto-co-sie-zmienia-w-taxi-na-aplikacje",
+        "Fintek.pl — Weryfikacja kierowców w CEPiK i nagrania głosowe — https://fintek.pl/weryfikacja-kierowcow-w-cepik-i-nagrania-glosowe-uber-wprowadza-nowe-zabezpieczenia/",
+        "Infor.pl — Lex Uber: od 17 czerwca polskie prawo jazdy dla kierowców z aplikacji — https://kadry.infor.pl/kadry/inne_formy_zatrudnienia/cudzoziemcy/6630565,wazne-lex-uber-od-17-czerwca-polskie-prawo-jazdy-dla-kierowcow-z-aplikacji.html"
+      ]
     },
     {
-          "id": "a10",
-          "cat": "rynki-zagraniczne",
-          "cats": [
-                "rynki-zagraniczne"
-          ],
-          "img": "pro/cover-zagranica-4.png",
-          "title": "Fala protestów przewoźników w Europie Zachodniej. Żądania równych reguł gry",
-          "lead": "Od Frankfurtu po Monachium na ulice wychodzą i klasyczni taksówkarze, i kierowcy aplikacji — jedni o równe reguły dla wszystkich, drudzy o stawki pozwalające zarobić powyżej płacy minimalnej. Ten sam konflikt narasta także w Polsce.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "25 maja 2026",
-          "read": 5,
-          "body": [
-                "Protesty przewoźników to stały element europejskiego rynku taxi, ale dziś mają dwa wyraźnie różne źródła — i często toczą się równolegle.",
-                "**Dwa fronty protestów**",
-                "Pierwszy nurt to klasyczni taksówkarze, którzy domagają się jednolitych wymogów — licencyjnych, podatkowych i bezpieczeństwa — dla wszystkich podmiotów przewożących osoby, bez taryfy ulgowej dla platform. Drugi to sami kierowcy aplikacji, protestujący przeciw wysokim prowizjom i zarobkom, które nie wystarczają na pokrycie kosztów.",
-                "**Niemcy: konkretne przykłady**",
-                "W listopadzie 2024 r. strajkowano we Frankfurcie, a wiosną 2025 r. taksówkarze wyjechali na ulice Moguncji, Wiesbaden i Monachium z hasłem „równe warunki dla wszystkich\". Kierowcy Ubera i Bolta wskazywali z kolei, że wypłaty od platform bywają zbyt niskie, by pokryć choćby płacę minimalną.",
-                "**Hiszpania i szerszy kontekst**",
-                "Do tego dochodzą powracające strajki w Hiszpanii, gdzie spór taksówki kontra licencje VTC należy do najostrzejszych w Europie. Mimo różnic krajowych postulat bywa wspólny: uczciwe i równe warunki konkurencji.",
-                "**Echo w Polsce**",
-                "Ten sam mechanizm widać nad Wisłą — w 2025 r. kierowcy aplikacji organizowali w polskich miastach strajki przeciw wysokim prowizjom Ubera i Bolta. To sygnał, że napięcia z dojrzałych rynków zachodnich docierają również do Polski."
-          ],
-          "sources": [
-                "Rabbit Trans Poland — Dlaczego niemieckie taksówki wypowiedziały wojnę Uberowi (protesty: Frankfurt, Moguncja, Wiesbaden, Monachium) — https://www.rabbittranspoland.com/pl/post/dlaczego-niemieckie-taks%C3%B3wki-wypowiedzia%C5%82y-wojn%C4%99-uberowi",
-                "EURACTIV.pl — Hiszpania: Uber i wielki strajk taksówkarzy — https://euractiv.pl/section/polityka-wewnetrzna-ue/news/hiszpania-uber-i-wielki-strajk-taksowkarzy/",
-                "GoWork.pl — Strajk kierowców Uber i Bolt 2025 — https://www.gowork.pl/poradnik/17/wiadomosci/strajk-kierowcow-uber-i-bolt-trwa-mlody-ukrainiec-z-tiktoka-rzuca-wyzwanie-gigantom/"
-          ]
-    },
-
-    // NEWSY Z PLATFORM
-
-
-
-
-    // PRZEGLĄD PRASY
-    {
-          "id": "a14",
-          "cat": "przeglad-prasy",
-          "cats": [
-                "przeglad-prasy",
-                "analizy"
-          ],
-          "img": "pro/komiks-przeglad-rynek.jpg",
-          "title": "Przegląd prasy: rynek przewozów w raportach Instytutu Jagiellońskiego i ZDG TOR",
-          "lead": "Raport Instytutu Jagiellońskiego wyceniał polski rynek ride-hailing na 2,5 mld zł (2022) i prognozował ok. 4,7 mld zł na 2025. Ponad 70% kursów taksówkowych zamawianych jest przez aplikacje. Zebraliśmy najważniejsze liczby i wnioski.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "31 maja 2026",
-          "read": 4,
-          "body": [
-                "Rynek przewozów na aplikację doczekał się kilku poważnych opracowań, na czele z raportem Instytutu Jagiellońskiego „Ride-hailing: pośrednictwo w przewozach osobowych – polska reforma\". Zebraliśmy z nich kluczowe dane.",
-                "**Wartość rynku: 2,5 mld zł (2022), prognoza ~4,7 mld zł (2025)**",
-                "W 2022 r. wartość rynku ride-hailing w Polsce sięgnęła 2,5 mld zł przy 18,6 mln aktywnych użytkowników aplikacji i ok. 112 mln zrealizowanych przejazdów. Prognoza na 2025 r. mówi o ok. 4,7 mld zł wartości usług i przychodach platform pośredniczących powyżej 886,5 mln zł (wartości na 2025 to prognoza, nie dane rejestrowe).",
-                "**Ponad 70% kursów przez aplikacje**",
-                "Szacunki wskazują, że w polskich miastach — zależnie od lokalizacji — co najmniej 70% wszystkich kursów taksówkowych realizowanych jest przez aplikacje. To pokazuje, jak dalece model platformowy zdominował rynek.",
-                "**Bezpieczeństwo i regulacja (ZDG TOR)**",
-                "Raport Instytutu Jagiellońskiego odwołuje się m.in. do prac zespołu doradców (ZDG TOR) dotyczących bezpieczeństwa przewozów na aplikację i analizuje działanie platform Bolt, FreeNow, iTaxi i Uber w Polsce, ze szczególnym naciskiem na czynniki ekonomiczne i społeczne reformy.",
-                "**Wniosek: koncentracja i profesjonalizacja**",
-                "Publikacje zgodnie wskazują, że po zmianach regulacyjnych rynek wszedł w fazę większej koncentracji i profesjonalizacji — z rosnącą rolą operatorów flotowych i partnerów rozliczeniowych."
-          ],
-          "sources": [
-                "Instytut Jagielloński — Ride-hailing: pośrednictwo w przewozach osobowych – polska reforma (raport) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
-                "Rzeczpospolita — Aplikacje generują ponad 70 proc. kursów taksówek — https://www.rp.pl/transport/art42095371-aplikacje-generuja-ponad-70-proc-kursow-taksowek",
-                "Bankier.pl — Rynek przewozu osób na aplikacje wart w Polsce 2,5 mld zł — https://www.bankier.pl/wiadomosc/Rynek-przewozu-osob-na-aplikacje-jest-wart-w-Polsce-2-5-mld-zl-ale-konieczne-jest-zwiekszenia-bezpieczenstwa-8504589.html"
-          ]
-    },
-
-
-    // ANALIZY
-    {
-          "id": "a16",
-          "cat": "analizy",
-          "cats": [
-                "analizy",
-                "rynek-polski"
-          ],
-          "img": "pro/komiks-flota.jpg",
-          "title": "Rentowność floty taxi w 2026. Analiza progu opłacalności pojazdu",
-          "lead": "Przy szacowanym koszcie ~0,72 zł/km i prowizjach rzędu 28–31% obrotu próg rentowności pojazdu wymaga ok. 3 500 zł obrotu tygodniowo. To analiza własna z jawnymi założeniami — nie dane rejestrowe.",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "1 czerwca 2026",
-          "read": 8,
-          "body": [
-                "Rentowność pojedynczego pojazdu we flocie zależy od trzech zmiennych: obrotu tygodniowego, struktury kosztów stałych i poziomu prowizji. Poniższe liczby to model i szacunki własne PRO.portaltaxi.pl — przedstawiamy je z jawnymi założeniami, nie jako dane rejestrowe.",
-                "**Próg opłacalności: ok. 3 500 zł tygodniowo**",
-                "Przy realnym koszcie utrzymania ~0,72 zł/km i prowizjach sięgających ~31% obrotu (z VAT) próg opłacalności wymaga obrotu rzędu 3 500 zł tygodniowo na pojazd. Poniżej tego poziomu koszty stałe — wynajem, ubezpieczenie, amortyzacja — pochłaniają cały przychód; w branży mówi się wtedy o „jeździe na sam czynsz\".",
-                "**Klucz: efektywność godzin, nie kilometry**",
-                "Najważniejszym czynnikiem rentowności nie jest liczba przejechanych kilometrów, lecz efektywność godzin pracy — udział czasu spędzonego w realizacji kursów względem czasu oczekiwania. To dlatego dwa auta o podobnym przebiegu mogą mieć skrajnie różny wynik.",
-                "**Założenia i zastrzeżenie**",
-                "Model opiera się na uśrednionych danych operatorów i raportach rynkowych. Rzeczywisty próg zależy od miasta, pory pracy, modelu auta i warunków umowy z platformą. Wartości oznaczone jako szacunek/prognoza nie są danymi rejestrowymi."
-          ],
-          "sources": [
-                "Instytut Jagielloński — raport ride-hailing (wartość rynku, prowizje) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
-                "Analiza własna PRO.portaltaxi.pl na podstawie danych operatorów (model i szacunki)."
-          ]
+      "id": "a7",
+      "cat": "regulacje-ue",
+      "cats": [
+        "regulacje-ue",
+        "rynek-polski"
+      ],
+      "img": "pro/komiks-urzad.jpg",
+      "title": "Postulat licencji metropolitalnych wraca do dyskusji. Koniec pułapki obszarowej?",
+      "lead": "Licencja taksówkowa obowiązuje na obszarze jednej gminy, więc w aglomeracjach kierowca łatwo naraża się na mandat. W debacie wraca postulat licencji obejmujących całe aglomeracje. Prawo już dziś dopuszcza porozumienia międzygminne.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "28 maja 2026",
+      "read": 2,
+      "body": [
+        "Licencji na przewóz osób taksówką udziela się na konkretny pojazd i obszar gminy, na okres od 2 do 50 lat. W aglomeracjach, gdzie ruch codziennie przekracza granice gmin, taki model tworzy ryzyko prawne dla kierowców.",
+        "## Pułapka obszarowa",
+        "Kierowca może zawieźć pasażera poza obszar swojej licencji, np. z Legionowa do Warszawy, ale nie może tam zabierać nowych pasażerów. Wyjątkiem jest kurs powrotny lub zamówienie złożone przez klienta. Złamanie zasady grozi karą podczas kontroli ITD lub policji.",
+        "## Postulat licencji metropolitalnych",
+        "W debacie branżowej wraca postulat licencji obejmujących całe aglomeracje, np. Warszawę z gminami ościennymi, Górnośląsko-Zagłębiowską Metropolię czy Trójmiasto. Zwolennicy wskazują, że uprościłoby to działalność i ograniczyło szarą strefę.",
+        "> Prawo już dziś pozwala, by licencja obejmowała kilka sąsiednich gmin, jeśli zawarły one porozumienie. Postulat sprowadza się więc do upowszechnienia istniejącego mechanizmu.",
+        "## Dla operatorów",
+        "Licencje metropolitalne oznaczałyby większą pewność prawną, mniejsze ryzyko kar i prostsze planowanie pracy floty. Projekt UD431 zmienia inną zasadę: pojazd będzie mógł być zgłoszony najwyżej do dwóch licencji z obszaru licencyjnego ([szczegóły projektu](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr))."
+      ],
+      "sources": [
+        "Biznes.gov.pl — Licencja na taksówkę (obszar gminy, zasady przewozu) — https://www.biznes.gov.pl/pl/portal/ou475",
+        "Poradnik Przedsiębiorcy — Licencja na taksówkę: co warto wiedzieć — https://poradnikprzedsiebiorcy.pl/-licencja-na-taksowke-co-warto-wiedziec"
+      ]
     },
     {
-          "id": "a17",
-          "cat": "analizy",
-          "cats": [
-                "analizy",
-                "rynek-polski"
-          ],
-          "img": "pro/komiks-elektryczne.jpg",
-          "title": "Elektromobilność we flotach taxi. Kiedy pojazd elektryczny zacznie się opłacać",
-          "lead": "Energia z domowej ładowarki w taryfie nocnej to ok. 7–10 zł na 100 km — kilkukrotnie mniej niż paliwo. Ale wysoka cena zakupu i czas ładowania, który w taxi oznacza utracone godziny pracy, przesuwają próg opłacalności. Kiedy EV naprawdę się broni?",
-          "author": "Redakcja PRO.portaltaxi.pl",
-          "date": "29 maja 2026",
-          "read": 7,
-          "body": [
-                "Pojazd elektryczny oferuje najniższy koszt energii na kilometr — ale w intensywnej eksploatacji taksówkarskiej równie ważny jak koszt jest czas. To dlatego rachunek opłacalności EV w taxi wygląda inaczej niż u kierowcy prywatnego.",
-                "**Koszt energii: przewaga przy ładowaniu w domu**",
-                "Przy domowym ładowaniu w taniej taryfie nocnej (G12, ok. 0,30–0,60 zł/kWh) przejechanie 100 km kosztuje ok. 7–10 zł, czyli ~0,07–0,10 zł/km. Na ładowarkach publicznych jest jednak znacznie drożej — w 2026 r. AC ok. 1,75–2,50 zł/kWh, a szybkie DC nawet 2,50–3,50 zł/kWh — co potrafi podnieść koszt energii do 0,50 zł/km i więcej.",
-                "**Bariera: cena zakupu i czas ładowania**",
-                "Dla kierowcy robiącego 15–20 tys. km rocznie domowe ładowanie pozwala zaoszczędzić 3–4 tys. zł rocznie względem benzyny. W taksówce, gdzie przebiegi sięgają 50 tys. km i więcej, oszczędność na energii jest większa — ale każda godzina pod ładowarką to godzina bez kursu. To właśnie czas ładowania, a nie sam koszt energii, jest dziś główną barierą.",
-                "**Infrastruktura**",
-                "Sieć rośnie: pod koniec 2025 r. w Polsce było ok. 11,3 tys. ogólnodostępnych punktów ładowania, z czego ok. 35% to szybkie ładowarki DC. To wciąż jednak wąskie gardło dla floty pracującej non stop.",
-                "**Kiedy EV się opłaca w taxi**",
-                "Elektryk wygrywa przede wszystkim u operatorów z własną infrastrukturą ładowania (najlepiej wspartą fotowoltaiką), taryfą nocną i przewidywalnym, miejskim profilem tras. Dla pozostałych hybryda plug-in pozostaje dziś rozsądnym kompromisem między kosztem energii a dostępnością auta."
-          ],
-          "sources": [
-                "Automarket.pl — Samochód elektryczny: koszt ładowania 2025 — https://automarket.pl/blog/serwis-i-uzytkowanie-samochodu/ile-kosztuje-ladowanie-samochodu-elektrycznego-2025",
-                "Superauto.pl — TCO samochodu elektrycznego: koszty eksploatacji — https://www.superauto.pl/artykuly/tco-samochodu-elektrycznego-koszty-eksploatacji-serwis-finansowanie",
-                "Greenkick — Ile kosztuje ładowanie samochodu elektrycznego w 2026 — https://greenkick.com.pl/blog/ile-kosztuje-ladowanie-samochodu-elektrycznego-w-2026-roku-porownanie-kosztow-z-autem-spalinowym/"
-          ]
+      "id": "a8",
+      "cat": "rynki-zagraniczne",
+      "cats": [
+        "rynki-zagraniczne"
+      ],
+      "img": "pro/cover-zagranica-2.png",
+      "title": "Hiszpania: limity licencji VTC i obowiązek rezerwacji. Czego uczy model hiszpański",
+      "lead": "Hiszpania reguluje przewozy na aplikację ostrzej niż większość krajów UE: na jedną licencję VTC może przypadać 30 licencji taksówkowych, a w Katalonii obowiązuje rezerwacja z wyprzedzeniem. Po zmianie przepisów w 2019 r. Uber i Cabify wycofały się z Barcelony.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "30 maja 2026",
+      "read": 2,
+      "body": [
+        "Usługi typu Uber czy Cabify działają w Hiszpanii na licencjach VTC (wynajem pojazdu z kierowcą). Są one limitowane ilościowo i obłożone dodatkowymi wymogami w porównaniu z taksówkami.",
+        "## Proporcja 1:30",
+        "Podstawowym narzędziem jest proporcja: jedna licencja VTC na 30 licencji taksówkowych. Według źródeł branżowych w Hiszpanii wydano ok. 6,7 tys. licencji VTC, z czego ok. 2,7 tys. w Madrycie. Celem jest ochrona równowagi w transporcie miejskim i dochodów taksówkarzy.",
+        "## Katalonia: rezerwacja z wyprzedzeniem",
+        "Katalońskie przepisy z 2019 r. wprowadziły obowiązek rezerwacji przejazdu VTC z wyprzedzeniem co najmniej 15 minut. Po ich wejściu Uber i Cabify wycofały się z Barcelony; według ówczesnych szacunków pracę straciło ponad 2 tys. osób. Uber wrócił później do Barcelony we współpracy z licencjonowanymi taksówkarzami.",
+        "## Spór o konkurencję",
+        "Platformy argumentują, że limity ograniczają konkurencję i dostępność usług. Taksówkarze odpowiadają, że stabilizują rynek i chronią ich dochody. Ten sam spór toczy się w całej Europie – zob. [sąd w Monachium o cenach minimalnych](/artykul/p67-monachium-sad-wstrzymal-ceny-minimalne-dla-ubera-i-bolta).",
+        "> Polska wybrała inną drogę (licencja taksówkowa dla kierowców aplikacji, lex Uber). Doświadczenia Madrytu i Barcelony pokazują skutki twardych limitów podaży.",
+        "Zastrzeżenie: tekst zaktualizowany redakcyjnie 4 listopada 2026 r."
+      ],
+      "sources": [
+        "Forsal.pl — Uber i Cabify wycofały się z Katalonii po nowelizacji prawa — https://forsal.pl/artykuly/1395688,uber-i-cabify-wycofaly-sie-z-katalonii-po-nowelizacji-prawa-ponad-2-tys-osob-straci-prace.html",
+        "EURACTIV.pl — Hiszpania: Uber i wielki strajk taksówkarzy — https://euractiv.pl/section/polityka-wewnetrzna-ue/news/hiszpania-uber-i-wielki-strajk-taksowkarzy/",
+        "Sekrety Hiszpanii — Uber, Bolt, Cabify w Hiszpanii: zasady, proporcja licencji i rezerwacja — https://www.sekretyhiszpanii.pl/praktyczne/uber-bolt-cabify-hiszpania/"
+      ]
     },
-
-
-    // ===== PRZEGLĄD PRASY — realne artykuły z bazy mediów 2024–2026 =====
+    {
+      "id": "a9",
+      "cat": "rynki-zagraniczne",
+      "cats": [
+        "rynki-zagraniczne"
+      ],
+      "img": "pro/cover-zagranica-3.png",
+      "title": "Niemcy: obowiązek powrotu do bazy. Jak prawo ogranicza Ubera i Bolta",
+      "lead": "Niemiecka ustawa o przewozie osób nakłada na wynajem pojazdu z kierowcą, w którym działają Uber i Bolt, obowiązek powrotu do bazy po każdym kursie. W czerwcu 2026 r. Federalny Trybunał Sprawiedliwości potwierdził tę zasadę.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "5 czerwca 2026",
+      "read": 2,
+      "body": [
+        "Niemcy odróżniają taksówkę od wynajmu pojazdu z kierowcą (Mietwagen). W tej drugiej kategorii działają Uber i Bolt, co wiąże się z innymi obowiązkami.",
+        "## Obowiązek powrotu (Rückkehrpflicht)",
+        "Zgodnie z § 49 ust. 4 ustawy o przewozie osób (PBefG) pojazd wynajmu z kierowcą musi po wykonaniu zlecenia wrócić do siedziby firmy, chyba że w drodze przyjmie nowe zlecenie. Generuje to puste przebiegi, których taksówka nie ma.",
+        "## Wyrok BGH z 3 czerwca 2026 r.",
+        "Federalny Trybunał Sprawiedliwości (BGH, sygn. I ZR 123/25) potwierdził, że auta zamawiane przez Ubera muszą po każdym kursie wracać do bazy – podaje serwis LTO. Wcześniej urzędy cofały zezwolenia za powtarzające się naruszenia tej zasady (jednej firmie cofnięto cztery zezwolenia).",
+        "## Wpływ na ekonomikę floty",
+        "Im dalej baza od centrum, tym więcej nieodpłatnych kilometrów. O opłacalności decyduje więc nie tylko prowizja, ale i szczegóły przepisów.",
+        "> W październiku 2026 r. sąd administracyjny w Monachium wstrzymał miejskie ceny minimalne dla tych samych przewozów – [szczegóły](/artykul/p67-monachium-sad-wstrzymal-ceny-minimalne-dla-ubera-i-bolta)."
+      ],
+      "sources": [
+        "LTO — BGH: Uber muss nach Fahrt zurück zum Betriebsgelände (sygn. I ZR 123/25) — https://www.lto.de/recht/nachrichten/n/bgh-izr12325-rueckkehr-mietwagen-uber-taxis-betriebsgelaende",
+        "taxi heute — Verstöße gegen die Rückkehrpflicht wiegen immer schwer (PBefG) — https://www.taxi-heute.de/de/news/personenbefoerderungsrecht-auch-pbefg_verstoesse-gegen-die-rueckkehrpflicht-wiegen-immer-schwer-22781.html",
+        "Juraarchiv — Rückkehrpflicht für Mietwagenanbieter: BGH-Entscheidung, EU-Kontext und Folgen — https://www.juraarchiv.de/rueckkehrpflicht-fuer-mietwagenanbieter-bgh-entscheidung-eu-kontext-und-folgen-fuer-die-branche/"
+      ]
+    },
+    {
+      "id": "a10",
+      "cat": "rynki-zagraniczne",
+      "cats": [
+        "rynki-zagraniczne"
+      ],
+      "img": "pro/cover-zagranica-4.png",
+      "title": "Protesty przewoźników w Europie Zachodniej. Dwa fronty: taksówkarze i kierowcy aplikacji",
+      "lead": "W Niemczech i Hiszpanii protestują zarówno taksówkarze, domagający się równych zasad dla wszystkich, jak i kierowcy aplikacji, protestujący przeciw prowizjom i niskim wypłatom. Podobne napięcia widać w Polsce.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "25 maja 2026",
+      "read": 2,
+      "body": [
+        "Protesty na europejskim rynku przewozów mają dziś dwa źródła i często toczą się równolegle.",
+        "## Dwa fronty",
+        "Taksówkarze domagają się jednolitych wymogów licencyjnych, podatkowych i bezpieczeństwa dla wszystkich przewożących osoby. Kierowcy aplikacji protestują przeciw prowizjom i wypłatom, które nie pokrywają kosztów.",
+        "## Niemcy",
+        "W listopadzie 2024 r. strajkowano we Frankfurcie, a wiosną 2025 r. taksówkarze wyjechali na ulice Moguncji, Wiesbaden i Monachium pod hasłem równych warunków. Kierowcy Ubera i Bolta wskazywali, że wypłaty bywają za niskie, by pokryć płacę minimalną.",
+        "## Hiszpania",
+        "Powracają strajki w sporze taksówek z licencjami VTC, jednym z najostrzejszych w Europie ([model hiszpański](/artykul/a8-hiszpania-limity-licencji-vtc-i-obowiazek-rezerwacji-czego-uczy-model-)).",
+        "## Polska i region",
+        "W 2025 r. kierowcy aplikacji organizowali w polskich miastach protesty przeciw prowizjom Ubera i Bolta. W marcu 2026 r. część kierowców Bolta wyłączyła aplikację w całej Słowacji ([więcej](/artykul/p55-slowacja-pierwsza-z-ustawa-platformowa-gdzie-jest-reszta-ue))."
+      ],
+      "sources": [
+        "Rabbit Trans Poland — Dlaczego niemieckie taksówki wypowiedziały wojnę Uberowi (protesty: Frankfurt, Moguncja, Wiesbaden, Monachium) — https://www.rabbittranspoland.com/pl/post/dlaczego-niemieckie-taks%C3%B3wki-wypowiedzia%C5%82y-wojn%C4%99-uberowi",
+        "EURACTIV.pl — Hiszpania: Uber i wielki strajk taksówkarzy — https://euractiv.pl/section/polityka-wewnetrzna-ue/news/hiszpania-uber-i-wielki-strajk-taksowkarzy/",
+        "GoWork.pl — Strajk kierowców Uber i Bolt 2025 — https://www.gowork.pl/poradnik/17/wiadomosci/strajk-kierowcow-uber-i-bolt-trwa-mlody-ukrainiec-z-tiktoka-rzuca-wyzwanie-gigantom/"
+      ]
+    },
+    {
+      "id": "a14",
+      "cat": "przeglad-prasy",
+      "cats": [
+        "przeglad-prasy",
+        "analizy"
+      ],
+      "img": "pro/komiks-przeglad-rynek.jpg",
+      "title": "Przegląd prasy: rynek przewozów na aplikację w raporcie Instytutu Jagiellońskiego",
+      "lead": "Instytut Jagielloński wyceniał polski rynek przewozów na aplikację na 2,5 mld zł w 2022 r. i prognozował ok. 4,7 mld zł w 2025 r. Według „Rzeczpospolitej” ponad 70 proc. kursów taksówkowych zamawianych jest przez aplikacje.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "31 maja 2026",
+      "read": 2,
+      "body": [
+        "Raport Instytutu Jagiellońskiego „Ride-hailing: pośrednictwo w przewozach osobowych – polska reforma” to jedno z najobszerniejszych opracowań o polskim rynku przewozów na aplikację. Zebraliśmy z niego najważniejsze dane.",
+        "## Wartość rynku",
+        "W 2022 r. wartość rynku przewozów na aplikację w Polsce wyniosła 2,5 mld zł przy 18,6 mln aktywnych użytkowników aplikacji i ok. 112 mln przejazdów. Prognoza na 2025 r. zakładała ok. 4,7 mld zł wartości usług i ponad 886,5 mln zł przychodów platform (prognoza, nie dane rejestrowe).",
+        "## Udział aplikacji",
+        "Według „Rzeczpospolitej” w polskich miastach, zależnie od lokalizacji, co najmniej 70 proc. kursów taksówkowych zamawianych jest przez aplikacje.",
+        "## Platformy",
+        "Raport analizuje działanie platform Bolt, FreeNow, iTaxi i Uber w Polsce, z naciskiem na ekonomiczne i społeczne skutki reformy przewozów.",
+        "> Po zmianach przepisów rynek wszedł w fazę koncentracji, z rosnącą rolą operatorów flotowych. Dane z 2026 r. opisujemy w tekście [Konsolidacja rynku](/artykul/p59-znikaja-firmy-taksowkowe-rosna-posrednicy-konsolidacja-rynku-w-2026-ro)."
+      ],
+      "sources": [
+        "Instytut Jagielloński — Ride-hailing: pośrednictwo w przewozach osobowych – polska reforma (raport) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
+        "Rzeczpospolita — Aplikacje generują ponad 70 proc. kursów taksówek — https://www.rp.pl/transport/art42095371-aplikacje-generuja-ponad-70-proc-kursow-taksowek",
+        "Bankier.pl — Rynek przewozu osób na aplikacje wart w Polsce 2,5 mld zł — https://www.bankier.pl/wiadomosc/Rynek-przewozu-osob-na-aplikacje-jest-wart-w-Polsce-2-5-mld-zl-ale-konieczne-jest-zwiekszenia-bezpieczenstwa-8504589.html"
+      ]
+    },
+    {
+      "id": "a16",
+      "cat": "analizy",
+      "cats": [
+        "analizy",
+        "rynek-polski"
+      ],
+      "img": "pro/komiks-flota.jpg",
+      "title": "Rentowność floty taxi w 2026. Szacunek progu opłacalności pojazdu",
+      "lead": "Przy szacowanym koszcie ok. 0,72 zł/km i prowizjach rzędu 28–31 proc. obrotu próg opłacalności pojazdu wypada w okolicach 3500 zł obrotu tygodniowo. To model redakcji, nie dane rejestrowe.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "1 czerwca 2026",
+      "read": 2,
+      "body": [
+        "Rentowność auta we flocie zależy od trzech zmiennych: obrotu tygodniowego, kosztów stałych i prowizji. Poniższe liczby to model i szacunki redakcji PRO.portaltaxi.pl.",
+        "## Próg opłacalności: ok. 3500 zł tygodniowo",
+        "Przy koszcie utrzymania ok. 0,72 zł/km i prowizjach do ok. 31 proc. obrotu (z VAT) próg opłacalności to ok. 3500 zł obrotu tygodniowo na pojazd. Poniżej tego poziomu koszty stałe – wynajem, ubezpieczenie, amortyzacja – pochłaniają cały przychód.",
+        "## Efektywność godzin, nie kilometry",
+        "Najważniejszy jest udział czasu z pasażerem w całym czasie pracy, a nie liczba przejechanych kilometrów. Dlatego dwa auta o podobnym przebiegu mogą mieć bardzo różny wynik.",
+        "Od października zmieniły się ceny paliw – benzyna i diesel mają ceny maksymalne, LPG nie ([szczegóły](/artykul/p64-ceny-maksymalne-paliw-do-konca-roku-floty-na-lpg-bez-ochrony)).",
+        "Zastrzeżenie: model opiera się na uśrednionych informacjach od operatorów i raportach rynkowych. Rzeczywisty próg zależy od miasta, pory pracy, modelu auta i warunków umowy z platformą."
+      ],
+      "sources": [
+        "Instytut Jagielloński — raport ride-hailing (wartość rynku, prowizje) — https://www.jagiellonski.pl/ride-hailing-posrednictwo-w-przewozach-osobowych-polska-reforma/",
+        "Analiza własna PRO.portaltaxi.pl na podstawie danych operatorów (model i szacunki)."
+      ]
+    },
+    {
+      "id": "a17",
+      "cat": "analizy",
+      "cats": [
+        "analizy",
+        "rynek-polski"
+      ],
+      "img": "pro/komiks-elektryczne.jpg",
+      "title": "Elektromobilność we flotach taxi. Kiedy auto elektryczne zaczyna się opłacać",
+      "lead": "Energia z domowej ładowarki w taryfie nocnej to ok. 7–10 zł na 100 km. Wysoka cena zakupu i czas ładowania, który w taxi oznacza utracone godziny pracy, przesuwają jednak próg opłacalności.",
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "date": "29 maja 2026",
+      "read": 2,
+      "body": [
+        "Auto elektryczne ma najniższy koszt energii na kilometr, ale w intensywnej eksploatacji równie ważny jest czas. Dlatego rachunek opłacalności w taxi wygląda inaczej niż u kierowcy prywatnego.",
+        "## Koszt energii",
+        "Przy ładowaniu w domu w taryfie nocnej (G12, ok. 0,30–0,60 zł/kWh) 100 km kosztuje ok. 7–10 zł. Na ładowarkach publicznych jest znacznie drożej: według zestawień rynkowych w 2026 r. AC ok. 1,75–2,50 zł/kWh, a szybkie DC 2,50–3,50 zł/kWh, co może podnieść koszt do 0,50 zł/km i więcej.",
+        "## Bariera: cena zakupu i czas ładowania",
+        "Przy przebiegach taxi rzędu 50 tys. km rocznie oszczędność na energii jest duża, ale każda godzina pod ładowarką to godzina bez kursu. To czas ładowania, a nie koszt energii, jest dziś główną barierą.",
+        "## Infrastruktura",
+        "Według zestawień rynkowych pod koniec 2025 r. w Polsce działało ok. 11,3 tys. ogólnodostępnych punktów ładowania, z czego ok. 35 proc. to szybkie ładowarki DC. Dla floty pracującej całą dobę to wciąż wąskie gardło.",
+        "> Auto elektryczne najłatwiej obronić u operatorów z własną infrastrukturą ładowania, taryfą nocną i przewidywalnym, miejskim profilem tras. Dla pozostałych kompromisem pozostaje hybryda plug-in.",
+        "Porównanie kosztów paliwa po wprowadzeniu cen maksymalnych: [Ceny maksymalne paliw](/artykul/p64-ceny-maksymalne-paliw-do-konca-roku-floty-na-lpg-bez-ochrony)."
+      ],
+      "sources": [
+        "Automarket.pl — Samochód elektryczny: koszt ładowania 2025 — https://automarket.pl/blog/serwis-i-uzytkowanie-samochodu/ile-kosztuje-ladowanie-samochodu-elektrycznego-2025",
+        "Superauto.pl — TCO samochodu elektrycznego: koszty eksploatacji — https://www.superauto.pl/artykuly/tco-samochodu-elektrycznego-koszty-eksploatacji-serwis-finansowanie",
+        "Greenkick — Ile kosztuje ładowanie samochodu elektrycznego w 2026 — https://greenkick.com.pl/blog/ile-kosztuje-ladowanie-samochodu-elektrycznego-w-2026-roku-porownanie-kosztow-z-autem-spalinowym/"
+      ]
+    },
     {
       "id": "p1",
       "cat": "regulacje-ue",
@@ -1437,32 +1918,36 @@ const PRO = {
       "date": "28 sierpnia 2024",
       "read": 2,
       "body": []
-    },
+    }
   ],
-
-  about: {
-    title: 'PRO.portaltaxi.pl — serwis branżowy rynku taxi',
-    lead: 'PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy to, co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot oraz otoczenia rynkowego branży.',
-    body: [
-      'PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy to, co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot oraz otoczenia rynkowego branży.',
-      'Piszemy o tym, co ważne dla firm działających w ekosystemie Ubera, Bolta, FreeNow oraz innych platform ride-hailingu. Polska to dziś dojrzały ekosystem platformowo-flotowy, w którym o pozycję rywalizują globalne aplikacje, profesjonalne floty partnerskie i tradycyjne lokalne korporacje taxi. To dynamicznie rosnący europejski rynek, którego wartość wynosi 5 mld zł rocznie. Ponad 70% kursów taxi w Polsce zamawianych jest przez aplikację — powyżej średniej europejskiej — a branża zatrudnia kilkadziesiąt tysięcy osób.',
-      'Stanowimy wiarygodne źródło wiedzy: informujemy o aktualnościach, pokazujemy trendy i porządkujemy informacje istotne dla rynku. Wspieramy branżę w okresie transformacji regulacyjnej, wejścia w erę elektromobilności i przygotowań do pojazdów autonomicznych.',
-      'Dostarczamy inwestorom, firmom partnerskim, właścicielom flot i uczestnikom rynku uporządkowany, weryfikowalny obraz polskiej branży taxi. Chcemy uczestniczyć w rozwoju rynku, bo wierzymy, że silna branża potrzebuje silnej infrastruktury informacyjnej.'
-    ],
+  "about": {
+    "title": "PRO.portaltaxi.pl — serwis branżowy rynku taxi",
+    "lead": "PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy to, co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot oraz otoczenia rynkowego branży.",
+    "body": [
+      "PRO.portaltaxi.pl to medium informacyjne dla profesjonalistów rynku taxi w Polsce. Pokazujemy to, co napędza branżę: decyzje platform, zmiany regulacyjne, ruchy rynkowe i dane, które mają realny wpływ na działalność firm partnerskich, właścicieli flot oraz otoczenia rynkowego branży.",
+      "Piszemy o tym, co ważne dla firm działających w ekosystemie Ubera, Bolta, FreeNow oraz innych platform ride-hailingu. Polska to dziś dojrzały ekosystem platformowo-flotowy, w którym o pozycję rywalizują globalne aplikacje, profesjonalne floty partnerskie i tradycyjne lokalne korporacje taxi. To dynamicznie rosnący europejski rynek, którego wartość wynosi 5 mld zł rocznie. Ponad 70% kursów taxi w Polsce zamawianych jest przez aplikację — powyżej średniej europejskiej — a branża zatrudnia kilkadziesiąt tysięcy osób.",
+      "Stanowimy wiarygodne źródło wiedzy: informujemy o aktualnościach, pokazujemy trendy i porządkujemy informacje istotne dla rynku. Wspieramy branżę w okresie transformacji regulacyjnej, wejścia w erę elektromobilności i przygotowań do pojazdów autonomicznych.",
+      "Dostarczamy inwestorom, firmom partnerskim, właścicielom flot i uczestnikom rynku uporządkowany, weryfikowalny obraz polskiej branży taxi. Chcemy uczestniczyć w rozwoju rynku, bo wierzymy, że silna branża potrzebuje silnej infrastruktury informacyjnej."
+    ]
   },
-
-  newsletter: {
-    heading: 'Bądź na bieżąco z rynkiem taxi',
-    text: 'Otrzymuj najważniejsze informacje branżowe, analizy, zmiany regulacyjne i przegląd wydarzeń z rynku taxi prosto na swoją skrzynkę.',
+  "newsletter": {
+    "heading": "Bądź na bieżąco z rynkiem taxi",
+    "text": "Otrzymuj najważniejsze informacje branżowe, analizy, zmiany regulacyjne i przegląd wydarzeń z rynku taxi prosto na swoją skrzynkę."
   },
-
-  // Suggested questions for the AI assistant
-  aiSuggestions: [
-    'Jak dyrektywa UE 2024/2831 wpłynie na floty w Polsce?',
-    'Ile wynosi realna prowizja platform po doliczeniu VAT?',
-    'Czym różni się licencja taxi od wypisu z licencji?',
-    'Kiedy pojazd elektryczny opłaca się we flocie taxi?',
-  ],
+  "aiSuggestions": [
+    "Jak dyrektywa UE 2024/2831 wpłynie na floty w Polsce?",
+    "Ile wynosi realna prowizja platform po doliczeniu VAT?",
+    "Czym różni się licencja taxi od wypisu z licencji?",
+    "Kiedy pojazd elektryczny opłaca się we flocie taxi?"
+  ]
 };
+
+(function () {
+  var now = Date.now();
+  var ok = function (a) { return !a.pub || Date.parse(a.pub) <= now; };
+  PRO.scheduled = PRO.articles.filter(function (a) { return !ok(a); }).length;
+  PRO.articles = PRO.articles.filter(ok);
+  PRO.slider = PRO.articles.filter(function (a) { return a.img; }).slice(0, 5);
+})();
 
 window.PRO = PRO;

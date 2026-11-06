@@ -135,8 +135,7 @@ const ProApp = () => {
   });
 
   return (
-    <div style={{ background: T.paper, minHeight: '100vh' }}>
-      <window.ProTopBar onNav={nav} />
+    <div style={{ background: T.bg, minHeight: '100vh' }}>
       <window.ProHeader route={route} onNav={nav} onOpenAI={() => setAiOpen(true)} />
 
       <main>
@@ -148,7 +147,7 @@ const ProApp = () => {
 
       <window.ProFooter onNav={nav} />
 
-      <window.AIAssistant open={aiOpen} onClose={() => setAiOpen(false)} />
+      {/* Asystent AI wyłączony 5.11.2026 — moduł AIAssistant zostaje w pro-shell.jsx */}
       <window.NewsletterPopup open={nlOpen} onClose={() => setNlOpen(false)} />
     </div>
   );
