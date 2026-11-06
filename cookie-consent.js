@@ -18,6 +18,40 @@
 
   var phLoaded = false;
 
+  // Język banera: EN pod /en i /en/..., w pozostałych miejscach PL
+  var path = window.location.pathname || "/";
+  var LANG = path === "/en" || path.indexOf("/en/") === 0 ? "en" : "pl";
+  var TXT = {
+    pl: {
+      aria: "Ustawienia plików cookie",
+      text:
+        "Używamy plików cookie. Niezbędne są konieczne do działania serwisu. " +
+        "Statystyczne (PostHog) pomagają nam rozwijać serwis — włączamy je tylko za Twoją zgodą. " +
+        "Nie sprzedajemy ani nie udostępniamy Twoich danych reklamodawcom. ",
+      more: "Więcej informacji",
+      necessary: "<b>Niezbędne</b> — zawsze aktywne. Wymagane do działania serwisu.",
+      stats: "<b>Statystyka</b> — PostHog (region EU), anonimowe metryki użycia.",
+      accept: "Akceptuję wszystkie",
+      reject: "Tylko niezbędne",
+      settings: "Ustawienia",
+      save: "Zapisz wybór",
+    },
+    en: {
+      aria: "Cookie settings",
+      text:
+        "We use cookies. Necessary cookies are required for the site to work. " +
+        "Statistics cookies (PostHog) help us improve the site — we enable them only with your consent. " +
+        "We do not sell or share your data with advertisers. ",
+      more: "More information (in Polish)",
+      necessary: "<b>Necessary</b> — always active. Required for the site to work.",
+      stats: "<b>Statistics</b> — PostHog (EU region), anonymous usage metrics.",
+      accept: "Accept all",
+      reject: "Necessary only",
+      settings: "Settings",
+      save: "Save choice",
+    },
+  }[LANG];
+
   function readConsent() {
     try {
       var raw = localStorage.getItem(CONSENT_KEY);
@@ -97,7 +131,7 @@
         if (c && c.statistics) {
           ph.opt_in_capturing();
           try {
-            ph.register({ jezyk: (navigator.language || "pl").slice(0, 2) });
+            ph.register({ jezyk: (navigator.language || "pl").slice(0, 2), wersja: LANG });
           } catch (e) {}
           ph.capture("$pageview");
         }
@@ -113,6 +147,7 @@
           window.posthog.opt_in_capturing();
           window.posthog.register({
             jezyk: (navigator.language || "pl").slice(0, 2),
+            wersja: LANG,
           });
           window.posthog.capture("$pageview");
         } catch (e) {}
@@ -157,26 +192,24 @@
     var el = document.createElement("div");
     el.id = "ptc-banner";
     el.setAttribute("role", "dialog");
-    el.setAttribute("aria-label", "Ustawienia plików cookie");
+    el.setAttribute("aria-label", TXT.aria);
     el.innerHTML =
       '<div class="ptc-wrap">' +
-      "<p>Używamy plików cookie. Niezbędne są konieczne do działania serwisu. " +
-      "Statystyczne (PostHog) pomagają nam rozwijać serwis — włączamy je tylko za Twoją zgodą. " +
-      "Nie sprzedajemy ani nie udostępniamy Twoich danych reklamodawcom. " +
-      '<a href="/polityka-cookies.html">Więcej informacji</a>.</p>' +
+      "<p>" + TXT.text +
+      '<a href="/polityka-cookies.html"' + (LANG === "en" ? ' hreflang="pl"' : "") + ">" + TXT.more + "</a>.</p>" +
       '<div class="ptc-opts' +
       (showSettings ? " show" : "") +
       '" id="ptc-opts">' +
-      '<label><input type="checkbox" checked disabled> <span><b>Niezbędne</b> — zawsze aktywne. Wymagane do działania serwisu.</span></label>' +
+      '<label><input type="checkbox" checked disabled> <span>' + TXT.necessary + "</span></label>" +
       '<label><input type="checkbox" id="ptc-stats"' +
       (statsChecked ? " checked" : "") +
-      "> <span><b>Statystyka</b> — PostHog (region EU), anonimowe metryki użycia.</span></label>" +
+      "> <span>" + TXT.stats + "</span></label>" +
       "</div>" +
       '<div class="ptc-btns">' +
-      '<button class="ptc-primary" id="ptc-accept">Akceptuję wszystkie</button>' +
-      '<button id="ptc-reject">Tylko niezbędne</button>' +
+      '<button class="ptc-primary" id="ptc-accept">' + TXT.accept + "</button>" +
+      '<button id="ptc-reject">' + TXT.reject + "</button>" +
       '<button class="ptc-link" id="ptc-toggle">' +
-      (showSettings ? "Zapisz wybór" : "Ustawienia") +
+      (showSettings ? TXT.save : TXT.settings) +
       "</button>" +
       "</div>" +
       "</div>";
@@ -194,7 +227,7 @@
       var opts = document.getElementById("ptc-opts");
       if (!opts.classList.contains("show")) {
         opts.classList.add("show");
-        this.textContent = "Zapisz wybór";
+        this.textContent = TXT.save;
       } else {
         writeConsent(document.getElementById("ptc-stats").checked);
         el.remove();

@@ -1,0 +1,56 @@
+{
+  "translated": "6 November 2026",
+  "guide": {
+    "id": "g1",
+    "type": "guide",
+    "slug": "polish-taxi-market-explained",
+    "cat": "guide",
+    "cats": ["guide", "rynek-polski"],
+    "date": "Updated 6 November 2026",
+    "img": "pro/komiks-flota-miasto.jpg",
+    "featured": true,
+    "hot": true,
+    "title": "The Polish taxi market explained",
+    "lead": "How the Polish taxi and ride-hailing market works: licences, apps, fleet partners, the 2024 driving licence rule, cities, consolidation and the EU Platform Work Directive – with sources for every figure.",
+    "bodyFile": "content-guide.md"
+  },
+  "p68": {
+    "id": "p68",
+    "slug": "lyft-enters-poland-freenow-becomes-lyft",
+    "cat": "Platforms",
+    "date": "5 November 2026",
+    "img": "/pro/lyft-wejscie-polska.jpg",
+    "imgCaption": "Autonomous May Mobility vehicle ordered via the Lyft app in the USA. Photo: Lyft, press materials",
+    "imgHome": "pro/lyft-wejscie-polska-home.jpg",
+    "imgHomeCaption": "Photo: Filip Klimaszewski / Freenow by Lyft, press materials",
+    "hot": true,
+    "title": "Lyft enters Poland: Freenow becomes Lyft – what it means for fleets and drivers",
+    "lead": "Lyft, which has owned Freenow since 2025, will start replacing the Freenow brand in Poland in Q1 2027. Both apps will run in parallel for a while. The company aims to at least double its rides in Poland in 2027 and enter 15–20 more smaller cities. The change affects passengers, over 10,000 active drivers working with Freenow and the partner companies they drive for.",
+    "bodyFile": "p68.md",
+    "sources": [
+      "Rzeczpospolita — Koniec z Freenow, nadchodzi Lyft. Krzysztof Urban: Chcemy podwoić liczbę przejazdów (3.11.2026, in Polish) — https://www.rp.pl/uslugi/art45406401-koniec-z-freenow-nadchodzi-lyft-krzysztof-urban-chcemy-podwoic-liczbe-przejazdow",
+      "Lyft — Lyft Reports Strong Q2 2026 Results (6.08.2026) — https://investor.lyft.com/news-events-presentations/press-releases/detail/202/lyft-reports-strong-q2-2026-results",
+      "Lyft — Q2 2026 Prepared Remarks (6.08.2026) — https://www.lyft.com/blog/posts/lyft-q2-2026-earnings-prepared-remarks",
+      "Lyft — Growing out, up, going global (8.06.2026) — https://www.lyft.com/blog/posts/growing-out-up-going-global-our-way",
+      "Lyft — Lyft Goes Global: FREENOW Acquisition Complete (31.07.2025) — https://www.lyft.com/blog/posts/lyft-goes-global-freenow-acquisition-complete",
+      "TechCrunch — Lyft to buy taxi app Freenow for $197M (16.04.2025) — https://techcrunch.com/2025/04/16/lyft-to-buy-taxi-app-freenow-for-197m-to-enter-europe",
+      "Uber — Uber Announces Results for Second Quarter 2026 (5.08.2026) — https://www.businesswire.com/news/home/20260805020613/en/Uber-Announces-Results-for-Second-Quarter-2026",
+      "Trade with Estonia — Bolt hits €2.27 billion in revenue (07.2026) — https://tradewithestonia.com/bolt-profit-2025/",
+      "BizRaport — ITAXI.PL S.A., financial data 2023–2025 — https://www.bizraport.pl/krs/0000922228/itaxipl-spolka-akcyjna",
+      "Taxi Times — Was plant Lyft mit Free Now? (2.06.2025, after Handelsblatt) — https://taxi-times.com/was-plant-lyft-mit-free-now/"
+    ]
+  },
+  "catMap": {
+    "Regulation & EU": "regulacje-ue",
+    "Platforms": "newsy-platform",
+    "Safety & licensing": "bezpieczenstwo"
+  },
+  "cats": {
+    "p54": ["regulacje-ue", "rynek-polski"],
+    "p57": ["newsy-platform", "rynek-polski"],
+    "p50": ["bezpieczenstwo", "regulacje-ue"],
+    "p68": ["newsy-platform", "rynek-polski"]
+  },
+  "hot": ["p54"],
+  "order": ["g1", "p68", "p54", "p57", "p50"]
+}

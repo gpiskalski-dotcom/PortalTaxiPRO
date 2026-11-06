@@ -10,18 +10,37 @@ const proSlug = (s) => (s || '')
   .replace(/ń/g, 'n').replace(/ó/g, 'o').replace(/ś/g, 's').replace(/ż/g, 'z').replace(/ź/g, 'z')
   .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70);
 
-// route -> ścieżka
+// route -> ścieżka (PL: /artykul/<id>-<slug>; EN: /en, /en/article/<slug>, /en/guide/<slug>, /en/category/<id>)
 const proPathFor = (r, a) => {
+  if (window.PRO_LANG === 'en') {
+    if (!r || r.type === 'home') return '/en';
+    if (r.type === 'category') return '/en/category/' + r.id;
+    if (r.type === 'page') return '/en/page/' + r.id;
+    if (r.type === 'article' && a) return '/en/' + (a.type === 'guide' ? 'guide' : 'article') + '/' + a.slug;
+    return '/en';
+  }
   if (!r || r.type === 'home') return '/';
   if (r.type === 'category') return '/kategoria/' + r.id;
   if (r.type === 'page') return '/strona/' + r.id;
   if (r.type === 'article' && a) return '/artykul/' + a.id + '-' + proSlug(a.title);
   return '/';
 };
+window.proPathFor = proPathFor;
+window.proSlug = proSlug;
 
 // tekst ścieżki -> {type,...}
 const proParseSegments = (raw) => {
   const parts = (raw || '/').split('/').filter(Boolean);
+  if (window.PRO_LANG === 'en') {
+    const seg = parts.slice(1); // bez "en"
+    if ((seg[0] === 'article' || seg[0] === 'guide') && seg[1]) {
+      const a = window.PRO.articles.find((x) => x.slug === seg[1]);
+      if (a) return { type: 'article', article: a };
+    }
+    if (seg[0] === 'category' && seg[1]) return { type: 'category', id: seg[1] };
+    if (seg[0] === 'page' && seg[1]) return { type: 'page', id: seg[1] };
+    return { type: 'home' };
+  }
   if (parts[0] === 'artykul') {
     const m = (parts[1] || '').match(/^(p\d+|a\d+)/);
     const a = m && window.PRO.articles.find((x) => x.id === m[1]);
@@ -85,13 +104,17 @@ const ProApp = () => {
 
   // Tytuł strony pod udostępnianie / SEO
   aUseEffect(() => {
-    let t = 'pro.portaltaxi.pl — branżowy serwis rynku taxi';
+    const t_ = window.t;
+    let t = t_('pro.portaltaxi.pl — branżowy serwis rynku taxi');
     if (route.type === 'article' && article) t = article.title + ' — pro.portaltaxi.pl';
     else if (route.type === 'category') {
       const c = window.PRO.categories.find((x) => x.id === route.id);
-      t = (c ? c.label : 'Kategoria') + ' — pro.portaltaxi.pl';
+      t = (c ? c.label : (route.id === 'all' ? t_('Wszystkie artykuły') : t_('Kategoria'))) + ' — pro.portaltaxi.pl';
     } else if (route.type === 'page') {
-      t = route.id.charAt(0).toUpperCase() + route.id.slice(1) + ' — pro.portaltaxi.pl';
+      const pageName = window.PRO_LANG === 'en'
+        ? ({ 'o-nas': t_('O nas'), 'kontakt': t_('Kontakt'), 'reklama': t_('Oferta reklamowa') }[route.id] || route.id)
+        : route.id.charAt(0).toUpperCase() + route.id.slice(1);
+      t = pageName + ' — pro.portaltaxi.pl';
     }
     document.title = t;
   }, [route, article]);
@@ -105,7 +128,7 @@ const ProApp = () => {
   };
 
   const openArticle = (a, more) => {
-    if (more || !a) { nav({ type: 'category', id: 'rynek-polski' }); return; }
+    if (more || !a) { nav({ type: 'category', id: window.PRO_LANG === 'en' ? 'all' : 'rynek-polski' }); return; }
     setArticle(a);
     setRoute({ type: 'article' });
     window.scrollTo(0, 0);
@@ -136,7 +159,7 @@ const ProApp = () => {
 
   return (
     <div style={{ background: T.bg, minHeight: '100vh' }}>
-      <window.ProHeader route={route} onNav={nav} onOpenAI={() => setAiOpen(true)} />
+      <window.ProHeader route={route} article={article} onNav={nav} onOpenAI={() => setAiOpen(true)} />
 
       <main>
         {route.type === 'home' && <window.ProHome onOpen={openArticle} onNav={nav} />}

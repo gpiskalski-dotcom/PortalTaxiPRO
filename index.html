@@ -56,6 +56,8 @@
     .pro-head-right > button:not(.pro-burger) { padding: 9px 12px !important; font-size: 13px !important; }
     /* przycisk Zaloguj chowamy na mobile — jest w menu pod burgerem */
     .pro-login { display: none !important; }
+    /* przełącznik PL/EN na telefonie jest w menu pod burgerem */
+    .pro-lang { display: none !important; }
     .pro-nav-inner, .pro-kierowcy-link { display: none !important; }
     .pro-cat-strip { grid-template-columns: 1fr !important; }
     .pro-press-grid { grid-template-columns: 1fr !important; }
@@ -86,11 +88,13 @@ window.proThumb = window.proThumb || function(src) { if(!src) return window.proI
 <body>
 <div id="root"></div>
 
-<script src="pro-data.js?v=20261105b"></script>
-<script type="text/babel" src="pro-shell.jsx?v=20261105b"></script>
-<script type="text/babel" src="pro-home.jsx?v=20261105b"></script>
-<script type="text/babel" src="pro-pages.jsx?v=20261105b"></script>
-<script type="text/babel" src="pro-app.jsx?v=20261105b"></script>
+<script src="pro-data.js?v=20261106en"></script>
+<script src="pro-data-en.js?v=20261106en"></script>
+<script src="pro-i18n.js?v=20261106en"></script>
+<script type="text/babel" src="pro-shell.jsx?v=20261106en"></script>
+<script type="text/babel" src="pro-home.jsx?v=20261106en"></script>
+<script type="text/babel" src="pro-pages.jsx?v=20261106en"></script>
+<script type="text/babel" src="pro-app.jsx?v=20261106en"></script>
   <script src="/cookie-consent.js" defer></script>
 
 </body>

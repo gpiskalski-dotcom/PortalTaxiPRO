@@ -38,7 +38,7 @@ const HeroSlider = ({ onOpen }) => {
             <div style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 10 }}>
             {s.source ?
               <>
-                <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 11.5, color: T.ink, background: T.yellow, padding: '5px 11px', letterSpacing: '0.07em', textTransform: 'uppercase' }}>Przegląd prasy</span>
+                <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 11.5, color: T.ink, background: T.yellow, padding: '5px 11px', letterSpacing: '0.07em', textTransform: 'uppercase' }}>{window.t('Przegląd prasy')}</span>
                 <span style={{ fontFamily: T.ui, fontSize: 14, color: '#d8d3c6', fontStyle: 'italic', fontWeight: 500 }}>{s.source}</span>
               </> :
               <window.Badge cat={s.cat} />}
@@ -53,22 +53,22 @@ const HeroSlider = ({ onOpen }) => {
               <button onClick={() => onOpen(window.PRO.articles.find((a) => a.id === s.id) || s)} style={{
                 fontFamily: T.ui, fontWeight: 700, fontSize: 14, color: T.ink, background: T.yellow,
                 border: 'none', padding: '13px 22px', cursor: 'pointer', letterSpacing: '0.01em'
-              }}>Czytaj więcej →</button>
+              }}>{window.t('Czytaj więcej →')}</button>
               <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.04em', color: '#b0a996' }}>{s.date} · {s.read} MIN</span>
             </div>
           </div>
         </div>
         {/* Arrows */}
-        <button onClick={() => go(i - 1)} aria-label="Poprzedni" style={arrowStyle('left')}>
+        <button onClick={() => go(i - 1)} aria-label={window.t('Poprzedni')} style={arrowStyle('left')}>
           <svg width="22" height="22" viewBox="0 0 24 24" stroke="#fff" strokeWidth="2" fill="none"><path d="m15 18-6-6 6-6" /></svg>
         </button>
-        <button onClick={() => go(i + 1)} aria-label="Następny" style={arrowStyle('right')}>
+        <button onClick={() => go(i + 1)} aria-label={window.t('Następny')} style={arrowStyle('right')}>
           <svg width="22" height="22" viewBox="0 0 24 24" stroke="#fff" strokeWidth="2" fill="none"><path d="m9 18 6-6-6-6" /></svg>
         </button>
         {/* Indicators */}
         <div style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: 8, alignItems: 'center' }}>
           {slides.map((_, idx) =>
-          <button key={idx} onClick={() => setI(idx)} aria-label={`Slajd ${idx + 1}`} style={{
+          <button key={idx} onClick={() => setI(idx)} aria-label={`${window.t('Slajd')} ${idx + 1}`} style={{
             width: idx === i ? 28 : 10, height: 4, borderRadius: 2, border: 'none', cursor: 'pointer',
             background: idx === i ? T.yellow : 'rgba(255,255,255,0.4)', transition: 'all .3s', padding: 0
           }} />
@@ -105,7 +105,7 @@ const ArticleRow = ({ a, onOpen }) => {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
           {(a.cats || [a.cat]).includes('przeglad-prasy') && a.source ?
           <>
-              <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 11, color: T.ink, background: T.yellow, padding: '3px 8px', letterSpacing: '0.06em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>Przegląd prasy</span>
+              <span style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 11, color: T.ink, background: T.yellow, padding: '3px 8px', letterSpacing: '0.06em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>{window.t('Przegląd prasy')}</span>
               <span style={{ fontFamily: T.ui, fontSize: 12.5, color: T.ink2, fontWeight: 600, fontStyle: 'italic' }}>{a.source}</span>
             </> :
           <window.Badge cat={a.cat} small />}
@@ -136,7 +136,7 @@ const SideTabs = ({ onOpen }) => {
     <aside style={{ position: 'sticky', top: 130 }}>
       <div style={{ border: `1px solid ${T.line}` }}>
         <div style={{ display: 'flex', borderBottom: `2px solid ${T.ink}` }}>
-          {[['najnowsze', 'Najnowsze'], ['popularne', 'Popularne']].map(([id, l]) =>
+          {[['najnowsze', window.t('Najnowsze')], ['popularne', window.t('Popularne')]].map(([id, l]) =>
           <button key={id} onClick={() => setTab(id)} style={{
             flex: 1, fontFamily: T.ui, fontWeight: 800, fontSize: 14, letterSpacing: '0.02em',
             color: tab === id ? T.ink : T.inkSoft, background: tab === id ? T.paper : T.paper2,
@@ -165,7 +165,7 @@ const SideTabs = ({ onOpen }) => {
         <button onClick={() => onOpen(null, true)} style={{
           width: '100%', fontFamily: T.ui, fontWeight: 700, fontSize: 12.5, letterSpacing: '0.08em',
           color: T.paper3, background: T.ink, border: 'none', padding: '14px', cursor: 'pointer', textTransform: 'uppercase'
-        }}>Więcej wiadomości →</button>
+        }}>{window.t('Więcej wiadomości →')}</button>
       </div>
 
       {/* Newsletter mini box */}
@@ -174,7 +174,7 @@ const SideTabs = ({ onOpen }) => {
           {window.PRO.newsletter.heading}
         </div>
         <p style={{ fontFamily: T.serif, fontSize: 13.5, lineHeight: 1.5, color: '#9a9384', margin: '0 0 14px' }}>
-          Najważniejsze informacje branżowe prosto na skrzynkę.
+          {window.t('Najważniejsze informacje branżowe prosto na skrzynkę.')}
         </p>
         <NewsletterInline />
       </div>
@@ -186,26 +186,26 @@ const NewsletterInline = () => {
   const T = window.T;
   const [email, setEmail] = hUseState('');
   const [state, setState] = hUseState('idle'); // idle | sending | ok | err | neterr
-  if (state === 'ok') return <div style={{ fontFamily: T.ui, fontSize: 13, color: T.yellow, fontWeight: 600 }}>✓ Dziękujemy! Zapis potwierdzony.</div>;
+  if (state === 'ok') return <div style={{ fontFamily: T.ui, fontSize: 13, color: T.yellow, fontWeight: 600 }}>{window.t('✓ Dziękujemy! Zapis potwierdzony.')}</div>;
   const submit = async (e) => {
     e.preventDefault();
     if (!/\S+@\S+\.\S+/.test(email)) { setState('err'); return; }
     setState('sending');
-    try { await window.PRO_subscribe(email, 'pro:mini-box'); setState('ok'); }
+    try { await window.PRO_subscribe(email, window.PRO_LANG === 'en' ? 'pro-en:mini-box' : 'pro:mini-box'); setState('ok'); }
     catch (err) { setState('neterr'); }
   };
   return (
     <form onSubmit={submit}>
-      <input type="email" value={email} onChange={(e) => { setEmail(e.target.value); if (state === 'err' || state === 'neterr') setState('idle'); }} placeholder="Twój e-mail" style={{
+      <input type="email" value={email} onChange={(e) => { setEmail(e.target.value); if (state === 'err' || state === 'neterr') setState('idle'); }} placeholder={window.t('Twój e-mail')} style={{
         width: '100%', fontFamily: T.ui, fontSize: 13.5, padding: '11px 12px', border: 'none',
         borderRadius: 2, outline: 'none', marginBottom: 8, boxSizing: 'border-box'
       }} />
-      {state === 'err' && <div style={{ fontFamily: T.ui, fontSize: 12, color: '#ffd9cf', marginBottom: 8 }}>Podaj poprawny e-mail.</div>}
-      {state === 'neterr' && <div style={{ fontFamily: T.ui, fontSize: 12, color: '#ffd9cf', marginBottom: 8 }}>Nie udało się zapisać — spróbuj ponownie.</div>}
+      {state === 'err' && <div style={{ fontFamily: T.ui, fontSize: 12, color: '#ffd9cf', marginBottom: 8 }}>{window.t('Podaj poprawny e-mail.')}</div>}
+      {state === 'neterr' && <div style={{ fontFamily: T.ui, fontSize: 12, color: '#ffd9cf', marginBottom: 8 }}>{window.t('Nie udało się zapisać — spróbuj ponownie.')}</div>}
       <button type="submit" disabled={state === 'sending'} style={{
         width: '100%', fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.ink, background: T.yellow,
         border: 'none', borderRadius: 2, padding: '11px', cursor: state === 'sending' ? 'default' : 'pointer', opacity: state === 'sending' ? 0.6 : 1
-      }}>{state === 'sending' ? 'Zapisuję…' : 'Zapisz mnie'}</button>
+      }}>{state === 'sending' ? window.t('Zapisuję…') : window.t('Zapisz mnie')}</button>
     </form>);
 
 };
@@ -239,7 +239,7 @@ const CategoryStrip = ({ catId, onOpen, onNav }) => {
         </div>
         <button onClick={() => onNav({ type: 'category', id: catId })} style={{
           fontFamily: T.ui, fontWeight: 600, fontSize: 13, color: T.inkSoft, background: 'transparent', border: 'none', cursor: 'pointer'
-        }}>Wszystkie →</button>
+        }}>{window.t('Wszystkie →')}</button>
       </div>
       <div className="pro-cat-strip" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginTop: 20 }}>
         {arts.map((a) =>
@@ -270,7 +270,7 @@ const HeroLead = ({ onOpen }) => {
           <div onClick={() => onOpen(lead)} style={{ cursor: 'pointer', aspectRatio: '16/10', overflow: 'hidden', background: T.paper3, borderRadius: 10 }}>
             <img src={window.proImg(lead.imgHome || lead.img)} onError={function (e) { e.currentTarget.style.opacity = '0.1'; }} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
-          <div style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.1em', color: T.inkFaint, margin: '8px 0 16px' }}>{(lead.imgHomeCaption || lead.imgCaption || 'Fot. materiały własne').toUpperCase()}</div>
+          <div style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.1em', color: T.inkFaint, margin: '8px 0 16px' }}>{(lead.imgHomeCaption || lead.imgCaption || window.t('Fot. materiały własne')).toUpperCase()}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
             <window.Badge cat={lead.cat} small />
             <span style={{ fontFamily: T.mono, fontSize: 11, letterSpacing: '0.04em', color: T.inkFaint }}>{lead.date} · {lead.read} MIN</span>
@@ -278,7 +278,7 @@ const HeroLead = ({ onOpen }) => {
           <h1 onClick={() => onOpen(lead)} style={{ cursor: 'pointer', fontFamily: T.ui, fontWeight: 800, fontSize: 38, lineHeight: 1.08, letterSpacing: '-0.03em', color: T.ink, margin: '0 0 16px' }}>{lead.title}</h1>
           <p style={{ fontFamily: T.ui, fontSize: 19, lineHeight: 1.5, color: T.ink2, margin: '0 0 22px', maxWidth: '34em' }}>{lead.lead}</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-            <button onClick={() => onOpen(lead)} style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 15, color: T.paper3, background: T.ink, border: 'none', borderRadius: 8, padding: '13px 22px', cursor: 'pointer' }}>Czytaj tekst</button>
+            <button onClick={() => onOpen(lead)} style={{ fontFamily: T.ui, fontWeight: 700, fontSize: 15, color: T.paper3, background: T.ink, border: 'none', borderRadius: 8, padding: '13px 22px', cursor: 'pointer' }}>{window.t('Czytaj tekst')}</button>
           </div>
         </div>
         <SideTabs onOpen={onOpen} />
@@ -332,21 +332,21 @@ const NewsletterBlockBig = () => {
   const T = window.T;
   const [email, setEmail] = hUseState('');
   const [state, setState] = hUseState('idle');
-  const submit = async (e) => { e.preventDefault(); if (!/\S+@\S+\.\S+/.test(email)) { setState('err'); return; } setState('sending'); try { await window.PRO_subscribe(email, 'pro:home-big'); setState('ok'); } catch (x) { setState('neterr'); } };
+  const submit = async (e) => { e.preventDefault(); if (!/\S+@\S+\.\S+/.test(email)) { setState('err'); return; } setState('sending'); try { await window.PRO_subscribe(email, window.PRO_LANG === 'en' ? 'pro-en:home-big' : 'pro:home-big'); setState('ok'); } catch (x) { setState('neterr'); } };
   return (
     <div style={{ background: T.ink, borderRadius: 12, padding: '28px 32px', color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-      <div style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: T.yellow, marginBottom: 12 }}>NEWSLETTER BRANŻOWY</div>
-      <h2 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 25, lineHeight: 1.15, color: '#fff', margin: '0 0 10px' }}>Co tydzień jedna analiza rynku i kalendarz regulacji</h2>
-      <p style={{ fontFamily: T.ui, fontSize: 15, lineHeight: 1.5, color: '#c9c3b4', margin: '0 0 20px' }}>Dla właścicieli flot i operatorów. Bez ofert pracy dla kierowców.</p>
+      <div style={{ fontFamily: T.mono, fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: T.yellow, marginBottom: 12 }}>{window.t('NEWSLETTER BRANŻOWY')}</div>
+      <h2 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 25, lineHeight: 1.15, color: '#fff', margin: '0 0 10px' }}>{window.t('Co tydzień jedna analiza rynku i kalendarz regulacji')}</h2>
+      <p style={{ fontFamily: T.ui, fontSize: 15, lineHeight: 1.5, color: '#c9c3b4', margin: '0 0 20px' }}>{window.t('Dla właścicieli flot i operatorów. Bez ofert pracy dla kierowców.')}</p>
       {state === 'ok' ? (
-        <div style={{ fontFamily: T.ui, fontSize: 14, color: T.yellow, fontWeight: 600, padding: '12px 0' }}>✓ Dziękujemy! Zapis potwierdzony.</div>
+        <div style={{ fontFamily: T.ui, fontSize: 14, color: T.yellow, fontWeight: 600, padding: '12px 0' }}>{window.t('✓ Dziękujemy! Zapis potwierdzony.')}</div>
       ) : (
         <form onSubmit={submit} style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-          <input type="email" value={email} onChange={(e) => { setEmail(e.target.value); if (state !== 'idle') setState('idle'); }} placeholder="adres@firma.pl" style={{ flex: '1 1 240px', fontFamily: T.ui, fontSize: 15, padding: '13px 16px', border: 'none', borderRadius: 9, background: T.paper3, color: T.inkSoft, outline: 'none' }} />
-          <button type="submit" disabled={state === 'sending'} style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 15, color: T.yellowInk, background: T.yellow, border: 'none', borderRadius: 9, padding: '13px 26px', cursor: 'pointer' }}>{state === 'sending' ? 'Zapisuję…' : 'Zapisz się'}</button>
+          <input type="email" value={email} onChange={(e) => { setEmail(e.target.value); if (state !== 'idle') setState('idle'); }} placeholder={window.t('adres@firma.pl')} style={{ flex: '1 1 240px', fontFamily: T.ui, fontSize: 15, padding: '13px 16px', border: 'none', borderRadius: 9, background: T.paper3, color: T.inkSoft, outline: 'none' }} />
+          <button type="submit" disabled={state === 'sending'} style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 15, color: T.yellowInk, background: T.yellow, border: 'none', borderRadius: 9, padding: '13px 26px', cursor: 'pointer' }}>{state === 'sending' ? window.t('Zapisuję…') : window.t('Zapisz się')}</button>
         </form>
       )}
-      <div style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.06em', color: '#8f887a', marginTop: 14 }}>REZYGNACJA JEDNYM KLIKNIĘCIEM</div>
+      <div style={{ fontFamily: T.mono, fontSize: 10, letterSpacing: '0.06em', color: '#8f887a', marginTop: 14 }}>{window.t('REZYGNACJA JEDNYM KLIKNIĘCIEM')}</div>
     </div>
   );
 };

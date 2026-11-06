@@ -5,8 +5,9 @@ const { useEffect: pgUseEffect } = React;
 // ===== Category listing =====
 const CategoryPage = ({ catId, onOpen, onOpenAI }) => {
   const T = window.T;
-  const cat = window.PRO.categories.find((c) => c.id === catId);
-  const arts = window.PRO.articles.filter((a) => (a.cats || [a.cat]).includes(catId));
+  const cat = window.PRO.categories.find((c) => c.id === catId)
+    || (catId === 'all' ? { id: 'all', label: window.t('Wszystkie artykuły'), desc: window.t('Wybrane artykuły o polskim rynku taxi w języku angielskim.') } : { id: catId, label: catId, desc: '' });
+  const arts = catId === 'all' ? window.PRO.articles : window.PRO.articles.filter((a) => (a.cats || [a.cat]).includes(catId));
   const [lead, ...rest] = arts;
 
   return (
@@ -39,14 +40,14 @@ const CategoryPage = ({ catId, onOpen, onOpenAI }) => {
           }
           {rest.map((a) => <window.ArticleRow key={a.id} a={a} onOpen={onOpen} />)}
           {arts.length === 0 &&
-          <p style={{ fontFamily: T.serif, fontSize: 16, color: T.inkSoft }}>Brak artykułów w tej kategorii.</p>
+          <p style={{ fontFamily: T.serif, fontSize: 16, color: T.inkSoft }}>{window.t('Brak artykułów w tej kategorii.')}</p>
           }
         </div>
 
         {/* Sidebar: popular (asystent AI wyłączony 5.11.2026) */}
         <aside>
           <div style={{ border: `1px solid ${T.line}` }}>
-            <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: T.ink, padding: '14px 16px', borderBottom: `2px solid ${T.ink}`, textTransform: 'uppercase' }}>Popularne</div>
+            <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: T.ink, padding: '14px 16px', borderBottom: `2px solid ${T.ink}`, textTransform: 'uppercase' }}>{window.t('Popularne')}</div>
             {window.PRO.articles.filter((a) => a.hot).slice(0, 5).map((a, idx) =>
             <div key={a.id} onClick={() => onOpen(a)} style={{ display: 'grid', gridTemplateColumns: '24px 1fr', gap: 12, padding: '14px 16px', borderBottom: idx < 4 ? `1px solid ${T.lineSoft}` : 'none', cursor: 'pointer' }}>
                 <span style={{ fontFamily: T.mono, fontWeight: 800, fontSize: 16, color: T.goldText, lineHeight: 1 }}>{idx + 1}</span>
@@ -68,9 +69,10 @@ window.CategoryPage = CategoryPage;
 //  **pogrubienie**, [tekst](https://adres) -> link.
 const proInline = (text) => {
   const T = window.T;
-  const parts = String(text).split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)\s]+\))/);
+  const parts = String(text).split(/(\*\*[^*]+\*\*|\*[^*\s][^*]*\*|\[[^\]]+\]\([^)\s]+\))/);
   return parts.map((part, j) => {
     if (/^\*\*[^*]+\*\*$/.test(part)) return <strong key={j}>{part.slice(2, -2)}</strong>;
+    if (/^\*[^*\s][^*]*\*$/.test(part)) return <em key={j}>{part.slice(1, -1)}</em>;
     const m = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
     if (m) {
       const intId = (m[2].match(/^\/artykul\/([pa]\d+)/) || [])[1];
@@ -134,7 +136,7 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
     <div style={{ maxWidth: 1240, margin: '0 auto', padding: '0 24px' }}>
       {/* Breadcrumb */}
       <div style={{ fontFamily: T.ui, fontSize: 12.5, color: T.inkSoft, padding: '20px 0 0' }}>
-        <button onClick={() => onNav({ type: 'home' })} style={crumbBtn}>Strona główna</button>
+        <button onClick={() => onNav({ type: 'home' })} style={crumbBtn}>{window.t('Strona główna')}</button>
         <span style={{ margin: '0 8px' }}>›</span>
         <button onClick={() => onNav({ type: 'category', id: article.cat })} style={crumbBtn}>{window.catLabel(article.cat)}</button>
       </div>
@@ -154,12 +156,12 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
               article.author :
               article.source ?
               article.source + (article.sourceAuthor && !/redakcja|komunikat/i.test(article.sourceAuthor) ? ' · ' + article.sourceAuthor : '') :
-              'Redakcja PortalTaxiPRO'}
+              window.t('Redakcja PortalTaxiPRO')}
             </span>
             <span style={{ width: 3, height: 3, borderRadius: '50%', background: T.inkSoft }} />
             <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.03em', color: T.inkSoft }}>{article.date}</span>
             <span style={{ width: 3, height: 3, borderRadius: '50%', background: T.inkSoft }} />
-            <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.03em', color: T.inkSoft }}>{article.read} min czytania</span>
+            <span style={{ fontFamily: T.mono, fontSize: 11.5, letterSpacing: '0.03em', color: T.inkSoft }}>{article.read} {window.t('min czytania')}</span>
           </div>
           <div style={{ aspectRatio: '16/9', overflow: 'hidden', background: T.paper3, marginBottom: article.imgCaption ? 8 : 28 }}>
             <img src={window.proImg(article.img)} onError={function(e){e.currentTarget.style.opacity='0.1';}} alt={article.imgCaption || ''} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -175,7 +177,7 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
 
           {article.sources && article.sources.length > 0 && (
             <div style={{ marginTop: 40, paddingTop: 24, borderTop: `1px solid ${T.line}` }}>
-              <h3 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 15, letterSpacing: '0.04em', textTransform: 'uppercase', color: T.inkSoft, margin: '0 0 16px' }}>Źródła</h3>
+              <h3 style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 15, letterSpacing: '0.04em', textTransform: 'uppercase', color: T.inkSoft, margin: '0 0 16px' }}>{window.t('Źródła')}</h3>
               <ol style={{ margin: 0, padding: '0 0 0 20px' }}>
                 {article.sources.map((src, i) => {
                   const urlMatch = src.match(/https?:\/\/\S+/);
@@ -191,18 +193,20 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
             </div>
           )}
 
+          <window.ProTranslationNote article={article} />
+
           {article.link &&
           <div style={{ border: `1px solid ${T.line}`, background: T.paper2, padding: '18px 20px', margin: '4px 0 8px' }}>
-              <div style={{ fontFamily: T.ui, fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: T.inkSoft, marginBottom: 8 }}>Źródło materiału</div>
+              <div style={{ fontFamily: T.ui, fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: T.inkSoft, marginBottom: 8 }}>{window.t('Źródło materiału')}</div>
               <div style={{ fontFamily: T.ui, fontSize: 15, fontWeight: 700, color: T.ink }}>{article.source}{article.sourceAuthor && !/redakcja|komunikat/i.test(article.sourceAuthor) ? ' — ' + article.sourceAuthor : ''}</div>
               {article.region && <div style={{ fontFamily: T.ui, fontSize: 12.5, color: T.inkSoft, marginTop: 2 }}>{article.region} · {article.date}</div>}
-              <a href={article.link} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 12, fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.paper3, background: T.ink, borderRadius: 8, padding: '11px 18px', textDecoration: 'none' }}>Czytaj w oryginale →</a>
+              <a href={article.link} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginTop: 12, fontFamily: T.ui, fontWeight: 700, fontSize: 13, color: T.paper3, background: T.ink, borderRadius: 8, padding: '11px 18px', textDecoration: 'none' }}>{window.t('Czytaj w oryginale →')}</a>
             </div>
           }
 
           {/* Tags / share */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '24px 0', borderTop: `1px solid ${T.line}`, marginTop: 12 }}>
-            <span style={{ fontFamily: T.ui, fontSize: 12.5, color: T.inkSoft }}>{(article.cats || [article.cat]).length > 1 ? 'Kategorie:' : 'Kategoria:'}</span>
+            <span style={{ fontFamily: T.ui, fontSize: 12.5, color: T.inkSoft }}>{(article.cats || [article.cat]).length > 1 ? window.t('Kategorie:') : window.t('Kategoria:')}</span>
             {(article.cats || [article.cat]).map((cid) =>
             <button key={cid} onClick={() => onNav({ type: 'category', id: cid })} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: 0 }}>
                 <window.Badge cat={cid} small />
@@ -216,7 +220,7 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
           <div style={{ position: 'sticky', top: 130 }}>
             {related.length > 0 &&
             <div style={{ border: `1px solid ${T.line}` }}>
-                <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: T.ink, padding: '14px 16px', borderBottom: `2px solid ${T.ink}`, textTransform: 'uppercase' }}>Powiązane</div>
+                <div style={{ fontFamily: T.ui, fontWeight: 800, fontSize: 14, letterSpacing: '0.02em', color: T.ink, padding: '14px 16px', borderBottom: `2px solid ${T.ink}`, textTransform: 'uppercase' }}>{window.t('Powiązane')}</div>
                 {related.map((a, idx) =>
               <div key={a.id} onClick={() => onOpen(a)} style={{ padding: '14px 16px', borderBottom: idx < related.length - 1 ? `1px solid ${T.lineSoft}` : 'none', cursor: 'pointer' }}
               onMouseEnter={(e) => e.currentTarget.style.background = T.paper2}
@@ -233,7 +237,7 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
 
       {/* More from category */}
       <div style={{ marginTop: 24, paddingTop: 32, borderTop: `2px solid ${T.ink}` }}>
-        <window.SectionHead accent={window.catColor(article.cat)}>Więcej: {window.catLabel(article.cat)}</window.SectionHead>
+        <window.SectionHead accent={window.catColor(article.cat)}>{window.t('Więcej:')} {window.catLabel(article.cat)}</window.SectionHead>
         <div className="pro-cat-strip" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20, marginTop: 20 }}>
           {related.map((a) =>
           <article key={a.id} onClick={() => onOpen(a)} style={{ cursor: 'pointer', borderTop: `3px solid ${T.ink}`, paddingTop: 14 }}>
@@ -249,6 +253,33 @@ const ArticlePage = ({ article, onOpen, onNav, onOpenAI }) => {
     </div>);
 
 };
+// Ramka tłumaczenia: w EN — link do polskiego oryginału i data tłumaczenia; w PL — link do wersji EN, jeśli istnieje.
+const ProTranslationNote = ({ article }) => {
+  const T = window.T;
+  const box = { border: `1px solid ${T.line}`, borderLeft: `4px solid ${T.yellow}`, background: T.paper2, padding: '16px 20px', margin: '28px 0 8px', fontFamily: T.ui, fontSize: 14, lineHeight: 1.55, color: T.ink2 };
+  const link = { color: T.ink, fontWeight: 700, textDecoration: 'underline', textUnderlineOffset: 3 };
+  if (window.PRO_LANG === 'en') {
+    if (article.type === 'guide') {
+      return <div style={box}>This guide is written for the English edition and updated every quarter. Facts as of the dates given in the text. For information only; not legal or investment advice.</div>;
+    }
+    const pl = window.proPlArticle(article);
+    return (
+      <div style={box}>
+        Translated and adapted from the Polish original{article.translated ? ' on ' + article.translated : ''}. Facts as of the dates given in the text. For information only; not legal advice.
+        {pl && <> <a href={'/artykul/' + pl.id + '-' + window.proSlug(pl.title)} hrefLang="pl" lang="pl" style={link}>Polish original →</a></>}
+      </div>
+    );
+  }
+  const en = window.proEnArticle(article.id);
+  if (!en) return null;
+  return (
+    <div style={box} lang="en">
+      This article is also available in English. <a href={'/en/article/' + en.slug} hrefLang="en" style={link}>Read in English →</a>
+    </div>
+  );
+};
+window.ProTranslationNote = ProTranslationNote;
+
 const crumbBtn = { fontFamily: '"Archivo", sans-serif', fontSize: 12.5, color: '#5c5648', background: 'transparent', border: 'none', cursor: 'pointer', padding: 0 };
 window.ArticlePage = ArticlePage;
 
@@ -270,7 +301,12 @@ window.ContactMail = ContactMail;
 const StaticPage = ({ pageId }) => {
   const T = window.T;
   pgUseEffect(() => {window.scrollTo(0, 0);}, [pageId]);
-  const content = {
+  const contentEN = {
+    'o-nas': { title: window.PRO.about.title, body: window.PRO.about.body },
+    'kontakt': { title: 'Contact', body: ['The PRO.portaltaxi.pl editorial team welcomes tips, materials and industry cooperation.', 'Contact the editors, including about advertising and partnerships:'] },
+    'reklama': { title: 'Advertising', body: ['PRO.portaltaxi.pl offers advertising formats for companies in mobility, fleets, insurance and technology.', 'Get in touch:'] },
+  };
+  const content = (window.PRO_LANG === 'en' && contentEN[pageId]) || {
     'o-nas': {
       title: window.PRO.about.title,
       body: window.PRO.about.body
@@ -284,7 +320,7 @@ const StaticPage = ({ pageId }) => {
     'prywatnosc': { title: 'Polityka prywatności', body: ['Pełna polityka prywatności zostanie opublikowana wraz z uruchomieniem produkcyjnym.'] },
     'ustawienia': { title: 'Ustawienia prywatności', body: ['Panel zarządzania zgodami będzie dostępny w wersji produkcyjnej.'] },
     'cookies': { title: 'Polityka cookies', body: ['Informacje o plikach cookies zostaną opublikowane wraz z uruchomieniem produkcyjnym.'] }
-  }[pageId] || { title: 'Strona', body: ['Treść w przygotowaniu.'] };
+  }[pageId] || (window.PRO_LANG === 'en' ? { title: 'Page', body: ['Content in preparation.'] } : { title: 'Strona', body: ['Treść w przygotowaniu.'] });
 
   return (
     <div style={{ maxWidth: 760, margin: '0 auto', padding: '48px 24px 0' }}>
