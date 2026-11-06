@@ -49,7 +49,7 @@ const out = [];
 const fromJson = (a) => {
   const blocks = toBlocks(a.body);
   return {
-    id: a.id, plId: a.id, slug: a.slug, cat: meta.catMap[a.cat], cats: meta.cats[a.id], date: a.date,
+    id: a.id, plId: a.id, slug: a.slug, cat: meta.catMap[a.cat], cats: meta.cats[a.id], date: (meta.dates && meta.dates[a.id]) || a.date,
     img: img(a.img), imgCaption: a.imgCaption || undefined, hot: meta.hot.includes(a.id) || undefined,
     author: 'PRO.portaltaxi.pl editorial team', title: a.title, lead: a.lead, body: blocks,
     sources: a.sources, read: readMin(blocks), translated: meta.translated,

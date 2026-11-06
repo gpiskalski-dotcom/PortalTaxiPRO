@@ -250,7 +250,7 @@ window.PRO_EN = {
         "bezpieczenstwo",
         "regulacje-ue"
       ],
-      "date": "11 June 2026, updated 4 November 2026",
+      "date": "11 June 2026",
       "img": "uploads/przeglad-nowe-zasady.png",
       "author": "PRO.portaltaxi.pl editorial team",
       "title": "Licence with verification: Poland to tighten rules for foreign taxi drivers",
@@ -503,7 +503,7 @@ window.PRO_EN = {
         "bezpieczenstwo",
         "regulacje-ue"
       ],
-      "date": "11 June 2026, updated 4 November 2026",
+      "date": "11 June 2026",
       "img": "uploads/przeglad-nowe-zasady.png",
       "author": "PRO.portaltaxi.pl editorial team",
       "title": "Licence with verification: Poland to tighten rules for foreign taxi drivers",

@@ -52,5 +52,6 @@
     "p68": ["newsy-platform", "rynek-polski"]
   },
   "hot": ["p54"],
+  "dates": { "p50": "11 June 2026" },
   "order": ["g1", "p68", "p54", "p57", "p50"]
 }
