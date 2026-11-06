@@ -23,7 +23,7 @@
     'Analizy': 'Analysis',
     'Przewodnik': 'Market guide',
     'Bezpieczeństwo': 'Safety',
-    'portaltaxi.pl dla kierowców →': 'portaltaxi.pl for drivers (PL) →',
+    'portaltaxi.pl dla kierowców →': 'For drivers (PL) →',
     'Wersja angielska': 'Polska wersja',
     // newsletter
     '✓ Dziękujemy! Zapis potwierdzony.': '✓ Thank you! You are subscribed.',

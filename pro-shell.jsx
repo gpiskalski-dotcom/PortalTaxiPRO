@@ -148,11 +148,11 @@ const LangSwitch = ({ route, article, mobile }) => {
         display: 'block', width: '100%', textAlign: 'left', fontFamily: T.ui, fontSize: 15, fontWeight: 700,
         color: T.ink, textDecoration: 'none', padding: '14px 0', borderBottom: `1px solid ${T.lineSoft}`,
       } : {
-        display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: T.mono, fontWeight: 700, fontSize: 12.5,
-        letterSpacing: '0.06em', color: T.ink, textDecoration: 'none', border: `1px solid ${T.line}`, borderRadius: 8,
-        padding: '9px 11px', whiteSpace: 'nowrap', background: T.paper,
+        display: 'inline-flex', alignItems: 'center', fontFamily: T.mono, fontWeight: 700, fontSize: 12.5,
+        letterSpacing: '0.04em', color: T.ink, textDecoration: 'none', border: `1px solid ${T.line}`, borderRadius: 6,
+        padding: '5px 7px', whiteSpace: 'nowrap', background: T.paper, lineHeight: 1,
       }}>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+      {mobile && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-2px', marginRight: 8 }}><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>}
       {mobile ? (en ? 'Polska wersja (PL)' : 'English edition (EN)') : (en ? 'PL' : 'EN')}
     </a>
   );

@@ -39,7 +39,7 @@ window.PRO_EN = {
         "guide",
         "rynek-polski"
       ],
-      "date": "Updated 6 November 2026",
+      "date": "6 November 2026",
       "img": "pro/komiks-flota-miasto.jpg",
       "featured": true,
       "hot": true,
@@ -292,7 +292,7 @@ window.PRO_EN = {
         "guide",
         "rynek-polski"
       ],
-      "date": "Updated 6 November 2026",
+      "date": "6 November 2026",
       "img": "pro/komiks-flota-miasto.jpg",
       "featured": true,
       "hot": true,
