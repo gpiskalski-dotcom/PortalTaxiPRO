@@ -1,4 +1,4 @@
-// pro-data.js — treści PRO.portaltaxi.pl. Wygenerowano 2026-11-18T00:49:31.570Z (build/build.js).
+// pro-data.js — treści PRO.portaltaxi.pl. Wygenerowano 2026-11-19T08:25:41.496Z (build/build.js).
 // Artykuł z polem pub (ISO) pojawia się w serwisie dopiero od tej chwili (harmonogram publikacji).
 
 const PRO = {
@@ -50,6 +50,69 @@ const PRO = {
     }
   ],
   "articles": [
+    {
+      "id": "p69",
+      "pub": "2026-11-19T10:00:00+01:00",
+      "date": "19 listopada 2026",
+      "cat": "analizy",
+      "cats": [
+        "analizy",
+        "rynek-polski",
+        "regulacje-ue"
+      ],
+      "img": "pro/n-pzpa-raport-taxi-warszawa.jpg",
+      "imgCaption": "",
+      "hot": true,
+      "author": "Redakcja PRO.portaltaxi.pl",
+      "title": "Partnerzy flotowi chcą rejestru pośredników i 600 tys. zł zabezpieczenia. Co proponuje raport PZPA",
+      "lead": "Polski Związek Partnerów Aplikacyjnych proponuje rejestr pośredników z obowiązkiem zezwolenia i gwarancją bankową na 600 tys. zł, ogólnokrajowe zasady dla taksówek oraz centralną ewidencję licencji i kierowców. Raport ukazał się dwa tygodnie przed terminem wdrożenia dyrektywy o pracy platformowej.",
+      "body": [
+        "Polski Związek Partnerów Aplikacyjnych (PZPA), który zrzesza 21 firm rozliczających kierowców i udostępniających im auta do pracy w aplikacjach przewozowych, opublikował 17 listopada raport „Dokąd jedziemy? Branża ride-hailing wczoraj, dziś i jutro”. Gdyby główny postulat związku trafił do prawa, każdy partner flotowy musiałby uzyskać zezwolenie i przedstawić gwarancję bankową. Polska ustawa wdrażająca dyrektywę o pracy platformowej nie trafiła jeszcze do Sejmu, a termin wdrożenia mija 2 grudnia 2026 r.",
+        "## Autor raportu to strona rynku",
+        "PZPA powstał na początku 2024 r. Według raportu jego członkowie współpracują łącznie z ponad 40 tys. osób świadczących usługi przez platformy (kierowców i kurierów). Raport wymienia 21 firm członkowskich, w tym BonitoCars i SaltExpress, których nie było w wykazie podanym przez związek po letnim zlocie ([o wcześniejszych zmianach w PZPA](/artykul/p58-pzpa-podwoil-liczbe-czlonkow-zwiazek-partnerow-aplikacyjnych-przed-ust)).",
+        "Raport przygotowała organizacja reprezentująca interesy tych firm. Dane o wartości rynku za lata 2023–2025 to wewnętrzne szacunki związku, a postulaty bezpośrednio dotyczą jego członków. W tekście oddzielamy dane z raportu od naszych wniosków.",
+        "## Rynek według PZPA",
+        "- Wartość segmentu przejazdów na aplikację: od 0,74 mld zł w 2020 r. przez 2,5 mld zł w 2022 r. do 4,3 mld zł w 2025 r. Lata 2020–2022 to dane Zespołu Doradców Gospodarczych TOR, lata 2023–2025 – szacunki PZPA. Instytut Jagielloński prognozował wcześniej ok. 4,7 mld zł na 2025 r. ([o tamtej prognozie](/artykul/a14-przeglad-prasy-rynek-przewozow-na-aplikacje-w-raporcie-instytutu-jagie)).\n- Udział aplikacji: 80–83% kursów w 20 największych miastach (analiza z końca 2025 r.). Najwyższy w Warszawie, Trójmieście, Wrocławiu, Poznaniu, Krakowie i Sosnowcu, najniższy w Radomiu i Bydgoszczy. Raport nie podaje tego wskaźnika dla całego kraju.\n- Użytkownicy: w IV kwartale 2025 r. Bolt miał ok. 2,4 mln, a Uber ok. 1,7 mln aktywnych użytkowników tygodniowo (dane Sensor Tower przytoczone w raporcie).\n- Członkowie PZPA w 2025 r.: ponad 29 tys. kierowców, ponad 6 tys. aut, ponad 650 pracowników operacyjnych i biura w ponad 40 lokalizacjach. Odprowadzili 170 mln zł podatków.",
+        "„Model ride-hailing, który jeszcze do niedawna był nowością rynkową, dziś odpowiada za większość wszystkich realizowanych kursów taksówką” – pisze we wstępie do raportu prezes związku. „Rzeczpospolita” przytacza tę wypowiedź jako słowa Jarosława Antoniuka.",
+        "Wzrost potwierdzają platformy. Krzysztof Urban, dyrektor zarządzający Freenow by Lyft w Polsce, powiedział „Rzeczpospolitej”, że liczba przejazdów rośnie o 5–10% rocznie, a taksówka „przestała być towarem luksusowym”. Ta sama gazeta, powołując się na Dun & Bradstreet, podaje, że problemy finansowe ma około dwóch trzecich polskich firm taksówkowych. Tomasz Starzyk z D&B wskazuje jako przyczyny wysokie koszty działalności, podatki, ceny paliwa, amortyzację aut i koszty osobowe ([o konsolidacji rynku](/artykul/p59-znikaja-firmy-taksowkowe-rosna-posrednicy-konsolidacja-rynku-w-2026-ro)).",
+        "## Ceny: Polska czwarta od dołu w zestawieniu 12 krajów",
+        "PZPA porównał ceny przejazdów zamawianych przez aplikację w 12 krajach Europy. Przejazd 10 km kosztuje w Polsce średnio 39,13 zł, a typowy kurs miejski na 5 km – 19,55 zł. Związek zestawił też ceny z wynagrodzeniami i wyliczył, ile odcinków po 100 km kierowca musi przejechać, aby pokryć koszty życia.",
+        "| Kraj | Przejazd 10 km (zł) | Odcinki po 100 km na pokrycie kosztów życia |\n| --- | --- | --- |\n| Rumunia | 18,04 | 51,6 |\n| Litwa | 33,18 | 58,9 |\n| Czechy | 38,15 | 38,7 |\n| Polska | 39,13 | 35,2 |\n| Węgry | 80,58 | 15,0 |\n| Niemcy | 131,80 | 14,2 |\n| Holandia | 192,83 | 11,1 |",
+        "Źródło tabeli: raport PZPA (2026), wybór 7 z 12 krajów; dane orientacyjne.",
+        "Przejazd 10 km kosztuje w Polsce 0,42% przeciętnego miesięcznego wynagrodzenia brutto. Niższy wskaźnik raport podaje tylko dla Rumunii (0,22%) i Litwy (0,35%). PZPA wnioskuje, że stawki w Polsce są za niskie, a kierowcy muszą pracować znacznie dłużej niż w Europie Zachodniej. Związek dodaje, że ich koszty rosną także przez strefy czystego transportu.",
+        "Przy tych liczbach trzeba pamiętać o dwóch zastrzeżeniach. PZPA zaznacza, że ceny zebrano z publicznie dostępnych źródeł i nie są to pełne taryfy aplikacji. Według tabeli podziału odpowiedzialności z tego samego raportu stawkę za zlecenie ustala platforma, a nie partner ani kierowca. Postulat wyższych stawek jest więc w praktyce skierowany do Ubera, Bolta i Freenow by Lyft.",
+        "## Postulat 1: rejestr pośredników i zezwolenie na działalność partnerską",
+        "PZPA proponuje Rejestr Pośredników Aplikacji Cyfrowych. Wpis i zezwolenie zależałyby od tego, czy firma:",
+        "- jest wpisana do CEIDG albo KRS;\n- ma lokal z dostępem do oryginałów dokumentów;\n- przedstawi gwarancję lub poręczenie bankowe na 600 tys. zł;\n- wskaże co najmniej jedną osobę uprawnioną do reprezentacji z miejscem zamieszkania w Polsce oraz polski adres do doręczeń;\n- nie ma zaległości podatkowych i składkowych, a jej reprezentanci nie byli karani m.in. za przestępstwa przeciwko obrotowi gospodarczemu i prawom osób wykonujących pracę zarobkową.",
+        "Osoby, które w ciągu 3 poprzednich lat zasiadały we władzach pośrednika wykreślonego za niepłacenie zobowiązań, miałyby czasowy zakaz wpisu. Firmy działające w dniu wejścia przepisów w życie dostałyby co najmniej 12 miesięcy na uzyskanie wpisu.",
+        "Związek uzasadnia postulat praktyką firm, które „agresywnie pozyskują współpracowników, generują przychody, a następnie znikają z rynku”, by po czasie wrócić pod nową nazwą. Zabezpieczenie ma pokryć roszczenia kierowców i należności wobec państwa, a wymóg lokalu ma umożliwić kontrolerom fizyczny wgląd w dokumenty.",
+        "> Nasza ocena: według raportu ponad połowę kierowców obsługuje kilkanaście największych firm, a pozostałych – od setek do tysięcy mniejszych, często lokalnych podmiotów. Dla dużych partnerów gwarancja 600 tys. zł jest prawdopodobnie do udźwignięcia, dla części małych może być barierą. Postulat może ograniczyć nieuczciwe praktyki, ale może też przyspieszyć konsolidację rynku na korzyść największych firm, w tym członków PZPA. Raport nie przedstawia stanowiska mniejszych partnerów ani szacunku, ile firm spełniłoby nowe warunki.",
+        "## Postulat 2: jedne zasady w całym kraju",
+        "Oznakowanie taksówek czy organizację kursów ustalają dziś gminy w uchwałach. PZPA chce przenieść te zasady do przepisów ogólnokrajowych, aby firmy o tym samym profilu działalności nie funkcjonowały na różnych warunkach w zależności od miasta.",
+        "## Postulat 3: centralna ewidencja licencji, taksówek i taksówkarzy",
+        "Dane o licencjach, wypisach, identyfikatorach kierowców i pojazdach są przechowywane w wielu niezależnych rejestrach, a część tylko na papierze. Firma działająca w kilku gminach musi w każdej osobno uzyskać licencję i ponownie złożyć te same dokumenty. Raport podaje przykład Śląska: aby legalnie realizować przejazdy w aglomeracji, kierowca musi mieć przy sobie kilkadziesiąt licencji albo wypisów. Podczas kontroli służby kontaktują się telefonicznie z urzędnikiem, żeby sprawdzić kierowcę i jego dokumenty.",
+        "![Ilustracja wygenerowana przez AI](pro/n-pzpa-raport-kontrola.jpg)",
+        "PZPA proponuje cyfrową bazę aktualizowaną w czasie rzeczywistym i połączoną z Centralną Ewidencją Pojazdów i Kierowców. Kontrolujący widzieliby wtedy od razu m.in. cofnięte uprawnienia i nieaktualne badania techniczne. Pomysł popiera Bartosz Pelczarski, szef Wydziału Komunikacji Urzędu Miasta Poznania i prezes Ogólnopolskiego Stowarzyszenia Szefów Wydziałów Komunikacji. W komentarzu do raportu ocenia, że idea centralnych rejestrów „jest rozwiązaniem słusznym i zasługującym na poparcie”.",
+        "Pelczarski wskazuje też ryzyka: bezpieczeństwo danych, koszty wdrożenia i utrzymania, integrację z systemami samorządów oraz uzależnienie pracy urzędów od jednego systemu. Jego zdaniem projekt wymaga procedur awaryjnych i jasnego podziału kompetencji między administracją rządową a samorządową.",
+        "## Tło: dwie ustawy w toku",
+        "> Stan prac na 19 listopada 2026 r. Dyrektywa (UE) 2024/2831 o pracy platformowej: termin wdrożenia 2 grudnia 2026 r. Projekt ustawy MRPiPS o pracy platformowej: po konsultacjach, przed skierowaniem do Sejmu. Projekt UD431 Ministerstwa Infrastruktury (zmiany w ustawie o transporcie drogowym): przyjęcie przez Radę Ministrów planowane na I kwartał 2027 r.",
+        "Ministerstwo Rodziny, Pracy i Polityki Społecznej przedstawiło projekt ustawy wdrażającej dyrektywę w sierpniu ([o projekcie](/artykul/p54-dyrektywa-platformowa-polska-nie-zdazy-na-2-grudnia)). Według XYZ.pl resort otrzymał ponad 700 uwag, a 4 listopada zaczęła się konferencja uzgodnieniowa. Minister Agnieszka Dziemianowicz-Bąk zapowiedziała 9 listopada (za PAP), że projekt trafi do Sejmu w ciągu kilku miesięcy, a przepisy mają obowiązywać od przyszłego roku. Radca prawny Robert Lisicki (C&C Chakowski & Ciszek) ocenił w rozmowie z XYZ.pl, że Polska nie przyjmie ustawy przed upływem terminu.",
+        "Raport PZPA rozpisuje podział zadań między uczestników rynku. Platforma odpowiada za technologię, dostęp do pasażerów i wysokość stawki, a partner za rozliczenia, obsługę kadrową i administracyjną. Weryfikację kierowcy przed rozpoczęciem współpracy prowadzą oboje. Od tego podziału zależy, kogo nowe przepisy uznają za odpowiedzialnego za warunki pracy kierowcy. „Rzeczpospolita” pisze, że firmy zrzeszone w PZPA obawiają się, iż ustawa o pracy platformowej uderzy w pośredników.",
+        "Osobno trwają prace nad projektem UD431 Ministerstwa Infrastruktury, który m.in. wprowadza ogólnopolski identyfikator kierowcy i nakłada na pośredników obowiązek sprawdzania badania technicznego i OC taksówki ([szczegóły projektu](/artykul/p56-projekt-ud431-identyfikator-kierowcy-oc-taksowki-i-nowe-obowiazki-posr)). Projekt i postulat centralnej ewidencji dotyczą tego samego systemu licencji, z którego korzystają partnerzy flotowi.",
+        "## Co dalej",
+        "- 2 grudnia 2026 r. mija termin wdrożenia dyrektywy o pracy platformowej. Polska ustawa ma trafić do Sejmu w ciągu kilku miesięcy.\n- Postulaty PZPA to stanowisko organizacji branżowej, a nie projekt przepisów. Nie wiadomo, czy rejestr pośredników trafi do ustawy o pracy platformowej, do nowelizacji ustawy o transporcie drogowym, czy do żadnej z nich.\n- Projekt UD431 ma trafić do Rady Ministrów w I kwartale 2027 r.",
+        "Zastrzeżenie: dane rynkowe za lata 2023–2025 to szacunki PZPA, a ceny mają charakter orientacyjny. Tekst ma charakter informacyjny i nie stanowi porady prawnej. Źródła sprawdzone 19.11.2026."
+      ],
+      "sources": [
+        "PZPA — Dokąd jedziemy? Branża ride-hailing wczoraj, dziś i jutro (PDF), 17.11.2026 — https://pzpa.pl/wp-content/uploads/2026/11/RAPORT-PZPA-2026-Dokad-jedziemy-Branza-ride-hailing-wczoraj-dzis-i-jutro-.pdf",
+        "PZPA — strona raportu — https://pzpa.pl/raport-branza-ride-hailing-wczoraj-dzis-i-jutro/",
+        "„Rzeczpospolita”, M. Duszczyk — Koniec taniego jeżdżenia? Boom na przewozy z aplikacji na zakręcie, 17.11.2026 — https://www.rp.pl/transport/art45494421-koniec-taniego-jezdzenia-boom-na-przewozy-z-aplikacji-na-zakrecie",
+        "XYZ.pl, M. Ciołczyk Garcia — Polska spóźnia się z wdrożeniem dyrektywy platformowej. Branża prosi o czas, aktywiści ponaglają, 4.11.2026 — https://xyz.pl/polska-spoznia-sie-z-wdrozeniem-dyrektywy-platformowej-branza-prosi-o-czas-aktywisci-ponaglaja/",
+        "dlahandlu.pl (PAP) — Dziemianowicz-Bąk: nowe przepisy w sprawie pracy platformowej będą w przyszłym roku, 9.11.2026 — https://www.dlahandlu.pl/inne/dziemianowicz-bak-nowe-przepisy-w-sprawie-pracy-platformowej-beda-w-przyszlym-roku,177615.html",
+        "EUR-Lex — Dyrektywa Parlamentu Europejskiego i Rady (UE) 2024/2831 — https://eur-lex.europa.eu/eli/dir/2024/2831/oj"
+      ],
+      "read": 7
+    },
     {
       "id": "p58",
       "pub": "2026-11-16T10:00:00+01:00",

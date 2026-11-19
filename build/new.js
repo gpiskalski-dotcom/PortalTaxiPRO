@@ -309,4 +309,5 @@ module.exports = [
   ],
 },
 require('./new_p68.js'),
+require('./new_p69.js'),
 ];
