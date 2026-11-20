@@ -5,7 +5,10 @@
     "type": "guide",
     "slug": "polish-taxi-market-explained",
     "cat": "guide",
-    "cats": ["guide", "rynek-polski"],
+    "cats": [
+      "guide",
+      "rynek-polski"
+    ],
     "date": "6 November 2026",
     "img": "pro/komiks-flota-miasto.jpg",
     "featured": true,
@@ -46,12 +49,60 @@
     "Safety & licensing": "bezpieczenstwo"
   },
   "cats": {
-    "p54": ["regulacje-ue", "rynek-polski"],
-    "p57": ["newsy-platform", "rynek-polski"],
-    "p50": ["bezpieczenstwo", "regulacje-ue"],
-    "p68": ["newsy-platform", "rynek-polski"]
+    "p54": [
+      "regulacje-ue",
+      "rynek-polski"
+    ],
+    "p57": [
+      "newsy-platform",
+      "rynek-polski"
+    ],
+    "p50": [
+      "bezpieczenstwo",
+      "regulacje-ue"
+    ],
+    "p68": [
+      "newsy-platform",
+      "rynek-polski"
+    ],
+    "p69": [
+      "regulacje-ue",
+      "rynek-polski"
+    ]
   },
-  "hot": ["p54"],
-  "dates": { "p50": "11 June 2026" },
-  "order": ["g1", "p68", "p54", "p57", "p50"]
+  "hot": [
+    "p54"
+  ],
+  "dates": {
+    "p50": "11 June 2026"
+  },
+  "order": [
+    "g1",
+    "p69",
+    "p68",
+    "p54",
+    "p57",
+    "p50"
+  ],
+  "p69": {
+    "id": "p69",
+    "slug": "polish-fleet-partners-want-register-of-intermediaries-pzpa-report",
+    "cat": "Regulation & EU",
+    "date": "19 November 2026",
+    "translated": "20 November 2026",
+    "img": "/pro/n-pzpa-raport-taxi-warszawa.jpg",
+    "imgCaption": "",
+    "hot": true,
+    "title": "Polish fleet partners want a register of intermediaries and a PLN 600,000 guarantee: what the PZPA report proposes",
+    "lead": "The Polish Association of App Partners proposes a register of intermediaries with a permit requirement and a PLN 600,000 bank guarantee, nationwide rules for taxis and a central register of licences and drivers. The report came out two weeks before the deadline for implementing the EU Platform Work Directive.",
+    "bodyFile": "p69.md",
+    "sources": [
+      "PZPA — Dokąd jedziemy? Branża ride-hailing wczoraj, dziś i jutro (report, PDF, 17.11.2026, in Polish) — https://pzpa.pl/wp-content/uploads/2026/11/RAPORT-PZPA-2026-Dokad-jedziemy-Branza-ride-hailing-wczoraj-dzis-i-jutro-.pdf",
+      "PZPA — report page (in Polish) — https://pzpa.pl/raport-branza-ride-hailing-wczoraj-dzis-i-jutro/",
+      "Rzeczpospolita, M. Duszczyk — Koniec taniego jeżdżenia? Boom na przewozy z aplikacji na zakręcie (17.11.2026, in Polish) — https://www.rp.pl/transport/art45494421-koniec-taniego-jezdzenia-boom-na-przewozy-z-aplikacji-na-zakrecie",
+      "XYZ.pl, M. Ciołczyk Garcia — Polska spóźnia się z wdrożeniem dyrektywy platformowej (4.11.2026, in Polish) — https://xyz.pl/polska-spoznia-sie-z-wdrozeniem-dyrektywy-platformowej-branza-prosi-o-czas-aktywisci-ponaglaja/",
+      "dlahandlu.pl (PAP) — Dziemianowicz-Bąk: nowe przepisy w sprawie pracy platformowej będą w przyszłym roku (9.11.2026, in Polish) — https://www.dlahandlu.pl/inne/dziemianowicz-bak-nowe-przepisy-w-sprawie-pracy-platformowej-beda-w-przyszlym-roku,177615.html",
+      "EUR-Lex — Directive (EU) 2024/2831 on improving working conditions in platform work — https://eur-lex.europa.eu/eli/dir/2024/2831/oj/eng"
+    ]
+  }
 }

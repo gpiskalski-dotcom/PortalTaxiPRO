@@ -1,6 +1,6 @@
 // Buduje pro-data-en.js (wersja EN serwisu) z plików w build/en/.
 // Uruchom z katalogu repo:  node build/en/build-en.js
-// Źródła treści: articles.json (p54, p57, p50), p68.md, content-guide.md, meta.json.
+// Źródła treści: articles.json (p54, p57, p50), p68.md, p69.md, content-guide.md, meta.json.
 const fs = require('fs');
 const path = require('path');
 const DIR = __dirname;
@@ -12,6 +12,7 @@ const arts = JSON.parse(fs.readFileSync(path.join(DIR, 'articles.json'), 'utf8')
 const slugs = { [meta.guide.slug]: 'guide' };
 arts.forEach((a) => { slugs[a.slug] = 'article'; });
 slugs[meta.p68.slug] = 'article';
+slugs[meta.p69.slug] = 'article';
 
 // /en/<slug> -> /en/article/<slug> lub /en/guide/<slug>
 const fixLinks = (s) => s.replace(/\]\(\/en\/([a-z0-9-]+)\)/g, (m, slug) => {
@@ -56,16 +57,17 @@ const fromJson = (a) => {
   };
 };
 arts.forEach((a) => out.push(fromJson(a)));
-{
-  const m = meta.p68;
+// Artykuły z osobnym plikiem .md (meta.<id> z polem bodyFile)
+['p68', 'p69'].forEach((id) => {
+  const m = meta[id];
   const blocks = toBlocks(fs.readFileSync(path.join(DIR, m.bodyFile), 'utf8'));
   out.push({
     id: m.id, plId: m.id, slug: m.slug, cat: meta.catMap[m.cat], cats: meta.cats[m.id], date: m.date,
-    img: img(m.img), imgCaption: m.imgCaption, imgHome: img(m.imgHome), imgHomeCaption: m.imgHomeCaption,
+    img: img(m.img), imgCaption: m.imgCaption || undefined, imgHome: m.imgHome ? img(m.imgHome) : undefined, imgHomeCaption: m.imgHomeCaption,
     hot: true, author: 'PRO.portaltaxi.pl editorial team', title: m.title, lead: m.lead, body: blocks,
-    sources: m.sources, read: readMin(blocks), translated: meta.translated,
+    sources: m.sources, read: readMin(blocks), translated: m.translated || meta.translated,
   });
-}
+});
 
 const byId = Object.fromEntries(out.map((a) => [a.id, a]));
 const articles = meta.order.map((id) => { if (!byId[id]) throw new Error('Brak ' + id); return byId[id]; });
